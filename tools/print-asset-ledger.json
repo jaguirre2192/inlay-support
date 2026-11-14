@@ -1,0 +1,3239 @@
+{
+  "catalog": "99840783efeb8ffe",
+  "nativeCatalogSHA256": "a0f01006f2bf72522a8a517c470cda593ab10919b57a47105bc2b8064305cd36",
+  "nativeSource": "b4fe3470bb45f82cf773db2cbee8c240040c969b",
+  "coordinatePolicy": "exact native paths, no invented/simplified borders",
+  "flagCommit": "ac7e0eb3259eb62aa6100c435607e2fe03896a97",
+  "files": [
+    {
+      "file": "print/assets/art/country-afghanistan-0656e7f9.webp",
+      "sha256": "c99e22b7ba1d5cc0ed48a4a98233518f3be228790aa60a96c24135f24ff6ceff",
+      "bytes": 288614,
+      "origin": "App/Resources/Countries/country-afghanistan-0656e7f9.webp"
+    },
+    {
+      "file": "print/assets/art/country-aland-islands.webp",
+      "sha256": "f52c4c319471eeb39a4d85ce6acda6bcc7a3661b7eb1019fb483f1911713b23a",
+      "bytes": 129880,
+      "origin": "App/Resources/Countries/country-aland-islands.webp"
+    },
+    {
+      "file": "print/assets/art/country-albania.webp",
+      "sha256": "96979409a59d84a07515c943b33963916496c26653f40f9e4567682ba2165fd7",
+      "bytes": 154634,
+      "origin": "App/Resources/Countries/country-albania.webp"
+    },
+    {
+      "file": "print/assets/art/country-algeria-1-5dd1a9a6.webp",
+      "sha256": "5dd1a9a612bca3d2e45aa09708ad0653e107d46cc7804d7ced01dbd8d49ef7e4",
+      "bytes": 490512,
+      "origin": "App/Resources/Countries/country-algeria-1-5dd1a9a6.webp"
+    },
+    {
+      "file": "print/assets/art/country-american-samoa-2-5f24402b.webp",
+      "sha256": "5f24402be9ec5c6b4ad3df9344a8e6cfbe3a3a3c04d08cc99f349cff048b5ec3",
+      "bytes": 191726,
+      "origin": "App/Resources/Countries/country-american-samoa-2-5f24402b.webp"
+    },
+    {
+      "file": "print/assets/art/country-andorra.webp",
+      "sha256": "4846afdb91bf96f7fa2a701c8f80f314a2925d1119da5eb0cdfe39a52ba29fbf",
+      "bytes": 267308,
+      "origin": "App/Resources/Countries/country-andorra.webp"
+    },
+    {
+      "file": "print/assets/art/country-angola-1-345818e1.webp",
+      "sha256": "345818e1c43876e690b6fb9e9fa954774ba1c4503ccbc353ad021cb177d87a37",
+      "bytes": 365690,
+      "origin": "App/Resources/Countries/country-angola-1-345818e1.webp"
+    },
+    {
+      "file": "print/assets/art/country-anguilla.webp",
+      "sha256": "3f52871179503de9aeed11d15d8fdb37bc2e93ba453edca8bd5715b3a5e3a570",
+      "bytes": 52888,
+      "origin": "App/Resources/Countries/country-anguilla.webp"
+    },
+    {
+      "file": "print/assets/art/country-antigua-and-barbuda.webp",
+      "sha256": "b3558bee9d5c6c04752f53cd25ded2c64f8c050442daaf82ca24bdbd311646fa",
+      "bytes": 122672,
+      "origin": "App/Resources/Countries/country-antigua-and-barbuda.webp"
+    },
+    {
+      "file": "print/assets/art/country-argentina-retained-58cf8b0b.webp",
+      "sha256": "58cf8b0bdc94def9beb83b00952cfa380f48e83ce30c8b21d812e4a20e272ce0",
+      "bytes": 154086,
+      "origin": "App/Resources/Countries/country-argentina-retained-58cf8b0b.webp"
+    },
+    {
+      "file": "print/assets/art/country-armenia.webp",
+      "sha256": "1ee0233e37f00169c0ed5a9475f626ea1b5d8134501432888bd01dae3997599c",
+      "bytes": 196358,
+      "origin": "App/Resources/Countries/country-armenia.webp"
+    },
+    {
+      "file": "print/assets/art/country-aruba.webp",
+      "sha256": "475377f19ed083c694aec497518b42723516e8882940309ae4fb41a2bd27c3d4",
+      "bytes": 164460,
+      "origin": "App/Resources/Countries/country-aruba.webp"
+    },
+    {
+      "file": "print/assets/art/country-at-local-b1717004.webp",
+      "sha256": "33d927dc1a1b7bb352cf7d7d73fb75f9d4075b7bbd6bc5f66e40fb6bf4da7881",
+      "bytes": 193240,
+      "origin": "App/Resources/Countries/country-at-local-b1717004.webp"
+    },
+    {
+      "file": "print/assets/art/country-australia-2-c58a4045.webp",
+      "sha256": "c58a4045f81b392c6e81420a3991b37d2dad5fc2c4aa89673a11396846e5c72c",
+      "bytes": 403360,
+      "origin": "App/Resources/Countries/country-australia-2-c58a4045.webp"
+    },
+    {
+      "file": "print/assets/art/country-azerbaijan.webp",
+      "sha256": "ec602530a2afc3600ef3a9dd2f1b91bbf5502dd8a02a0e944d84579985ec783a",
+      "bytes": 259876,
+      "origin": "App/Resources/Countries/country-azerbaijan.webp"
+    },
+    {
+      "file": "print/assets/art/country-bahamas.webp",
+      "sha256": "8a979360fa0440749398fe6583288e02f24414cdbd8ad7fdb6fe7309255a0d06",
+      "bytes": 187422,
+      "origin": "App/Resources/Countries/country-bahamas.webp"
+    },
+    {
+      "file": "print/assets/art/country-bahrain-e37206d1.webp",
+      "sha256": "7d803a30d60bb1b631615d8400b59dffb7e90304cd29710470078aed425bbde6",
+      "bytes": 122428,
+      "origin": "App/Resources/Countries/country-bahrain-e37206d1.webp"
+    },
+    {
+      "file": "print/assets/art/country-bangladesh-6d9dcd98.webp",
+      "sha256": "049a820b8dd2cf8f4abd2086f1c12c39ca3b3596f049d949e614fe869a170e87",
+      "bytes": 271332,
+      "origin": "App/Resources/Countries/country-bangladesh-6d9dcd98.webp"
+    },
+    {
+      "file": "print/assets/art/country-barbados.webp",
+      "sha256": "0d25e8ebf3d74e57e34c78720a7d543adbf35a5bf2cda6a5280a9d8cdbaed753",
+      "bytes": 213052,
+      "origin": "App/Resources/Countries/country-barbados.webp"
+    },
+    {
+      "file": "print/assets/art/country-belarus.webp",
+      "sha256": "5bc7129189ab41659818a9291aeff5ecef3476f261440bd4217dda4f98fd58ba",
+      "bytes": 216986,
+      "origin": "App/Resources/Countries/country-belarus.webp"
+    },
+    {
+      "file": "print/assets/art/country-belgium.webp",
+      "sha256": "a8c9341111dd9e1759961bec73ed22c5423482eee04a6a29bd9c2551e0157ce0",
+      "bytes": 201900,
+      "origin": "App/Resources/Countries/country-belgium.webp"
+    },
+    {
+      "file": "print/assets/art/country-belize.webp",
+      "sha256": "14863076aad5bc3f3b4665c3436643d1fb486c009c4a4a98efe3e2d65936683f",
+      "bytes": 187952,
+      "origin": "App/Resources/Countries/country-belize.webp"
+    },
+    {
+      "file": "print/assets/art/country-benin-1-d55d541c.webp",
+      "sha256": "d55d541c2374b14960a7037bda37a3f142460821d9532f9819b7a6117a25f8d9",
+      "bytes": 272486,
+      "origin": "App/Resources/Countries/country-benin-1-d55d541c.webp"
+    },
+    {
+      "file": "print/assets/art/country-bermuda.webp",
+      "sha256": "779633424b64df24a471f295a2839467c411a71bded9f9e307a484b5c9087d39",
+      "bytes": 159656,
+      "origin": "App/Resources/Countries/country-bermuda.webp"
+    },
+    {
+      "file": "print/assets/art/country-bhutan-41d9e15a.webp",
+      "sha256": "6bad1395663b52652e78434c315657a389cb5c1eaefb4f53f67fb273fd9ebf4e",
+      "bytes": 212416,
+      "origin": "App/Resources/Countries/country-bhutan-41d9e15a.webp"
+    },
+    {
+      "file": "print/assets/art/country-bolivia-retained-f0f5275f.webp",
+      "sha256": "f0f5275f2f537f7a8a334770b0b8b8f3323862716dff2dd40f5d52a344f17a77",
+      "bytes": 248472,
+      "origin": "App/Resources/Countries/country-bolivia-retained-f0f5275f.webp"
+    },
+    {
+      "file": "print/assets/art/country-bosnia-and-herzegovina.webp",
+      "sha256": "1f6edf8fd29aadb9e6b9bb050e67f5e5cb46a78cab29ab80d69468a102b12da7",
+      "bytes": 284202,
+      "origin": "App/Resources/Countries/country-bosnia-and-herzegovina.webp"
+    },
+    {
+      "file": "print/assets/art/country-botswana-1-bc2c418e.webp",
+      "sha256": "bc2c418ea729882c68db323ce91ee4eaf62779a29e0dfb3ade63d792da372706",
+      "bytes": 515880,
+      "origin": "App/Resources/Countries/country-botswana-1-bc2c418e.webp"
+    },
+    {
+      "file": "print/assets/art/country-bouvet-island-retained-b5d2ca85.webp",
+      "sha256": "b5d2ca85f701a4076776d12806350d61954cfb76f31631ee651de3a8785b2ee8",
+      "bytes": 273698,
+      "origin": "App/Resources/Countries/country-bouvet-island-retained-b5d2ca85.webp"
+    },
+    {
+      "file": "print/assets/art/country-brazil-retained-7d068d97.webp",
+      "sha256": "7d068d97ad03bf8e93da3eb25796d3d6456a3ec7c0cec4d0e98e42a44d5448bf",
+      "bytes": 342896,
+      "origin": "App/Resources/Countries/country-brazil-retained-7d068d97.webp"
+    },
+    {
+      "file": "print/assets/art/country-british-virgin-islands.webp",
+      "sha256": "5754d119d50cb66b8cb8190e846b082d038b466587d4bc619f5a49c9a8af288e",
+      "bytes": 84944,
+      "origin": "App/Resources/Countries/country-british-virgin-islands.webp"
+    },
+    {
+      "file": "print/assets/art/country-brunei-9f986ad6.webp",
+      "sha256": "b2a22479f956708b40cc7995f41078d2a34ac1f295e99fabb29cc99561d2e5db",
+      "bytes": 191766,
+      "origin": "App/Resources/Countries/country-brunei-9f986ad6.webp"
+    },
+    {
+      "file": "print/assets/art/country-bulgaria.webp",
+      "sha256": "35821e0516c53105e525d6ce2d1e0f4906016433ddaaa93aaa4a332adc721c5b",
+      "bytes": 211746,
+      "origin": "App/Resources/Countries/country-bulgaria.webp"
+    },
+    {
+      "file": "print/assets/art/country-burkina-faso-1-c78084fe.webp",
+      "sha256": "c78084fe9569d6ecb8f1fa21527b38f70c309874db59d9ce18ecaf7112e460a8",
+      "bytes": 431280,
+      "origin": "App/Resources/Countries/country-burkina-faso-1-c78084fe.webp"
+    },
+    {
+      "file": "print/assets/art/country-burundi-1-e786ad01.webp",
+      "sha256": "e786ad01a721db4958c239e956c75e19cacd7ec6ba3bbf95286aecdd4489556e",
+      "bytes": 385386,
+      "origin": "App/Resources/Countries/country-burundi-1-e786ad01.webp"
+    },
+    {
+      "file": "print/assets/art/country-cabo-verde-1-1119c84a.webp",
+      "sha256": "1119c84a64a37593c3df2d88a96c4001ab7a9d4e891ff56cc6891119d57a7616",
+      "bytes": 149484,
+      "origin": "App/Resources/Countries/country-cabo-verde-1-1119c84a.webp"
+    },
+    {
+      "file": "print/assets/art/country-cambodia-3beab58e.webp",
+      "sha256": "c9a9f7c27954edf9e852bf2ddecc2b414d10160a1a40eabadb682d176da6f935",
+      "bytes": 360658,
+      "origin": "App/Resources/Countries/country-cambodia-3beab58e.webp"
+    },
+    {
+      "file": "print/assets/art/country-cameroon-1-ce08ee74.webp",
+      "sha256": "ce08ee74e2e98a79f1f25fb2b0de34b5c23f085128291f3451a608090f009798",
+      "bytes": 288798,
+      "origin": "App/Resources/Countries/country-cameroon-1-ce08ee74.webp"
+    },
+    {
+      "file": "print/assets/art/country-canada.webp",
+      "sha256": "c277790caf0ee2e8adcf397eb981e9977e7a1388089bb975f71fef32799f311b",
+      "bytes": 290366,
+      "origin": "App/Resources/Countries/country-canada.webp"
+    },
+    {
+      "file": "print/assets/art/country-caribbean-netherlands.webp",
+      "sha256": "20db32ede8cd46e6c679f5ab293fe1b33d20716c7c1f1530173461ff661bef8e",
+      "bytes": 179850,
+      "origin": "App/Resources/Countries/country-caribbean-netherlands.webp"
+    },
+    {
+      "file": "print/assets/art/country-cayman-islands.webp",
+      "sha256": "d317246b58ceac4088d5cfc747f022f4c77449d5cc14f661857032d8fd58d18a",
+      "bytes": 139866,
+      "origin": "App/Resources/Countries/country-cayman-islands.webp"
+    },
+    {
+      "file": "print/assets/art/country-central-african-republic-1-cbc41f35.webp",
+      "sha256": "cbc41f35fbaaa13ffd0e5d9881ae60c1354430d1feaee17da9add68733d3c83a",
+      "bytes": 325754,
+      "origin": "App/Resources/Countries/country-central-african-republic-1-cbc41f35.webp"
+    },
+    {
+      "file": "print/assets/art/country-ch-local-01251ddc.webp",
+      "sha256": "4e30f4b84f96771ec20776a55408f772ca80870d3bd4926d7472354aae07c8c8",
+      "bytes": 174312,
+      "origin": "App/Resources/Countries/country-ch-local-01251ddc.webp"
+    },
+    {
+      "file": "print/assets/art/country-chad-1-73a8d364.webp",
+      "sha256": "73a8d3642a222b987155f4803d755d50e8570ccbdacfb4c7bfa044d598068fb1",
+      "bytes": 356112,
+      "origin": "App/Resources/Countries/country-chad-1-73a8d364.webp"
+    },
+    {
+      "file": "print/assets/art/country-chile-retained-aaf78ca1.webp",
+      "sha256": "aaf78ca160bddf800dd1935d746ad2912079f65a6dfee4ce65942cfc4cc9ec0e",
+      "bytes": 107190,
+      "origin": "App/Resources/Countries/country-chile-retained-aaf78ca1.webp"
+    },
+    {
+      "file": "print/assets/art/country-christmas-island-c55e3be9.webp",
+      "sha256": "d48fb24d4b5ca668df489e648529c0135b3c1d19fbce45eb9dbc983746dc77c4",
+      "bytes": 228902,
+      "origin": "App/Resources/Countries/country-christmas-island-c55e3be9.webp"
+    },
+    {
+      "file": "print/assets/art/country-cn-local-4197f046.webp",
+      "sha256": "2f61d4dbdec13687b9a5364b9d56550d20f1ce036e598ae9298d70253d585a4d",
+      "bytes": 301204,
+      "origin": "App/Resources/Countries/country-cn-local-4197f046.webp"
+    },
+    {
+      "file": "print/assets/art/country-cocos-keeling-islands-c20b232e.webp",
+      "sha256": "11c8e787e0c20058edf2e45eccb44913581ad069259db105a0113cfe9fca1e6e",
+      "bytes": 141280,
+      "origin": "App/Resources/Countries/country-cocos-keeling-islands-c20b232e.webp"
+    },
+    {
+      "file": "print/assets/art/country-colombia-retained-6878a07f.webp",
+      "sha256": "6878a07f57cb663f0aaaf3e000e1e8e4655c19a0269a16c5c4975caa3aff2f9f",
+      "bytes": 210822,
+      "origin": "App/Resources/Countries/country-colombia-retained-6878a07f.webp"
+    },
+    {
+      "file": "print/assets/art/country-comoros-1-adc28b01.webp",
+      "sha256": "adc28b019fc881009df4b69456ccc8ef5562e9901f378e8d1463bb1deb3c180d",
+      "bytes": 205584,
+      "origin": "App/Resources/Countries/country-comoros-1-adc28b01.webp"
+    },
+    {
+      "file": "print/assets/art/country-congo-1-781423af.webp",
+      "sha256": "781423afd66c24d775c050b074caa5e6f1b170ecdf93ce9b3c39a39c6ff273bf",
+      "bytes": 361322,
+      "origin": "App/Resources/Countries/country-congo-1-781423af.webp"
+    },
+    {
+      "file": "print/assets/art/country-cook-islands-2-96c803ed.webp",
+      "sha256": "96c803ed2a5c2001d30182d0ae1fc9e15da10be7b45913d49e7d4cefa8f0a1f8",
+      "bytes": 324230,
+      "origin": "App/Resources/Countries/country-cook-islands-2-96c803ed.webp"
+    },
+    {
+      "file": "print/assets/art/country-costa-rica.webp",
+      "sha256": "4d73dd25c774e3aba55fc8b08676985d8a17bdf95dde430a12c266fc7c43e3a4",
+      "bytes": 198134,
+      "origin": "App/Resources/Countries/country-costa-rica.webp"
+    },
+    {
+      "file": "print/assets/art/country-cote-divoire-1-59b631ee.webp",
+      "sha256": "59b631ee74011c729a7857520ebd4261d2e01e32f1a3ae39b66eaec7fce82966",
+      "bytes": 474144,
+      "origin": "App/Resources/Countries/country-cote-divoire-1-59b631ee.webp"
+    },
+    {
+      "file": "print/assets/art/country-croatia.webp",
+      "sha256": "17029bae085f469606da76deb38d3a807a6ff7fa5e68608b431c4d1fc525af28",
+      "bytes": 274032,
+      "origin": "App/Resources/Countries/country-croatia.webp"
+    },
+    {
+      "file": "print/assets/art/country-cuba-v1.webp",
+      "sha256": "8646d3c16e309659ff65bcb089458777fc11a8fbfc5fd631898f73a56ff172e1",
+      "bytes": 218418,
+      "origin": "App/Resources/Countries/country-cuba-v1.webp"
+    },
+    {
+      "file": "print/assets/art/country-curacao.webp",
+      "sha256": "905dfc82b1fe1a1ebcedcf062f30447e99b6551b05f1252fc63281b7696c0866",
+      "bytes": 151528,
+      "origin": "App/Resources/Countries/country-curacao.webp"
+    },
+    {
+      "file": "print/assets/art/country-cyprus.webp",
+      "sha256": "b5cb1000db889ad4949dfbcfe8359cea95d99efd85a7eacda66028a742feca98",
+      "bytes": 208804,
+      "origin": "App/Resources/Countries/country-cyprus.webp"
+    },
+    {
+      "file": "print/assets/art/country-czechia.webp",
+      "sha256": "491212defe307a2fed2c7a569a28fdf863db4d14c5a149b3fbe1e4ec792e6c6a",
+      "bytes": 181502,
+      "origin": "App/Resources/Countries/country-czechia.webp"
+    },
+    {
+      "file": "print/assets/art/country-de-local-ff7027c7.webp",
+      "sha256": "448d5a2196efb7011ac0cef0f23ff0d27f93bfb15fd15b8c6500d5f1b830e2a9",
+      "bytes": 225952,
+      "origin": "App/Resources/Countries/country-de-local-ff7027c7.webp"
+    },
+    {
+      "file": "print/assets/art/country-democratic-republic-of-the-congo-1-b00c876b.webp",
+      "sha256": "b00c876b18d077125b3da082deba571bced7fda319ef489db40ccf9af3b5b521",
+      "bytes": 392752,
+      "origin": "App/Resources/Countries/country-democratic-republic-of-the-congo-1-b00c876b.webp"
+    },
+    {
+      "file": "print/assets/art/country-djibouti-1-d6007557.webp",
+      "sha256": "d6007557d36d2224099290b68113a7ad36379cc054843e8c127d2d8694ed8b16",
+      "bytes": 384258,
+      "origin": "App/Resources/Countries/country-djibouti-1-d6007557.webp"
+    },
+    {
+      "file": "print/assets/art/country-dk-local-v1-619500d0.webp",
+      "sha256": "795bb2429e114a57347c65f00f97131be7f35af1562f7179699ab6018dfe703a",
+      "bytes": 207634,
+      "origin": "App/Resources/Countries/country-dk-local-v1-619500d0.webp"
+    },
+    {
+      "file": "print/assets/art/country-dominica.webp",
+      "sha256": "b7a0687c191da50969ca35502c7857c4690c39ad400a1368a32f50f464573772",
+      "bytes": 187438,
+      "origin": "App/Resources/Countries/country-dominica.webp"
+    },
+    {
+      "file": "print/assets/art/country-dominican-republic.webp",
+      "sha256": "3a649f6a4f8d124f0cf9540f4c633832a17166101d7484993f8bc87e829ad2cb",
+      "bytes": 253358,
+      "origin": "App/Resources/Countries/country-dominican-republic.webp"
+    },
+    {
+      "file": "print/assets/art/country-ecuador-retained-0224aae6.webp",
+      "sha256": "0224aae6e6e66edbc7801a0d9b6624375bcb16839c1a0e3424fd8877af372ac3",
+      "bytes": 237394,
+      "origin": "App/Resources/Countries/country-ecuador-retained-0224aae6.webp"
+    },
+    {
+      "file": "print/assets/art/country-egypt-1-9d42f7a6.webp",
+      "sha256": "9d42f7a693c4fff0627bc4c16e1aa8186b88ac7006a86fc97742e86b4b7e36c8",
+      "bytes": 532940,
+      "origin": "App/Resources/Countries/country-egypt-1-9d42f7a6.webp"
+    },
+    {
+      "file": "print/assets/art/country-el-salvador-v2.webp",
+      "sha256": "4c90dd60d3775995ecaf511310d7bc39c9b02d0fefd90072c2fb15da6636d375",
+      "bytes": 263894,
+      "origin": "App/Resources/Countries/country-el-salvador-v2.webp"
+    },
+    {
+      "file": "print/assets/art/country-equatorial-guinea-1-b0007189.webp",
+      "sha256": "b0007189b26a26fa3f83cc15bc3bd00cb7f22291d79940dc0648c6af130c32f1",
+      "bytes": 213702,
+      "origin": "App/Resources/Countries/country-equatorial-guinea-1-b0007189.webp"
+    },
+    {
+      "file": "print/assets/art/country-eritrea-1-3635d032.webp",
+      "sha256": "3635d032e0fb539805a706c3c5444dd6216089e6ec3a770f2b337e7986e70f95",
+      "bytes": 344622,
+      "origin": "App/Resources/Countries/country-eritrea-1-3635d032.webp"
+    },
+    {
+      "file": "print/assets/art/country-es-local-1d8df2ca.webp",
+      "sha256": "234eb0c008498136b321d54342ec2b41f4eb23cab12225a3e5b187fbf2785979",
+      "bytes": 296044,
+      "origin": "App/Resources/Countries/country-es-local-1d8df2ca.webp"
+    },
+    {
+      "file": "print/assets/art/country-estonia.webp",
+      "sha256": "e072dd70f44254680a760ee2ce69f56386e86b90d6483f331f2ddad0aa0ca9d7",
+      "bytes": 154682,
+      "origin": "App/Resources/Countries/country-estonia.webp"
+    },
+    {
+      "file": "print/assets/art/country-eswatini-1-b56c6541.webp",
+      "sha256": "b56c6541e2d2a94bab673fc5034a101937bf0b706da56cd4f55c8f83268ac775",
+      "bytes": 421474,
+      "origin": "App/Resources/Countries/country-eswatini-1-b56c6541.webp"
+    },
+    {
+      "file": "print/assets/art/country-ethiopia-1-39898c80.webp",
+      "sha256": "39898c80eee46ab323d1032aa7fb1552df578616eaab81ac5b081d5931354ef7",
+      "bytes": 470182,
+      "origin": "App/Resources/Countries/country-ethiopia-1-39898c80.webp"
+    },
+    {
+      "file": "print/assets/art/country-falkland-islands-malvinas-4-e0ce7db5.webp",
+      "sha256": "e0ce7db5151d93d2fc91dff2106fd1f95ec096c43e924d6562166d7f96b89004",
+      "bytes": 183888,
+      "origin": "App/Resources/Countries/country-falkland-islands-malvinas-4-e0ce7db5.webp"
+    },
+    {
+      "file": "print/assets/art/country-faroe-islands.webp",
+      "sha256": "69693c2b22e552db1568d03a4fe19141f8e01355214ccb84e87baee950820957",
+      "bytes": 221040,
+      "origin": "App/Resources/Countries/country-faroe-islands.webp"
+    },
+    {
+      "file": "print/assets/art/country-fi-local-v1-0bb93d2c.webp",
+      "sha256": "91f074a055a037f14416da73da675abaad31dcbd44a8521719fc2340d40f5a54",
+      "bytes": 329426,
+      "origin": "App/Resources/Countries/country-fi-local-v1-0bb93d2c.webp"
+    },
+    {
+      "file": "print/assets/art/country-fiji-2-178cdca1.webp",
+      "sha256": "178cdca1ea0f123427dac9c5a60adab3699345dbc500a31f580d9169954c188f",
+      "bytes": 211540,
+      "origin": "App/Resources/Countries/country-fiji-2-178cdca1.webp"
+    },
+    {
+      "file": "print/assets/art/country-fr-local-0bf385db.webp",
+      "sha256": "fcb2aa86c8048de389ac75e126924b3cc4863a5baae27add7aab5204cf08b3df",
+      "bytes": 363356,
+      "origin": "App/Resources/Countries/country-fr-local-0bf385db.webp"
+    },
+    {
+      "file": "print/assets/art/country-french-guiana-retained-22e33a44.webp",
+      "sha256": "22e33a4486afcd30a8d01594e08a37ff7a0c3365761ca3c3facb895bf6e8dffa",
+      "bytes": 267604,
+      "origin": "App/Resources/Countries/country-french-guiana-retained-22e33a44.webp"
+    },
+    {
+      "file": "print/assets/art/country-french-polynesia-2-b0e718c7.webp",
+      "sha256": "b0e718c71a9e68391ec344201cbcbbf114507e29c0a71f0c49ff144ac1edf4ad",
+      "bytes": 130790,
+      "origin": "App/Resources/Countries/country-french-polynesia-2-b0e718c7.webp"
+    },
+    {
+      "file": "print/assets/art/country-french-southern-territories-1-6e951869.webp",
+      "sha256": "6e9518694885356c673aaa71ca805a07a1b7611154c9452fabdb6f111a257d6c",
+      "bytes": 281788,
+      "origin": "App/Resources/Countries/country-french-southern-territories-1-6e951869.webp"
+    },
+    {
+      "file": "print/assets/art/country-gabon-1-05fa7ef2.webp",
+      "sha256": "05fa7ef2ca2287663638ae16fa4c2c7c6cc15b883fa3a34b069a2cc7a3ad0a8b",
+      "bytes": 415174,
+      "origin": "App/Resources/Countries/country-gabon-1-05fa7ef2.webp"
+    },
+    {
+      "file": "print/assets/art/country-gambia-2-dbbcbf83.webp",
+      "sha256": "dbbcbf833a130ed2f03691486ae2056491fa69e80b14e5cc5233e990f73ba07f",
+      "bytes": 124380,
+      "origin": "App/Resources/Countries/country-gambia-2-dbbcbf83.webp"
+    },
+    {
+      "file": "print/assets/art/country-gb-local-21f4d496.webp",
+      "sha256": "7cc8526bf1b7ea89b98b2b1e38125e4b8fc6233c2900183547709de69cf6fe48",
+      "bytes": 183796,
+      "origin": "App/Resources/Countries/country-gb-local-21f4d496.webp"
+    },
+    {
+      "file": "print/assets/art/country-georgia.webp",
+      "sha256": "87851296bc777465e374a3cbabcf66cedfc17d96197549145cbaa11abad21eb3",
+      "bytes": 111076,
+      "origin": "App/Resources/Countries/country-georgia.webp"
+    },
+    {
+      "file": "print/assets/art/country-ghana-1-63da2020.webp",
+      "sha256": "63da2020bfefa182fbc611f76b9eae1e453c293b23935253e99e2448e57a20f0",
+      "bytes": 339522,
+      "origin": "App/Resources/Countries/country-ghana-1-63da2020.webp"
+    },
+    {
+      "file": "print/assets/art/country-gibraltar.webp",
+      "sha256": "7a0832b8ea7bf6acc3905844e154150a4c7b178e44c4333a01fba6795f5fd1d6",
+      "bytes": 163912,
+      "origin": "App/Resources/Countries/country-gibraltar.webp"
+    },
+    {
+      "file": "print/assets/art/country-greece.webp",
+      "sha256": "efe5f517ad49005e2cfbae122085a8161629d1a80857401701480a8b989f6baf",
+      "bytes": 341722,
+      "origin": "App/Resources/Countries/country-greece.webp"
+    },
+    {
+      "file": "print/assets/art/country-greenland.webp",
+      "sha256": "763229a47ec709e029867a18ba0cedd8368e7a3dd07e380ba5ebc2a4fc1d317a",
+      "bytes": 203800,
+      "origin": "App/Resources/Countries/country-greenland.webp"
+    },
+    {
+      "file": "print/assets/art/country-grenada.webp",
+      "sha256": "84ba5848cd6dbff27b6f1a875f630c3290818a13d91de5c797ec17baaa9fd034",
+      "bytes": 128184,
+      "origin": "App/Resources/Countries/country-grenada.webp"
+    },
+    {
+      "file": "print/assets/art/country-guadeloupe.webp",
+      "sha256": "5921c20323776da6be5c612945b610e897bd42ac177ec368c184b6c389d6b0da",
+      "bytes": 224902,
+      "origin": "App/Resources/Countries/country-guadeloupe.webp"
+    },
+    {
+      "file": "print/assets/art/country-guam-1-85633248.webp",
+      "sha256": "85633248595fa1a6adf0501d892b38ede8115146300daedfce2ee278d6768bad",
+      "bytes": 246518,
+      "origin": "App/Resources/Countries/country-guam-1-85633248.webp"
+    },
+    {
+      "file": "print/assets/art/country-guatemala-v1.webp",
+      "sha256": "2a53e2b224abac324a4cd308ec6beb063574e0555adff9164a7be6ddc5558199",
+      "bytes": 402680,
+      "origin": "App/Resources/Countries/country-guatemala-v1.webp"
+    },
+    {
+      "file": "print/assets/art/country-guernsey.webp",
+      "sha256": "663352fff846d72dee97df682725c604e6ab8a41d95ad264553e4ef61f0b381e",
+      "bytes": 202628,
+      "origin": "App/Resources/Countries/country-guernsey.webp"
+    },
+    {
+      "file": "print/assets/art/country-guinea-1-927c4a71.webp",
+      "sha256": "927c4a71d309e454f87fce995a3d97f1bf8a31635df6dd8130cec413fe39b848",
+      "bytes": 395288,
+      "origin": "App/Resources/Countries/country-guinea-1-927c4a71.webp"
+    },
+    {
+      "file": "print/assets/art/country-guinea-bissau-1-980eea13.webp",
+      "sha256": "980eea131e7743fe939caa6a77bb2f4b6571fe24d0fc090f2a63dcb2e96e7016",
+      "bytes": 386506,
+      "origin": "App/Resources/Countries/country-guinea-bissau-1-980eea13.webp"
+    },
+    {
+      "file": "print/assets/art/country-guyana-2-f75922f6.webp",
+      "sha256": "f75922f6ba9488e327191bf47a0943f26eafb03a9f3e6ad503ff140fd8a6c340",
+      "bytes": 164940,
+      "origin": "App/Resources/Countries/country-guyana-2-f75922f6.webp"
+    },
+    {
+      "file": "print/assets/art/country-haiti-v1.webp",
+      "sha256": "5d24db1a5338317817a29bcd735c9a3a9bd499127cf9c3689b97844af47fc891",
+      "bytes": 346864,
+      "origin": "App/Resources/Countries/country-haiti-v1.webp"
+    },
+    {
+      "file": "print/assets/art/country-honduras.webp",
+      "sha256": "78638a7635eeac23927ca530f1fe47c5d91be1b302b5f351f2f322c61b6b551f",
+      "bytes": 167720,
+      "origin": "App/Resources/Countries/country-honduras.webp"
+    },
+    {
+      "file": "print/assets/art/country-hong-kong-74d787a5.webp",
+      "sha256": "06ee596f67a4f426abc612923ff9eb1f10f3c3abe6627355246cac7fb2a6ad0f",
+      "bytes": 292434,
+      "origin": "App/Resources/Countries/country-hong-kong-74d787a5.webp"
+    },
+    {
+      "file": "print/assets/art/country-hungary.webp",
+      "sha256": "25fda6bdc8d07428759bf8fdb023540d50e705c7b6df24f56f20ed494e9d73c6",
+      "bytes": 153276,
+      "origin": "App/Resources/Countries/country-hungary.webp"
+    },
+    {
+      "file": "print/assets/art/country-ie-local-v1-c83c1514.webp",
+      "sha256": "a61695fcd4ba47dd30b4cb6c34a3764e9f3402fa7b44e844c56167187eb446ed",
+      "bytes": 432770,
+      "origin": "App/Resources/Countries/country-ie-local-v1-c83c1514.webp"
+    },
+    {
+      "file": "print/assets/art/country-india-273fb446.webp",
+      "sha256": "8c26f1eefd74013c0481813cb242854708ccf40c972cbfb5691f5b9dc0554240",
+      "bytes": 203530,
+      "origin": "App/Resources/Countries/country-india-273fb446.webp"
+    },
+    {
+      "file": "print/assets/art/country-indonesia-abf15670.webp",
+      "sha256": "9f165ab8d1317c09ac52259ba8510535820413d3a657be2a01174ff72d119bd4",
+      "bytes": 192414,
+      "origin": "App/Resources/Countries/country-indonesia-abf15670.webp"
+    },
+    {
+      "file": "print/assets/art/country-iran-31dcdaa6.webp",
+      "sha256": "83bf32cb00a89b4b3e6c0fd138eb3fedd17d3abf2c6499742ba92d837ae98064",
+      "bytes": 300160,
+      "origin": "App/Resources/Countries/country-iran-31dcdaa6.webp"
+    },
+    {
+      "file": "print/assets/art/country-iraq-e2bddfa4.webp",
+      "sha256": "dbd586906d621ee06deed37f79a9b015dfe548eb73a1ce79294b3f3dd917991a",
+      "bytes": 258304,
+      "origin": "App/Resources/Countries/country-iraq-e2bddfa4.webp"
+    },
+    {
+      "file": "print/assets/art/country-is-local-v1-ffc973c4.webp",
+      "sha256": "fd0b85df78d347453c35e98efa8904b9c84fe9dd14e2b9bcc3adb742ed0156ae",
+      "bytes": 256406,
+      "origin": "App/Resources/Countries/country-is-local-v1-ffc973c4.webp"
+    },
+    {
+      "file": "print/assets/art/country-isle-of-man.webp",
+      "sha256": "4d2dd820e639fd5502cb55425777085d04fc246a590e7209a56fc5a78f17c368",
+      "bytes": 213122,
+      "origin": "App/Resources/Countries/country-isle-of-man.webp"
+    },
+    {
+      "file": "print/assets/art/country-israel-0af7928a.webp",
+      "sha256": "74df7af856254823688a2fedee9e8dc98ae4b8f621a37cda53754050bb6528fa",
+      "bytes": 93028,
+      "origin": "App/Resources/Countries/country-israel-0af7928a.webp"
+    },
+    {
+      "file": "print/assets/art/country-jamaica-v1.webp",
+      "sha256": "828f39efc8017c1146ee97e3b0f31779f4067efd1437f32058ea10d7f36c5532",
+      "bytes": 226532,
+      "origin": "App/Resources/Countries/country-jamaica-v1.webp"
+    },
+    {
+      "file": "print/assets/art/country-jersey.webp",
+      "sha256": "a17b3914e5abbcfa2ae8d49ecf299e9bcad3af0f0e5581a45f8ab34cbca692ce",
+      "bytes": 192248,
+      "origin": "App/Resources/Countries/country-jersey.webp"
+    },
+    {
+      "file": "print/assets/art/country-jordan-795b30d7.webp",
+      "sha256": "e86c627ec29a9675639ea3ca30f472b6f66746fcfa26af520fc54e12e56cf195",
+      "bytes": 206050,
+      "origin": "App/Resources/Countries/country-jordan-795b30d7.webp"
+    },
+    {
+      "file": "print/assets/art/country-jp-local-4f1c1682.webp",
+      "sha256": "ab9ef8e9b3ad205d8c6c012eaf9cd6741f7baffc30c8dd5c77c13222de9feba5",
+      "bytes": 186638,
+      "origin": "App/Resources/Countries/country-jp-local-4f1c1682.webp"
+    },
+    {
+      "file": "print/assets/art/country-kazakhstan.webp",
+      "sha256": "fd392b1002252c34f373d32d54010e5ae0c6acfa84321ae20143fab3d1a2497a",
+      "bytes": 160830,
+      "origin": "App/Resources/Countries/country-kazakhstan.webp"
+    },
+    {
+      "file": "print/assets/art/country-kenya-1-74e2db65.webp",
+      "sha256": "74e2db653f6ee75a1d93c87483d83d60ba037a2200cab99bac47b4c899ba4d4f",
+      "bytes": 452582,
+      "origin": "App/Resources/Countries/country-kenya-1-74e2db65.webp"
+    },
+    {
+      "file": "print/assets/art/country-kiribati-1-403b1c8b.webp",
+      "sha256": "403b1c8bf485825c95dcd2c41955e2307e99db9916ba560f6e095e6054899ba5",
+      "bytes": 284422,
+      "origin": "App/Resources/Countries/country-kiribati-1-403b1c8b.webp"
+    },
+    {
+      "file": "print/assets/art/country-kosovo.webp",
+      "sha256": "81f6ffe62fd0002162fbddcd7ae3de1dccb24abdf79280737cb0cbb66e16eec4",
+      "bytes": 251438,
+      "origin": "App/Resources/Countries/country-kosovo.webp"
+    },
+    {
+      "file": "print/assets/art/country-kr-local-894b7289.webp",
+      "sha256": "b7976c796913641cba9d4182e2b4cf4fe66c0e29d7229876193ae7a77f014a32",
+      "bytes": 243446,
+      "origin": "App/Resources/Countries/country-kr-local-894b7289.webp"
+    },
+    {
+      "file": "print/assets/art/country-kuwait-08b1cc33.webp",
+      "sha256": "db5b03afe6bac0be3e99a43c39f8c560c7372f3c0d30253cc99df6358660edba",
+      "bytes": 226840,
+      "origin": "App/Resources/Countries/country-kuwait-08b1cc33.webp"
+    },
+    {
+      "file": "print/assets/art/country-kyrgyzstan-a449c657.webp",
+      "sha256": "678d2511ee1e2a8d58f99fdaffb2a7fe23ba181c3fe89db0f0ea94dd47b2e178",
+      "bytes": 140530,
+      "origin": "App/Resources/Countries/country-kyrgyzstan-a449c657.webp"
+    },
+    {
+      "file": "print/assets/art/country-laos-c47229b9.webp",
+      "sha256": "02a81976390ad79681924fc8ac7c317c39a911ddf1ab8a06a205751025a7d68d",
+      "bytes": 170004,
+      "origin": "App/Resources/Countries/country-laos-c47229b9.webp"
+    },
+    {
+      "file": "print/assets/art/country-latvia.webp",
+      "sha256": "dda0a32e4ae15aaeb45b67052707f8a03b2464bba180bfa84b998d091ebe8171",
+      "bytes": 165590,
+      "origin": "App/Resources/Countries/country-latvia.webp"
+    },
+    {
+      "file": "print/assets/art/country-lebanon-177809a3.webp",
+      "sha256": "1fb2a4220556491b1ea3fa52877105eef3b0a7638d91dd7b56e2877ae44089b8",
+      "bytes": 180176,
+      "origin": "App/Resources/Countries/country-lebanon-177809a3.webp"
+    },
+    {
+      "file": "print/assets/art/country-lesotho-1-1015cbbd.webp",
+      "sha256": "1015cbbd1e7b2aa7160dd4d63ea1bc16b7081efd491b93e7ef1455c5a262f396",
+      "bytes": 480960,
+      "origin": "App/Resources/Countries/country-lesotho-1-1015cbbd.webp"
+    },
+    {
+      "file": "print/assets/art/country-liberia-1-5a23c603.webp",
+      "sha256": "5a23c603b5b53df8767f4bcc5b8c22c3680406565ca859516bd2391fa51fb047",
+      "bytes": 430490,
+      "origin": "App/Resources/Countries/country-liberia-1-5a23c603.webp"
+    },
+    {
+      "file": "print/assets/art/country-libya-1-d098510b.webp",
+      "sha256": "d098510b789cfea76ad80f712b897ab4b4cbfca808b8bb78e289ccb8e107362e",
+      "bytes": 473666,
+      "origin": "App/Resources/Countries/country-libya-1-d098510b.webp"
+    },
+    {
+      "file": "print/assets/art/country-liechtenstein.webp",
+      "sha256": "09faf8d2f859aef03ba80bb2d32c4d8c013df0070424467304c0a39cc3e7b099",
+      "bytes": 160292,
+      "origin": "App/Resources/Countries/country-liechtenstein.webp"
+    },
+    {
+      "file": "print/assets/art/country-lithuania.webp",
+      "sha256": "845c81cea1bffadab1277f47ca82349a0eb9a635d150237a8e90f4d818de6efa",
+      "bytes": 212482,
+      "origin": "App/Resources/Countries/country-lithuania.webp"
+    },
+    {
+      "file": "print/assets/art/country-luxembourg.webp",
+      "sha256": "c9f2813446b3e79f9eb19c39a35bf83186b054bff63f8251a44408d0a3e3a4dd",
+      "bytes": 271990,
+      "origin": "App/Resources/Countries/country-luxembourg.webp"
+    },
+    {
+      "file": "print/assets/art/country-macau-339a608b.webp",
+      "sha256": "57f977f34bba566f713947792a899bb0fd24e4c4265de4e4a616d53ce7dfec90",
+      "bytes": 209326,
+      "origin": "App/Resources/Countries/country-macau-339a608b.webp"
+    },
+    {
+      "file": "print/assets/art/country-madagascar-1-cba2b008.webp",
+      "sha256": "cba2b00822e123a0058527527fc1733b6a923e8e7ad3e9b379c761743dfc417f",
+      "bytes": 291338,
+      "origin": "App/Resources/Countries/country-madagascar-1-cba2b008.webp"
+    },
+    {
+      "file": "print/assets/art/country-malawi-1-2247bc6e.webp",
+      "sha256": "2247bc6e76145c3e6bcc27b057e8dfdf1be3e6fa808c0fe35fed11feb854f36b",
+      "bytes": 168906,
+      "origin": "App/Resources/Countries/country-malawi-1-2247bc6e.webp"
+    },
+    {
+      "file": "print/assets/art/country-malaysia-480adbdc.webp",
+      "sha256": "b3645f58c3584712e9cd6617483dd1fbf9a4de4654e22e6223a1824433ed3c34",
+      "bytes": 106246,
+      "origin": "App/Resources/Countries/country-malaysia-480adbdc.webp"
+    },
+    {
+      "file": "print/assets/art/country-maldives-dc2b609e.webp",
+      "sha256": "a8f6777df8f61cf1593dee11c3e727e8a28abc44de4c4f10c8d6c066a1e4e495",
+      "bytes": 147282,
+      "origin": "App/Resources/Countries/country-maldives-dc2b609e.webp"
+    },
+    {
+      "file": "print/assets/art/country-mali-1-4c908a1d.webp",
+      "sha256": "4c908a1d0c93a82f60d436090761021374c34f4b9b5557beff0411744d685c30",
+      "bytes": 361576,
+      "origin": "App/Resources/Countries/country-mali-1-4c908a1d.webp"
+    },
+    {
+      "file": "print/assets/art/country-malta.webp",
+      "sha256": "46729638a0c1f3d04c28df4a31ac69555f79323c12aa7ea8a4960f263563f49d",
+      "bytes": 190846,
+      "origin": "App/Resources/Countries/country-malta.webp"
+    },
+    {
+      "file": "print/assets/art/country-martinique.webp",
+      "sha256": "71bc45ea7ea733e582e73ab9774bbe116a3359796958cd0a38c751957d0e27c7",
+      "bytes": 225196,
+      "origin": "App/Resources/Countries/country-martinique.webp"
+    },
+    {
+      "file": "print/assets/art/country-mauritania-1-3cbb8f60.webp",
+      "sha256": "3cbb8f6064138b5f1fee5ec3421d44586cbbdb431aa234492ae66c383117a97a",
+      "bytes": 371904,
+      "origin": "App/Resources/Countries/country-mauritania-1-3cbb8f60.webp"
+    },
+    {
+      "file": "print/assets/art/country-mauritius-1-98b6cb7a.webp",
+      "sha256": "98b6cb7a1879452d84192900f5bd88930831bf8ed15c39e40bda784b508bccaa",
+      "bytes": 464834,
+      "origin": "App/Resources/Countries/country-mauritius-1-98b6cb7a.webp"
+    },
+    {
+      "file": "print/assets/art/country-mayotte-1-22a2531f.webp",
+      "sha256": "22a2531f878487a4b0edcf31859be453f75977ddd8195ca82ee47a101ef643b5",
+      "bytes": 271264,
+      "origin": "App/Resources/Countries/country-mayotte-1-22a2531f.webp"
+    },
+    {
+      "file": "print/assets/art/country-mexico-amate.webp",
+      "sha256": "13106b151dd604c54de1b0e2a97b658c880409e6dae9bccfc4a86192cc132e2a",
+      "bytes": 205110,
+      "origin": "App/Resources/Countries/country-mexico-amate.webp"
+    },
+    {
+      "file": "print/assets/art/country-micronesia-federated-states-of-1-43578f0e.webp",
+      "sha256": "43578f0ebb7ee2392b510864eb5fac7e798ff7d6792f0c14efcd2cb3d39aa061",
+      "bytes": 188738,
+      "origin": "App/Resources/Countries/country-micronesia-federated-states-of-1-43578f0e.webp"
+    },
+    {
+      "file": "print/assets/art/country-moldova.webp",
+      "sha256": "c86fb7646217c0eedacfcbfa779ce01d987650c80eb706ac99f88650e50112da",
+      "bytes": 188674,
+      "origin": "App/Resources/Countries/country-moldova.webp"
+    },
+    {
+      "file": "print/assets/art/country-monaco.webp",
+      "sha256": "596ae51903b9284021636362659466e3788cbe1f7c2e2c4a9195a9c2604f47b7",
+      "bytes": 267158,
+      "origin": "App/Resources/Countries/country-monaco.webp"
+    },
+    {
+      "file": "print/assets/art/country-mongolia-5afbde89.webp",
+      "sha256": "b6423a482d25ce31cc1d48f34af2243ec9665db1fb4e7d544da7d09d09384e01",
+      "bytes": 109026,
+      "origin": "App/Resources/Countries/country-mongolia-5afbde89.webp"
+    },
+    {
+      "file": "print/assets/art/country-montenegro.webp",
+      "sha256": "d2461537ab28b971692b580fa896e61b0f18336f1580c35cf04d2e709719489a",
+      "bytes": 254136,
+      "origin": "App/Resources/Countries/country-montenegro.webp"
+    },
+    {
+      "file": "print/assets/art/country-montserrat.webp",
+      "sha256": "0249952d4076c2b67d77f1cfce40ed51422bdb7d3e0a0c433891ce7ef23ee91d",
+      "bytes": 181714,
+      "origin": "App/Resources/Countries/country-montserrat.webp"
+    },
+    {
+      "file": "print/assets/art/country-morocco-retained-92839f82.webp",
+      "sha256": "92839f829b125229cce2f8ac6b5c7bedc99d7d7c4dacca6b56cf32e286f20503",
+      "bytes": 184308,
+      "origin": "App/Resources/Countries/country-morocco-retained-92839f82.webp"
+    },
+    {
+      "file": "print/assets/art/country-mozambique-1-dee39e00.webp",
+      "sha256": "dee39e000dde785cf60d46d0546fde50abbe9b9cad3437ec67541c7b021ae6e7",
+      "bytes": 312920,
+      "origin": "App/Resources/Countries/country-mozambique-1-dee39e00.webp"
+    },
+    {
+      "file": "print/assets/art/country-myanmar-0f457aa7.webp",
+      "sha256": "23d72a3435274ea49248de11d85ecbb54acb8a998f78b0ec4a2222f4e3bf6dda",
+      "bytes": 142186,
+      "origin": "App/Resources/Countries/country-myanmar-0f457aa7.webp"
+    },
+    {
+      "file": "print/assets/art/country-namibia-1-9bb359dd.webp",
+      "sha256": "9bb359dd9483f0277614a90ea0174cf0ad151d373b37666fd846072b50be25e9",
+      "bytes": 418278,
+      "origin": "App/Resources/Countries/country-namibia-1-9bb359dd.webp"
+    },
+    {
+      "file": "print/assets/art/country-nepal-c73c3993.webp",
+      "sha256": "59143719c05f4f88e716b33022c75faaf53146503c73c43f9322eb5e7acf1a50",
+      "bytes": 141262,
+      "origin": "App/Resources/Countries/country-nepal-c73c3993.webp"
+    },
+    {
+      "file": "print/assets/art/country-new-caledonia-1-af18436d.webp",
+      "sha256": "af18436de37c454be9f4bdd006a8e0cab06163f5589422517dbf96515608968f",
+      "bytes": 225380,
+      "origin": "App/Resources/Countries/country-new-caledonia-1-af18436d.webp"
+    },
+    {
+      "file": "print/assets/art/country-new-zealand-1-76ef967e.webp",
+      "sha256": "76ef967e42b8eb5a0e24e4cdcbf877c01a46f4c84d0f215b16ef347eef8ee7db",
+      "bytes": 259896,
+      "origin": "App/Resources/Countries/country-new-zealand-1-76ef967e.webp"
+    },
+    {
+      "file": "print/assets/art/country-nicaragua-v2.webp",
+      "sha256": "8a74f4c899dd111e91928548eb053ade074f8f9d03befb426018f651fef4a0d3",
+      "bytes": 334796,
+      "origin": "App/Resources/Countries/country-nicaragua-v2.webp"
+    },
+    {
+      "file": "print/assets/art/country-niger-1-ad5e424d.webp",
+      "sha256": "ad5e424d08a597a313b2e0ca4869c3e816d0f3abd34e9dc5cf999f414affb268",
+      "bytes": 399812,
+      "origin": "App/Resources/Countries/country-niger-1-ad5e424d.webp"
+    },
+    {
+      "file": "print/assets/art/country-nigeria-1-06ca5862.webp",
+      "sha256": "06ca586248e0e4e50de91a948b0a383202a25ddaa100733ab0748eca24bdb605",
+      "bytes": 449128,
+      "origin": "App/Resources/Countries/country-nigeria-1-06ca5862.webp"
+    },
+    {
+      "file": "print/assets/art/country-nl-local-a2ba542a.webp",
+      "sha256": "2f383c63836885c2a9c2077796a38bd9bfeeb8a2bbbe8165cd5b31055252bbf0",
+      "bytes": 216586,
+      "origin": "App/Resources/Countries/country-nl-local-a2ba542a.webp"
+    },
+    {
+      "file": "print/assets/art/country-no-local-v2-23b3a86b.webp",
+      "sha256": "9bc5818175fcc3a95a74f08e65a049460a92a27fd10ceefe950d2505393a4ba7",
+      "bytes": 165018,
+      "origin": "App/Resources/Countries/country-no-local-v2-23b3a86b.webp"
+    },
+    {
+      "file": "print/assets/art/country-norfolk-island-1-02d28c1c.webp",
+      "sha256": "02d28c1c22dae70db864caf479118cb1d027f7b7b978d47d33d6caefb70f173a",
+      "bytes": 368784,
+      "origin": "App/Resources/Countries/country-norfolk-island-1-02d28c1c.webp"
+    },
+    {
+      "file": "print/assets/art/country-north-korea-986ff6d3.webp",
+      "sha256": "e846168f862de3fb4afe46c35c990d991c750900faf4cd8ab1b1cb74f90ade53",
+      "bytes": 234270,
+      "origin": "App/Resources/Countries/country-north-korea-986ff6d3.webp"
+    },
+    {
+      "file": "print/assets/art/country-north-macedonia.webp",
+      "sha256": "c777de0274427fca74bf01e1e58d92d1a2fe60e8b67027a9bdce2034587ea7ed",
+      "bytes": 306468,
+      "origin": "App/Resources/Countries/country-north-macedonia.webp"
+    },
+    {
+      "file": "print/assets/art/country-northern-mariana-islands-1-a941688d.webp",
+      "sha256": "a941688d8a5310c03248952e0467b9d22a67147aefe7a226fd2b5240539cb314",
+      "bytes": 152776,
+      "origin": "App/Resources/Countries/country-northern-mariana-islands-1-a941688d.webp"
+    },
+    {
+      "file": "print/assets/art/country-oman-fbbf8fa8.webp",
+      "sha256": "3457520a30a9f90fa7b1663dd6f13e705cccfda3260170afdffee2c50ae58092",
+      "bytes": 147262,
+      "origin": "App/Resources/Countries/country-oman-fbbf8fa8.webp"
+    },
+    {
+      "file": "print/assets/art/country-pakistan-fd306b12.webp",
+      "sha256": "722fe70d0624f92dfa682d5e187deea66b0ccfab87a3dcb0dad44d0487935822",
+      "bytes": 220348,
+      "origin": "App/Resources/Countries/country-pakistan-fd306b12.webp"
+    },
+    {
+      "file": "print/assets/art/country-palau-2-ca98219f.webp",
+      "sha256": "ca98219fccf916e15d3c1e338d007942a048bdaa246bde48b0c25ffcbeb5e14c",
+      "bytes": 55404,
+      "origin": "App/Resources/Countries/country-palau-2-ca98219f.webp"
+    },
+    {
+      "file": "print/assets/art/country-palestine-c125e3e5.webp",
+      "sha256": "0810ce7ada5a6789a99a891b68d7c8b48f4a3c05da6b119d53e39adf315cdbd8",
+      "bytes": 154022,
+      "origin": "App/Resources/Countries/country-palestine-c125e3e5.webp"
+    },
+    {
+      "file": "print/assets/art/country-panama-v2.webp",
+      "sha256": "e7fe5a4d35729df7819712be6563f430a6f22ed12a8668d9be36e0df39e37553",
+      "bytes": 262830,
+      "origin": "App/Resources/Countries/country-panama-v2.webp"
+    },
+    {
+      "file": "print/assets/art/country-papua-new-guinea-1-f4607dd2.webp",
+      "sha256": "f4607dd21c92a66e22184b1e3ac345c78d178f810346554e056b58454f598b7b",
+      "bytes": 281338,
+      "origin": "App/Resources/Countries/country-papua-new-guinea-1-f4607dd2.webp"
+    },
+    {
+      "file": "print/assets/art/country-paraguay-retained-b3495cd0.webp",
+      "sha256": "b3495cd0a5cee9fca30adb93eb37dec14ccc88fab3560f2fda3ae4d46ff9811d",
+      "bytes": 255452,
+      "origin": "App/Resources/Countries/country-paraguay-retained-b3495cd0.webp"
+    },
+    {
+      "file": "print/assets/art/country-peru-retained-840061c5.webp",
+      "sha256": "840061c5b00aa21a8255f244128501823d18131c338c93efa1a66cb6cf15d3f0",
+      "bytes": 190150,
+      "origin": "App/Resources/Countries/country-peru-retained-840061c5.webp"
+    },
+    {
+      "file": "print/assets/art/country-philippines-c325d1d7.webp",
+      "sha256": "6e3b3fa9e5d3a2e15026f516efa09f52fbfe47a175a7d03d10a606937180af09",
+      "bytes": 179406,
+      "origin": "App/Resources/Countries/country-philippines-c325d1d7.webp"
+    },
+    {
+      "file": "print/assets/art/country-pl-local-636636eb.webp",
+      "sha256": "a19246c208abc5a41e030f92fa4f4cf4887c50e8718dc21e2c9789fb719efc0d",
+      "bytes": 234900,
+      "origin": "App/Resources/Countries/country-pl-local-636636eb.webp"
+    },
+    {
+      "file": "print/assets/art/country-pt-local-cb18b90b.webp",
+      "sha256": "81a6fbc7944ba87957eeeaaef4be4d95b0a14c4e03c986a4e0271d10dcf1a47d",
+      "bytes": 223086,
+      "origin": "App/Resources/Countries/country-pt-local-cb18b90b.webp"
+    },
+    {
+      "file": "print/assets/art/country-puerto-rico-v1.webp",
+      "sha256": "4e502a73c6ef081d0f9465850447ec4625126cb218cd45e01138be881d34cb81",
+      "bytes": 136372,
+      "origin": "App/Resources/Countries/country-puerto-rico-v1.webp"
+    },
+    {
+      "file": "print/assets/art/country-qatar-d4ddf59d.webp",
+      "sha256": "9ecfc38b6b9a2618860a163c9462714b1ae3e84fdc63390e1c53e4c7f9fc638e",
+      "bytes": 143224,
+      "origin": "App/Resources/Countries/country-qatar-d4ddf59d.webp"
+    },
+    {
+      "file": "print/assets/art/country-reunion-1-323bc5ed.webp",
+      "sha256": "323bc5ed12e92de25bf93a625a063f146c28b1bd065462bf9e37e8e921e32cdf",
+      "bytes": 614002,
+      "origin": "App/Resources/Countries/country-reunion-1-323bc5ed.webp"
+    },
+    {
+      "file": "print/assets/art/country-romania.webp",
+      "sha256": "a915c57cf74e78fdc1a0dcb8aadb061faaa96b927e2ce313bcfbb41acd92d848",
+      "bytes": 188690,
+      "origin": "App/Resources/Countries/country-romania.webp"
+    },
+    {
+      "file": "print/assets/art/country-russia.webp",
+      "sha256": "3a5755993d0f2b5d86aee58a4f7a6bb68ebde62f1480dc55252c1bb4935e6886",
+      "bytes": 141504,
+      "origin": "App/Resources/Countries/country-russia.webp"
+    },
+    {
+      "file": "print/assets/art/country-rwanda-2-3b2a6cc8.webp",
+      "sha256": "3b2a6cc8c7e9549249f8ca765427010a56b6c6caf878b493f2e2fda783335468",
+      "bytes": 342152,
+      "origin": "App/Resources/Countries/country-rwanda-2-3b2a6cc8.webp"
+    },
+    {
+      "file": "print/assets/art/country-saint-barthelemy.webp",
+      "sha256": "dc8434364efe75cc02281fd497fedfdbfac01c5787b962509facbf983a568a5a",
+      "bytes": 227292,
+      "origin": "App/Resources/Countries/country-saint-barthelemy.webp"
+    },
+    {
+      "file": "print/assets/art/country-saint-kitts-and-nevis.webp",
+      "sha256": "ae60205e11fcf1ff9a1a2a8f4b7ce38d051fa51a861fb018076b00189fef09e1",
+      "bytes": 123050,
+      "origin": "App/Resources/Countries/country-saint-kitts-and-nevis.webp"
+    },
+    {
+      "file": "print/assets/art/country-saint-lucia.webp",
+      "sha256": "7d4fa2a244d8d53f62f56f2fb350a00e8c15572f16f00bc2a3a2c5b4fc064890",
+      "bytes": 169490,
+      "origin": "App/Resources/Countries/country-saint-lucia.webp"
+    },
+    {
+      "file": "print/assets/art/country-saint-martin.webp",
+      "sha256": "fe8241b71c172159bd9f4ced0fb1fa6b494015466a45d03c90ec0ea24c183649",
+      "bytes": 213464,
+      "origin": "App/Resources/Countries/country-saint-martin.webp"
+    },
+    {
+      "file": "print/assets/art/country-saint-pierre-and-miquelon.webp",
+      "sha256": "b5d97aea96e9bd8c0b71afeb9a083a99d3e875682d0a9655418f2e452f900c48",
+      "bytes": 137366,
+      "origin": "App/Resources/Countries/country-saint-pierre-and-miquelon.webp"
+    },
+    {
+      "file": "print/assets/art/country-saint-vincent-and-the-grenadines.webp",
+      "sha256": "656a24073499f3e7e99807fb205ebfd286c163e82876656872c9012dc6e2e71f",
+      "bytes": 79868,
+      "origin": "App/Resources/Countries/country-saint-vincent-and-the-grenadines.webp"
+    },
+    {
+      "file": "print/assets/art/country-samoa-1-b97a3a87.webp",
+      "sha256": "b97a3a87ae4bcc0fbfe4a98ceeaaec141560b588830cfef276481f9b6a3a8439",
+      "bytes": 146202,
+      "origin": "App/Resources/Countries/country-samoa-1-b97a3a87.webp"
+    },
+    {
+      "file": "print/assets/art/country-san-marino.webp",
+      "sha256": "fc94e8d7ce44dfed17184f0e43545853eeecb687b98f778ce19270d1d1a39535",
+      "bytes": 256850,
+      "origin": "App/Resources/Countries/country-san-marino.webp"
+    },
+    {
+      "file": "print/assets/art/country-sao-tome-and-principe-1-29dcda91.webp",
+      "sha256": "29dcda9126d921728a5cbb85536299a5c11690b4f7933a8e50a5aa2a6a1a49e5",
+      "bytes": 203972,
+      "origin": "App/Resources/Countries/country-sao-tome-and-principe-1-29dcda91.webp"
+    },
+    {
+      "file": "print/assets/art/country-saudi-arabia-3f00bf00.webp",
+      "sha256": "d85d3bef1ae2a5ed7236c0d045aff7566ee3e792a759f0e8190e330bda82e30c",
+      "bytes": 259902,
+      "origin": "App/Resources/Countries/country-saudi-arabia-3f00bf00.webp"
+    },
+    {
+      "file": "print/assets/art/country-se-local-v1-e29171b3.webp",
+      "sha256": "97fd38213d9fde568842b1ed1dfd478822e8746858c8fab097b25854a33e512e",
+      "bytes": 201796,
+      "origin": "App/Resources/Countries/country-se-local-v1-e29171b3.webp"
+    },
+    {
+      "file": "print/assets/art/country-senegal-1-23f046ad.webp",
+      "sha256": "23f046ad8acfa787bc9533f47ffadb55511c1b137810f831fdc8a55248a94d63",
+      "bytes": 593336,
+      "origin": "App/Resources/Countries/country-senegal-1-23f046ad.webp"
+    },
+    {
+      "file": "print/assets/art/country-serbia.webp",
+      "sha256": "e5dc62cce0b2ce018016162c9c3d388769133cfe71b90fe9d2207b61d37e8bcb",
+      "bytes": 258164,
+      "origin": "App/Resources/Countries/country-serbia.webp"
+    },
+    {
+      "file": "print/assets/art/country-seychelles-1-39818f0d.webp",
+      "sha256": "39818f0dfe647b947051358c4bc832a6335ddf5cdbefd3d93630d1684928ca49",
+      "bytes": 99346,
+      "origin": "App/Resources/Countries/country-seychelles-1-39818f0d.webp"
+    },
+    {
+      "file": "print/assets/art/country-sierra-leone-1-7b3a04f0.webp",
+      "sha256": "7b3a04f029dfca468ef347962c7d89d0f3421516246a12b83e8dacc7b0d2e139",
+      "bytes": 483216,
+      "origin": "App/Resources/Countries/country-sierra-leone-1-7b3a04f0.webp"
+    },
+    {
+      "file": "print/assets/art/country-singapore-84177899.webp",
+      "sha256": "6ac4354a5fbc9ea6bb3fa3640794420d926e7cf7946df4e32e69031455876f6c",
+      "bytes": 185434,
+      "origin": "App/Resources/Countries/country-singapore-84177899.webp"
+    },
+    {
+      "file": "print/assets/art/country-sint-maarten.webp",
+      "sha256": "33935a588066ce296ed9b50599dc85ab415f9c8d31643258342ccbe186d5ea02",
+      "bytes": 131816,
+      "origin": "App/Resources/Countries/country-sint-maarten.webp"
+    },
+    {
+      "file": "print/assets/art/country-slovakia.webp",
+      "sha256": "e9a4587e69990e4fcddb90878240db9012b9b77068a377caabc106ac4e155ed8",
+      "bytes": 151598,
+      "origin": "App/Resources/Countries/country-slovakia.webp"
+    },
+    {
+      "file": "print/assets/art/country-slovenia.webp",
+      "sha256": "8e7f68bffc5cdf6eee42dba2bc2e4e03fc2dc5270c136ca22aa2981d38f2c6f8",
+      "bytes": 165180,
+      "origin": "App/Resources/Countries/country-slovenia.webp"
+    },
+    {
+      "file": "print/assets/art/country-solomon-islands-1-37b8d83a.webp",
+      "sha256": "37b8d83a88cb9de68ea078d8a8ac0c57da4ba174609596486532b8ee047c875e",
+      "bytes": 289142,
+      "origin": "App/Resources/Countries/country-solomon-islands-1-37b8d83a.webp"
+    },
+    {
+      "file": "print/assets/art/country-somalia-1-2b6a87fd.webp",
+      "sha256": "2b6a87fd6eff1e3bfcba087225bd7006eedbebfbd389d36829635f7a653d09aa",
+      "bytes": 250626,
+      "origin": "App/Resources/Countries/country-somalia-1-2b6a87fd.webp"
+    },
+    {
+      "file": "print/assets/art/country-south-africa-1-8f50892d.webp",
+      "sha256": "8f50892d686f0094df31c87e4ced7583dbb1b11e245452b5736360e95ac10ab4",
+      "bytes": 471626,
+      "origin": "App/Resources/Countries/country-south-africa-1-8f50892d.webp"
+    },
+    {
+      "file": "print/assets/art/country-south-georgia-and-the-south-sandwich-islands-retained-e219fa31.webp",
+      "sha256": "e219fa31de947cfeb4f4629049c882aca045aac3b9850ef55c0dc177159fa9b9",
+      "bytes": 123292,
+      "origin": "App/Resources/Countries/country-south-georgia-and-the-south-sandwich-islands-retained-e219fa31.webp"
+    },
+    {
+      "file": "print/assets/art/country-south-sudan-1-cc80ea6b.webp",
+      "sha256": "cc80ea6bf22e5eb252fe149de3963d9dfbe12bd6fe3adc469d339e39118fb83d",
+      "bytes": 376958,
+      "origin": "App/Resources/Countries/country-south-sudan-1-cc80ea6b.webp"
+    },
+    {
+      "file": "print/assets/art/country-sri-lanka-dc7c2667.webp",
+      "sha256": "3781a5d1aa3323ce9883077a5a9c4e280853d71cd3a1be814115d63468371900",
+      "bytes": 223900,
+      "origin": "App/Resources/Countries/country-sri-lanka-dc7c2667.webp"
+    },
+    {
+      "file": "print/assets/art/country-sudan-1-33602fa5.webp",
+      "sha256": "33602fa5acea4ec999f3874e582f352f49304b753d2b722c2f1d4ffc3ed96a3a",
+      "bytes": 515704,
+      "origin": "App/Resources/Countries/country-sudan-1-33602fa5.webp"
+    },
+    {
+      "file": "print/assets/art/country-suriname-retained-1723b134.webp",
+      "sha256": "1723b134c1d175156cc9b38b601afd4f51e582203b0b728ffd01f149bcb60e14",
+      "bytes": 333302,
+      "origin": "App/Resources/Countries/country-suriname-retained-1723b134.webp"
+    },
+    {
+      "file": "print/assets/art/country-svalbard-and-jan-mayen.webp",
+      "sha256": "0d2b64f8582a325d23896defe47ac6664bb295b754b782bdb4f8dcaf0911bb5a",
+      "bytes": 126572,
+      "origin": "App/Resources/Countries/country-svalbard-and-jan-mayen.webp"
+    },
+    {
+      "file": "print/assets/art/country-syria-388c88b1.webp",
+      "sha256": "17deb998225b0cec22d0a0a87620a1aad3adc0bb294e58bcda47803b8720efcd",
+      "bytes": 280074,
+      "origin": "App/Resources/Countries/country-syria-388c88b1.webp"
+    },
+    {
+      "file": "print/assets/art/country-taiwan-c73ddf22.webp",
+      "sha256": "75bdbfa3ac3ef619d293d366743cc6f4a327f9d658dd86a604a1e399f38aa426",
+      "bytes": 160586,
+      "origin": "App/Resources/Countries/country-taiwan-c73ddf22.webp"
+    },
+    {
+      "file": "print/assets/art/country-tajikistan-19370956.webp",
+      "sha256": "c15f01870db134e5e7bdf1e13018033ff17a2b1eb8b496225ca543883b73fa7e",
+      "bytes": 212800,
+      "origin": "App/Resources/Countries/country-tajikistan-19370956.webp"
+    },
+    {
+      "file": "print/assets/art/country-thailand-8cee34c3.webp",
+      "sha256": "c3ac8899ef0199d4f6c36917e0828445577f0dc1aa7376a7e16b11edeb049b16",
+      "bytes": 162160,
+      "origin": "App/Resources/Countries/country-thailand-8cee34c3.webp"
+    },
+    {
+      "file": "print/assets/art/country-timor-leste-adbb0c8d.webp",
+      "sha256": "828b1acdeb340596ebf4a46f8c7f227743923b848facd576f62b5c68edad9b21",
+      "bytes": 122254,
+      "origin": "App/Resources/Countries/country-timor-leste-adbb0c8d.webp"
+    },
+    {
+      "file": "print/assets/art/country-togo-1-b1fdfdba.webp",
+      "sha256": "b1fdfdba5c1012c8a04d996ff3b1b5477ef80c51d472106dd78ca8fc0c5d8fff",
+      "bytes": 188204,
+      "origin": "App/Resources/Countries/country-togo-1-b1fdfdba.webp"
+    },
+    {
+      "file": "print/assets/art/country-tonga-1-31a602d3.webp",
+      "sha256": "31a602d3f43c707a942e4ce5d23d69eec0b7544f3d9c2cc791f501472086335b",
+      "bytes": 173320,
+      "origin": "App/Resources/Countries/country-tonga-1-31a602d3.webp"
+    },
+    {
+      "file": "print/assets/art/country-trinidad-and-tobago.webp",
+      "sha256": "37dd559d2cba386fccc53adb8b8337b58baea593e49d4d10227448116259b1b1",
+      "bytes": 202422,
+      "origin": "App/Resources/Countries/country-trinidad-and-tobago.webp"
+    },
+    {
+      "file": "print/assets/art/country-tunisia-1-6b957e96.webp",
+      "sha256": "6b957e967a88b2c3b455d8561332eb6f7ab7800ec92aa4df1c37c6f5c9f2a301",
+      "bytes": 255868,
+      "origin": "App/Resources/Countries/country-tunisia-1-6b957e96.webp"
+    },
+    {
+      "file": "print/assets/art/country-turkiye.webp",
+      "sha256": "62f9336920c442d05250308cb2a4ef75f7fb65731a93fe14fa2cb63792288bf4",
+      "bytes": 175110,
+      "origin": "App/Resources/Countries/country-turkiye.webp"
+    },
+    {
+      "file": "print/assets/art/country-turkmenistan-a2252087.webp",
+      "sha256": "3f693267c079104704be135b8323e5b1ecaf9cd62fa0630fb1d571c286999073",
+      "bytes": 141128,
+      "origin": "App/Resources/Countries/country-turkmenistan-a2252087.webp"
+    },
+    {
+      "file": "print/assets/art/country-turks-and-caicos.webp",
+      "sha256": "a1499981e02c5e5b9919ee6ea37c6e510efc201d6f6af10378c28a8da4283540",
+      "bytes": 147296,
+      "origin": "App/Resources/Countries/country-turks-and-caicos.webp"
+    },
+    {
+      "file": "print/assets/art/country-uganda-1-786af278.webp",
+      "sha256": "786af278acf922047ed160a44d6cecf672dfb2af06c90d864373534eda2e50dd",
+      "bytes": 512662,
+      "origin": "App/Resources/Countries/country-uganda-1-786af278.webp"
+    },
+    {
+      "file": "print/assets/art/country-ukraine.webp",
+      "sha256": "2085d56ccf657542e08657ea06fab0c839069b7078523331aa99145746d3e41a",
+      "bytes": 212568,
+      "origin": "App/Resources/Countries/country-ukraine.webp"
+    },
+    {
+      "file": "print/assets/art/country-united-arab-emirates-d5317db0.webp",
+      "sha256": "9826593e7ad8bac2e28e2330c7cf4c4c8ce1bbd0cc14bd053907c12d73379663",
+      "bytes": 201622,
+      "origin": "App/Resources/Countries/country-united-arab-emirates-d5317db0.webp"
+    },
+    {
+      "file": "print/assets/art/country-united-republic-of-tanzania-1-f9899071.webp",
+      "sha256": "f9899071f460897d8644ab3f35dc3942b381f5fefbfd19fd9f16ea2d25e15d1f",
+      "bytes": 500058,
+      "origin": "App/Resources/Countries/country-united-republic-of-tanzania-1-f9899071.webp"
+    },
+    {
+      "file": "print/assets/art/country-united-states.webp",
+      "sha256": "822fc0494063d047c8933a63894ed45850ca74ab7248c82dd29af1b76b69efa5",
+      "bytes": 207712,
+      "origin": "App/Resources/Countries/country-united-states.webp"
+    },
+    {
+      "file": "print/assets/art/country-uruguay-retained-340e18f1.webp",
+      "sha256": "340e18f1085fabdb21af07347c07b5390ba6fe73c2b13faa0c0592492a41c61e",
+      "bytes": 314682,
+      "origin": "App/Resources/Countries/country-uruguay-retained-340e18f1.webp"
+    },
+    {
+      "file": "print/assets/art/country-us-virgin-islands.webp",
+      "sha256": "89795b1c923bcbbe107c3fdf89b609600d961ff7d469ebc3a40a6a47326288f5",
+      "bytes": 161920,
+      "origin": "App/Resources/Countries/country-us-virgin-islands.webp"
+    },
+    {
+      "file": "print/assets/art/country-uzbekistan-6557b59c.webp",
+      "sha256": "c45a19cd29460c6c736e83cb52e363e72d22adf36ec0b81dcb636663ff436afc",
+      "bytes": 130778,
+      "origin": "App/Resources/Countries/country-uzbekistan-6557b59c.webp"
+    },
+    {
+      "file": "print/assets/art/country-vanuatu-1-2b0b496a.webp",
+      "sha256": "2b0b496a987ea501688ce5b5547d82d309002f7eeb5a7792df7ec415b0b3fd05",
+      "bytes": 142176,
+      "origin": "App/Resources/Countries/country-vanuatu-1-2b0b496a.webp"
+    },
+    {
+      "file": "print/assets/art/country-vatican-city.webp",
+      "sha256": "de4df00273f39d493c2b4935d9c94c3574e7c6c135c0468549d1cfab7e6cb68d",
+      "bytes": 280438,
+      "origin": "App/Resources/Countries/country-vatican-city.webp"
+    },
+    {
+      "file": "print/assets/art/country-venezuela-retained-13584044.webp",
+      "sha256": "13584044f91e56c4b873cad46322cf8d898a8f4e3e874c8c009726bb1b104b23",
+      "bytes": 287348,
+      "origin": "App/Resources/Countries/country-venezuela-retained-13584044.webp"
+    },
+    {
+      "file": "print/assets/art/country-vn-local-0c924a00.webp",
+      "sha256": "b59822bb82a01413718b29a19576ad15d1bcb150653bdf9565d3132ca9b2f37d",
+      "bytes": 143504,
+      "origin": "App/Resources/Countries/country-vn-local-0c924a00.webp"
+    },
+    {
+      "file": "print/assets/art/country-wallis-and-futuna-islands-2-b27f984c.webp",
+      "sha256": "b27f984ce6ea4e9a5d8120d4e9b5fd6a731f950c3e0a872379342c4029516076",
+      "bytes": 205448,
+      "origin": "App/Resources/Countries/country-wallis-and-futuna-islands-2-b27f984c.webp"
+    },
+    {
+      "file": "print/assets/art/country-western-sahara-2-62e6ea8b.webp",
+      "sha256": "62e6ea8b33a26ff1152cb314add193b042539e67a7b5b623205883edf05df157",
+      "bytes": 184036,
+      "origin": "App/Resources/Countries/country-western-sahara-2-62e6ea8b.webp"
+    },
+    {
+      "file": "print/assets/art/country-yemen-d1f71ae5.webp",
+      "sha256": "f429a2be252619c59ed9dc5976fc62e15ab54c3afc5a754c86b84396d3db5ba8",
+      "bytes": 207960,
+      "origin": "App/Resources/Countries/country-yemen-d1f71ae5.webp"
+    },
+    {
+      "file": "print/assets/art/country-zambia-1-32480074.webp",
+      "sha256": "324800745678d89e72bec3670204bee0b5f5caa623ee8ff368a153efe832b82d",
+      "bytes": 458546,
+      "origin": "App/Resources/Countries/country-zambia-1-32480074.webp"
+    },
+    {
+      "file": "print/assets/art/country-zimbabwe-1-e6a393a5.webp",
+      "sha256": "e6a393a5882a73b6b48ec278d4448a0bb618fa8dcd1ac5b6a6102e06a73fc0ad",
+      "bytes": 515484,
+      "origin": "App/Resources/Countries/country-zimbabwe-1-e6a393a5.webp"
+    },
+    {
+      "file": "print/assets/art/generic-subantarctic-terrain-v1-ca078478.webp",
+      "sha256": "ca078478015be399c7ec5646c6358d646f786df536d5f56119f2a7e532e04ea6",
+      "bytes": 660020,
+      "origin": "App/Resources/Countries/generic-subantarctic-terrain-v1-ca078478.webp"
+    },
+    {
+      "file": "print/assets/art/generic-temperate-volcanic-terrain-v1-35a3483a.webp",
+      "sha256": "35a3483a046319f3bed897ed4c69d43c37f19c7bf31cf44539f66de3ae7fa5d9",
+      "bytes": 604908,
+      "origin": "App/Resources/Countries/generic-temperate-volcanic-terrain-v1-35a3483a.webp"
+    },
+    {
+      "file": "print/assets/art/generic-tropical-terrain-v1-15868f7d.webp",
+      "sha256": "15868f7d666aea5227e14add3b09ef7b2c2aa6bce5a0e1e5cfcc1a599c5ee240",
+      "bytes": 631872,
+      "origin": "App/Resources/Countries/generic-tropical-terrain-v1-15868f7d.webp"
+    },
+    {
+      "file": "print/assets/art/mainland.jpg",
+      "sha256": "13aaa0ba6eae2bba91226970546c8de543f2631d26c50c38a319383bc606954e",
+      "bytes": 143163,
+      "origin": "App/Resources/mainland.jpg"
+    },
+    {
+      "file": "print/assets/art/region-ae-r02-v1-9d4c3f54.webp",
+      "sha256": "4f8c7d97d35361286efab079bba963d416a3d38912f9edfe66894079f1682958",
+      "bytes": 190814,
+      "origin": "App/Resources/Countries/region-ae-r02-v1-9d4c3f54.webp"
+    },
+    {
+      "file": "print/assets/art/region-af-r02-v2-4f71b9f5.webp",
+      "sha256": "3f304394635fbd61d5eaf704c94ee6e530b3e6d197b6733c07ea883c254abd33",
+      "bytes": 298774,
+      "origin": "App/Resources/Countries/region-af-r02-v2-4f71b9f5.webp"
+    },
+    {
+      "file": "print/assets/art/region-bd-r04-v1-47774ccb.webp",
+      "sha256": "0ab48002151d2b468014d2cafd0365d163293531f89460aa8ebc1912fcf6c44c",
+      "bytes": 400258,
+      "origin": "App/Resources/Countries/region-bd-r04-v1-47774ccb.webp"
+    },
+    {
+      "file": "print/assets/art/region-bn-r01-v2-1bb57596.webp",
+      "sha256": "21d9d94fd2665d31e3cb7f281a064aa7063c5babc67052d6eb72fc328864790a",
+      "bytes": 278346,
+      "origin": "App/Resources/Countries/region-bn-r01-v2-1bb57596.webp"
+    },
+    {
+      "file": "print/assets/art/region-bt-r04-v1-948b355b.webp",
+      "sha256": "9bd360e6072327620394a098ffe32af6474956a7e008ccbc90682ef16a28dd8f",
+      "bytes": 334110,
+      "origin": "App/Resources/Countries/region-bt-r04-v1-948b355b.webp"
+    },
+    {
+      "file": "print/assets/art/region-hk-r01-v2-d8775385.webp",
+      "sha256": "4e53db4dc2c6fe8988af4020b1c628e0b49105731064bd68496017b65e1a1bea",
+      "bytes": 230352,
+      "origin": "App/Resources/Countries/region-hk-r01-v2-d8775385.webp"
+    },
+    {
+      "file": "print/assets/art/region-id-r03-v1-c90659c5.webp",
+      "sha256": "5be2e6ad313ab23bf31704465bade1a47a8389d78362e0ce769bb5ed6fcc04f5",
+      "bytes": 372602,
+      "origin": "App/Resources/Countries/region-id-r03-v1-c90659c5.webp"
+    },
+    {
+      "file": "print/assets/art/region-il-r01-v1-99f29608.webp",
+      "sha256": "4d150bd4bcb1f8c594584c53b399d57a2f00a96bda7f469c2a2a769bfb8519c3",
+      "bytes": 296140,
+      "origin": "App/Resources/Countries/region-il-r01-v1-99f29608.webp"
+    },
+    {
+      "file": "print/assets/art/region-in-r04-v1-b2352103.webp",
+      "sha256": "3ce96f05859bdc4608131b2a8fbcebdb47f50fe1767ff29f9fe2ddfa7c14f2ad",
+      "bytes": 373920,
+      "origin": "App/Resources/Countries/region-in-r04-v1-b2352103.webp"
+    },
+    {
+      "file": "print/assets/art/region-iq-r04-v1-75fb7347.webp",
+      "sha256": "438a70b544d78123f396ac65d7a7a8caea8f3e4d4e24014d0fcdadb7c772217c",
+      "bytes": 344810,
+      "origin": "App/Resources/Countries/region-iq-r04-v1-75fb7347.webp"
+    },
+    {
+      "file": "print/assets/art/region-ir-r06-v1-74b20b7f.webp",
+      "sha256": "d92d09d0649cef5d02c7b1ca65e1b7c71a62b618c3f6f4e66be74488a3d2875f",
+      "bytes": 271548,
+      "origin": "App/Resources/Countries/region-ir-r06-v1-74b20b7f.webp"
+    },
+    {
+      "file": "print/assets/art/region-jo-r04-v1-479fefa8.webp",
+      "sha256": "e7a82375dff8badafae38c59d16f44c41ce33eba734ceaad5bddb50d70cc0c5f",
+      "bytes": 364258,
+      "origin": "App/Resources/Countries/region-jo-r04-v1-479fefa8.webp"
+    },
+    {
+      "file": "print/assets/art/region-kg-r02-v1-c55c920b.webp",
+      "sha256": "b6eae142bfb5a92cc9c204c83ce3fb95c9b88b9b52a1d104a42fd5b0bd5046ba",
+      "bytes": 156372,
+      "origin": "App/Resources/Countries/region-kg-r02-v1-c55c920b.webp"
+    },
+    {
+      "file": "print/assets/art/region-kh-r01-v2-6de0b356.webp",
+      "sha256": "3c996fa6ca9aa941205943844e735a111ffc03f072a77943027e0ff89b04667e",
+      "bytes": 350292,
+      "origin": "App/Resources/Countries/region-kh-r01-v2-6de0b356.webp"
+    },
+    {
+      "file": "print/assets/art/region-kp-r04-v1-0bb4e5fb.webp",
+      "sha256": "c61107417a1b1c574918651a79a48b7425f3ec7d1ee3d37fe7b0c84355600c14",
+      "bytes": 320080,
+      "origin": "App/Resources/Countries/region-kp-r04-v1-0bb4e5fb.webp"
+    },
+    {
+      "file": "print/assets/art/region-la-r03-v1-b686637e.webp",
+      "sha256": "5d2a6658fd484b1ac5237967d68e244082681a5c23f1921ef814f78740f53910",
+      "bytes": 318342,
+      "origin": "App/Resources/Countries/region-la-r03-v1-b686637e.webp"
+    },
+    {
+      "file": "print/assets/art/region-lb-r04-v2-742ee54b.webp",
+      "sha256": "5f90c9ccb82b6324dfbfc91422539aab0c8ad3e0504c5826ddc3f79f4f6746e8",
+      "bytes": 308044,
+      "origin": "App/Resources/Countries/region-lb-r04-v2-742ee54b.webp"
+    },
+    {
+      "file": "print/assets/art/region-lk-r02-v1-7b7f4803.webp",
+      "sha256": "7168d744eee9331a1a2a963e1b0d58b5b57c8937599ef77854b4d7da58e548c3",
+      "bytes": 297656,
+      "origin": "App/Resources/Countries/region-lk-r02-v1-7b7f4803.webp"
+    },
+    {
+      "file": "print/assets/art/region-mm-r01-v1-832c96b8.webp",
+      "sha256": "e905d3e9f0e3c52c6290e4add25b8a2648b85a38ff604991a6122cebffc6c2fd",
+      "bytes": 276364,
+      "origin": "App/Resources/Countries/region-mm-r01-v1-832c96b8.webp"
+    },
+    {
+      "file": "print/assets/art/region-mn-r05-v1-c8e715f0.webp",
+      "sha256": "abc05c18c0a3c34b6c53f8e212f48b02efa90273a8c76ac499df6fa469000ff5",
+      "bytes": 171200,
+      "origin": "App/Resources/Countries/region-mn-r05-v1-c8e715f0.webp"
+    },
+    {
+      "file": "print/assets/art/region-my-r04-v1-bccfd03a.webp",
+      "sha256": "90d6e40050f29a9bb624ecd9be9c65488bb0debad31bc46fdc89e9799dd649b1",
+      "bytes": 199620,
+      "origin": "App/Resources/Countries/region-my-r04-v1-bccfd03a.webp"
+    },
+    {
+      "file": "print/assets/art/region-np-r01-v1-fd3a3b43.webp",
+      "sha256": "3b19c5adf5ee2f62b0bf37d2f40f1c93d268ce20b605f6c515cca753f148ac93",
+      "bytes": 456270,
+      "origin": "App/Resources/Countries/region-np-r01-v1-fd3a3b43.webp"
+    },
+    {
+      "file": "print/assets/art/region-om-r05-v1-6bd1ca17.webp",
+      "sha256": "a413e6012392a46ae4899f02003348470eb6c8dc2d1ef3d259e1f64fde532189",
+      "bytes": 359792,
+      "origin": "App/Resources/Countries/region-om-r05-v1-6bd1ca17.webp"
+    },
+    {
+      "file": "print/assets/art/region-ph-r03-v2-3a58a04b.webp",
+      "sha256": "938a2b131d387ef2adc4e3761def1596373a5eedc41f285e5fe9579237a04e94",
+      "bytes": 205216,
+      "origin": "App/Resources/Countries/region-ph-r03-v2-3a58a04b.webp"
+    },
+    {
+      "file": "print/assets/art/region-pk-r03-v1-200f795a.webp",
+      "sha256": "c86ab38d7961fafce7b1b9fb0ecd9799fb630184ac6be6f63c035c21bb097ed7",
+      "bytes": 303446,
+      "origin": "App/Resources/Countries/region-pk-r03-v1-200f795a.webp"
+    },
+    {
+      "file": "print/assets/art/region-ps-r01-v1-b59dc944.webp",
+      "sha256": "69f863bb5305c19a3eda1081794e1486241473814f59d3be607b19837d71ff26",
+      "bytes": 235874,
+      "origin": "App/Resources/Countries/region-ps-r01-v1-b59dc944.webp"
+    },
+    {
+      "file": "print/assets/art/region-sa-r03-v1-50dae786.webp",
+      "sha256": "057b661a46898eab14b6f587b571a65ba68822cf6b55eda8b9af94b517817328",
+      "bytes": 188356,
+      "origin": "App/Resources/Countries/region-sa-r03-v1-50dae786.webp"
+    },
+    {
+      "file": "print/assets/art/region-sy-r04-v1-85eec719.webp",
+      "sha256": "09da89f15edcffaf7ce8f94ed3be8baae77839f9290473f14a1d75a9f38f0100",
+      "bytes": 397406,
+      "origin": "App/Resources/Countries/region-sy-r04-v1-85eec719.webp"
+    },
+    {
+      "file": "print/assets/art/region-th-r02-v1-9411bc72.webp",
+      "sha256": "86692a489e9396f863e4b5c572d2d77b797dd53bb6433bb9b140a11915a7a4a1",
+      "bytes": 447604,
+      "origin": "App/Resources/Countries/region-th-r02-v1-9411bc72.webp"
+    },
+    {
+      "file": "print/assets/art/region-tj-r03-v1-9020e302.webp",
+      "sha256": "62cad44f8ddda6d80bc2ca4f676046633540921075ae1476f73811ca838736f1",
+      "bytes": 364134,
+      "origin": "App/Resources/Countries/region-tj-r03-v1-9020e302.webp"
+    },
+    {
+      "file": "print/assets/art/region-tl-r03-v1-c7aae3d2.webp",
+      "sha256": "153128d7f1680e72921d4a8b4cab9419750de7c5fdf90c058f24af093b8405fa",
+      "bytes": 195838,
+      "origin": "App/Resources/Countries/region-tl-r03-v1-c7aae3d2.webp"
+    },
+    {
+      "file": "print/assets/art/region-tm-r03-v2-0ae20596.webp",
+      "sha256": "15192b2f3603fede802fd93b5a911e106d3d989510d37dda9e487d287eb189a3",
+      "bytes": 351240,
+      "origin": "App/Resources/Countries/region-tm-r03-v2-0ae20596.webp"
+    },
+    {
+      "file": "print/assets/art/region-tw-r01-v2-ef8d1ef4.webp",
+      "sha256": "7c650ef6c3bcd50de6452e46c4fbc137186c4d73676a68354bc308975c0b174f",
+      "bytes": 368108,
+      "origin": "App/Resources/Countries/region-tw-r01-v2-ef8d1ef4.webp"
+    },
+    {
+      "file": "print/assets/art/region-uz-r06-v1-54bee65f.webp",
+      "sha256": "68a32bf9b9e70c0e20d6f58eac671bd62cb6dff04d65db8b77320fd3f55bf7fb",
+      "bytes": 228946,
+      "origin": "App/Resources/Countries/region-uz-r06-v1-54bee65f.webp"
+    },
+    {
+      "file": "print/assets/art/region-ye-r06-v1-c36b7692.webp",
+      "sha256": "422723e5a995367df2f2e73bb7f11455b1a98e5fce9cf1b2b0c10f289b6e05f3",
+      "bytes": 219880,
+      "origin": "App/Resources/Countries/region-ye-r06-v1-c36b7692.webp"
+    },
+    {
+      "file": "print/assets/art/sardinia.jpg",
+      "sha256": "dbd07fb8d6329a3a6dae5ef2932a697a227d9a4c881057be599ba30cbab8ea3b",
+      "bytes": 16612,
+      "origin": "App/Resources/sardinia.jpg"
+    },
+    {
+      "file": "print/assets/art/sicily.jpg",
+      "sha256": "abceb6d02bce31e8f48a09570f3042550b0a01a74230993c635b1a8b9f6a1b23",
+      "bytes": 20487,
+      "origin": "App/Resources/sicily.jpg"
+    },
+    {
+      "file": "print/assets/fonts/Italiana-Regular.ttf",
+      "sha256": "15c4dd6ab8cf4a29ba8826f65edcbe2f6c266c557d34d081f25072dfd5605fd2",
+      "bytes": 27184,
+      "origin": "approved print collection/Italiana-Regular.ttf"
+    },
+    {
+      "file": "print/assets/fonts/InstrumentSerif-Regular.ttf",
+      "sha256": "56ac3be03ac3ba283196b3e77850ab2ffcf56cfb6fd3212c5620109a972f8c99",
+      "bytes": 69312,
+      "origin": "approved print collection/InstrumentSerif-Regular.ttf"
+    },
+    {
+      "file": "print/assets/fonts/InstrumentSerif-Italic.ttf",
+      "sha256": "9c86e4d5a47b50224a2463a9eca8535835257c8e85c470c2c6b454b1af6f046e",
+      "bytes": 70868,
+      "origin": "approved print collection/InstrumentSerif-Italic.ttf"
+    },
+    {
+      "file": "print/assets/fonts/InstrumentSans-Regular.ttf",
+      "sha256": "a22cb26e48fd79bcb01bf2fc92d36785474dce36d9c544ab0a8868c2657c4a87",
+      "bytes": 68028,
+      "origin": "approved print collection/InstrumentSans-Regular.ttf"
+    },
+    {
+      "file": "print/assets/fonts/Italiana-OFL.txt",
+      "sha256": "320551af9ba7f65d6c3dd51b714dea27fb320ab37dd5fd3837d8ecf3deef67d1",
+      "bytes": 4393,
+      "origin": "approved print collection/Italiana-OFL.txt"
+    },
+    {
+      "file": "print/assets/fonts/InstrumentSerif-OFL.txt",
+      "sha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521",
+      "bytes": 4405,
+      "origin": "approved print collection/InstrumentSerif-OFL.txt"
+    },
+    {
+      "file": "print/assets/fonts/InstrumentSans-OFL.txt",
+      "sha256": "d772141ef2499f6fbd6780dbb1be06a1bc21817a75d4a060e7cb5262a145e12b",
+      "bytes": 4402,
+      "origin": "approved print collection/InstrumentSans-OFL.txt"
+    },
+    {
+      "file": "print/assets/flags/at.svg",
+      "sha256": "c0e5cb3c1d59fd002afd6e2b0dd03787677ca3c9e7b2321f4af6d9e28256ebcd",
+      "bytes": 195,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/at.svg"
+    },
+    {
+      "file": "print/assets/flags/be.svg",
+      "sha256": "d6aff6fa4c913404eafd53f91c0a9b240fcecaddc8f0ac2160d362e38469342c",
+      "bytes": 302,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/be.svg"
+    },
+    {
+      "file": "print/assets/flags/bg.svg",
+      "sha256": "b6d979fc96dc6b46c1697a5e05ecfe1fac1fa912ed480ca7a2a9b450f087faf6",
+      "bytes": 225,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bg.svg"
+    },
+    {
+      "file": "print/assets/flags/hr.svg",
+      "sha256": "f6db0eb906b48dc7b4d6da48e8a73ccedff47ee2f972d0cca16d231913880154",
+      "bytes": 30727,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/hr.svg"
+    },
+    {
+      "file": "print/assets/flags/cy.svg",
+      "sha256": "d2ddf86c24e9d4dc4e2f5cd298b189b9d04a08c0f6497c35249f07d6f1969e33",
+      "bytes": 5466,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cy.svg"
+    },
+    {
+      "file": "print/assets/flags/cz.svg",
+      "sha256": "d601fcc2e5b1fd48b79d53c55108af4c0e90793f146db51f3ee449d8d69512bc",
+      "bytes": 225,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cz.svg"
+    },
+    {
+      "file": "print/assets/flags/dk.svg",
+      "sha256": "d2847c0bd7a1fb97977ee51f2f618c5ebc5898dd66ef9804f187613c27bdca1a",
+      "bytes": 236,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/dk.svg"
+    },
+    {
+      "file": "print/assets/flags/ee.svg",
+      "sha256": "25642310e287fbdc02e1ac3e0e08fadca9a32eae195f67b6863bf0fc6247176b",
+      "bytes": 225,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ee.svg"
+    },
+    {
+      "file": "print/assets/flags/fi.svg",
+      "sha256": "012edd984cf1879463c2855b7df02dea2f7de7f7a66b244fb1e22b4227f7aa65",
+      "bytes": 234,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/fi.svg"
+    },
+    {
+      "file": "print/assets/flags/fr.svg",
+      "sha256": "a526851c372e3372b1596be71af355ea72b1650bbc4c06e6e2c226900d3de6cc",
+      "bytes": 241,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/fr.svg"
+    },
+    {
+      "file": "print/assets/flags/de.svg",
+      "sha256": "efd480af5a154a7651f29da23ee0d09dbc892410fb4041898ddf8face336c575",
+      "bytes": 221,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/de.svg"
+    },
+    {
+      "file": "print/assets/flags/gr.svg",
+      "sha256": "a184070f7678b06777be8ac38cb05ba41829591a6dac9b64b2b72db66aec82f5",
+      "bytes": 868,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gr.svg"
+    },
+    {
+      "file": "print/assets/flags/hu.svg",
+      "sha256": "4891ce591bf29b5b68609c29d973a30f1ef109032d8dab369208d0d5f615bc74",
+      "bytes": 264,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/hu.svg"
+    },
+    {
+      "file": "print/assets/flags/ie.svg",
+      "sha256": "f82568d70bd1624ff7ce3ced8712a718a224ff2424fd2ade2da4339be3bba463",
+      "bytes": 289,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ie.svg"
+    },
+    {
+      "file": "print/assets/flags/it.svg",
+      "sha256": "9fa88118818d9b64838f578e2babcca3d0630aed21b5c33b34aff7ac5ce506bc",
+      "bytes": 289,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/it.svg"
+    },
+    {
+      "file": "print/assets/flags/lv.svg",
+      "sha256": "d0d1ac1c0e301f808be3db32bcd7cdbc8986b6ec15574f557f440caed8b7bb31",
+      "bytes": 263,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/lv.svg"
+    },
+    {
+      "file": "print/assets/flags/lt.svg",
+      "sha256": "dc0401993f6e14b3a58fa496d874b95dfcb58614052a868b14492166782c1006",
+      "bytes": 439,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/lt.svg"
+    },
+    {
+      "file": "print/assets/flags/lu.svg",
+      "sha256": "a0a530e396ac2e2490d32d432a89c08a3d35081816ba089241b9b2b2a76a049e",
+      "bytes": 225,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/lu.svg"
+    },
+    {
+      "file": "print/assets/flags/mt.svg",
+      "sha256": "a2ad157eeb5f1bb92dc9706ad90faa111dd39ec019586bc5d12e67c5a6aa6cd5",
+      "bytes": 13925,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mt.svg"
+    },
+    {
+      "file": "print/assets/flags/nl.svg",
+      "sha256": "8f691f17fe70894537af8e92f2ca47761d353639b0defc15cbe561eb503ab010",
+      "bytes": 225,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/nl.svg"
+    },
+    {
+      "file": "print/assets/flags/pl.svg",
+      "sha256": "06687a4b90fc00195d0795aea1c26a9f73f1b6ea6a76e358724b2f1f32b7c8f4",
+      "bytes": 215,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/pl.svg"
+    },
+    {
+      "file": "print/assets/flags/pt.svg",
+      "sha256": "a7a2cf0b44aaaaf4f3bdc0ee0fa308ec7085bdfedd3f72da1473d43fd2a569fb",
+      "bytes": 8001,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/pt.svg"
+    },
+    {
+      "file": "print/assets/flags/ro.svg",
+      "sha256": "17a3a747fc5e63302aaa670a667e5812f3676f46768e5a3e87b254bd41762840",
+      "bytes": 302,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ro.svg"
+    },
+    {
+      "file": "print/assets/flags/sk.svg",
+      "sha256": "578d0693bc95214334248b47c5719dd01cfc9839bd909a726df045d499fabbb6",
+      "bytes": 1182,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sk.svg"
+    },
+    {
+      "file": "print/assets/flags/si.svg",
+      "sha256": "3a5e0cac44baaea6b6d8e91054844b6ea72764f6dbe363c11ea11fd81203733a",
+      "bytes": 1993,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/si.svg"
+    },
+    {
+      "file": "print/assets/flags/es.svg",
+      "sha256": "f9cfaff858e95f830733ade9591037b5322dfb5827a53b70956a3d190bb49b9a",
+      "bytes": 80958,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/es.svg"
+    },
+    {
+      "file": "print/assets/flags/se.svg",
+      "sha256": "b3b5071e6c1d4a0e3db828bab5c7dfd68d0e90fcf3b25b15e9a2c4f96c1f79c9",
+      "bytes": 209,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/se.svg"
+    },
+    {
+      "file": "print/assets/flags/gb.svg",
+      "sha256": "c8be1e7208798a4ae692ee1e937065d498bb29e741943f6172b29118b8ed8066",
+      "bytes": 504,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gb.svg"
+    },
+    {
+      "file": "print/assets/flags/ca.svg",
+      "sha256": "345ec9dac057e203f1331b2d3f9f473789864edaee1182a26bc261356bcf72f1",
+      "bytes": 625,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ca.svg"
+    },
+    {
+      "file": "print/assets/flags/us.svg",
+      "sha256": "e7be4240cf57987926673708f09233be1ab6bdf35acc7b86bd32a263f197a2a7",
+      "bytes": 648,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/us.svg"
+    },
+    {
+      "file": "print/assets/flags/mx.svg",
+      "sha256": "9dbc8ad8b35e52ce7cb686d5cd93bd95e4c0dd8505c184186a740148ffd34901",
+      "bytes": 84753,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mx.svg"
+    },
+    {
+      "file": "print/assets/flags/bz.svg",
+      "sha256": "9aef8f4ef9d86bf989fbdd714d64c5440dceaa2bc1a23e493942129022e6b677",
+      "bytes": 42505,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bz.svg"
+    },
+    {
+      "file": "print/assets/flags/cr.svg",
+      "sha256": "4775ef01d28b8a887cde3dbe2826466ed77c87aae4d00517c99d4977afdbdc20",
+      "bytes": 290,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cr.svg"
+    },
+    {
+      "file": "print/assets/flags/sv.svg",
+      "sha256": "4c2b4e2b8bbb85d6cb97a5a35399f6fa9f269dc4b4c17591350441b61137041d",
+      "bytes": 77273,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sv.svg"
+    },
+    {
+      "file": "print/assets/flags/gt.svg",
+      "sha256": "a20814d011af90ab2e80ea88eae9928cfce824cb9b50edf7b74ce2a98a159059",
+      "bytes": 31352,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gt.svg"
+    },
+    {
+      "file": "print/assets/flags/hn.svg",
+      "sha256": "67130fa043e9d30dda7691e0d59567ff32db435a0d72e4e57309bd439fd79995",
+      "bytes": 1144,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/hn.svg"
+    },
+    {
+      "file": "print/assets/flags/ni.svg",
+      "sha256": "b9dfe1fc2aded19b2796ad7b9b681b64457250ca6043f2865b4160e9230d097f",
+      "bytes": 17249,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ni.svg"
+    },
+    {
+      "file": "print/assets/flags/pa.svg",
+      "sha256": "5e034a8ad127c43b19f52c648fe808160ab4ddb117afa4204772af96566d31bc",
+      "bytes": 521,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/pa.svg"
+    },
+    {
+      "file": "print/assets/flags/ag.svg",
+      "sha256": "131282135f0f5cfca72efa3a6dc6a3392b5999b5b15e1cbd0f3f73253c24080d",
+      "bytes": 743,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ag.svg"
+    },
+    {
+      "file": "print/assets/flags/bs.svg",
+      "sha256": "1f179c39f296e5e3e062114d62fea394ff0ea487bd29cdffbe3837b7238d46dc",
+      "bytes": 557,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bs.svg"
+    },
+    {
+      "file": "print/assets/flags/bb.svg",
+      "sha256": "46cfd88ab5ea96e75627e044d008462586fbd04a346205dfd258984a46ffc27a",
+      "bytes": 628,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bb.svg"
+    },
+    {
+      "file": "print/assets/flags/cu.svg",
+      "sha256": "15013e0bb414c074af963bab167806dc81b7e1bb6dabc05dac20b2583511e535",
+      "bytes": 610,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cu.svg"
+    },
+    {
+      "file": "print/assets/flags/dm.svg",
+      "sha256": "0a4bf1a27390308c62675099f3fb7c86ac3098fce4e8c5e95046c7a15c54226d",
+      "bytes": 15787,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/dm.svg"
+    },
+    {
+      "file": "print/assets/flags/do.svg",
+      "sha256": "c14c3f138e9a81ab988a5d58af65ac4250ae63d43d6b156d31b51d2c1e152aba",
+      "bytes": 40266,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/do.svg"
+    },
+    {
+      "file": "print/assets/flags/gd.svg",
+      "sha256": "eecc1f130ed02b2166c6f185439b7c95cabfa4a41b33c1a834ca59ffe4780785",
+      "bytes": 1712,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gd.svg"
+    },
+    {
+      "file": "print/assets/flags/ht.svg",
+      "sha256": "d45f0285b56379b6816ab02ac0fcef2dc47b3f9a926a661e51a5c546b259e5d6",
+      "bytes": 13301,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ht.svg"
+    },
+    {
+      "file": "print/assets/flags/jm.svg",
+      "sha256": "f837df1ac21a4c64be2c977e2faeb6d6593624703d7c61b71a857fa8355b7f47",
+      "bytes": 401,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/jm.svg"
+    },
+    {
+      "file": "print/assets/flags/kn.svg",
+      "sha256": "0832acb7396986c7ba99bdfdadc563df322363f91659775f14aeeeacdd546c7e",
+      "bytes": 796,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/kn.svg"
+    },
+    {
+      "file": "print/assets/flags/lc.svg",
+      "sha256": "99645e005699eba454a0c3bf052b84d161267b615d8be60c41acb41f9355e47d",
+      "bytes": 352,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/lc.svg"
+    },
+    {
+      "file": "print/assets/flags/vc.svg",
+      "sha256": "4e0a86447af4924dc11f26179f5cbb91195451ae766b2f777effe9c5f7cbc8f6",
+      "bytes": 429,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/vc.svg"
+    },
+    {
+      "file": "print/assets/flags/tt.svg",
+      "sha256": "04c13dcd0b3690f91e752680653def1c2bbe5b4553b9e5dc75748b9339636749",
+      "bytes": 304,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tt.svg"
+    },
+    {
+      "file": "print/assets/flags/ai.svg",
+      "sha256": "974c6af4adba3aed291f00a7eddaa8940853f8a7ca9be0c17ff8064714f27c51",
+      "bytes": 2304,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ai.svg"
+    },
+    {
+      "file": "print/assets/flags/aw.svg",
+      "sha256": "6cabd9394138d55a421da65a8a5b7aebd612c5df48d97fd23790ebfbd59bd1ac",
+      "bytes": 9003,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/aw.svg"
+    },
+    {
+      "file": "print/assets/flags/bm.svg",
+      "sha256": "65e4636aa41be4ff0613f19d2c56af41a2b43cd44522f83cf3e6d89fbd16aba0",
+      "bytes": 22464,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bm.svg"
+    },
+    {
+      "file": "print/assets/flags/bq.svg",
+      "sha256": "23881e6caad00e2f7f8ce50448bf419e1e1c44029db022a4a12d49416469c4d3",
+      "bytes": 221,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bq.svg"
+    },
+    {
+      "file": "print/assets/flags/vg.svg",
+      "sha256": "986913ded6a6365a65906d9185ead0c4411c5d71710fc2dfa4f47c16e4f708ab",
+      "bytes": 10018,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/vg.svg"
+    },
+    {
+      "file": "print/assets/flags/ky.svg",
+      "sha256": "a15e10f11df6e945230ea2870d578330065e56b7e0624e40c9cba6ab28b64272",
+      "bytes": 23386,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ky.svg"
+    },
+    {
+      "file": "print/assets/flags/cw.svg",
+      "sha256": "c845d0cad7f00344a2729257315afbf81c70c08bf0772211eb913a716b9aae7c",
+      "bytes": 687,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cw.svg"
+    },
+    {
+      "file": "print/assets/flags/gl.svg",
+      "sha256": "15a60b078ed13383947233241fd26f2a3a6e7e88658ef3b90f2bd6c4e658411e",
+      "bytes": 223,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gl.svg"
+    },
+    {
+      "file": "print/assets/flags/gp.svg",
+      "sha256": "ee9d78d0ee512858949eb8571960d1366e73ce751833b0da91154c2f74f88456",
+      "bytes": 231,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gp.svg"
+    },
+    {
+      "file": "print/assets/flags/mq.svg",
+      "sha256": "94315e14207c968bbaae8673d446075bd406263756986a86dd19852aff91a20e",
+      "bytes": 228,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mq.svg"
+    },
+    {
+      "file": "print/assets/flags/ms.svg",
+      "sha256": "c5d14004b158c9e4d8693b3cb50f4331b72516877a6af805316c0b54da6ae1fc",
+      "bytes": 5832,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ms.svg"
+    },
+    {
+      "file": "print/assets/flags/pr.svg",
+      "sha256": "968c343f7074f4312871383337f26454040aaa84f304460d518da549b2549f8d",
+      "bytes": 625,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/pr.svg"
+    },
+    {
+      "file": "print/assets/flags/bl.svg",
+      "sha256": "d511eb84cf9313e11f8b648de6a0122d4fa6c1662b0111890303b7867ad71d24",
+      "bytes": 231,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bl.svg"
+    },
+    {
+      "file": "print/assets/flags/mf.svg",
+      "sha256": "137b371d2ccb0e2901e0eec84e9273cfc8b0b941fcb0e3239ab62a8af0eda649",
+      "bytes": 231,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mf.svg"
+    },
+    {
+      "file": "print/assets/flags/pm.svg",
+      "sha256": "10cc79ca2b0f93864b6b16599a55f82c6b1c3af3f2b6be81ecde99031fc5f5f2",
+      "bytes": 231,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/pm.svg"
+    },
+    {
+      "file": "print/assets/flags/sx.svg",
+      "sha256": "3088bb73f80188d67a504d8b34921a719720ab8e5839c6bdb56397670bb224f6",
+      "bytes": 12214,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sx.svg"
+    },
+    {
+      "file": "print/assets/flags/tc.svg",
+      "sha256": "b8d8c6898f888af85d64bb33aeaf1c507f28489215fae298d8a152f1d0156961",
+      "bytes": 7117,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tc.svg"
+    },
+    {
+      "file": "print/assets/flags/vi.svg",
+      "sha256": "69e264ecc5c61b1750863f7863d74860a8f3ef152167c0537deb633eadced21f",
+      "bytes": 8518,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/vi.svg"
+    },
+    {
+      "file": "print/assets/flags/al.svg",
+      "sha256": "4ae4d2950f6a08528639700e48d19930b964478a2548cb9bf41b898c2b757b11",
+      "bytes": 3126,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/al.svg"
+    },
+    {
+      "file": "print/assets/flags/ad.svg",
+      "sha256": "1914f0d751b810056fdde2fa27d5c255082b4eeaa5942f8ac27e48dca3a377ed",
+      "bytes": 30510,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ad.svg"
+    },
+    {
+      "file": "print/assets/flags/am.svg",
+      "sha256": "efb6cdaad5658ae5024c86b099a96c4e3769028894240f4015cbc090a0e90e0f",
+      "bytes": 228,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/am.svg"
+    },
+    {
+      "file": "print/assets/flags/az.svg",
+      "sha256": "33ad245b2125c36fbf0f863b0edd5c85cbef37587900e101db3a615870504502",
+      "bytes": 501,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/az.svg"
+    },
+    {
+      "file": "print/assets/flags/by.svg",
+      "sha256": "a1efa44ad1167d6d77abbe59ce85aa3a68ff4bd57af79454c08a3ade5c178578",
+      "bytes": 2078,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/by.svg"
+    },
+    {
+      "file": "print/assets/flags/ba.svg",
+      "sha256": "b321fe9b47c1cd741c61b330aee66cf00550622a6a9e740161a9f240a14e0787",
+      "bytes": 1240,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ba.svg"
+    },
+    {
+      "file": "print/assets/flags/ge.svg",
+      "sha256": "0280a1279c3d1d772f1e885ee821e37a1cdb4aa085ca2870825fe10bad8d7ff1",
+      "bytes": 1313,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ge.svg"
+    },
+    {
+      "file": "print/assets/flags/is.svg",
+      "sha256": "4ef2de6fb25ff5a16789e8ffc3b68894527e68c89dce3b4e1118f5bbcc0bb7ae",
+      "bytes": 509,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/is.svg"
+    },
+    {
+      "file": "print/assets/flags/kz.svg",
+      "sha256": "381b22e4c287b13e191c208bccfc2cfb9156cd657de248f033b920a0c713a1f3",
+      "bytes": 7094,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/kz.svg"
+    },
+    {
+      "file": "print/assets/flags/xk.svg",
+      "sha256": "290d7f74bc73f362f9679a0bb09b7de0f679ab9aeaedf3952e40d79e0e3d25af",
+      "bytes": 8267,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/xk.svg"
+    },
+    {
+      "file": "print/assets/flags/li.svg",
+      "sha256": "77a33513c5288a0f2044f918efd2f82ba789d599f2e934b2af39b60fba8d9458",
+      "bytes": 7318,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/li.svg"
+    },
+    {
+      "file": "print/assets/flags/md.svg",
+      "sha256": "987ca12a752ec2b3594c115923d50160343a7d30af8ea5e316ae04fb12b8e9dd",
+      "bytes": 11126,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/md.svg"
+    },
+    {
+      "file": "print/assets/flags/mc.svg",
+      "sha256": "690c23fe64b6ac71770657fd87f744b88196a7853abb28017b5bff54473ae0da",
+      "bytes": 234,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mc.svg"
+    },
+    {
+      "file": "print/assets/flags/me.svg",
+      "sha256": "d284332e23ef88ae4f1b957ce1c6d9b9f691f94e4726f15d1a4219840008387b",
+      "bytes": 56372,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/me.svg"
+    },
+    {
+      "file": "print/assets/flags/mk.svg",
+      "sha256": "22488dc890fe1e5f7a8bea423dfe2e74f8ccf04402e75090cdeca030b12ca010",
+      "bytes": 379,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mk.svg"
+    },
+    {
+      "file": "print/assets/flags/no.svg",
+      "sha256": "ceea17af051dceefd5759a824213eb40ac8a8095aa88a6874a7bbc8de637357a",
+      "bytes": 318,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/no.svg"
+    },
+    {
+      "file": "print/assets/flags/ru.svg",
+      "sha256": "7100aaae51ff3b6a2bf0ca932b3bc518bdc760814725e7cca31d821a26c3dd7c",
+      "bytes": 225,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ru.svg"
+    },
+    {
+      "file": "print/assets/flags/sm.svg",
+      "sha256": "fc3388637c187533a086e1a25253cd96ce657bd7d105886624d21addb380af16",
+      "bytes": 15683,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sm.svg"
+    },
+    {
+      "file": "print/assets/flags/rs.svg",
+      "sha256": "b6e08e2eca1ec4c287e5d5d7c36d7d4ad9503ad030133b04cf315f95ab49961c",
+      "bytes": 181634,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/rs.svg"
+    },
+    {
+      "file": "print/assets/flags/ch.svg",
+      "sha256": "ac676cd39d7032988598ef2dd73f6bebcd767738e3e469705d6a437835ac485c",
+      "bytes": 290,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ch.svg"
+    },
+    {
+      "file": "print/assets/flags/tr.svg",
+      "sha256": "256a1d6afbedb9f731566982331a1cd1ad14aba211b8a61d338855879505e74f",
+      "bytes": 549,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tr.svg"
+    },
+    {
+      "file": "print/assets/flags/ua.svg",
+      "sha256": "b7892e2bee1b25eb5407d6f5249b020dcece29ee1c9cc1a8a6a10c4f38ce6801",
+      "bytes": 234,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ua.svg"
+    },
+    {
+      "file": "print/assets/flags/va.svg",
+      "sha256": "e0c5f2ab3c7cc99a89c8a0b02253229b5eb7239ed2969103d5f2e49c0de91fc8",
+      "bytes": 28720,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/va.svg"
+    },
+    {
+      "file": "print/assets/flags/ax.svg",
+      "sha256": "1f2bddd37b8663637561e785b3dd0286a9dd6b9966d2a7955ff5d3bfb87654a4",
+      "bytes": 556,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ax.svg"
+    },
+    {
+      "file": "print/assets/flags/fo.svg",
+      "sha256": "ec85991b8a9255cae6ea4241413ae3bd836d8afd985cc3a6cc5f91a37a00a1b4",
+      "bytes": 555,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/fo.svg"
+    },
+    {
+      "file": "print/assets/flags/gi.svg",
+      "sha256": "483f5768d4c360c28a751dd121872ed9a2f6568fc358816a95378284526e1d0b",
+      "bytes": 2889,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gi.svg"
+    },
+    {
+      "file": "print/assets/flags/gg.svg",
+      "sha256": "ea806b4831074904a767c9744ca6defc2d8f44b8565c56528f5dcd1ecc54e9f5",
+      "bytes": 604,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gg.svg"
+    },
+    {
+      "file": "print/assets/flags/im.svg",
+      "sha256": "6edaeb06a7ad667f801dec7deda2aa6aa9632df904c3cb7fc558f0c5061516e4",
+      "bytes": 9130,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/im.svg"
+    },
+    {
+      "file": "print/assets/flags/je.svg",
+      "sha256": "200badc2286f389d5f36d63e8bfbb9adf1f16b7b996d0e40d2a19833b8fbc7cb",
+      "bytes": 34192,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/je.svg"
+    },
+    {
+      "file": "print/assets/flags/sj.svg",
+      "sha256": "b60dad0ef05ccf28511eda8bfb21773223c696ef597378e77b7d518fdfb21a76",
+      "bytes": 318,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sj.svg"
+    },
+    {
+      "file": "print/assets/flags/kg.svg",
+      "sha256": "b0cf3e6806af23d8712a7007a27e8669403c00aef75faa2d7a15d183fc3d0587",
+      "bytes": 4743,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/kg.svg"
+    },
+    {
+      "file": "print/assets/flags/tj.svg",
+      "sha256": "cd1afa9808833e4983986fa8818b73a9e1640f42c827692123a9639220c4a720",
+      "bytes": 1843,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tj.svg"
+    },
+    {
+      "file": "print/assets/flags/tm.svg",
+      "sha256": "378178e3d5c91c62dafd0416b3f2b789f9505d26db0aef93dab8f5979ad60841",
+      "bytes": 38349,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tm.svg"
+    },
+    {
+      "file": "print/assets/flags/uz.svg",
+      "sha256": "62ce6f1073416e8d3d599639ec8b105f4de167c0730f036e47c650e686c4ff5d",
+      "bytes": 1498,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/uz.svg"
+    },
+    {
+      "file": "print/assets/flags/cn.svg",
+      "sha256": "981da9bdf82d48e31691f20578cefcb26cf7d0bd95e4ebd5c0df00bdfe988c1a",
+      "bytes": 813,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cn.svg"
+    },
+    {
+      "file": "print/assets/flags/hk.svg",
+      "sha256": "d9d142b2b97ec3b8190bff3802072c1b4f15573a679eead89a0ce59986dcad0c",
+      "bytes": 727,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/hk.svg"
+    },
+    {
+      "file": "print/assets/flags/mo.svg",
+      "sha256": "e1f783f6a43285a4338ee45cfe6f76db67801174968935b9f985d44d17914c83",
+      "bytes": 1370,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mo.svg"
+    },
+    {
+      "file": "print/assets/flags/kp.svg",
+      "sha256": "f79bc8b6502445b51fd6db4bb9b6fa9d49f7fbe00da77b6af4d052b6d9fec4d3",
+      "bytes": 783,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/kp.svg"
+    },
+    {
+      "file": "print/assets/flags/jp.svg",
+      "sha256": "bfea80baf9989383dc4bf7ca594ed95be0df0ff125bfc88d0bfa878eb0198022",
+      "bytes": 470,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/jp.svg"
+    },
+    {
+      "file": "print/assets/flags/mn.svg",
+      "sha256": "92d5422514f63fc10800714e71e14b576437e69a22645cf74a7ac0f516d67a69",
+      "bytes": 1397,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mn.svg"
+    },
+    {
+      "file": "print/assets/flags/kr.svg",
+      "sha256": "7a6cd5b51d0e2841ed8b79b1147ad8a66cf3c09f6344d4a63b5e4413ffa5d15b",
+      "bytes": 1061,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/kr.svg"
+    },
+    {
+      "file": "print/assets/flags/bn.svg",
+      "sha256": "4fc01eb8e4b3d4776d179cd06dfca4f21ee7ca833751eb564e7943d3203b6851",
+      "bytes": 13340,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bn.svg"
+    },
+    {
+      "file": "print/assets/flags/kh.svg",
+      "sha256": "21a9681682a2158cab294bd1826a2dda2e3edf17aff891d692c6c976c3d9c874",
+      "bytes": 7122,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/kh.svg"
+    },
+    {
+      "file": "print/assets/flags/id.svg",
+      "sha256": "5cd3acc4939dd7eae6318c8d75df8c0d1733f650e2504a2635b0dbf3dfabb040",
+      "bytes": 178,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/id.svg"
+    },
+    {
+      "file": "print/assets/flags/la.svg",
+      "sha256": "da591b989d90a90d03c736d8515fe567832eb9f24dcfa7a2870b1cf3196fdb05",
+      "bytes": 456,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/la.svg"
+    },
+    {
+      "file": "print/assets/flags/my.svg",
+      "sha256": "bb30e84a099d2d9dc286ab091bdd40ae7a8e332eb49827f2df4f11803e613667",
+      "bytes": 1378,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/my.svg"
+    },
+    {
+      "file": "print/assets/flags/mm.svg",
+      "sha256": "c0b2e23a7e202ff2ad69421ea1b528e58af4e541fc2f4b986479a9cdef7f18e0",
+      "bytes": 710,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mm.svg"
+    },
+    {
+      "file": "print/assets/flags/ph.svg",
+      "sha256": "c3bd5e08ddc5f6dbdfa899af9efb45577e3841402e6a7f5d00fef754816b2884",
+      "bytes": 1382,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ph.svg"
+    },
+    {
+      "file": "print/assets/flags/sg.svg",
+      "sha256": "25de9044c2e2775f7ccf9c1df02dd02342f915715b22c43248452b7ae24079a5",
+      "bytes": 889,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sg.svg"
+    },
+    {
+      "file": "print/assets/flags/th.svg",
+      "sha256": "329cc0d520536d6eb4b9304105f23650c2d02bbdba8f8696e996dbf166de6f2e",
+      "bytes": 284,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/th.svg"
+    },
+    {
+      "file": "print/assets/flags/tl.svg",
+      "sha256": "09c763aa3e5a48e2092348367b0bc93b1bc0536f5b527b31175e493132c55e19",
+      "bytes": 611,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tl.svg"
+    },
+    {
+      "file": "print/assets/flags/vn.svg",
+      "sha256": "2355037201315d74581ab0ad60b5587a29a087d26b0525bdeb8676e64fae5b86",
+      "bytes": 490,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/vn.svg"
+    },
+    {
+      "file": "print/assets/flags/af.svg",
+      "sha256": "313a7dd89f3d4bdceae673908ede1bca4a2f1aa0ea3562d8e96fe430d3b4c690",
+      "bytes": 19192,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/af.svg"
+    },
+    {
+      "file": "print/assets/flags/bd.svg",
+      "sha256": "1aabb4a772651fb9a673660233d5bc6f3d78dfc71df09d567769bc97b9eb554f",
+      "bytes": 187,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bd.svg"
+    },
+    {
+      "file": "print/assets/flags/bt.svg",
+      "sha256": "05ff0d4d7258357823180eec1e53baa11846505234f51061a47c2f95641d1f43",
+      "bytes": 24784,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bt.svg"
+    },
+    {
+      "file": "print/assets/flags/in.svg",
+      "sha256": "91185efa1a9b52cdc0e470712518efeefc4e4d6a6555bae9de997ba71885bb98",
+      "bytes": 1090,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/in.svg"
+    },
+    {
+      "file": "print/assets/flags/ir.svg",
+      "sha256": "cb363e09bafbff6de7c2fba6a002ca33f0563dc83a2328d34adb492cf80ca629",
+      "bytes": 15397,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ir.svg"
+    },
+    {
+      "file": "print/assets/flags/mv.svg",
+      "sha256": "5546d527d669b3935bbff11e0344fb8522200cf5ea84eba730d8a7a0b1e86f15",
+      "bytes": 286,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mv.svg"
+    },
+    {
+      "file": "print/assets/flags/np.svg",
+      "sha256": "b84c02e2fa659d0be6fc6b5963d5e9fbd25c3a6ab4d469aa61f1e3cdbd3f4637",
+      "bytes": 1005,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/np.svg"
+    },
+    {
+      "file": "print/assets/flags/pk.svg",
+      "sha256": "89e851c0d541d8166b297e13bed97e0cb500bdb4ae48fd83a86b606a078352a8",
+      "bytes": 725,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/pk.svg"
+    },
+    {
+      "file": "print/assets/flags/lk.svg",
+      "sha256": "ed3eee24d19872d6adcecd589513c057c6ecfe4997af36e8d25ef9ed58660d23",
+      "bytes": 10724,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/lk.svg"
+    },
+    {
+      "file": "print/assets/flags/bh.svg",
+      "sha256": "7a519f58c9007731d70a975a48cc81fcf516ab52ab972f9739eace370431e0c2",
+      "bytes": 252,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bh.svg"
+    },
+    {
+      "file": "print/assets/flags/iq.svg",
+      "sha256": "073b07113d582dfea58fbd7e7e63cd9626bfa4afc87b3446a2a798981e26a412",
+      "bytes": 1420,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/iq.svg"
+    },
+    {
+      "file": "print/assets/flags/il.svg",
+      "sha256": "04a099ac4370b5e856f5f8d44ce0822ec47a6d3bc395a7d048d3a46d69274d68",
+      "bytes": 834,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/il.svg"
+    },
+    {
+      "file": "print/assets/flags/jo.svg",
+      "sha256": "e3a570d5c50c15f4aca73d27b2543ee335fd04151847e3d8ef2b42e5ac1ebe12",
+      "bytes": 727,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/jo.svg"
+    },
+    {
+      "file": "print/assets/flags/kw.svg",
+      "sha256": "172a4281fdaf4b168471afcffc9e9ea277d6b5e54acc1a18b2f8ddc0a255cd7c",
+      "bytes": 517,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/kw.svg"
+    },
+    {
+      "file": "print/assets/flags/lb.svg",
+      "sha256": "94b12b3f1dc43809f93516592f07bb4eb85dabbfdd6010b736f467fa64283e7f",
+      "bytes": 2770,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/lb.svg"
+    },
+    {
+      "file": "print/assets/flags/om.svg",
+      "sha256": "3204f5aa802cf3b2b782ba0ddfd798b42c0ba7c3125606245ac34bbb1cf26cc1",
+      "bytes": 22223,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/om.svg"
+    },
+    {
+      "file": "print/assets/flags/qa.svg",
+      "sha256": "fb955ef352ff3ba1ea980090c31d5cf15257729d32949d04b18402651e93b986",
+      "bytes": 354,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/qa.svg"
+    },
+    {
+      "file": "print/assets/flags/sa.svg",
+      "sha256": "5738c8cfca5fea63587cbcf69237996c8ce6283f8016853150686f37311b620e",
+      "bytes": 9968,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sa.svg"
+    },
+    {
+      "file": "print/assets/flags/ps.svg",
+      "sha256": "5d95ca7526bf8edd90a913d7de08130688d68b7c2dd2825cbf0dde3a6aec20e3",
+      "bytes": 276,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ps.svg"
+    },
+    {
+      "file": "print/assets/flags/sy.svg",
+      "sha256": "04c5e853ade8f2e5585a3c42e9c1a1a80248125acf6a44afa85e9bbf36cd96c5",
+      "bytes": 366,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sy.svg"
+    },
+    {
+      "file": "print/assets/flags/ae.svg",
+      "sha256": "3bc52a4aac7c6c68cd7c0a04013fa14f715abfe6958e7a6e3194f0793c9eb816",
+      "bytes": 266,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ae.svg"
+    },
+    {
+      "file": "print/assets/flags/ye.svg",
+      "sha256": "ead644b90bc8cc74407d5f4680ada429bf0dc3d0dbd1e8a11fbfc7663a2d7fc2",
+      "bytes": 281,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ye.svg"
+    },
+    {
+      "file": "print/assets/flags/tw.svg",
+      "sha256": "931757f06b9ee751fd1a0cc8dd7cf862e21fdcaf894d10ed7bcc68dabcca59ad",
+      "bytes": 2499,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tw.svg"
+    },
+    {
+      "file": "print/assets/flags/cx.svg",
+      "sha256": "316d011952bf1b8ea518ee829006529e105187c8075457c9a5060c6b28a1e9ae",
+      "bytes": 2454,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cx.svg"
+    },
+    {
+      "file": "print/assets/flags/cc.svg",
+      "sha256": "57265e7cd109321f517c6e8d6e82318f1a82814cd00b9fd405943feb09911bc9",
+      "bytes": 3119,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cc.svg"
+    },
+    {
+      "file": "print/assets/flags/dz.svg",
+      "sha256": "9ea0cf93222ab7b5e7b77b9576afcad80dad1eff33827e8e58dbfbb42aeb8213",
+      "bytes": 294,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/dz.svg"
+    },
+    {
+      "file": "print/assets/flags/eg.svg",
+      "sha256": "1f418e17240c1ff39a1bcc021314d9eb8fa3029cb48ea9d9b8fdd2e4dbce37c5",
+      "bytes": 8717,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/eg.svg"
+    },
+    {
+      "file": "print/assets/flags/ly.svg",
+      "sha256": "47d96b6e011cd540bdeb30155cbd7994f929cd2f5b84cffdd50936b876823f41",
+      "bytes": 549,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ly.svg"
+    },
+    {
+      "file": "print/assets/flags/sd.svg",
+      "sha256": "25b3fa24693ccbb80991235e235e9370895f182c509c687e96824faf6b65809a",
+      "bytes": 505,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sd.svg"
+    },
+    {
+      "file": "print/assets/flags/tn.svg",
+      "sha256": "8e0274e5762a4d5f783e64f1206dd69008454f750de21d3ba61439d0af3c577c",
+      "bytes": 343,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tn.svg"
+    },
+    {
+      "file": "print/assets/flags/eh.svg",
+      "sha256": "a957f2aedbb4178a79710d178de3fdb77ebdd3b441ef8fb59e51d9b11966b06b",
+      "bytes": 804,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/eh.svg"
+    },
+    {
+      "file": "print/assets/flags/io.svg",
+      "sha256": "3b82705371d04eb663b1e477d24f91e55063f2a9ed4ffb542449abe90f2e12a2",
+      "bytes": 23024,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/io.svg"
+    },
+    {
+      "file": "print/assets/flags/bi.svg",
+      "sha256": "5ef1a56b4ebe90326d6d807bbf61bd2d6f0b752fd6966588cd42471a886307bb",
+      "bytes": 1078,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bi.svg"
+    },
+    {
+      "file": "print/assets/flags/km.svg",
+      "sha256": "81e1befbbdeab3b2a4ec451e060b161bbcc6de00b97ef9d99791bc5741dfddab",
+      "bytes": 1053,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/km.svg"
+    },
+    {
+      "file": "print/assets/flags/dj.svg",
+      "sha256": "2a22d382f85cef20ba39a9abb6e6ecffdfa806d46afea3f6d26b8a23a5c12e43",
+      "bytes": 585,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/dj.svg"
+    },
+    {
+      "file": "print/assets/flags/er.svg",
+      "sha256": "64c98a80601fc019f9ca7a71f7dd384ca995da1403e7775edcbfd79118564e45",
+      "bytes": 3158,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/er.svg"
+    },
+    {
+      "file": "print/assets/flags/et.svg",
+      "sha256": "a136cd1152e5ab4b02f2ff2eab4f5ae5b48ed3594afd7f3160899f12575b41c7",
+      "bytes": 1119,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/et.svg"
+    },
+    {
+      "file": "print/assets/flags/tf.svg",
+      "sha256": "0bf7174a781219bcc47895ff64101403a41632e62711f96a1d3dc8a1e1bbb531",
+      "bytes": 1099,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tf.svg"
+    },
+    {
+      "file": "print/assets/flags/ke.svg",
+      "sha256": "699163d87382eb969d8a26d4ce1a99a00264e8b7b95276abf585476506f46e82",
+      "bytes": 1421,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ke.svg"
+    },
+    {
+      "file": "print/assets/flags/mg.svg",
+      "sha256": "59246c21300e2456c0c5170791698e43399b089de80a69474deeac00697d2b7b",
+      "bytes": 299,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mg.svg"
+    },
+    {
+      "file": "print/assets/flags/mw.svg",
+      "sha256": "29a3e7057ec47f18bd8dd54312074335263b607c1543fcd969f89f14e307985f",
+      "bytes": 3563,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mw.svg"
+    },
+    {
+      "file": "print/assets/flags/mu.svg",
+      "sha256": "51f86810118855ca9a0b0501f3d363e0556fe74f429a66d1be9af5c027b3b593",
+      "bytes": 316,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mu.svg"
+    },
+    {
+      "file": "print/assets/flags/yt.svg",
+      "sha256": "f6ed4975d7f834a036bbd8a5cb59147c1515922055d41d7f1bb3291df2e43bfe",
+      "bytes": 231,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/yt.svg"
+    },
+    {
+      "file": "print/assets/flags/mz.svg",
+      "sha256": "ad91c2f8e6d6f80f19dca1fb080488539e2e39a4670ead32169d491bc88c3c03",
+      "bytes": 2563,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mz.svg"
+    },
+    {
+      "file": "print/assets/flags/re.svg",
+      "sha256": "7b5a5202ed96511c206fd9fcbcd07c6fd36588941ea013f16d942e525e75635c",
+      "bytes": 231,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/re.svg"
+    },
+    {
+      "file": "print/assets/flags/rw.svg",
+      "sha256": "9512100aa3e8079ed3780e8b3d6cd6a49639d0986ad78a709f81e9d0827b65b2",
+      "bytes": 755,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/rw.svg"
+    },
+    {
+      "file": "print/assets/flags/sc.svg",
+      "sha256": "30cdbe42a1aed2dab0b26cb7b510901813cad3289835ef58e07d5ff1b554ec61",
+      "bytes": 317,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sc.svg"
+    },
+    {
+      "file": "print/assets/flags/so.svg",
+      "sha256": "249e1acb87efcd0ef0f685285f14f5063f0bf260e0d28ca462e713c3f6178e7d",
+      "bytes": 483,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/so.svg"
+    },
+    {
+      "file": "print/assets/flags/ss.svg",
+      "sha256": "f7ac7017201841eee0b261f66be6787200a80fbeadbb869dc6e8823e3b2ec220",
+      "bytes": 398,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ss.svg"
+    },
+    {
+      "file": "print/assets/flags/ug.svg",
+      "sha256": "ab6aa03e1324d54ffbed5ea4560f757797f4729da58fc977527cedd586e928a5",
+      "bytes": 3929,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ug.svg"
+    },
+    {
+      "file": "print/assets/flags/tz.svg",
+      "sha256": "fd317abae009fa3629c51b82a6b9f1c529a7254406478047734bb52de83611cd",
+      "bytes": 548,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tz.svg"
+    },
+    {
+      "file": "print/assets/flags/zm.svg",
+      "sha256": "2753554062cd3761e53a180c3c8f8e245af622fb6ecf1c02020c79db0ff2d644",
+      "bytes": 5421,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/zm.svg"
+    },
+    {
+      "file": "print/assets/flags/zw.svg",
+      "sha256": "e27fcdcc882d7175cc4c07542779911043dc56262fe43b42f39bdaca09b762d5",
+      "bytes": 6186,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/zw.svg"
+    },
+    {
+      "file": "print/assets/flags/ao.svg",
+      "sha256": "3a4b1f9b0c95729b128ed86c7446ce82733f29ad9f6387e7a2ca951fa488e763",
+      "bytes": 1602,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ao.svg"
+    },
+    {
+      "file": "print/assets/flags/cm.svg",
+      "sha256": "c9a327dc0e355739a9f2bc0a91e1293f8e08e13910e718bc63fda35a244acef5",
+      "bytes": 840,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cm.svg"
+    },
+    {
+      "file": "print/assets/flags/cf.svg",
+      "sha256": "1b58dc2035ff0039c82e4dfb16a536dcf74ee09ab4d95b75221d404ad616dc0f",
+      "bytes": 687,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cf.svg"
+    },
+    {
+      "file": "print/assets/flags/td.svg",
+      "sha256": "19a278fbd88e7fa245b44b40a829bd2bc83f4a2b5521feb665cee8d629e2f026",
+      "bytes": 271,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/td.svg"
+    },
+    {
+      "file": "print/assets/flags/cg.svg",
+      "sha256": "628dcfc7f00ab09cc9074b837863c31fe4472c7c3e17c30e233332d94c37585b",
+      "bytes": 470,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cg.svg"
+    },
+    {
+      "file": "print/assets/flags/cd.svg",
+      "sha256": "ad93c1afd68e6a7364d141e0989a798e81a202fe4674f21fece3ceea83fd167c",
+      "bytes": 334,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cd.svg"
+    },
+    {
+      "file": "print/assets/flags/gq.svg",
+      "sha256": "61ddf0a98d1d4bf93c6ec53eec080662efceabc37d1361eda4e7d291e10976d8",
+      "bytes": 4941,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gq.svg"
+    },
+    {
+      "file": "print/assets/flags/ga.svg",
+      "sha256": "f7b775c474b0331222ed84a3d1b5a5d66af1c097c8565766db17a5cff5237c93",
+      "bytes": 271,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ga.svg"
+    },
+    {
+      "file": "print/assets/flags/st.svg",
+      "sha256": "880c17f94cb564b1818f604b764ac8c3b87e019d97724a7ebb9e69aa96821238",
+      "bytes": 954,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/st.svg"
+    },
+    {
+      "file": "print/assets/flags/bw.svg",
+      "sha256": "180bfa4e76b78fa7b52bf9f3c8e99d3c1b4aa520b97a239661a8953dc90658b3",
+      "bytes": 264,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bw.svg"
+    },
+    {
+      "file": "print/assets/flags/sz.svg",
+      "sha256": "5d6399c149d143306981f386048047b984586b2f85b0cf11fd7aeaa5757a81e9",
+      "bytes": 4663,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sz.svg"
+    },
+    {
+      "file": "print/assets/flags/ls.svg",
+      "sha256": "83d2e4152ef06ed39f5792dd2d5b9aa9953e3cbfe645f0384449e87b73dc96fb",
+      "bytes": 1133,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ls.svg"
+    },
+    {
+      "file": "print/assets/flags/na.svg",
+      "sha256": "caa43fcdebb595ebf9808be7c5ba326a65bb40f78172182b1470102dd97a0182",
+      "bytes": 993,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/na.svg"
+    },
+    {
+      "file": "print/assets/flags/za.svg",
+      "sha256": "1755a5e16f1c9f5120e4871e8454bdee663beb4fb4827012bcd02cb9044249c2",
+      "bytes": 860,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/za.svg"
+    },
+    {
+      "file": "print/assets/flags/bj.svg",
+      "sha256": "0a46cbae6018acdbc4a485f6b1c4a3df7a7b36680439f6eb5d1bfb957f704888",
+      "bytes": 499,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bj.svg"
+    },
+    {
+      "file": "print/assets/flags/bf.svg",
+      "sha256": "4723f5e95c0728e89b5715f3206ff24d8db157f325e163779bfac41c3200f93b",
+      "bytes": 342,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bf.svg"
+    },
+    {
+      "file": "print/assets/flags/cv.svg",
+      "sha256": "2fa67e0a2477306f0427877b78d2276c58c496ff50faf4b3d69252350821e138",
+      "bytes": 1411,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cv.svg"
+    },
+    {
+      "file": "print/assets/flags/ci.svg",
+      "sha256": "7a09020c7263a1c35a2fab646bdb4ee16fcc06a292f63d5a1d9f1feb2501ecd2",
+      "bytes": 277,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ci.svg"
+    },
+    {
+      "file": "print/assets/flags/gm.svg",
+      "sha256": "2aa3fad4e8820fb42386f62d3efee1d3923817a49ed2bb05ba364c58d0ca4d3f",
+      "bytes": 543,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gm.svg"
+    },
+    {
+      "file": "print/assets/flags/gh.svg",
+      "sha256": "53c55ca455293bceecfe6a5d6b12dc0bb670734c50bfd95cb21dc4ef12197405",
+      "bytes": 293,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gh.svg"
+    },
+    {
+      "file": "print/assets/flags/gn.svg",
+      "sha256": "ee01e7dd4abb0a995980ec8d0ba2bf314b564c73fcaba39fed8a5f48a7c49753",
+      "bytes": 292,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gn.svg"
+    },
+    {
+      "file": "print/assets/flags/gw.svg",
+      "sha256": "6b81a234b51ceacb4b67e889bb5b7ccf5f1084ac34b4fded2b97af5336f4797e",
+      "bytes": 846,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gw.svg"
+    },
+    {
+      "file": "print/assets/flags/lr.svg",
+      "sha256": "69f2ce4b9490ab3c94ca30dc94862e5f1e8cb0f84344e5db0eb9300df5c66146",
+      "bytes": 713,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/lr.svg"
+    },
+    {
+      "file": "print/assets/flags/ml.svg",
+      "sha256": "49e84081981f2b8ec245dcc66ebf44521fc91b3eae6e9f10c925616f78951f14",
+      "bytes": 273,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ml.svg"
+    },
+    {
+      "file": "print/assets/flags/mr.svg",
+      "sha256": "ea338a9f7744fb25c3664f3cee5b2355e70bed7b0d79d952d246436cb600edb9",
+      "bytes": 437,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mr.svg"
+    },
+    {
+      "file": "print/assets/flags/ne.svg",
+      "sha256": "4b91653d53f76ddaf492a61adad3c1be86528ee9f23d7a18a6044c4eed165cad",
+      "bytes": 273,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ne.svg"
+    },
+    {
+      "file": "print/assets/flags/ng.svg",
+      "sha256": "b7a2a45a6499095efce41592428ff558ec5bd83d2751858dfe5fa4589334b66f",
+      "bytes": 257,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ng.svg"
+    },
+    {
+      "file": "print/assets/flags/sh.svg",
+      "sha256": "559acea1c3e57186410e4058e3eca3a51c6b54744342434fdf6a74d71f0c2383",
+      "bytes": 504,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sh.svg"
+    },
+    {
+      "file": "print/assets/flags/sn.svg",
+      "sha256": "d97a004ca8a85c79286ced0b87a9dd12e74035e15e155ee93f261310547ca5e0",
+      "bytes": 417,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sn.svg"
+    },
+    {
+      "file": "print/assets/flags/sl.svg",
+      "sha256": "d0c384b03a037f4eeb6c967346e3faafb4a09a3706667ac762999e54b55bc647",
+      "bytes": 272,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sl.svg"
+    },
+    {
+      "file": "print/assets/flags/tg.svg",
+      "sha256": "f52b955fb48669d149991f511db818761589e8d45ce4dcc84478737cc0156d75",
+      "bytes": 708,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tg.svg"
+    },
+    {
+      "file": "print/assets/flags/au.svg",
+      "sha256": "cbb2206c5e59a25d79228306af973666a191e163f0ae337681f447977e6edb18",
+      "bytes": 1296,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/au.svg"
+    },
+    {
+      "file": "print/assets/flags/hm.svg",
+      "sha256": "b57fb521c08a8f80adf13aa96f151db87e192c9ea3d22e0918fa57a187b3792f",
+      "bytes": 1296,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/hm.svg"
+    },
+    {
+      "file": "print/assets/flags/nz.svg",
+      "sha256": "794a2c8c09796090ab748a74bc35aed825e701eaddc46b138f300401ac9a25cd",
+      "bytes": 2172,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/nz.svg"
+    },
+    {
+      "file": "print/assets/flags/nf.svg",
+      "sha256": "c42c0423a879ba6131dc1342d42139a2fa5a714fa3c7c2cbb265ae1d85bb281c",
+      "bytes": 5563,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/nf.svg"
+    },
+    {
+      "file": "print/assets/flags/fj.svg",
+      "sha256": "b23cbee897c889ce2d057aaca7c221b74a386ea58efb29da1982418564b58343",
+      "bytes": 24100,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/fj.svg"
+    },
+    {
+      "file": "print/assets/flags/nc.svg",
+      "sha256": "f914e0e0c744c4d78dfb3f1da3d8049adb31fb4ff1d6fe9a70cce2aff2aa8aae",
+      "bytes": 1618,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/nc.svg"
+    },
+    {
+      "file": "print/assets/flags/pg.svg",
+      "sha256": "43e492331c192a947d9bd72ac6e1f4edcab1d86af097b8840faa9ac24e439d97",
+      "bytes": 1608,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/pg.svg"
+    },
+    {
+      "file": "print/assets/flags/sb.svg",
+      "sha256": "b34eabf373af639cec1d7de7c0dff84df6487737f04510efcc356810147c2cfa",
+      "bytes": 940,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sb.svg"
+    },
+    {
+      "file": "print/assets/flags/vu.svg",
+      "sha256": "6c711900c98d0d79ec9676f921d4bc9f3a77f57bf8a78964176b45fed1923847",
+      "bytes": 1782,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/vu.svg"
+    },
+    {
+      "file": "print/assets/flags/gu.svg",
+      "sha256": "f49a02cc01b2c97d43e89260ed852e9bf7c5006fbbc384a2c786819ba6a6695f",
+      "bytes": 4327,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gu.svg"
+    },
+    {
+      "file": "print/assets/flags/ki.svg",
+      "sha256": "01206661587925daf1e57d8b6a6eb85f07a8ccf2230b89ed9b6e3a39b83f0ce0",
+      "bytes": 5627,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ki.svg"
+    },
+    {
+      "file": "print/assets/flags/mh.svg",
+      "sha256": "96d7c0b917a5c064636d11239b2a3031e574bc782e2445ec917208eeb051ccaa",
+      "bytes": 729,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mh.svg"
+    },
+    {
+      "file": "print/assets/flags/fm.svg",
+      "sha256": "23db3e9fe582cc8dd5d3b9ad58aff1ef5cb359c330bbed59fc053d76355434de",
+      "bytes": 771,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/fm.svg"
+    },
+    {
+      "file": "print/assets/flags/nr.svg",
+      "sha256": "f1de4b06479d454bb0a23a1bfee221e97d68e0a128002bfef1a1b3ea4c88ad46",
+      "bytes": 646,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/nr.svg"
+    },
+    {
+      "file": "print/assets/flags/mp.svg",
+      "sha256": "fffb725bb0e0cdcdfb548bcd43f3eb9e10201d48a050d1249ebd35419d5cabbe",
+      "bytes": 22568,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/mp.svg"
+    },
+    {
+      "file": "print/assets/flags/pw.svg",
+      "sha256": "a61ab9d94f2968304eaf62d838e0ba1674977da8a5056beae5776fe912a8e233",
+      "bytes": 466,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/pw.svg"
+    },
+    {
+      "file": "print/assets/flags/um.svg",
+      "sha256": "60a633301685f6e5218db358980dadd36a6994034ab5edfbebf24422ee7ce27b",
+      "bytes": 648,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/um.svg"
+    },
+    {
+      "file": "print/assets/flags/as.svg",
+      "sha256": "6f356d18cc09efabdae58579373f5dc89b25695b42cb4e92d7ebc9e94477b81f",
+      "bytes": 30449,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/as.svg"
+    },
+    {
+      "file": "print/assets/flags/ck.svg",
+      "sha256": "b17c039f7195b292265dd28b50f85b3668e28e490b48df760e953e3ab0bc3557",
+      "bytes": 1898,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ck.svg"
+    },
+    {
+      "file": "print/assets/flags/pf.svg",
+      "sha256": "67391766bf25f74433f1de41d7c2370215b23a375064b1345b12f9d0e0b6d35c",
+      "bytes": 4030,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/pf.svg"
+    },
+    {
+      "file": "print/assets/flags/nu.svg",
+      "sha256": "835c94f3f7aa08d717e2f4254234947bfab26eaa925cbd50871b1de3d31676c5",
+      "bytes": 864,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/nu.svg"
+    },
+    {
+      "file": "print/assets/flags/pn.svg",
+      "sha256": "b647b2f7d9c6961b120f05a8ce196d6a79ec2082163e2b33f831947849aa7da4",
+      "bytes": 13471,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/pn.svg"
+    },
+    {
+      "file": "print/assets/flags/ws.svg",
+      "sha256": "6b1a7ebcce97d75020af84da13b918875ba38ba4535b4d990b2be8985a67b8ad",
+      "bytes": 687,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ws.svg"
+    },
+    {
+      "file": "print/assets/flags/tk.svg",
+      "sha256": "8040c00b82d542b3ff7c2b4cf4542ea7d36bb4f252fd3a954dcf60f3a99303a2",
+      "bytes": 761,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tk.svg"
+    },
+    {
+      "file": "print/assets/flags/to.svg",
+      "sha256": "b351703fccc1e08a13d2d57260dd71bee8280e393030b879b9df1c7ccd3a9538",
+      "bytes": 352,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/to.svg"
+    },
+    {
+      "file": "print/assets/flags/tv.svg",
+      "sha256": "d94fa5f107cbacdba29731226bc5ad06edc95784e3d29c20e1ea41fe384530b7",
+      "bytes": 1427,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/tv.svg"
+    },
+    {
+      "file": "print/assets/flags/wf.svg",
+      "sha256": "ad34db05b0badcbab865a0cbcd45cd0251479a20aa505173f276ca4a45b4fc6e",
+      "bytes": 231,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/wf.svg"
+    },
+    {
+      "file": "print/assets/flags/ma.svg",
+      "sha256": "28cfcdecf9675b0a14fbfae176324aea03711edab1a13592cfb7d58e6772b25c",
+      "bytes": 247,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ma.svg"
+    },
+    {
+      "file": "print/assets/flags/ar.svg",
+      "sha256": "da39bfbe83fd35fae781f605c4a297b632f03ccf72d4cb0499e86dac8370663d",
+      "bytes": 3461,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ar.svg"
+    },
+    {
+      "file": "print/assets/flags/bo.svg",
+      "sha256": "ee1075ebb655dd8252ec317827baa0a75cf0a5e4f0b0b35d6e9766b30686d183",
+      "bytes": 102880,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bo.svg"
+    },
+    {
+      "file": "print/assets/flags/bv.svg",
+      "sha256": "d972d58c5ff46de1c76f3bd465f42300bb5777d37be2c006079ce3b3b21aec50",
+      "bytes": 582,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/bv.svg"
+    },
+    {
+      "file": "print/assets/flags/br.svg",
+      "sha256": "b0a912826c3ffd7287435ebed66e18fe058e992309c00dc10b430dd41a29ba91",
+      "bytes": 7140,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/br.svg"
+    },
+    {
+      "file": "print/assets/flags/cl.svg",
+      "sha256": "bcf0ccdf0999a1cd82061202988e1f6088c2070e3e76794d67cb375ef325ef76",
+      "bytes": 552,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/cl.svg"
+    },
+    {
+      "file": "print/assets/flags/co.svg",
+      "sha256": "6bab3c96c1657510c6e49354dd40203c69401bee54da497392ab9267334e5fd4",
+      "bytes": 286,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/co.svg"
+    },
+    {
+      "file": "print/assets/flags/ec.svg",
+      "sha256": "4472b0618e2f5e31d31d16c0d7d811310c33b07d5a101b54f60fcb7ec84d1d4d",
+      "bytes": 28777,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ec.svg"
+    },
+    {
+      "file": "print/assets/flags/fk.svg",
+      "sha256": "34676edea491307813e055ea141cc6886f266e958ea35825a0bc6adbccb5ae63",
+      "bytes": 28737,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/fk.svg"
+    },
+    {
+      "file": "print/assets/flags/gf.svg",
+      "sha256": "cb5464e28e5fafd01fa1222c9605d6b7e67eb683e881fe59a3eb048f7f0b7b6b",
+      "bytes": 231,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gf.svg"
+    },
+    {
+      "file": "print/assets/flags/gy.svg",
+      "sha256": "5bd7a7b326efd9c28c3ec3b23118b241cb7643967fe9410611f392bc3deb65b0",
+      "bytes": 493,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gy.svg"
+    },
+    {
+      "file": "print/assets/flags/py.svg",
+      "sha256": "fe0968470b7910543b23f7621b00cdeeebde8d90cffbd4fbcbfa97783a01cc04",
+      "bytes": 16184,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/py.svg"
+    },
+    {
+      "file": "print/assets/flags/pe.svg",
+      "sha256": "e9dd299d453d9c173203e60f69623ef2148dbee24b2a1763328e94d4dfece05f",
+      "bytes": 186,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/pe.svg"
+    },
+    {
+      "file": "print/assets/flags/gs.svg",
+      "sha256": "71b1be86c54f5066be18bd92b32bc45df56780ce8c38e7aa3a1b81b4b2d1f58e",
+      "bytes": 31502,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/gs.svg"
+    },
+    {
+      "file": "print/assets/flags/sr.svg",
+      "sha256": "5194a6af4e0d8a350ba7c1f66873725a9e1c91f2054fb9e85fc59cf7f7f2c0f2",
+      "bytes": 312,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/sr.svg"
+    },
+    {
+      "file": "print/assets/flags/uy.svg",
+      "sha256": "47656c0bf4961a1f7233841eb78756cd45d074e7d4061b8a1217bba7754a30fe",
+      "bytes": 1724,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/uy.svg"
+    },
+    {
+      "file": "print/assets/flags/ve.svg",
+      "sha256": "5712f1c63ba0bfa25a853c100cdebfd6698cce98fc2e0ba8d3fab35df541efa1",
+      "bytes": 1206,
+      "origin": "https://github.com/lipis/flag-icons/tree/ac7e0eb3259eb62aa6100c435607e2fe03896a97/flags/4x3/ve.svg"
+    },
+    {
+      "file": "print/vendor/pako-inflate-2.1.0.min.js",
+      "sha256": "fa226c8e1e3556993260e6a5c1fe94e225da59b3418a06811fdc51d308f8bb43",
+      "bytes": 21479,
+      "origin": "https://registry.npmjs.org/pako/-/pako-2.1.0.tgz",
+      "integrity": "sha512-w+eufiZ1WuJYgPXbV/PO3NCMEc3xqylkKHzp8bxp1uW4qaSNQUkwmLLEc3kKsfz8lpV1F8Ht3U1Cm+9Srog2ug=="
+    },
+    {
+      "file": "print/vendor/pako-LICENSE.txt",
+      "sha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539",
+      "bytes": 1104,
+      "origin": "https://registry.npmjs.org/pako/-/pako-2.1.0.tgz",
+      "integrity": "sha512-w+eufiZ1WuJYgPXbV/PO3NCMEc3xqylkKHzp8bxp1uW4qaSNQUkwmLLEc3kKsfz8lpV1F8Ht3U1Cm+9Srog2ug=="
+    },
+    {
+      "file": "print/assets/art/approved-italy.png",
+      "sha256": "4bc1668ab4b41816638730e17ff1914aaa26454ce69752b5735e4abb9f54eba7",
+      "bytes": 1681379,
+      "origin": "approved print collection/italy-art.png"
+    }
+  ]
+}

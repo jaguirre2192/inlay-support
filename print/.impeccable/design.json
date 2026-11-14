@@ -1,0 +1,1058 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-14T21:16:25.329331Z",
+  "title": "Design System: Inlay Connected Print Studio",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Deep Green Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0125 164.24)",
+          "oklch(26% 0.0217 164.24)",
+          "oklch(38% 0.0317 164.24)",
+          "oklch(50% 0.0333 164.24)",
+          "oklch(62% 0.0333 164.24)",
+          "oklch(74% 0.0333 164.24)",
+          "oklch(86% 0.0187 164.24)",
+          "oklch(95% 0.0067 164.24)"
+        ]
+      },
+      "ink-hover": {
+        "role": "primary",
+        "displayName": "Lifted Green",
+        "tonalRamp": [
+          "oklch(15% 0.0144 150.20)",
+          "oklch(26% 0.0249 150.20)",
+          "oklch(38% 0.0364 150.20)",
+          "oklch(50% 0.0383 150.20)",
+          "oklch(62% 0.0383 150.20)",
+          "oklch(74% 0.0383 150.20)",
+          "oklch(86% 0.0215 150.20)",
+          "oklch(95% 0.0077 150.20)"
+        ]
+      },
+      "focus": {
+        "role": "secondary",
+        "displayName": "Earth Focus",
+        "tonalRamp": [
+          "oklch(15% 0.0289 62.82)",
+          "oklch(26% 0.0501 62.82)",
+          "oklch(38% 0.0732 62.82)",
+          "oklch(50% 0.0770 62.82)",
+          "oklch(62% 0.0770 62.82)",
+          "oklch(74% 0.0770 62.82)",
+          "oklch(86% 0.0431 62.82)",
+          "oklch(95% 0.0154 62.82)"
+        ]
+      },
+      "error": {
+        "role": "secondary",
+        "displayName": "Clay Error",
+        "tonalRamp": [
+          "oklch(15% 0.0450 31.97)",
+          "oklch(26% 0.0780 31.97)",
+          "oklch(38% 0.1140 31.97)",
+          "oklch(50% 0.1200 31.97)",
+          "oklch(62% 0.1200 31.97)",
+          "oklch(74% 0.1200 31.97)",
+          "oklch(86% 0.0672 31.97)",
+          "oklch(95% 0.0240 31.97)"
+        ]
+      },
+      "error-line": {
+        "role": "secondary",
+        "displayName": "Error Stroke",
+        "tonalRamp": [
+          "oklch(15% 0.0251 48.21)",
+          "oklch(26% 0.0436 48.21)",
+          "oklch(38% 0.0637 48.21)",
+          "oklch(50% 0.0670 48.21)",
+          "oklch(62% 0.0670 48.21)",
+          "oklch(74% 0.0670 48.21)",
+          "oklch(86% 0.0375 48.21)",
+          "oklch(95% 0.0134 48.21)"
+        ]
+      },
+      "frame-oak": {
+        "role": "secondary",
+        "displayName": "Natural Oak",
+        "tonalRamp": [
+          "oklch(15% 0.0299 74.27)",
+          "oklch(26% 0.0519 74.27)",
+          "oklch(38% 0.0759 74.27)",
+          "oklch(50% 0.0799 74.27)",
+          "oklch(62% 0.0799 74.27)",
+          "oklch(74% 0.0799 74.27)",
+          "oklch(86% 0.0447 74.27)",
+          "oklch(95% 0.0160 74.27)"
+        ]
+      },
+      "frame-walnut": {
+        "role": "secondary",
+        "displayName": "Dark Walnut",
+        "tonalRamp": [
+          "oklch(15% 0.0191 59.08)",
+          "oklch(26% 0.0331 59.08)",
+          "oklch(38% 0.0484 59.08)",
+          "oklch(50% 0.0509 59.08)",
+          "oklch(62% 0.0509 59.08)",
+          "oklch(74% 0.0509 59.08)",
+          "oklch(86% 0.0285 59.08)",
+          "oklch(95% 0.0102 59.08)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0063 88.00)",
+          "oklch(26% 0.0109 88.00)",
+          "oklch(38% 0.0160 88.00)",
+          "oklch(50% 0.0168 88.00)",
+          "oklch(62% 0.0168 88.00)",
+          "oklch(74% 0.0168 88.00)",
+          "oklch(86% 0.0094 88.00)",
+          "oklch(95% 0.0034 88.00)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Quiet Green",
+        "tonalRamp": [
+          "oklch(15% 0.0129 137.48)",
+          "oklch(26% 0.0224 137.48)",
+          "oklch(38% 0.0328 137.48)",
+          "oklch(50% 0.0345 137.48)",
+          "oklch(62% 0.0345 137.48)",
+          "oklch(74% 0.0345 137.48)",
+          "oklch(86% 0.0193 137.48)",
+          "oklch(95% 0.0069 137.48)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Paper Rule",
+        "tonalRamp": [
+          "oklch(15% 0.0092 106.91)",
+          "oklch(26% 0.0159 106.91)",
+          "oklch(38% 0.0232 106.91)",
+          "oklch(50% 0.0245 106.91)",
+          "oklch(62% 0.0245 106.91)",
+          "oklch(74% 0.0245 106.91)",
+          "oklch(86% 0.0137 106.91)",
+          "oklch(95% 0.0049 106.91)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Field Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0051 92.98)",
+          "oklch(26% 0.0088 92.98)",
+          "oklch(38% 0.0129 92.98)",
+          "oklch(50% 0.0136 92.98)",
+          "oklch(62% 0.0136 92.98)",
+          "oklch(74% 0.0136 92.98)",
+          "oklch(86% 0.0076 92.98)",
+          "oklch(95% 0.0027 92.98)"
+        ]
+      },
+      "control-line": {
+        "role": "neutral",
+        "displayName": "Control Edge",
+        "tonalRamp": [
+          "oklch(15% 0.0160 129.96)",
+          "oklch(26% 0.0278 129.96)",
+          "oklch(38% 0.0406 129.96)",
+          "oklch(50% 0.0428 129.96)",
+          "oklch(62% 0.0428 129.96)",
+          "oklch(74% 0.0428 129.96)",
+          "oklch(86% 0.0239 129.96)",
+          "oklch(95% 0.0086 129.96)"
+        ]
+      },
+      "choice-line": {
+        "role": "neutral",
+        "displayName": "Choice Edge",
+        "tonalRamp": [
+          "oklch(15% 0.0154 120.47)",
+          "oklch(26% 0.0266 120.47)",
+          "oklch(38% 0.0389 120.47)",
+          "oklch(50% 0.0410 120.47)",
+          "oklch(62% 0.0410 120.47)",
+          "oklch(74% 0.0410 120.47)",
+          "oklch(86% 0.0230 120.47)",
+          "oklch(95% 0.0082 120.47)"
+        ]
+      },
+      "selected": {
+        "role": "neutral",
+        "displayName": "Selected Sage",
+        "tonalRamp": [
+          "oklch(15% 0.0086 117.61)",
+          "oklch(26% 0.0150 117.61)",
+          "oklch(38% 0.0219 117.61)",
+          "oklch(50% 0.0230 117.61)",
+          "oklch(62% 0.0230 117.61)",
+          "oklch(74% 0.0230 117.61)",
+          "oklch(86% 0.0129 117.61)",
+          "oklch(95% 0.0046 117.61)"
+        ]
+      },
+      "notice-paper": {
+        "role": "neutral",
+        "displayName": "Status Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0075 112.95)",
+          "oklch(26% 0.0131 112.95)",
+          "oklch(38% 0.0191 112.95)",
+          "oklch(50% 0.0201 112.95)",
+          "oklch(62% 0.0201 112.95)",
+          "oklch(74% 0.0201 112.95)",
+          "oklch(86% 0.0112 112.95)",
+          "oklch(95% 0.0040 112.95)"
+        ]
+      },
+      "error-paper": {
+        "role": "neutral",
+        "displayName": "Error Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0093 53.68)",
+          "oklch(26% 0.0160 53.68)",
+          "oklch(38% 0.0234 53.68)",
+          "oklch(50% 0.0247 53.68)",
+          "oklch(62% 0.0247 53.68)",
+          "oklch(74% 0.0247 53.68)",
+          "oklch(86% 0.0138 53.68)",
+          "oklch(95% 0.0049 53.68)"
+        ]
+      },
+      "gallery-ground": {
+        "role": "neutral",
+        "displayName": "Gallery Mount",
+        "tonalRamp": [
+          "oklch(15% 0.0071 100.15)",
+          "oklch(26% 0.0123 100.15)",
+          "oklch(38% 0.0179 100.15)",
+          "oklch(50% 0.0189 100.15)",
+          "oklch(62% 0.0189 100.15)",
+          "oklch(74% 0.0189 100.15)",
+          "oklch(86% 0.0106 100.15)",
+          "oklch(95% 0.0038 100.15)"
+        ]
+      },
+      "footer-ground": {
+        "role": "neutral",
+        "displayName": "Footer Green",
+        "tonalRamp": [
+          "oklch(15% 0.0136 163.68)",
+          "oklch(26% 0.0235 163.68)",
+          "oklch(38% 0.0344 163.68)",
+          "oklch(50% 0.0362 163.68)",
+          "oklch(62% 0.0362 163.68)",
+          "oklch(74% 0.0362 163.68)",
+          "oklch(86% 0.0203 163.68)",
+          "oklch(95% 0.0072 163.68)"
+        ]
+      },
+      "mount-paper": {
+        "role": "neutral",
+        "displayName": "Mount Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0031 91.48)",
+          "oklch(26% 0.0053 91.48)",
+          "oklch(38% 0.0078 91.48)",
+          "oklch(50% 0.0082 91.48)",
+          "oklch(62% 0.0082 91.48)",
+          "oklch(74% 0.0082 91.48)",
+          "oklch(86% 0.0046 91.48)",
+          "oklch(95% 0.0016 91.48)"
+        ]
+      },
+      "unvisited-ground": {
+        "role": "neutral",
+        "displayName": "Unvisited Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0080 109.73)",
+          "oklch(26% 0.0140 109.73)",
+          "oklch(38% 0.0204 109.73)",
+          "oklch(50% 0.0215 109.73)",
+          "oklch(62% 0.0215 109.73)",
+          "oklch(74% 0.0215 109.73)",
+          "oklch(86% 0.0120 109.73)",
+          "oklch(95% 0.0043 109.73)"
+        ]
+      },
+      "map-line": {
+        "role": "neutral",
+        "displayName": "Map Rule",
+        "tonalRamp": [
+          "oklch(15% 0.0100 116.67)",
+          "oklch(26% 0.0173 116.67)",
+          "oklch(38% 0.0253 116.67)",
+          "oklch(50% 0.0267 116.67)",
+          "oklch(62% 0.0267 116.67)",
+          "oklch(74% 0.0267 116.67)",
+          "oklch(86% 0.0149 116.67)",
+          "oklch(95% 0.0053 116.67)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Default editor title; responsive/import variants are in responsiveTypography."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Serif photograph-section heading."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Instructions and editable text."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Ordinary button labels."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels, disclosures and summary readouts."
+      },
+      "label-small": {
+        "displayName": "Label Small",
+        "purpose": "Radio options, back navigation and compact progress."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "Helper, privacy and storage notes."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Italic serif caption beneath the proof."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Widely tracked Inlay navigation mark."
+      }
+    },
+    "shadows": [
+      {
+        "name": "framed-proof",
+        "value": "10px 18px 32px #39332638,2px 3px 5px #39332625",
+        "purpose": "Diffuse depth on the illustrative frame only.",
+        "source": "studio.css:2 .frame"
+      },
+      {
+        "name": "selected-option",
+        "value": "inset 0 0 0 1px var(--ink,#22382e)",
+        "purpose": "A state-reinforcing inset edge, not floating elevation.",
+        "source": "studio.css:2 .choices input:checked+span"
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-color",
+        "value": "background-color .18s,color .18s",
+        "purpose": "Buttons and links only when prefers-reduced-motion is no-preference.",
+        "source": "studio.css:3"
+      },
+      {
+        "name": "frame-color",
+        "value": "background-color .2s",
+        "purpose": "Preview frame presentation change under the same motion preference.",
+        "source": "studio.css:3"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "desktop-sticky-min",
+        "value": "1100px",
+        "query": "(min-width:1100px)"
+      },
+      {
+        "name": "stacked-max",
+        "value": "850px",
+        "query": "(max-width:850px)"
+      },
+      {
+        "name": "phone-max",
+        "value": "480px",
+        "query": "(max-width:480px)"
+      }
+    ],
+    "scope": {
+      "route": "/print/",
+      "designFile": "DESIGN.md",
+      "sidecarFile": ".impeccable/design.json",
+      "supportIdentity": "../DESIGN.md",
+      "surfaceBrief": "../.impeccable/surfaces/print-index-html.md",
+      "product": "../PRODUCT.md",
+      "authority": "Approved private Inlay Print Collection system, inherited as a precise Operate extension; no new comp, QUALITY BAR or build-phase state is inferred."
+    },
+    "previewEnvironment": {
+      "baseRoute": "/print/",
+      "fontAssets": "/print/assets/fonts/",
+      "customProperties": {
+        "--paper": "colors.paper",
+        "--ink": "colors.ink",
+        "--muted": "colors.muted",
+        "--line": "colors.line",
+        "--field": "colors.field",
+        "--selected": "colors.selected",
+        "--error": "colors.error",
+        "--focus": "colors.focus"
+      },
+      "notes": [
+        "Each preview is self-contained HTML/CSS, uses ds- classes and loads the actual self-hosted Sans face.",
+        "Source CSS custom properties stay live-bound through var() with source-value fallbacks. Non-variable source values remain literal.",
+        "The balanced navigation preview also inherits --gutter, with its actual source clamp as fallback.",
+        "The tonal ramps are synthesized OKLCH panel strips only; they are not implemented palette tokens.",
+        "These are static component previews. Import/render/export/storage behavior and the live Impeccable panel were not executed by the documenter.",
+        "Component-local border-box sizing preserves the source global sizing rule where dimensions depend on it; no universal reset is copied."
+      ]
+    },
+    "focus": {
+      "value": "2px solid var(--focus,#7d542d)",
+      "offset": "5px",
+      "optionOffset": "4px",
+      "source": "studio.css:2"
+    },
+    "responsiveTypography": {
+      "importTitle": {
+        "default": "clamp(38px,3.8vw,58px)",
+        "max850": "44px"
+      },
+      "editorTitle": {
+        "default": "46px",
+        "max850": "42px",
+        "max480": "40px"
+      },
+      "previewCaption": {
+        "default": "italic 18px Instrument,serif",
+        "max480": "16px"
+      },
+      "wordmark": {
+        "default": "14px",
+        "max480": "13px"
+      },
+      "source": "studio.css:2-3"
+    },
+    "layout": {
+      "maxWidth": "1640px",
+      "gutter": "clamp(24px,5vw,80px)",
+      "studioColumns": "minmax(0,1.6fr) minmax(300px,1fr)",
+      "studioGap": "clamp(36px,5vw,80px)",
+      "stackGap": "32px",
+      "editorMaxStacked": "620px",
+      "previewMaxStacked": "800px",
+      "inspectionWidth": "1100px",
+      "inspectionMaxHeight": "70vh",
+      "inspectionMaxHeightPhone": "65vh",
+      "source": "studio.css:2-3"
+    },
+    "artworkComposition": {
+      "source": "renderer.js",
+      "worldLogical": [
+        1800,
+        1200
+      ],
+      "portraitLogical": [
+        1200,
+        1600
+      ],
+      "renderScale": 2,
+      "italyCountryArt": [
+        150,
+        160,
+        960,
+        1150
+      ],
+      "italyMemoryArt": [
+        90,
+        300,
+        820,
+        982
+      ],
+      "italyMemoryPhotoMounts": [
+        [
+          780,
+          322,
+          2.5,
+          290,
+          334
+        ],
+        [
+          790,
+          1068,
+          -2,
+          290,
+          334
+        ],
+        [
+          118,
+          1024,
+          -3,
+          290,
+          334
+        ]
+      ],
+      "otherMemoryPhotoMounts": [
+        [
+          833,
+          344,
+          2,
+          260,
+          310
+        ],
+        [
+          818,
+          701,
+          -2,
+          260,
+          310
+        ],
+        [
+          841,
+          1058,
+          1.5,
+          260,
+          310
+        ]
+      ],
+      "mountTuple": "x, y, degrees, width, height in logical canvas units",
+      "photoShadow": {
+        "color": "rgba(45,40,30,.17)",
+        "blur": 14,
+        "offsetY": 7
+      },
+      "flagShadow": {
+        "color": "rgba(40,32,20,.14)",
+        "blur": 4,
+        "offsetY": 2
+      },
+      "notes": [
+        "Italy uses the approved Italy raster plate. Other selected country art remains clipped to true geography.",
+        "United States retains mainland, Alaska and Hawaiʻi panels.",
+        "Dense flags compress their own band and stay complete.",
+        "Photographs are explicit local selections; no sample photograph is inserted into empty mounts."
+      ]
+    },
+    "sourceMap": {
+      "colors.ink": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ":root",
+        "property": "--ink",
+        "sourceValue": "#22382e"
+      },
+      "colors.paper": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ":root",
+        "property": "--paper",
+        "sourceValue": "#f5f0e4"
+      },
+      "colors.muted": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ":root",
+        "property": "--muted",
+        "sourceValue": "#53614e"
+      },
+      "colors.line": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ":root",
+        "property": "--line",
+        "sourceValue": "#cdcdbb"
+      },
+      "colors.field": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ":root",
+        "property": "--field",
+        "sourceValue": "#faf7ed"
+      },
+      "colors.selected": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ":root",
+        "property": "--selected",
+        "sourceValue": "#e5e9d8"
+      },
+      "colors.error": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ":root",
+        "property": "--error",
+        "sourceValue": "#8f3020"
+      },
+      "colors.focus": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ":root",
+        "property": "--focus",
+        "sourceValue": "#7d542d"
+      },
+      "colors.ink-hover": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".primary:hover",
+        "property": "background",
+        "sourceValue": "#3c5140"
+      },
+      "colors.error-line": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".error",
+        "property": "border",
+        "sourceValue": "#bb8c74"
+      },
+      "colors.frame-oak": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".frame",
+        "property": "background",
+        "sourceValue": "#be9967"
+      },
+      "colors.frame-walnut": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".frame[data-frame=walnut]",
+        "property": "background",
+        "sourceValue": "#674b35"
+      },
+      "colors.control-line": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": "input:not([type=radio]):not([type=file]),select,textarea",
+        "property": "border",
+        "sourceValue": "#7d8b70"
+      },
+      "colors.choice-line": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".choices span",
+        "property": "border",
+        "sourceValue": "#929a7e"
+      },
+      "colors.notice-paper": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".notice",
+        "property": "background",
+        "sourceValue": "#e6e8d9"
+      },
+      "colors.error-paper": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".error",
+        "property": "background",
+        "sourceValue": "#f7e5da"
+      },
+      "colors.gallery-ground": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".gallery",
+        "property": "background",
+        "sourceValue": "#e2e0d2"
+      },
+      "colors.footer-ground": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": "footer",
+        "property": "background",
+        "sourceValue": "#20382d"
+      },
+      "colors.mount-paper": {
+        "file": "renderer.js",
+        "symbol": "mountPhotos()/world() mount fillStyle",
+        "sourceValue": "#fffdf7"
+      },
+      "colors.unvisited-ground": {
+        "file": "renderer.js",
+        "symbol": "buildMap() unselected fillStyle",
+        "sourceValue": "#dedfcf"
+      },
+      "colors.map-line": {
+        "file": "renderer.js",
+        "symbol": "buildMap() base strokeStyle",
+        "sourceValue": "#b7bba8"
+      },
+      "typography.display": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".import-panel h1,.editor h1; .editor h1",
+        "properties": [
+          "font",
+          "letter-spacing",
+          "font-size"
+        ],
+        "note": "The token records the editor’s 46px default; the import clamp and responsive overrides are recorded in responsiveTypography."
+      },
+      "typography.title": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": "h2",
+        "property": "font"
+      },
+      "typography.body": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": "body",
+        "property": "font"
+      },
+      "typography.action": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".button + inherited body font",
+        "properties": [
+          "font-size",
+          "line-height"
+        ]
+      },
+      "typography.label": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": "label,legend + inherited body font",
+        "property": "font-size"
+      },
+      "typography.label-small": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".choices span + inherited body font",
+        "property": "font-size"
+      },
+      "typography.note": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".small,.storage-note,.privacy-note",
+        "properties": [
+          "font-size",
+          "line-height"
+        ]
+      },
+      "typography.caption": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".preview-note",
+        "property": "font",
+        "note": "The actual source is italic; fontStyle is carried in the component narrative rather than invented as a frontmatter property."
+      },
+      "typography.wordmark": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".wordmark",
+        "properties": [
+          "font",
+          "letter-spacing"
+        ]
+      },
+      "rounded.control": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".button; text inputs/select/textarea; file selector at line6",
+        "property": "border-radius",
+        "sourceValue": "2px"
+      },
+      "rounded.square": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".choices span",
+        "property": "border-radius",
+        "sourceValue": "0px",
+        "note": "Computed default: no border-radius declaration; square span boxes."
+      },
+      "spacing.small": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": "label,legend",
+        "property": "margin-bottom",
+        "sourceValue": "8px"
+      },
+      "spacing.action-gap": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".proof-actions; .button",
+        "property": "gap",
+        "sourceValue": "12px"
+      },
+      "spacing.medium": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".site-header; .atlas-person",
+        "property": "gap",
+        "sourceValue": "16px"
+      },
+      "spacing.field-gap": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ".field; fieldset",
+        "property": "margin-bottom",
+        "sourceValue": "24px"
+      },
+      "spacing.stack-gap": {
+        "file": "studio.css",
+        "line": 3,
+        "selector": "@media(max-width:850px) .studio-grid",
+        "property": "gap",
+        "sourceValue": "32px"
+      },
+      "spacing.gutter-min": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ":root",
+        "property": "--gutter",
+        "sourceValue": "clamp(24px,5vw,80px)"
+      },
+      "spacing.gutter-max": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": ":root",
+        "property": "--gutter",
+        "sourceValue": "clamp(24px,5vw,80px)"
+      },
+      "spacing.page-end": {
+        "file": "studio.css",
+        "line": 2,
+        "selector": "main",
+        "property": "padding",
+        "sourceValue": "40px var(--gutter) 96px"
+      },
+      "components.button-primary": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": ".button.primary",
+        "selector": ".button + .primary"
+      },
+      "components.button-primary-hover": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": ".button.primary:hover",
+        "selector": ".primary:hover"
+      },
+      "components.button-secondary": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": ".button.secondary",
+        "selector": ".button + .secondary"
+      },
+      "components.button-secondary-hover": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": ".button.secondary:hover",
+        "selector": ".secondary:hover"
+      },
+      "components.button-text": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": ".text-button",
+        "selector": ".text-button"
+      },
+      "components.text-field": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": "text inputs/select/textarea",
+        "selector": "input:not([type=radio]):not([type=file]),select,textarea"
+      },
+      "components.file-selector": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 6,
+        "element": "input[type=file]::file-selector-button",
+        "selector": "input[type=file]::file-selector-button"
+      },
+      "components.choice-option": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": ".choices label > input + span",
+        "selector": ".choices span"
+      },
+      "components.choice-option-selected": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": ".choices input:checked + span",
+        "selector": ".choices input:checked+span"
+      },
+      "components.navigation": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": ".site-header",
+        "selector": ".site-header"
+      },
+      "components.disclosure": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": "details > summary",
+        "selector": "summary"
+      },
+      "components.atlas-summary": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": "#atlas-summary",
+        "selector": ".atlas-summary"
+      },
+      "components.notice": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": ".notice",
+        "selector": ".notice"
+      },
+      "components.notice-error": {
+        "markup": "index.html",
+        "stylesheet": "studio.css",
+        "line": 2,
+        "element": ".notice.error",
+        "selector": ".error"
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The working primary action, shown with the existing Download proof label.",
+      "html": "<button class=\"ds-button\" type=\"button\">Download proof</button>",
+      "css": "@font-face{font-family:Sans;src:url('/print/assets/fonts/InstrumentSans-Regular.ttf')}.ds-button{box-sizing:border-box;font:400 14px/1.4 Sans,system-ui,sans-serif;display:inline-flex;min-height:49px;align-items:center;justify-content:center;gap:12px;border:1px solid var(--ink,#22382e);border-radius:2px;padding:12px 22px;cursor:pointer;text-decoration:none;background:var(--ink,#22382e);color:var(--paper,#f5f0e4)}.ds-button:hover{background:#3c5140;color:var(--paper,#f5f0e4)}.ds-button:focus-visible{outline:2px solid var(--focus,#7d542d);outline-offset:5px;}.ds-button:disabled{cursor:wait;opacity:.55}@media(prefers-reduced-motion:no-preference){.ds-button{transition:background-color .18s,color .18s}}"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A quiet bordered action for saving or adding an atlas.",
+      "html": "<button class=\"ds-button\" type=\"button\">Save design</button>",
+      "css": "@font-face{font-family:Sans;src:url('/print/assets/fonts/InstrumentSans-Regular.ttf')}.ds-button{box-sizing:border-box;font:400 14px/1.4 Sans,system-ui,sans-serif;display:inline-flex;min-height:49px;align-items:center;justify-content:center;gap:12px;border:1px solid var(--ink,#22382e);border-radius:2px;padding:12px 22px;cursor:pointer;text-decoration:none;background:transparent;color:var(--ink,#22382e)}.ds-button:hover{background:var(--selected,#e5e9d8)}.ds-button:focus-visible{outline:2px solid var(--focus,#7d542d);outline-offset:5px;}.ds-button:disabled{cursor:wait;opacity:.55}@media(prefers-reduced-motion:no-preference){.ds-button{transition:background-color .18s,color .18s}}"
+    },
+    {
+      "name": "Text action",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Underlined recovery or utility action with the existing minimum target.",
+      "html": "<button class=\"ds-text-action\" type=\"button\">Choose another design</button>",
+      "css": "@font-face{font-family:Sans;src:url('/print/assets/fonts/InstrumentSans-Regular.ttf')}.ds-text-action{box-sizing:border-box;font:400 14px/1.55 Sans,system-ui,sans-serif;color:var(--ink,#22382e);min-height:44px;border:0;background:transparent;text-decoration:underline;text-underline-offset:4px;padding:10px 0;cursor:pointer}.ds-text-action:hover{color:#7d542d}.ds-text-action:focus-visible{outline:2px solid var(--focus,#7d542d);outline-offset:5px;}.ds-text-action:disabled{cursor:wait;opacity:.55}@media(prefers-reduced-motion:no-preference){.ds-text-action{transition:background-color .18s,color .18s}}"
+    },
+    {
+      "name": "Text field",
+      "kind": "input",
+      "refersTo": "text-field",
+      "description": "An above-field label, optional hint and paper input. Placeholder text is copied from the source.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-dedication\">Dedication <span class=\"ds-optional\">(optional)</span></label><input class=\"ds-text-field\" id=\"ds-dedication\" placeholder=\"Everywhere, with you.\" maxlength=\"100\" autocomplete=\"off\">",
+      "css": "@font-face{font-family:Sans;src:url('/print/assets/fonts/InstrumentSans-Regular.ttf')}.ds-field-label{display:block;font:400 14px/1.55 Sans,system-ui,sans-serif;color:var(--ink,#22382e);margin-bottom:8px}.ds-optional{color:var(--muted,#53614e)}.ds-text-field{box-sizing:border-box;display:block;width:100%;font:400 16px/1.55 Sans,system-ui,sans-serif;color:var(--ink,#22382e);caret-color:var(--focus,#7d542d);border:1px solid #7d8b70;background:var(--field,#faf7ed);border-radius:2px;padding:12px 13px;min-height:48px}.ds-text-field:focus-visible{outline:2px solid var(--focus,#7d542d);outline-offset:5px;}"
+    },
+    {
+      "name": "Local design file selector",
+      "kind": "input",
+      "refersTo": "file-selector",
+      "description": "Native local-file input with the shipped 44px themed selector button; no upload behavior is simulated.",
+      "html": "<label class=\"ds-file-label\" for=\"ds-design-file\">Your Inlay design file</label><input class=\"ds-file-input\" type=\"file\" id=\"ds-design-file\" accept=\"application/json,.json\">",
+      "css": "@font-face{font-family:Sans;src:url('/print/assets/fonts/InstrumentSans-Regular.ttf')}.ds-file-label{display:block;margin-bottom:8px;color:var(--ink,#22382e);font:400 14px/1.55 Sans,system-ui,sans-serif}.ds-file-input{box-sizing:border-box;display:block;width:100%;max-width:100%;min-height:48px;line-height:1.5;color:var(--ink,#22382e);font-family:Sans,system-ui,sans-serif;font-size:13px}.ds-file-input::file-selector-button{box-sizing:border-box;min-height:44px;border:1px solid var(--ink,#22382e);border-radius:2px;background:var(--field,#faf7ed);color:var(--ink,#22382e);padding:10px 14px;margin-right:12px;font:inherit;cursor:pointer}.ds-file-input::file-selector-button:hover{background:var(--selected,#e5e9d8)}.ds-file-input:focus-visible{outline:2px solid var(--focus,#7d542d);outline-offset:5px;}"
+    },
+    {
+      "name": "Edition radio choices",
+      "kind": "chip",
+      "refersTo": "choice-option",
+      "description": "Real wrapping radios, with selected and keyboard-focus states; these remain options rather than action chips.",
+      "html": "<fieldset class=\"ds-choice-field\"><legend class=\"ds-choice-legend\">Edition</legend><div class=\"ds-choices\"><label class=\"ds-choice\"><input class=\"ds-choice-input\" type=\"radio\" name=\"ds-edition\" checked><span class=\"ds-choice-face\">Your World</span></label><label class=\"ds-choice\"><input class=\"ds-choice-input\" type=\"radio\" name=\"ds-edition\"><span class=\"ds-choice-face\">Country</span></label><label class=\"ds-choice\"><input class=\"ds-choice-input\" type=\"radio\" name=\"ds-edition\"><span class=\"ds-choice-face\">Memory</span></label></div></fieldset>",
+      "css": "@font-face{font-family:Sans;src:url('/print/assets/fonts/InstrumentSans-Regular.ttf')}.ds-choice-field{border:0;padding:0;margin:0;min-width:0;color:var(--ink,#22382e);font-family:Sans,system-ui,sans-serif}.ds-choice-legend{padding:0;font-size:14px;margin-bottom:8px}.ds-choices{display:flex;flex-wrap:wrap;gap:9px}.ds-choice{position:relative;display:flex;flex:1;min-width:0}.ds-choice-input{position:absolute;opacity:0;width:1px;height:1px}.ds-choice-face{box-sizing:border-box;border:1px solid #929a7e;padding:11px 13px;color:var(--ink,#22382e);display:block;flex:1;text-align:center;font-size:13px;line-height:1.55;min-height:45px;cursor:pointer}.ds-choice-input:checked+.ds-choice-face{background:var(--selected,#e5e9d8);box-shadow:inset 0 0 0 1px var(--ink,#22382e);border-color:var(--ink,#22382e)}.ds-choice-input:focus-visible+.ds-choice-face{outline:2px solid var(--focus,#7d542d);outline-offset:4px}@media(max-width:480px){.ds-choice-face{padding:10px 9px}}"
+    },
+    {
+      "name": "Balanced studio navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Back link, centered wordmark and right-aligned utility action preserve the three-column header.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Studio preview\"><a class=\"ds-back\" href=\"/\"><svg class=\"ds-back-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m14 5-7 7 7 7\"/></svg><span class=\"ds-back-text\">Inlay home</span></a><a class=\"ds-wordmark\" href=\"/\">INLAY</a><button class=\"ds-nav-action\" type=\"button\">Clear draft</button></nav>",
+      "css": "@font-face{font-family:Sans;src:url('/print/assets/fonts/InstrumentSans-Regular.ttf')}.ds-nav{box-sizing:border-box;height:84px;border-bottom:1px solid var(--line,#cdcdbb);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 var(--gutter,clamp(24px,5vw,80px));gap:16px;color:var(--ink,#22382e);font-family:Sans,system-ui,sans-serif}.ds-back{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:13px;color:inherit}.ds-back-icon{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;flex:none}.ds-wordmark{font:14px Sans,sans-serif;letter-spacing:.26em;text-decoration:none;color:inherit}.ds-nav-action{box-sizing:border-box;justify-self:end;min-height:44px;border:0;background:transparent;color:inherit;text-decoration:underline;text-underline-offset:4px;padding:10px 0;font:400 14px/1.55 Sans,system-ui,sans-serif;cursor:pointer}.ds-back:hover,.ds-wordmark:hover,.ds-nav-action:hover{color:#7d542d}.ds-back:focus-visible,.ds-wordmark:focus-visible,.ds-nav-action:focus-visible{outline:2px solid var(--focus,#7d542d);outline-offset:5px;}@media(max-width:850px){.ds-nav{height:72px}}@media(max-width:480px){.ds-nav{padding:0 24px;gap:10px}.ds-back-text{display:none}.ds-nav-action{font-size:12px}.ds-wordmark{font-size:13px}}@media(prefers-reduced-motion:no-preference){.ds-back,.ds-wordmark,.ds-nav-action{transition:background-color .18s,color .18s}}"
+    },
+    {
+      "name": "Authored disclosure",
+      "kind": "custom",
+      "refersTo": "disclosure",
+      "description": "Native details/summary behavior with the shipped SVG plus/minus and visible keyboard focus.",
+      "html": "<details class=\"ds-details\"><summary class=\"ds-summary\">Inspect the print <svg class=\"ds-disclosure-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path class=\"ds-disclosure-vertical\" d=\"M12 5v14\"/></svg></summary><p class=\"ds-disclosure-note\">Swipe across the larger proof, or use the arrow keys when it has focus.</p></details>",
+      "css": "@font-face{font-family:Sans;src:url('/print/assets/fonts/InstrumentSans-Regular.ttf')}.ds-details{border-top:1px solid var(--line,#cdcdbb);color:var(--ink,#22382e);font-family:Sans,system-ui,sans-serif}.ds-summary{box-sizing:border-box;cursor:pointer;min-height:56px;padding:16px 0;font-size:14px;line-height:1.55;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:15px}.ds-summary::-webkit-details-marker{display:none}.ds-disclosure-icon{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;flex:none}.ds-details[open]>.ds-summary .ds-disclosure-vertical{display:none}.ds-summary:focus-visible{outline:2px solid var(--focus,#7d542d);outline-offset:5px;}.ds-disclosure-note{margin:0 0 18px;font-size:12px;line-height:1.6;color:var(--muted,#53614e)}"
+    },
+    {
+      "name": "Ruled atlas summary",
+      "kind": "card",
+      "refersTo": "atlas-summary",
+      "description": "The flat name/count readout; Riley/Morgan and the counts are synthetic fixture content, not user travel data.",
+      "html": "<div class=\"ds-atlas-summary\"><p class=\"ds-atlas-person\"><strong class=\"ds-atlas-name\">Riley</strong><span class=\"ds-atlas-count\">5 countries · 3 territories</span></p><p class=\"ds-atlas-person\"><strong class=\"ds-atlas-name\">Morgan</strong><span class=\"ds-atlas-count\">5 countries · 1 territory</span></p><div class=\"ds-atlas-combined\"><p class=\"ds-atlas-person\"><strong class=\"ds-atlas-name\">Both visited</strong><span class=\"ds-atlas-count\">2 countries</span></p><p class=\"ds-atlas-person\"><strong class=\"ds-atlas-name\">Combined atlas</strong><span class=\"ds-atlas-count\">8 countries · 4 territories</span></p></div></div>",
+      "css": "@font-face{font-family:Sans;src:url('/print/assets/fonts/InstrumentSans-Regular.ttf')}.ds-atlas-summary{font:400 14px/1.5 Sans,system-ui,sans-serif;color:var(--ink,#22382e);border-block:1px solid var(--line,#cdcdbb);padding:14px 0;margin-bottom:28px}.ds-atlas-person{display:flex;justify-content:space-between;gap:16px;margin:0 0 8px;overflow-wrap:anywhere}.ds-atlas-person:last-child{margin-bottom:0}.ds-atlas-name{font-weight:500}.ds-atlas-count{text-align:right;font-variant-numeric:tabular-nums}.ds-atlas-combined{border-top:1px solid var(--line,#cdcdbb);padding-top:10px}@media(max-width:480px){.ds-atlas-person{gap:12px}.ds-atlas-count{max-width:55%}}"
+    },
+    {
+      "name": "Adjacent status and recovery",
+      "kind": "custom",
+      "refersTo": "notice",
+      "description": "Existing flat status and error treatments with the design-specific recovery wording; no asynchronous behavior is simulated.",
+      "html": "<div class=\"ds-notice\" role=\"status\"><p class=\"ds-notice-copy\">Your atlas is here. Make it yours.</p></div><div class=\"ds-notice ds-notice-error\"><p class=\"ds-notice-copy\">A photograph in this design could not be read. Choose another saved design.</p><button class=\"ds-recovery-action\" type=\"button\">Choose another design</button></div>",
+      "css": "@font-face{font-family:Sans;src:url('/print/assets/fonts/InstrumentSans-Regular.ttf')}.ds-notice{box-sizing:border-box;font:400 14px/1.55 Sans,system-ui,sans-serif;color:var(--ink,#22382e);padding:14px 18px;margin:0 0 28px;background:#e6e8d9;overflow-wrap:anywhere}.ds-notice-copy{margin:0 0 8px}.ds-notice-copy:last-child{margin:0}.ds-notice-error{color:var(--error,#8f3020);background:#f7e5da;border:1px solid #bb8c74}.ds-recovery-action{box-sizing:border-box;font:400 14px/1.55 Sans,system-ui,sans-serif;color:inherit;min-height:44px;border:0;background:transparent;text-decoration:underline;text-underline-offset:4px;padding:10px 0;cursor:pointer}.ds-recovery-action:hover{color:#7d542d}.ds-recovery-action:focus-visible{outline:2px solid var(--focus,#7d542d);outline-offset:5px;}@media(prefers-reduced-motion:no-preference){.ds-recovery-action{transition:background-color .18s,color .18s}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A private gallery of travel memories",
+    "overview": "The connected print studio extends Inlay’s approved print collection into a quiet working surface. Warm paper, deep green ink, fine Italiana lettering and authentic illustrated geography carry the existing identity; Instrument Serif gives captions and dedications an intimate print voice. Flat controls and thin rules keep the artwork prominent while making personalization easy to scan.\n\nThis record describes the completed implementation under /print/. Its visual authority is the approved private Inlay Print Collection design system, reconciled with studio.css and renderer.js. The separate support and invitation identity remains governed by the repository-root DESIGN.md. Page mode, first-viewport composition, task states and acceptance remain in the connected print surface brief; this document records the reusable visual rules found in the finished source.",
+    "keyCharacteristics": [
+      "Continuous warm paper and green ink connect the editor to the proof.",
+      "Italiana display lettering, Instrument Serif captions and Instrument Sans controls have distinct roles.",
+      "Nearly square controls, authored SVG disclosures, thin rules and aligned gutters provide quiet structure.",
+      "Physical depth belongs to frames, photograph mounts and flag mounts; form surfaces stay flat.",
+      "Complete artwork remains visible, with a separate contained inspection view for detail."
+    ],
+    "rules": [
+      {
+        "name": "The Paper and Ink Rule",
+        "body": "Keep the approved paper ground continuous between the proof and its surrounding editor; use deep green ink for the primary reading and action hierarchy.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Reserve Italiana for large headings and the print’s own lettering. Use Instrument Sans for controls, instructions and small metadata; Instrument Serif supplies intimate captions and dedications.",
+        "section": "typography"
+      },
+      {
+        "name": "The Shared Guides Rule",
+        "body": "Align the preview, fields, choices and action stack to deliberate column edges. Contain enlarged-proof scrolling within its own focusable region.",
+        "section": "layout"
+      },
+      {
+        "name": "The Artwork Depth Rule",
+        "body": "Concentrate diffuse depth on the physical artwork, its frame and its native photograph and flag mounts. Forms, summaries and status surfaces stay flat and legible.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Complete Proof Rule",
+        "body": "Keep the complete print visible at composition scale, and offer a separate enlarged inspection region when personalization becomes too small to read.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do preserve the approved print proportions, actual country artwork, true geography, recipient dedication and complete flag faces.",
+      "Do align headings, art stages, fields, choice groups and action stacks to shared gutters and deliberate column guides.",
+      "Do keep focus, status, validation and recovery messages adjacent to the affected controls, with the current names, dedication and selected photographs preserved.",
+      "Do use the same visual language for an individual atlas, a friend’s gift or an atlas for any two people.",
+      "Do retain the visible local-photo, frame-visualization and personal-digital-proof disclosures."
+    ],
+    "donts": [
+      "Don’t replace illustrated artwork with generic map decoration or adopt the separate support identity’s palette and type.",
+      "Don’t crop a complete proof to fit its preview stage or turn enlarged inspection into page-wide horizontal scrolling.",
+      "Don’t turn flat form, summary or recovery surfaces into elevated cards, pills or badge clusters.",
+      "Don’t replace authored SVG disclosure marks with font glyphs.",
+      "Don’t use tiny print lettering as the only readable confirmation of edited names or shared counts."
+    ]
+  }
+}

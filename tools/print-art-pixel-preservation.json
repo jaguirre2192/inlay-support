@@ -1,0 +1,2805 @@
+{
+  "policy": "metadata-only web derivatives; native originals retained",
+  "files": [
+    {
+      "file": "print/assets/art/country-afghanistan-0656e7f9.webp",
+      "originalSHA256": "c99e22b7ba1d5cc0ed48a4a98233518f3be228790aa60a96c24135f24ff6ceff",
+      "shippedSHA256": "c99e22b7ba1d5cc0ed48a4a98233518f3be228790aa60a96c24135f24ff6ceff",
+      "origin": "App/Resources/Countries/country-afghanistan-0656e7f9.webp",
+      "pixels": {
+        "byteSHA256": "c99e22b7ba1d5cc0ed48a4a98233518f3be228790aa60a96c24135f24ff6ceff",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-aland-islands.webp",
+      "originalSHA256": "f52c4c319471eeb39a4d85ce6acda6bcc7a3661b7eb1019fb483f1911713b23a",
+      "shippedSHA256": "f52c4c319471eeb39a4d85ce6acda6bcc7a3661b7eb1019fb483f1911713b23a",
+      "origin": "App/Resources/Countries/country-aland-islands.webp",
+      "pixels": {
+        "byteSHA256": "f52c4c319471eeb39a4d85ce6acda6bcc7a3661b7eb1019fb483f1911713b23a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-albania.webp",
+      "originalSHA256": "96979409a59d84a07515c943b33963916496c26653f40f9e4567682ba2165fd7",
+      "shippedSHA256": "96979409a59d84a07515c943b33963916496c26653f40f9e4567682ba2165fd7",
+      "origin": "App/Resources/Countries/country-albania.webp",
+      "pixels": {
+        "byteSHA256": "96979409a59d84a07515c943b33963916496c26653f40f9e4567682ba2165fd7",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-algeria-1-5dd1a9a6.webp",
+      "originalSHA256": "5dd1a9a612bca3d2e45aa09708ad0653e107d46cc7804d7ced01dbd8d49ef7e4",
+      "shippedSHA256": "5dd1a9a612bca3d2e45aa09708ad0653e107d46cc7804d7ced01dbd8d49ef7e4",
+      "origin": "App/Resources/Countries/country-algeria-1-5dd1a9a6.webp",
+      "pixels": {
+        "byteSHA256": "5dd1a9a612bca3d2e45aa09708ad0653e107d46cc7804d7ced01dbd8d49ef7e4",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-american-samoa-2-5f24402b.webp",
+      "originalSHA256": "5f24402be9ec5c6b4ad3df9344a8e6cfbe3a3a3c04d08cc99f349cff048b5ec3",
+      "shippedSHA256": "5f24402be9ec5c6b4ad3df9344a8e6cfbe3a3a3c04d08cc99f349cff048b5ec3",
+      "origin": "App/Resources/Countries/country-american-samoa-2-5f24402b.webp",
+      "pixels": {
+        "byteSHA256": "5f24402be9ec5c6b4ad3df9344a8e6cfbe3a3a3c04d08cc99f349cff048b5ec3",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-andorra.webp",
+      "originalSHA256": "4846afdb91bf96f7fa2a701c8f80f314a2925d1119da5eb0cdfe39a52ba29fbf",
+      "shippedSHA256": "4846afdb91bf96f7fa2a701c8f80f314a2925d1119da5eb0cdfe39a52ba29fbf",
+      "origin": "App/Resources/Countries/country-andorra.webp",
+      "pixels": {
+        "byteSHA256": "4846afdb91bf96f7fa2a701c8f80f314a2925d1119da5eb0cdfe39a52ba29fbf",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-angola-1-345818e1.webp",
+      "originalSHA256": "345818e1c43876e690b6fb9e9fa954774ba1c4503ccbc353ad021cb177d87a37",
+      "shippedSHA256": "345818e1c43876e690b6fb9e9fa954774ba1c4503ccbc353ad021cb177d87a37",
+      "origin": "App/Resources/Countries/country-angola-1-345818e1.webp",
+      "pixels": {
+        "byteSHA256": "345818e1c43876e690b6fb9e9fa954774ba1c4503ccbc353ad021cb177d87a37",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-anguilla.webp",
+      "originalSHA256": "3f52871179503de9aeed11d15d8fdb37bc2e93ba453edca8bd5715b3a5e3a570",
+      "shippedSHA256": "3f52871179503de9aeed11d15d8fdb37bc2e93ba453edca8bd5715b3a5e3a570",
+      "origin": "App/Resources/Countries/country-anguilla.webp",
+      "pixels": {
+        "byteSHA256": "3f52871179503de9aeed11d15d8fdb37bc2e93ba453edca8bd5715b3a5e3a570",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-antigua-and-barbuda.webp",
+      "originalSHA256": "b3558bee9d5c6c04752f53cd25ded2c64f8c050442daaf82ca24bdbd311646fa",
+      "shippedSHA256": "b3558bee9d5c6c04752f53cd25ded2c64f8c050442daaf82ca24bdbd311646fa",
+      "origin": "App/Resources/Countries/country-antigua-and-barbuda.webp",
+      "pixels": {
+        "byteSHA256": "b3558bee9d5c6c04752f53cd25ded2c64f8c050442daaf82ca24bdbd311646fa",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-argentina-retained-58cf8b0b.webp",
+      "originalSHA256": "58cf8b0bdc94def9beb83b00952cfa380f48e83ce30c8b21d812e4a20e272ce0",
+      "shippedSHA256": "58cf8b0bdc94def9beb83b00952cfa380f48e83ce30c8b21d812e4a20e272ce0",
+      "origin": "App/Resources/Countries/country-argentina-retained-58cf8b0b.webp",
+      "pixels": {
+        "byteSHA256": "58cf8b0bdc94def9beb83b00952cfa380f48e83ce30c8b21d812e4a20e272ce0",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-armenia.webp",
+      "originalSHA256": "1ee0233e37f00169c0ed5a9475f626ea1b5d8134501432888bd01dae3997599c",
+      "shippedSHA256": "1ee0233e37f00169c0ed5a9475f626ea1b5d8134501432888bd01dae3997599c",
+      "origin": "App/Resources/Countries/country-armenia.webp",
+      "pixels": {
+        "byteSHA256": "1ee0233e37f00169c0ed5a9475f626ea1b5d8134501432888bd01dae3997599c",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-aruba.webp",
+      "originalSHA256": "475377f19ed083c694aec497518b42723516e8882940309ae4fb41a2bd27c3d4",
+      "shippedSHA256": "475377f19ed083c694aec497518b42723516e8882940309ae4fb41a2bd27c3d4",
+      "origin": "App/Resources/Countries/country-aruba.webp",
+      "pixels": {
+        "byteSHA256": "475377f19ed083c694aec497518b42723516e8882940309ae4fb41a2bd27c3d4",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-at-local-b1717004.webp",
+      "originalSHA256": "33d927dc1a1b7bb352cf7d7d73fb75f9d4075b7bbd6bc5f66e40fb6bf4da7881",
+      "shippedSHA256": "33d927dc1a1b7bb352cf7d7d73fb75f9d4075b7bbd6bc5f66e40fb6bf4da7881",
+      "origin": "App/Resources/Countries/country-at-local-b1717004.webp",
+      "pixels": {
+        "byteSHA256": "33d927dc1a1b7bb352cf7d7d73fb75f9d4075b7bbd6bc5f66e40fb6bf4da7881",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-australia-2-c58a4045.webp",
+      "originalSHA256": "c58a4045f81b392c6e81420a3991b37d2dad5fc2c4aa89673a11396846e5c72c",
+      "shippedSHA256": "c58a4045f81b392c6e81420a3991b37d2dad5fc2c4aa89673a11396846e5c72c",
+      "origin": "App/Resources/Countries/country-australia-2-c58a4045.webp",
+      "pixels": {
+        "byteSHA256": "c58a4045f81b392c6e81420a3991b37d2dad5fc2c4aa89673a11396846e5c72c",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-azerbaijan.webp",
+      "originalSHA256": "ec602530a2afc3600ef3a9dd2f1b91bbf5502dd8a02a0e944d84579985ec783a",
+      "shippedSHA256": "ec602530a2afc3600ef3a9dd2f1b91bbf5502dd8a02a0e944d84579985ec783a",
+      "origin": "App/Resources/Countries/country-azerbaijan.webp",
+      "pixels": {
+        "byteSHA256": "ec602530a2afc3600ef3a9dd2f1b91bbf5502dd8a02a0e944d84579985ec783a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-bahamas.webp",
+      "originalSHA256": "8a979360fa0440749398fe6583288e02f24414cdbd8ad7fdb6fe7309255a0d06",
+      "shippedSHA256": "8a979360fa0440749398fe6583288e02f24414cdbd8ad7fdb6fe7309255a0d06",
+      "origin": "App/Resources/Countries/country-bahamas.webp",
+      "pixels": {
+        "byteSHA256": "8a979360fa0440749398fe6583288e02f24414cdbd8ad7fdb6fe7309255a0d06",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-bahrain-e37206d1.webp",
+      "originalSHA256": "7d803a30d60bb1b631615d8400b59dffb7e90304cd29710470078aed425bbde6",
+      "shippedSHA256": "7d803a30d60bb1b631615d8400b59dffb7e90304cd29710470078aed425bbde6",
+      "origin": "App/Resources/Countries/country-bahrain-e37206d1.webp",
+      "pixels": {
+        "byteSHA256": "7d803a30d60bb1b631615d8400b59dffb7e90304cd29710470078aed425bbde6",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-bangladesh-6d9dcd98.webp",
+      "originalSHA256": "049a820b8dd2cf8f4abd2086f1c12c39ca3b3596f049d949e614fe869a170e87",
+      "shippedSHA256": "049a820b8dd2cf8f4abd2086f1c12c39ca3b3596f049d949e614fe869a170e87",
+      "origin": "App/Resources/Countries/country-bangladesh-6d9dcd98.webp",
+      "pixels": {
+        "byteSHA256": "049a820b8dd2cf8f4abd2086f1c12c39ca3b3596f049d949e614fe869a170e87",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-barbados.webp",
+      "originalSHA256": "0d25e8ebf3d74e57e34c78720a7d543adbf35a5bf2cda6a5280a9d8cdbaed753",
+      "shippedSHA256": "0d25e8ebf3d74e57e34c78720a7d543adbf35a5bf2cda6a5280a9d8cdbaed753",
+      "origin": "App/Resources/Countries/country-barbados.webp",
+      "pixels": {
+        "byteSHA256": "0d25e8ebf3d74e57e34c78720a7d543adbf35a5bf2cda6a5280a9d8cdbaed753",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-belarus.webp",
+      "originalSHA256": "5bc7129189ab41659818a9291aeff5ecef3476f261440bd4217dda4f98fd58ba",
+      "shippedSHA256": "5bc7129189ab41659818a9291aeff5ecef3476f261440bd4217dda4f98fd58ba",
+      "origin": "App/Resources/Countries/country-belarus.webp",
+      "pixels": {
+        "byteSHA256": "5bc7129189ab41659818a9291aeff5ecef3476f261440bd4217dda4f98fd58ba",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-belgium.webp",
+      "originalSHA256": "a8c9341111dd9e1759961bec73ed22c5423482eee04a6a29bd9c2551e0157ce0",
+      "shippedSHA256": "a8c9341111dd9e1759961bec73ed22c5423482eee04a6a29bd9c2551e0157ce0",
+      "origin": "App/Resources/Countries/country-belgium.webp",
+      "pixels": {
+        "byteSHA256": "a8c9341111dd9e1759961bec73ed22c5423482eee04a6a29bd9c2551e0157ce0",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-belize.webp",
+      "originalSHA256": "14863076aad5bc3f3b4665c3436643d1fb486c009c4a4a98efe3e2d65936683f",
+      "shippedSHA256": "14863076aad5bc3f3b4665c3436643d1fb486c009c4a4a98efe3e2d65936683f",
+      "origin": "App/Resources/Countries/country-belize.webp",
+      "pixels": {
+        "byteSHA256": "14863076aad5bc3f3b4665c3436643d1fb486c009c4a4a98efe3e2d65936683f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-benin-1-d55d541c.webp",
+      "originalSHA256": "d55d541c2374b14960a7037bda37a3f142460821d9532f9819b7a6117a25f8d9",
+      "shippedSHA256": "d55d541c2374b14960a7037bda37a3f142460821d9532f9819b7a6117a25f8d9",
+      "origin": "App/Resources/Countries/country-benin-1-d55d541c.webp",
+      "pixels": {
+        "byteSHA256": "d55d541c2374b14960a7037bda37a3f142460821d9532f9819b7a6117a25f8d9",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-bermuda.webp",
+      "originalSHA256": "779633424b64df24a471f295a2839467c411a71bded9f9e307a484b5c9087d39",
+      "shippedSHA256": "779633424b64df24a471f295a2839467c411a71bded9f9e307a484b5c9087d39",
+      "origin": "App/Resources/Countries/country-bermuda.webp",
+      "pixels": {
+        "byteSHA256": "779633424b64df24a471f295a2839467c411a71bded9f9e307a484b5c9087d39",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-bhutan-41d9e15a.webp",
+      "originalSHA256": "6bad1395663b52652e78434c315657a389cb5c1eaefb4f53f67fb273fd9ebf4e",
+      "shippedSHA256": "6bad1395663b52652e78434c315657a389cb5c1eaefb4f53f67fb273fd9ebf4e",
+      "origin": "App/Resources/Countries/country-bhutan-41d9e15a.webp",
+      "pixels": {
+        "byteSHA256": "6bad1395663b52652e78434c315657a389cb5c1eaefb4f53f67fb273fd9ebf4e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-bolivia-retained-f0f5275f.webp",
+      "originalSHA256": "f0f5275f2f537f7a8a334770b0b8b8f3323862716dff2dd40f5d52a344f17a77",
+      "shippedSHA256": "f0f5275f2f537f7a8a334770b0b8b8f3323862716dff2dd40f5d52a344f17a77",
+      "origin": "App/Resources/Countries/country-bolivia-retained-f0f5275f.webp",
+      "pixels": {
+        "byteSHA256": "f0f5275f2f537f7a8a334770b0b8b8f3323862716dff2dd40f5d52a344f17a77",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-bosnia-and-herzegovina.webp",
+      "originalSHA256": "1f6edf8fd29aadb9e6b9bb050e67f5e5cb46a78cab29ab80d69468a102b12da7",
+      "shippedSHA256": "1f6edf8fd29aadb9e6b9bb050e67f5e5cb46a78cab29ab80d69468a102b12da7",
+      "origin": "App/Resources/Countries/country-bosnia-and-herzegovina.webp",
+      "pixels": {
+        "byteSHA256": "1f6edf8fd29aadb9e6b9bb050e67f5e5cb46a78cab29ab80d69468a102b12da7",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-botswana-1-bc2c418e.webp",
+      "originalSHA256": "bc2c418ea729882c68db323ce91ee4eaf62779a29e0dfb3ade63d792da372706",
+      "shippedSHA256": "bc2c418ea729882c68db323ce91ee4eaf62779a29e0dfb3ade63d792da372706",
+      "origin": "App/Resources/Countries/country-botswana-1-bc2c418e.webp",
+      "pixels": {
+        "byteSHA256": "bc2c418ea729882c68db323ce91ee4eaf62779a29e0dfb3ade63d792da372706",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-bouvet-island-retained-b5d2ca85.webp",
+      "originalSHA256": "b5d2ca85f701a4076776d12806350d61954cfb76f31631ee651de3a8785b2ee8",
+      "shippedSHA256": "b5d2ca85f701a4076776d12806350d61954cfb76f31631ee651de3a8785b2ee8",
+      "origin": "App/Resources/Countries/country-bouvet-island-retained-b5d2ca85.webp",
+      "pixels": {
+        "byteSHA256": "b5d2ca85f701a4076776d12806350d61954cfb76f31631ee651de3a8785b2ee8",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-brazil-retained-7d068d97.webp",
+      "originalSHA256": "7d068d97ad03bf8e93da3eb25796d3d6456a3ec7c0cec4d0e98e42a44d5448bf",
+      "shippedSHA256": "7d068d97ad03bf8e93da3eb25796d3d6456a3ec7c0cec4d0e98e42a44d5448bf",
+      "origin": "App/Resources/Countries/country-brazil-retained-7d068d97.webp",
+      "pixels": {
+        "byteSHA256": "7d068d97ad03bf8e93da3eb25796d3d6456a3ec7c0cec4d0e98e42a44d5448bf",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-british-virgin-islands.webp",
+      "originalSHA256": "5754d119d50cb66b8cb8190e846b082d038b466587d4bc619f5a49c9a8af288e",
+      "shippedSHA256": "5754d119d50cb66b8cb8190e846b082d038b466587d4bc619f5a49c9a8af288e",
+      "origin": "App/Resources/Countries/country-british-virgin-islands.webp",
+      "pixels": {
+        "byteSHA256": "5754d119d50cb66b8cb8190e846b082d038b466587d4bc619f5a49c9a8af288e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-brunei-9f986ad6.webp",
+      "originalSHA256": "b2a22479f956708b40cc7995f41078d2a34ac1f295e99fabb29cc99561d2e5db",
+      "shippedSHA256": "b2a22479f956708b40cc7995f41078d2a34ac1f295e99fabb29cc99561d2e5db",
+      "origin": "App/Resources/Countries/country-brunei-9f986ad6.webp",
+      "pixels": {
+        "byteSHA256": "b2a22479f956708b40cc7995f41078d2a34ac1f295e99fabb29cc99561d2e5db",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-bulgaria.webp",
+      "originalSHA256": "35821e0516c53105e525d6ce2d1e0f4906016433ddaaa93aaa4a332adc721c5b",
+      "shippedSHA256": "35821e0516c53105e525d6ce2d1e0f4906016433ddaaa93aaa4a332adc721c5b",
+      "origin": "App/Resources/Countries/country-bulgaria.webp",
+      "pixels": {
+        "byteSHA256": "35821e0516c53105e525d6ce2d1e0f4906016433ddaaa93aaa4a332adc721c5b",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-burkina-faso-1-c78084fe.webp",
+      "originalSHA256": "c78084fe9569d6ecb8f1fa21527b38f70c309874db59d9ce18ecaf7112e460a8",
+      "shippedSHA256": "c78084fe9569d6ecb8f1fa21527b38f70c309874db59d9ce18ecaf7112e460a8",
+      "origin": "App/Resources/Countries/country-burkina-faso-1-c78084fe.webp",
+      "pixels": {
+        "byteSHA256": "c78084fe9569d6ecb8f1fa21527b38f70c309874db59d9ce18ecaf7112e460a8",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-burundi-1-e786ad01.webp",
+      "originalSHA256": "e786ad01a721db4958c239e956c75e19cacd7ec6ba3bbf95286aecdd4489556e",
+      "shippedSHA256": "e786ad01a721db4958c239e956c75e19cacd7ec6ba3bbf95286aecdd4489556e",
+      "origin": "App/Resources/Countries/country-burundi-1-e786ad01.webp",
+      "pixels": {
+        "byteSHA256": "e786ad01a721db4958c239e956c75e19cacd7ec6ba3bbf95286aecdd4489556e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-cabo-verde-1-1119c84a.webp",
+      "originalSHA256": "1119c84a64a37593c3df2d88a96c4001ab7a9d4e891ff56cc6891119d57a7616",
+      "shippedSHA256": "1119c84a64a37593c3df2d88a96c4001ab7a9d4e891ff56cc6891119d57a7616",
+      "origin": "App/Resources/Countries/country-cabo-verde-1-1119c84a.webp",
+      "pixels": {
+        "byteSHA256": "1119c84a64a37593c3df2d88a96c4001ab7a9d4e891ff56cc6891119d57a7616",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-cambodia-3beab58e.webp",
+      "originalSHA256": "c9a9f7c27954edf9e852bf2ddecc2b414d10160a1a40eabadb682d176da6f935",
+      "shippedSHA256": "c9a9f7c27954edf9e852bf2ddecc2b414d10160a1a40eabadb682d176da6f935",
+      "origin": "App/Resources/Countries/country-cambodia-3beab58e.webp",
+      "pixels": {
+        "byteSHA256": "c9a9f7c27954edf9e852bf2ddecc2b414d10160a1a40eabadb682d176da6f935",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-cameroon-1-ce08ee74.webp",
+      "originalSHA256": "ce08ee74e2e98a79f1f25fb2b0de34b5c23f085128291f3451a608090f009798",
+      "shippedSHA256": "ce08ee74e2e98a79f1f25fb2b0de34b5c23f085128291f3451a608090f009798",
+      "origin": "App/Resources/Countries/country-cameroon-1-ce08ee74.webp",
+      "pixels": {
+        "byteSHA256": "ce08ee74e2e98a79f1f25fb2b0de34b5c23f085128291f3451a608090f009798",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-canada.webp",
+      "originalSHA256": "c277790caf0ee2e8adcf397eb981e9977e7a1388089bb975f71fef32799f311b",
+      "shippedSHA256": "c277790caf0ee2e8adcf397eb981e9977e7a1388089bb975f71fef32799f311b",
+      "origin": "App/Resources/Countries/country-canada.webp",
+      "pixels": {
+        "byteSHA256": "c277790caf0ee2e8adcf397eb981e9977e7a1388089bb975f71fef32799f311b",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-caribbean-netherlands.webp",
+      "originalSHA256": "20db32ede8cd46e6c679f5ab293fe1b33d20716c7c1f1530173461ff661bef8e",
+      "shippedSHA256": "20db32ede8cd46e6c679f5ab293fe1b33d20716c7c1f1530173461ff661bef8e",
+      "origin": "App/Resources/Countries/country-caribbean-netherlands.webp",
+      "pixels": {
+        "byteSHA256": "20db32ede8cd46e6c679f5ab293fe1b33d20716c7c1f1530173461ff661bef8e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-cayman-islands.webp",
+      "originalSHA256": "d317246b58ceac4088d5cfc747f022f4c77449d5cc14f661857032d8fd58d18a",
+      "shippedSHA256": "d317246b58ceac4088d5cfc747f022f4c77449d5cc14f661857032d8fd58d18a",
+      "origin": "App/Resources/Countries/country-cayman-islands.webp",
+      "pixels": {
+        "byteSHA256": "d317246b58ceac4088d5cfc747f022f4c77449d5cc14f661857032d8fd58d18a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-central-african-republic-1-cbc41f35.webp",
+      "originalSHA256": "cbc41f35fbaaa13ffd0e5d9881ae60c1354430d1feaee17da9add68733d3c83a",
+      "shippedSHA256": "cbc41f35fbaaa13ffd0e5d9881ae60c1354430d1feaee17da9add68733d3c83a",
+      "origin": "App/Resources/Countries/country-central-african-republic-1-cbc41f35.webp",
+      "pixels": {
+        "byteSHA256": "cbc41f35fbaaa13ffd0e5d9881ae60c1354430d1feaee17da9add68733d3c83a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-ch-local-01251ddc.webp",
+      "originalSHA256": "4e30f4b84f96771ec20776a55408f772ca80870d3bd4926d7472354aae07c8c8",
+      "shippedSHA256": "4e30f4b84f96771ec20776a55408f772ca80870d3bd4926d7472354aae07c8c8",
+      "origin": "App/Resources/Countries/country-ch-local-01251ddc.webp",
+      "pixels": {
+        "byteSHA256": "4e30f4b84f96771ec20776a55408f772ca80870d3bd4926d7472354aae07c8c8",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-chad-1-73a8d364.webp",
+      "originalSHA256": "73a8d3642a222b987155f4803d755d50e8570ccbdacfb4c7bfa044d598068fb1",
+      "shippedSHA256": "73a8d3642a222b987155f4803d755d50e8570ccbdacfb4c7bfa044d598068fb1",
+      "origin": "App/Resources/Countries/country-chad-1-73a8d364.webp",
+      "pixels": {
+        "byteSHA256": "73a8d3642a222b987155f4803d755d50e8570ccbdacfb4c7bfa044d598068fb1",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-chile-retained-aaf78ca1.webp",
+      "originalSHA256": "aaf78ca160bddf800dd1935d746ad2912079f65a6dfee4ce65942cfc4cc9ec0e",
+      "shippedSHA256": "aaf78ca160bddf800dd1935d746ad2912079f65a6dfee4ce65942cfc4cc9ec0e",
+      "origin": "App/Resources/Countries/country-chile-retained-aaf78ca1.webp",
+      "pixels": {
+        "byteSHA256": "aaf78ca160bddf800dd1935d746ad2912079f65a6dfee4ce65942cfc4cc9ec0e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-christmas-island-c55e3be9.webp",
+      "originalSHA256": "d48fb24d4b5ca668df489e648529c0135b3c1d19fbce45eb9dbc983746dc77c4",
+      "shippedSHA256": "d48fb24d4b5ca668df489e648529c0135b3c1d19fbce45eb9dbc983746dc77c4",
+      "origin": "App/Resources/Countries/country-christmas-island-c55e3be9.webp",
+      "pixels": {
+        "byteSHA256": "d48fb24d4b5ca668df489e648529c0135b3c1d19fbce45eb9dbc983746dc77c4",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-cn-local-4197f046.webp",
+      "originalSHA256": "2f61d4dbdec13687b9a5364b9d56550d20f1ce036e598ae9298d70253d585a4d",
+      "shippedSHA256": "2f61d4dbdec13687b9a5364b9d56550d20f1ce036e598ae9298d70253d585a4d",
+      "origin": "App/Resources/Countries/country-cn-local-4197f046.webp",
+      "pixels": {
+        "byteSHA256": "2f61d4dbdec13687b9a5364b9d56550d20f1ce036e598ae9298d70253d585a4d",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-cocos-keeling-islands-c20b232e.webp",
+      "originalSHA256": "11c8e787e0c20058edf2e45eccb44913581ad069259db105a0113cfe9fca1e6e",
+      "shippedSHA256": "11c8e787e0c20058edf2e45eccb44913581ad069259db105a0113cfe9fca1e6e",
+      "origin": "App/Resources/Countries/country-cocos-keeling-islands-c20b232e.webp",
+      "pixels": {
+        "byteSHA256": "11c8e787e0c20058edf2e45eccb44913581ad069259db105a0113cfe9fca1e6e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-colombia-retained-6878a07f.webp",
+      "originalSHA256": "6878a07f57cb663f0aaaf3e000e1e8e4655c19a0269a16c5c4975caa3aff2f9f",
+      "shippedSHA256": "6878a07f57cb663f0aaaf3e000e1e8e4655c19a0269a16c5c4975caa3aff2f9f",
+      "origin": "App/Resources/Countries/country-colombia-retained-6878a07f.webp",
+      "pixels": {
+        "byteSHA256": "6878a07f57cb663f0aaaf3e000e1e8e4655c19a0269a16c5c4975caa3aff2f9f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-comoros-1-adc28b01.webp",
+      "originalSHA256": "adc28b019fc881009df4b69456ccc8ef5562e9901f378e8d1463bb1deb3c180d",
+      "shippedSHA256": "adc28b019fc881009df4b69456ccc8ef5562e9901f378e8d1463bb1deb3c180d",
+      "origin": "App/Resources/Countries/country-comoros-1-adc28b01.webp",
+      "pixels": {
+        "byteSHA256": "adc28b019fc881009df4b69456ccc8ef5562e9901f378e8d1463bb1deb3c180d",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-congo-1-781423af.webp",
+      "originalSHA256": "781423afd66c24d775c050b074caa5e6f1b170ecdf93ce9b3c39a39c6ff273bf",
+      "shippedSHA256": "781423afd66c24d775c050b074caa5e6f1b170ecdf93ce9b3c39a39c6ff273bf",
+      "origin": "App/Resources/Countries/country-congo-1-781423af.webp",
+      "pixels": {
+        "byteSHA256": "781423afd66c24d775c050b074caa5e6f1b170ecdf93ce9b3c39a39c6ff273bf",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-cook-islands-2-96c803ed.webp",
+      "originalSHA256": "96c803ed2a5c2001d30182d0ae1fc9e15da10be7b45913d49e7d4cefa8f0a1f8",
+      "shippedSHA256": "96c803ed2a5c2001d30182d0ae1fc9e15da10be7b45913d49e7d4cefa8f0a1f8",
+      "origin": "App/Resources/Countries/country-cook-islands-2-96c803ed.webp",
+      "pixels": {
+        "byteSHA256": "96c803ed2a5c2001d30182d0ae1fc9e15da10be7b45913d49e7d4cefa8f0a1f8",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-costa-rica.webp",
+      "originalSHA256": "4d73dd25c774e3aba55fc8b08676985d8a17bdf95dde430a12c266fc7c43e3a4",
+      "shippedSHA256": "4d73dd25c774e3aba55fc8b08676985d8a17bdf95dde430a12c266fc7c43e3a4",
+      "origin": "App/Resources/Countries/country-costa-rica.webp",
+      "pixels": {
+        "byteSHA256": "4d73dd25c774e3aba55fc8b08676985d8a17bdf95dde430a12c266fc7c43e3a4",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-cote-divoire-1-59b631ee.webp",
+      "originalSHA256": "59b631ee74011c729a7857520ebd4261d2e01e32f1a3ae39b66eaec7fce82966",
+      "shippedSHA256": "59b631ee74011c729a7857520ebd4261d2e01e32f1a3ae39b66eaec7fce82966",
+      "origin": "App/Resources/Countries/country-cote-divoire-1-59b631ee.webp",
+      "pixels": {
+        "byteSHA256": "59b631ee74011c729a7857520ebd4261d2e01e32f1a3ae39b66eaec7fce82966",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-croatia.webp",
+      "originalSHA256": "17029bae085f469606da76deb38d3a807a6ff7fa5e68608b431c4d1fc525af28",
+      "shippedSHA256": "17029bae085f469606da76deb38d3a807a6ff7fa5e68608b431c4d1fc525af28",
+      "origin": "App/Resources/Countries/country-croatia.webp",
+      "pixels": {
+        "byteSHA256": "17029bae085f469606da76deb38d3a807a6ff7fa5e68608b431c4d1fc525af28",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-cuba-v1.webp",
+      "originalSHA256": "8646d3c16e309659ff65bcb089458777fc11a8fbfc5fd631898f73a56ff172e1",
+      "shippedSHA256": "8646d3c16e309659ff65bcb089458777fc11a8fbfc5fd631898f73a56ff172e1",
+      "origin": "App/Resources/Countries/country-cuba-v1.webp",
+      "pixels": {
+        "byteSHA256": "8646d3c16e309659ff65bcb089458777fc11a8fbfc5fd631898f73a56ff172e1",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-curacao.webp",
+      "originalSHA256": "905dfc82b1fe1a1ebcedcf062f30447e99b6551b05f1252fc63281b7696c0866",
+      "shippedSHA256": "905dfc82b1fe1a1ebcedcf062f30447e99b6551b05f1252fc63281b7696c0866",
+      "origin": "App/Resources/Countries/country-curacao.webp",
+      "pixels": {
+        "byteSHA256": "905dfc82b1fe1a1ebcedcf062f30447e99b6551b05f1252fc63281b7696c0866",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-cyprus.webp",
+      "originalSHA256": "b5cb1000db889ad4949dfbcfe8359cea95d99efd85a7eacda66028a742feca98",
+      "shippedSHA256": "b5cb1000db889ad4949dfbcfe8359cea95d99efd85a7eacda66028a742feca98",
+      "origin": "App/Resources/Countries/country-cyprus.webp",
+      "pixels": {
+        "byteSHA256": "b5cb1000db889ad4949dfbcfe8359cea95d99efd85a7eacda66028a742feca98",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-czechia.webp",
+      "originalSHA256": "491212defe307a2fed2c7a569a28fdf863db4d14c5a149b3fbe1e4ec792e6c6a",
+      "shippedSHA256": "491212defe307a2fed2c7a569a28fdf863db4d14c5a149b3fbe1e4ec792e6c6a",
+      "origin": "App/Resources/Countries/country-czechia.webp",
+      "pixels": {
+        "byteSHA256": "491212defe307a2fed2c7a569a28fdf863db4d14c5a149b3fbe1e4ec792e6c6a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-de-local-ff7027c7.webp",
+      "originalSHA256": "448d5a2196efb7011ac0cef0f23ff0d27f93bfb15fd15b8c6500d5f1b830e2a9",
+      "shippedSHA256": "448d5a2196efb7011ac0cef0f23ff0d27f93bfb15fd15b8c6500d5f1b830e2a9",
+      "origin": "App/Resources/Countries/country-de-local-ff7027c7.webp",
+      "pixels": {
+        "byteSHA256": "448d5a2196efb7011ac0cef0f23ff0d27f93bfb15fd15b8c6500d5f1b830e2a9",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-democratic-republic-of-the-congo-1-b00c876b.webp",
+      "originalSHA256": "b00c876b18d077125b3da082deba571bced7fda319ef489db40ccf9af3b5b521",
+      "shippedSHA256": "b00c876b18d077125b3da082deba571bced7fda319ef489db40ccf9af3b5b521",
+      "origin": "App/Resources/Countries/country-democratic-republic-of-the-congo-1-b00c876b.webp",
+      "pixels": {
+        "byteSHA256": "b00c876b18d077125b3da082deba571bced7fda319ef489db40ccf9af3b5b521",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-djibouti-1-d6007557.webp",
+      "originalSHA256": "d6007557d36d2224099290b68113a7ad36379cc054843e8c127d2d8694ed8b16",
+      "shippedSHA256": "d6007557d36d2224099290b68113a7ad36379cc054843e8c127d2d8694ed8b16",
+      "origin": "App/Resources/Countries/country-djibouti-1-d6007557.webp",
+      "pixels": {
+        "byteSHA256": "d6007557d36d2224099290b68113a7ad36379cc054843e8c127d2d8694ed8b16",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-dk-local-v1-619500d0.webp",
+      "originalSHA256": "795bb2429e114a57347c65f00f97131be7f35af1562f7179699ab6018dfe703a",
+      "shippedSHA256": "795bb2429e114a57347c65f00f97131be7f35af1562f7179699ab6018dfe703a",
+      "origin": "App/Resources/Countries/country-dk-local-v1-619500d0.webp",
+      "pixels": {
+        "byteSHA256": "795bb2429e114a57347c65f00f97131be7f35af1562f7179699ab6018dfe703a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-dominica.webp",
+      "originalSHA256": "b7a0687c191da50969ca35502c7857c4690c39ad400a1368a32f50f464573772",
+      "shippedSHA256": "b7a0687c191da50969ca35502c7857c4690c39ad400a1368a32f50f464573772",
+      "origin": "App/Resources/Countries/country-dominica.webp",
+      "pixels": {
+        "byteSHA256": "b7a0687c191da50969ca35502c7857c4690c39ad400a1368a32f50f464573772",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-dominican-republic.webp",
+      "originalSHA256": "3a649f6a4f8d124f0cf9540f4c633832a17166101d7484993f8bc87e829ad2cb",
+      "shippedSHA256": "3a649f6a4f8d124f0cf9540f4c633832a17166101d7484993f8bc87e829ad2cb",
+      "origin": "App/Resources/Countries/country-dominican-republic.webp",
+      "pixels": {
+        "byteSHA256": "3a649f6a4f8d124f0cf9540f4c633832a17166101d7484993f8bc87e829ad2cb",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-ecuador-retained-0224aae6.webp",
+      "originalSHA256": "0224aae6e6e66edbc7801a0d9b6624375bcb16839c1a0e3424fd8877af372ac3",
+      "shippedSHA256": "0224aae6e6e66edbc7801a0d9b6624375bcb16839c1a0e3424fd8877af372ac3",
+      "origin": "App/Resources/Countries/country-ecuador-retained-0224aae6.webp",
+      "pixels": {
+        "byteSHA256": "0224aae6e6e66edbc7801a0d9b6624375bcb16839c1a0e3424fd8877af372ac3",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-egypt-1-9d42f7a6.webp",
+      "originalSHA256": "9d42f7a693c4fff0627bc4c16e1aa8186b88ac7006a86fc97742e86b4b7e36c8",
+      "shippedSHA256": "9d42f7a693c4fff0627bc4c16e1aa8186b88ac7006a86fc97742e86b4b7e36c8",
+      "origin": "App/Resources/Countries/country-egypt-1-9d42f7a6.webp",
+      "pixels": {
+        "byteSHA256": "9d42f7a693c4fff0627bc4c16e1aa8186b88ac7006a86fc97742e86b4b7e36c8",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-el-salvador-v2.webp",
+      "originalSHA256": "4c90dd60d3775995ecaf511310d7bc39c9b02d0fefd90072c2fb15da6636d375",
+      "shippedSHA256": "4c90dd60d3775995ecaf511310d7bc39c9b02d0fefd90072c2fb15da6636d375",
+      "origin": "App/Resources/Countries/country-el-salvador-v2.webp",
+      "pixels": {
+        "byteSHA256": "4c90dd60d3775995ecaf511310d7bc39c9b02d0fefd90072c2fb15da6636d375",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-equatorial-guinea-1-b0007189.webp",
+      "originalSHA256": "b0007189b26a26fa3f83cc15bc3bd00cb7f22291d79940dc0648c6af130c32f1",
+      "shippedSHA256": "b0007189b26a26fa3f83cc15bc3bd00cb7f22291d79940dc0648c6af130c32f1",
+      "origin": "App/Resources/Countries/country-equatorial-guinea-1-b0007189.webp",
+      "pixels": {
+        "byteSHA256": "b0007189b26a26fa3f83cc15bc3bd00cb7f22291d79940dc0648c6af130c32f1",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-eritrea-1-3635d032.webp",
+      "originalSHA256": "3635d032e0fb539805a706c3c5444dd6216089e6ec3a770f2b337e7986e70f95",
+      "shippedSHA256": "3635d032e0fb539805a706c3c5444dd6216089e6ec3a770f2b337e7986e70f95",
+      "origin": "App/Resources/Countries/country-eritrea-1-3635d032.webp",
+      "pixels": {
+        "byteSHA256": "3635d032e0fb539805a706c3c5444dd6216089e6ec3a770f2b337e7986e70f95",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-es-local-1d8df2ca.webp",
+      "originalSHA256": "234eb0c008498136b321d54342ec2b41f4eb23cab12225a3e5b187fbf2785979",
+      "shippedSHA256": "234eb0c008498136b321d54342ec2b41f4eb23cab12225a3e5b187fbf2785979",
+      "origin": "App/Resources/Countries/country-es-local-1d8df2ca.webp",
+      "pixels": {
+        "byteSHA256": "234eb0c008498136b321d54342ec2b41f4eb23cab12225a3e5b187fbf2785979",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-estonia.webp",
+      "originalSHA256": "e072dd70f44254680a760ee2ce69f56386e86b90d6483f331f2ddad0aa0ca9d7",
+      "shippedSHA256": "e072dd70f44254680a760ee2ce69f56386e86b90d6483f331f2ddad0aa0ca9d7",
+      "origin": "App/Resources/Countries/country-estonia.webp",
+      "pixels": {
+        "byteSHA256": "e072dd70f44254680a760ee2ce69f56386e86b90d6483f331f2ddad0aa0ca9d7",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-eswatini-1-b56c6541.webp",
+      "originalSHA256": "b56c6541e2d2a94bab673fc5034a101937bf0b706da56cd4f55c8f83268ac775",
+      "shippedSHA256": "b56c6541e2d2a94bab673fc5034a101937bf0b706da56cd4f55c8f83268ac775",
+      "origin": "App/Resources/Countries/country-eswatini-1-b56c6541.webp",
+      "pixels": {
+        "byteSHA256": "b56c6541e2d2a94bab673fc5034a101937bf0b706da56cd4f55c8f83268ac775",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-ethiopia-1-39898c80.webp",
+      "originalSHA256": "39898c80eee46ab323d1032aa7fb1552df578616eaab81ac5b081d5931354ef7",
+      "shippedSHA256": "39898c80eee46ab323d1032aa7fb1552df578616eaab81ac5b081d5931354ef7",
+      "origin": "App/Resources/Countries/country-ethiopia-1-39898c80.webp",
+      "pixels": {
+        "byteSHA256": "39898c80eee46ab323d1032aa7fb1552df578616eaab81ac5b081d5931354ef7",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-falkland-islands-malvinas-4-e0ce7db5.webp",
+      "originalSHA256": "e0ce7db5151d93d2fc91dff2106fd1f95ec096c43e924d6562166d7f96b89004",
+      "shippedSHA256": "e0ce7db5151d93d2fc91dff2106fd1f95ec096c43e924d6562166d7f96b89004",
+      "origin": "App/Resources/Countries/country-falkland-islands-malvinas-4-e0ce7db5.webp",
+      "pixels": {
+        "byteSHA256": "e0ce7db5151d93d2fc91dff2106fd1f95ec096c43e924d6562166d7f96b89004",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-faroe-islands.webp",
+      "originalSHA256": "69693c2b22e552db1568d03a4fe19141f8e01355214ccb84e87baee950820957",
+      "shippedSHA256": "69693c2b22e552db1568d03a4fe19141f8e01355214ccb84e87baee950820957",
+      "origin": "App/Resources/Countries/country-faroe-islands.webp",
+      "pixels": {
+        "byteSHA256": "69693c2b22e552db1568d03a4fe19141f8e01355214ccb84e87baee950820957",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-fi-local-v1-0bb93d2c.webp",
+      "originalSHA256": "91f074a055a037f14416da73da675abaad31dcbd44a8521719fc2340d40f5a54",
+      "shippedSHA256": "91f074a055a037f14416da73da675abaad31dcbd44a8521719fc2340d40f5a54",
+      "origin": "App/Resources/Countries/country-fi-local-v1-0bb93d2c.webp",
+      "pixels": {
+        "byteSHA256": "91f074a055a037f14416da73da675abaad31dcbd44a8521719fc2340d40f5a54",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-fiji-2-178cdca1.webp",
+      "originalSHA256": "178cdca1ea0f123427dac9c5a60adab3699345dbc500a31f580d9169954c188f",
+      "shippedSHA256": "178cdca1ea0f123427dac9c5a60adab3699345dbc500a31f580d9169954c188f",
+      "origin": "App/Resources/Countries/country-fiji-2-178cdca1.webp",
+      "pixels": {
+        "byteSHA256": "178cdca1ea0f123427dac9c5a60adab3699345dbc500a31f580d9169954c188f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-fr-local-0bf385db.webp",
+      "originalSHA256": "fcb2aa86c8048de389ac75e126924b3cc4863a5baae27add7aab5204cf08b3df",
+      "shippedSHA256": "fcb2aa86c8048de389ac75e126924b3cc4863a5baae27add7aab5204cf08b3df",
+      "origin": "App/Resources/Countries/country-fr-local-0bf385db.webp",
+      "pixels": {
+        "byteSHA256": "fcb2aa86c8048de389ac75e126924b3cc4863a5baae27add7aab5204cf08b3df",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-french-guiana-retained-22e33a44.webp",
+      "originalSHA256": "22e33a4486afcd30a8d01594e08a37ff7a0c3365761ca3c3facb895bf6e8dffa",
+      "shippedSHA256": "22e33a4486afcd30a8d01594e08a37ff7a0c3365761ca3c3facb895bf6e8dffa",
+      "origin": "App/Resources/Countries/country-french-guiana-retained-22e33a44.webp",
+      "pixels": {
+        "byteSHA256": "22e33a4486afcd30a8d01594e08a37ff7a0c3365761ca3c3facb895bf6e8dffa",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-french-polynesia-2-b0e718c7.webp",
+      "originalSHA256": "b0e718c71a9e68391ec344201cbcbbf114507e29c0a71f0c49ff144ac1edf4ad",
+      "shippedSHA256": "b0e718c71a9e68391ec344201cbcbbf114507e29c0a71f0c49ff144ac1edf4ad",
+      "origin": "App/Resources/Countries/country-french-polynesia-2-b0e718c7.webp",
+      "pixels": {
+        "byteSHA256": "b0e718c71a9e68391ec344201cbcbbf114507e29c0a71f0c49ff144ac1edf4ad",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-french-southern-territories-1-6e951869.webp",
+      "originalSHA256": "6e9518694885356c673aaa71ca805a07a1b7611154c9452fabdb6f111a257d6c",
+      "shippedSHA256": "6e9518694885356c673aaa71ca805a07a1b7611154c9452fabdb6f111a257d6c",
+      "origin": "App/Resources/Countries/country-french-southern-territories-1-6e951869.webp",
+      "pixels": {
+        "byteSHA256": "6e9518694885356c673aaa71ca805a07a1b7611154c9452fabdb6f111a257d6c",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-gabon-1-05fa7ef2.webp",
+      "originalSHA256": "05fa7ef2ca2287663638ae16fa4c2c7c6cc15b883fa3a34b069a2cc7a3ad0a8b",
+      "shippedSHA256": "05fa7ef2ca2287663638ae16fa4c2c7c6cc15b883fa3a34b069a2cc7a3ad0a8b",
+      "origin": "App/Resources/Countries/country-gabon-1-05fa7ef2.webp",
+      "pixels": {
+        "byteSHA256": "05fa7ef2ca2287663638ae16fa4c2c7c6cc15b883fa3a34b069a2cc7a3ad0a8b",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-gambia-2-dbbcbf83.webp",
+      "originalSHA256": "dbbcbf833a130ed2f03691486ae2056491fa69e80b14e5cc5233e990f73ba07f",
+      "shippedSHA256": "dbbcbf833a130ed2f03691486ae2056491fa69e80b14e5cc5233e990f73ba07f",
+      "origin": "App/Resources/Countries/country-gambia-2-dbbcbf83.webp",
+      "pixels": {
+        "byteSHA256": "dbbcbf833a130ed2f03691486ae2056491fa69e80b14e5cc5233e990f73ba07f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-gb-local-21f4d496.webp",
+      "originalSHA256": "7cc8526bf1b7ea89b98b2b1e38125e4b8fc6233c2900183547709de69cf6fe48",
+      "shippedSHA256": "7cc8526bf1b7ea89b98b2b1e38125e4b8fc6233c2900183547709de69cf6fe48",
+      "origin": "App/Resources/Countries/country-gb-local-21f4d496.webp",
+      "pixels": {
+        "byteSHA256": "7cc8526bf1b7ea89b98b2b1e38125e4b8fc6233c2900183547709de69cf6fe48",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-georgia.webp",
+      "originalSHA256": "87851296bc777465e374a3cbabcf66cedfc17d96197549145cbaa11abad21eb3",
+      "shippedSHA256": "87851296bc777465e374a3cbabcf66cedfc17d96197549145cbaa11abad21eb3",
+      "origin": "App/Resources/Countries/country-georgia.webp",
+      "pixels": {
+        "byteSHA256": "87851296bc777465e374a3cbabcf66cedfc17d96197549145cbaa11abad21eb3",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-ghana-1-63da2020.webp",
+      "originalSHA256": "63da2020bfefa182fbc611f76b9eae1e453c293b23935253e99e2448e57a20f0",
+      "shippedSHA256": "63da2020bfefa182fbc611f76b9eae1e453c293b23935253e99e2448e57a20f0",
+      "origin": "App/Resources/Countries/country-ghana-1-63da2020.webp",
+      "pixels": {
+        "byteSHA256": "63da2020bfefa182fbc611f76b9eae1e453c293b23935253e99e2448e57a20f0",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-gibraltar.webp",
+      "originalSHA256": "7a0832b8ea7bf6acc3905844e154150a4c7b178e44c4333a01fba6795f5fd1d6",
+      "shippedSHA256": "7a0832b8ea7bf6acc3905844e154150a4c7b178e44c4333a01fba6795f5fd1d6",
+      "origin": "App/Resources/Countries/country-gibraltar.webp",
+      "pixels": {
+        "byteSHA256": "7a0832b8ea7bf6acc3905844e154150a4c7b178e44c4333a01fba6795f5fd1d6",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-greece.webp",
+      "originalSHA256": "efe5f517ad49005e2cfbae122085a8161629d1a80857401701480a8b989f6baf",
+      "shippedSHA256": "efe5f517ad49005e2cfbae122085a8161629d1a80857401701480a8b989f6baf",
+      "origin": "App/Resources/Countries/country-greece.webp",
+      "pixels": {
+        "byteSHA256": "efe5f517ad49005e2cfbae122085a8161629d1a80857401701480a8b989f6baf",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-greenland.webp",
+      "originalSHA256": "763229a47ec709e029867a18ba0cedd8368e7a3dd07e380ba5ebc2a4fc1d317a",
+      "shippedSHA256": "763229a47ec709e029867a18ba0cedd8368e7a3dd07e380ba5ebc2a4fc1d317a",
+      "origin": "App/Resources/Countries/country-greenland.webp",
+      "pixels": {
+        "byteSHA256": "763229a47ec709e029867a18ba0cedd8368e7a3dd07e380ba5ebc2a4fc1d317a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-grenada.webp",
+      "originalSHA256": "84ba5848cd6dbff27b6f1a875f630c3290818a13d91de5c797ec17baaa9fd034",
+      "shippedSHA256": "84ba5848cd6dbff27b6f1a875f630c3290818a13d91de5c797ec17baaa9fd034",
+      "origin": "App/Resources/Countries/country-grenada.webp",
+      "pixels": {
+        "byteSHA256": "84ba5848cd6dbff27b6f1a875f630c3290818a13d91de5c797ec17baaa9fd034",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-guadeloupe.webp",
+      "originalSHA256": "5921c20323776da6be5c612945b610e897bd42ac177ec368c184b6c389d6b0da",
+      "shippedSHA256": "5921c20323776da6be5c612945b610e897bd42ac177ec368c184b6c389d6b0da",
+      "origin": "App/Resources/Countries/country-guadeloupe.webp",
+      "pixels": {
+        "byteSHA256": "5921c20323776da6be5c612945b610e897bd42ac177ec368c184b6c389d6b0da",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-guam-1-85633248.webp",
+      "originalSHA256": "85633248595fa1a6adf0501d892b38ede8115146300daedfce2ee278d6768bad",
+      "shippedSHA256": "85633248595fa1a6adf0501d892b38ede8115146300daedfce2ee278d6768bad",
+      "origin": "App/Resources/Countries/country-guam-1-85633248.webp",
+      "pixels": {
+        "byteSHA256": "85633248595fa1a6adf0501d892b38ede8115146300daedfce2ee278d6768bad",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-guatemala-v1.webp",
+      "originalSHA256": "2a53e2b224abac324a4cd308ec6beb063574e0555adff9164a7be6ddc5558199",
+      "shippedSHA256": "2a53e2b224abac324a4cd308ec6beb063574e0555adff9164a7be6ddc5558199",
+      "origin": "App/Resources/Countries/country-guatemala-v1.webp",
+      "pixels": {
+        "byteSHA256": "2a53e2b224abac324a4cd308ec6beb063574e0555adff9164a7be6ddc5558199",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-guernsey.webp",
+      "originalSHA256": "663352fff846d72dee97df682725c604e6ab8a41d95ad264553e4ef61f0b381e",
+      "shippedSHA256": "663352fff846d72dee97df682725c604e6ab8a41d95ad264553e4ef61f0b381e",
+      "origin": "App/Resources/Countries/country-guernsey.webp",
+      "pixels": {
+        "byteSHA256": "663352fff846d72dee97df682725c604e6ab8a41d95ad264553e4ef61f0b381e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-guinea-1-927c4a71.webp",
+      "originalSHA256": "927c4a71d309e454f87fce995a3d97f1bf8a31635df6dd8130cec413fe39b848",
+      "shippedSHA256": "927c4a71d309e454f87fce995a3d97f1bf8a31635df6dd8130cec413fe39b848",
+      "origin": "App/Resources/Countries/country-guinea-1-927c4a71.webp",
+      "pixels": {
+        "byteSHA256": "927c4a71d309e454f87fce995a3d97f1bf8a31635df6dd8130cec413fe39b848",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-guinea-bissau-1-980eea13.webp",
+      "originalSHA256": "980eea131e7743fe939caa6a77bb2f4b6571fe24d0fc090f2a63dcb2e96e7016",
+      "shippedSHA256": "980eea131e7743fe939caa6a77bb2f4b6571fe24d0fc090f2a63dcb2e96e7016",
+      "origin": "App/Resources/Countries/country-guinea-bissau-1-980eea13.webp",
+      "pixels": {
+        "byteSHA256": "980eea131e7743fe939caa6a77bb2f4b6571fe24d0fc090f2a63dcb2e96e7016",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-guyana-2-f75922f6.webp",
+      "originalSHA256": "f75922f6ba9488e327191bf47a0943f26eafb03a9f3e6ad503ff140fd8a6c340",
+      "shippedSHA256": "f75922f6ba9488e327191bf47a0943f26eafb03a9f3e6ad503ff140fd8a6c340",
+      "origin": "App/Resources/Countries/country-guyana-2-f75922f6.webp",
+      "pixels": {
+        "byteSHA256": "f75922f6ba9488e327191bf47a0943f26eafb03a9f3e6ad503ff140fd8a6c340",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-haiti-v1.webp",
+      "originalSHA256": "5d24db1a5338317817a29bcd735c9a3a9bd499127cf9c3689b97844af47fc891",
+      "shippedSHA256": "5d24db1a5338317817a29bcd735c9a3a9bd499127cf9c3689b97844af47fc891",
+      "origin": "App/Resources/Countries/country-haiti-v1.webp",
+      "pixels": {
+        "byteSHA256": "5d24db1a5338317817a29bcd735c9a3a9bd499127cf9c3689b97844af47fc891",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-honduras.webp",
+      "originalSHA256": "78638a7635eeac23927ca530f1fe47c5d91be1b302b5f351f2f322c61b6b551f",
+      "shippedSHA256": "78638a7635eeac23927ca530f1fe47c5d91be1b302b5f351f2f322c61b6b551f",
+      "origin": "App/Resources/Countries/country-honduras.webp",
+      "pixels": {
+        "byteSHA256": "78638a7635eeac23927ca530f1fe47c5d91be1b302b5f351f2f322c61b6b551f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-hong-kong-74d787a5.webp",
+      "originalSHA256": "06ee596f67a4f426abc612923ff9eb1f10f3c3abe6627355246cac7fb2a6ad0f",
+      "shippedSHA256": "06ee596f67a4f426abc612923ff9eb1f10f3c3abe6627355246cac7fb2a6ad0f",
+      "origin": "App/Resources/Countries/country-hong-kong-74d787a5.webp",
+      "pixels": {
+        "byteSHA256": "06ee596f67a4f426abc612923ff9eb1f10f3c3abe6627355246cac7fb2a6ad0f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-hungary.webp",
+      "originalSHA256": "25fda6bdc8d07428759bf8fdb023540d50e705c7b6df24f56f20ed494e9d73c6",
+      "shippedSHA256": "25fda6bdc8d07428759bf8fdb023540d50e705c7b6df24f56f20ed494e9d73c6",
+      "origin": "App/Resources/Countries/country-hungary.webp",
+      "pixels": {
+        "byteSHA256": "25fda6bdc8d07428759bf8fdb023540d50e705c7b6df24f56f20ed494e9d73c6",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-ie-local-v1-c83c1514.webp",
+      "originalSHA256": "a61695fcd4ba47dd30b4cb6c34a3764e9f3402fa7b44e844c56167187eb446ed",
+      "shippedSHA256": "a61695fcd4ba47dd30b4cb6c34a3764e9f3402fa7b44e844c56167187eb446ed",
+      "origin": "App/Resources/Countries/country-ie-local-v1-c83c1514.webp",
+      "pixels": {
+        "byteSHA256": "a61695fcd4ba47dd30b4cb6c34a3764e9f3402fa7b44e844c56167187eb446ed",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-india-273fb446.webp",
+      "originalSHA256": "8c26f1eefd74013c0481813cb242854708ccf40c972cbfb5691f5b9dc0554240",
+      "shippedSHA256": "8c26f1eefd74013c0481813cb242854708ccf40c972cbfb5691f5b9dc0554240",
+      "origin": "App/Resources/Countries/country-india-273fb446.webp",
+      "pixels": {
+        "byteSHA256": "8c26f1eefd74013c0481813cb242854708ccf40c972cbfb5691f5b9dc0554240",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-indonesia-abf15670.webp",
+      "originalSHA256": "9f165ab8d1317c09ac52259ba8510535820413d3a657be2a01174ff72d119bd4",
+      "shippedSHA256": "9f165ab8d1317c09ac52259ba8510535820413d3a657be2a01174ff72d119bd4",
+      "origin": "App/Resources/Countries/country-indonesia-abf15670.webp",
+      "pixels": {
+        "byteSHA256": "9f165ab8d1317c09ac52259ba8510535820413d3a657be2a01174ff72d119bd4",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-iran-31dcdaa6.webp",
+      "originalSHA256": "83bf32cb00a89b4b3e6c0fd138eb3fedd17d3abf2c6499742ba92d837ae98064",
+      "shippedSHA256": "83bf32cb00a89b4b3e6c0fd138eb3fedd17d3abf2c6499742ba92d837ae98064",
+      "origin": "App/Resources/Countries/country-iran-31dcdaa6.webp",
+      "pixels": {
+        "byteSHA256": "83bf32cb00a89b4b3e6c0fd138eb3fedd17d3abf2c6499742ba92d837ae98064",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-iraq-e2bddfa4.webp",
+      "originalSHA256": "dbd586906d621ee06deed37f79a9b015dfe548eb73a1ce79294b3f3dd917991a",
+      "shippedSHA256": "dbd586906d621ee06deed37f79a9b015dfe548eb73a1ce79294b3f3dd917991a",
+      "origin": "App/Resources/Countries/country-iraq-e2bddfa4.webp",
+      "pixels": {
+        "byteSHA256": "dbd586906d621ee06deed37f79a9b015dfe548eb73a1ce79294b3f3dd917991a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-is-local-v1-ffc973c4.webp",
+      "originalSHA256": "fd0b85df78d347453c35e98efa8904b9c84fe9dd14e2b9bcc3adb742ed0156ae",
+      "shippedSHA256": "fd0b85df78d347453c35e98efa8904b9c84fe9dd14e2b9bcc3adb742ed0156ae",
+      "origin": "App/Resources/Countries/country-is-local-v1-ffc973c4.webp",
+      "pixels": {
+        "byteSHA256": "fd0b85df78d347453c35e98efa8904b9c84fe9dd14e2b9bcc3adb742ed0156ae",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-isle-of-man.webp",
+      "originalSHA256": "4d2dd820e639fd5502cb55425777085d04fc246a590e7209a56fc5a78f17c368",
+      "shippedSHA256": "4d2dd820e639fd5502cb55425777085d04fc246a590e7209a56fc5a78f17c368",
+      "origin": "App/Resources/Countries/country-isle-of-man.webp",
+      "pixels": {
+        "byteSHA256": "4d2dd820e639fd5502cb55425777085d04fc246a590e7209a56fc5a78f17c368",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-israel-0af7928a.webp",
+      "originalSHA256": "74df7af856254823688a2fedee9e8dc98ae4b8f621a37cda53754050bb6528fa",
+      "shippedSHA256": "74df7af856254823688a2fedee9e8dc98ae4b8f621a37cda53754050bb6528fa",
+      "origin": "App/Resources/Countries/country-israel-0af7928a.webp",
+      "pixels": {
+        "byteSHA256": "74df7af856254823688a2fedee9e8dc98ae4b8f621a37cda53754050bb6528fa",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-jamaica-v1.webp",
+      "originalSHA256": "828f39efc8017c1146ee97e3b0f31779f4067efd1437f32058ea10d7f36c5532",
+      "shippedSHA256": "828f39efc8017c1146ee97e3b0f31779f4067efd1437f32058ea10d7f36c5532",
+      "origin": "App/Resources/Countries/country-jamaica-v1.webp",
+      "pixels": {
+        "byteSHA256": "828f39efc8017c1146ee97e3b0f31779f4067efd1437f32058ea10d7f36c5532",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-jersey.webp",
+      "originalSHA256": "a17b3914e5abbcfa2ae8d49ecf299e9bcad3af0f0e5581a45f8ab34cbca692ce",
+      "shippedSHA256": "a17b3914e5abbcfa2ae8d49ecf299e9bcad3af0f0e5581a45f8ab34cbca692ce",
+      "origin": "App/Resources/Countries/country-jersey.webp",
+      "pixels": {
+        "byteSHA256": "a17b3914e5abbcfa2ae8d49ecf299e9bcad3af0f0e5581a45f8ab34cbca692ce",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-jordan-795b30d7.webp",
+      "originalSHA256": "e86c627ec29a9675639ea3ca30f472b6f66746fcfa26af520fc54e12e56cf195",
+      "shippedSHA256": "e86c627ec29a9675639ea3ca30f472b6f66746fcfa26af520fc54e12e56cf195",
+      "origin": "App/Resources/Countries/country-jordan-795b30d7.webp",
+      "pixels": {
+        "byteSHA256": "e86c627ec29a9675639ea3ca30f472b6f66746fcfa26af520fc54e12e56cf195",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-jp-local-4f1c1682.webp",
+      "originalSHA256": "ab9ef8e9b3ad205d8c6c012eaf9cd6741f7baffc30c8dd5c77c13222de9feba5",
+      "shippedSHA256": "ab9ef8e9b3ad205d8c6c012eaf9cd6741f7baffc30c8dd5c77c13222de9feba5",
+      "origin": "App/Resources/Countries/country-jp-local-4f1c1682.webp",
+      "pixels": {
+        "byteSHA256": "ab9ef8e9b3ad205d8c6c012eaf9cd6741f7baffc30c8dd5c77c13222de9feba5",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-kazakhstan.webp",
+      "originalSHA256": "fd392b1002252c34f373d32d54010e5ae0c6acfa84321ae20143fab3d1a2497a",
+      "shippedSHA256": "fd392b1002252c34f373d32d54010e5ae0c6acfa84321ae20143fab3d1a2497a",
+      "origin": "App/Resources/Countries/country-kazakhstan.webp",
+      "pixels": {
+        "byteSHA256": "fd392b1002252c34f373d32d54010e5ae0c6acfa84321ae20143fab3d1a2497a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-kenya-1-74e2db65.webp",
+      "originalSHA256": "74e2db653f6ee75a1d93c87483d83d60ba037a2200cab99bac47b4c899ba4d4f",
+      "shippedSHA256": "74e2db653f6ee75a1d93c87483d83d60ba037a2200cab99bac47b4c899ba4d4f",
+      "origin": "App/Resources/Countries/country-kenya-1-74e2db65.webp",
+      "pixels": {
+        "byteSHA256": "74e2db653f6ee75a1d93c87483d83d60ba037a2200cab99bac47b4c899ba4d4f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-kiribati-1-403b1c8b.webp",
+      "originalSHA256": "403b1c8bf485825c95dcd2c41955e2307e99db9916ba560f6e095e6054899ba5",
+      "shippedSHA256": "403b1c8bf485825c95dcd2c41955e2307e99db9916ba560f6e095e6054899ba5",
+      "origin": "App/Resources/Countries/country-kiribati-1-403b1c8b.webp",
+      "pixels": {
+        "byteSHA256": "403b1c8bf485825c95dcd2c41955e2307e99db9916ba560f6e095e6054899ba5",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-kosovo.webp",
+      "originalSHA256": "81f6ffe62fd0002162fbddcd7ae3de1dccb24abdf79280737cb0cbb66e16eec4",
+      "shippedSHA256": "81f6ffe62fd0002162fbddcd7ae3de1dccb24abdf79280737cb0cbb66e16eec4",
+      "origin": "App/Resources/Countries/country-kosovo.webp",
+      "pixels": {
+        "byteSHA256": "81f6ffe62fd0002162fbddcd7ae3de1dccb24abdf79280737cb0cbb66e16eec4",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-kr-local-894b7289.webp",
+      "originalSHA256": "b7976c796913641cba9d4182e2b4cf4fe66c0e29d7229876193ae7a77f014a32",
+      "shippedSHA256": "b7976c796913641cba9d4182e2b4cf4fe66c0e29d7229876193ae7a77f014a32",
+      "origin": "App/Resources/Countries/country-kr-local-894b7289.webp",
+      "pixels": {
+        "byteSHA256": "b7976c796913641cba9d4182e2b4cf4fe66c0e29d7229876193ae7a77f014a32",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-kuwait-08b1cc33.webp",
+      "originalSHA256": "db5b03afe6bac0be3e99a43c39f8c560c7372f3c0d30253cc99df6358660edba",
+      "shippedSHA256": "db5b03afe6bac0be3e99a43c39f8c560c7372f3c0d30253cc99df6358660edba",
+      "origin": "App/Resources/Countries/country-kuwait-08b1cc33.webp",
+      "pixels": {
+        "byteSHA256": "db5b03afe6bac0be3e99a43c39f8c560c7372f3c0d30253cc99df6358660edba",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-kyrgyzstan-a449c657.webp",
+      "originalSHA256": "678d2511ee1e2a8d58f99fdaffb2a7fe23ba181c3fe89db0f0ea94dd47b2e178",
+      "shippedSHA256": "678d2511ee1e2a8d58f99fdaffb2a7fe23ba181c3fe89db0f0ea94dd47b2e178",
+      "origin": "App/Resources/Countries/country-kyrgyzstan-a449c657.webp",
+      "pixels": {
+        "byteSHA256": "678d2511ee1e2a8d58f99fdaffb2a7fe23ba181c3fe89db0f0ea94dd47b2e178",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-laos-c47229b9.webp",
+      "originalSHA256": "02a81976390ad79681924fc8ac7c317c39a911ddf1ab8a06a205751025a7d68d",
+      "shippedSHA256": "02a81976390ad79681924fc8ac7c317c39a911ddf1ab8a06a205751025a7d68d",
+      "origin": "App/Resources/Countries/country-laos-c47229b9.webp",
+      "pixels": {
+        "byteSHA256": "02a81976390ad79681924fc8ac7c317c39a911ddf1ab8a06a205751025a7d68d",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-latvia.webp",
+      "originalSHA256": "dda0a32e4ae15aaeb45b67052707f8a03b2464bba180bfa84b998d091ebe8171",
+      "shippedSHA256": "dda0a32e4ae15aaeb45b67052707f8a03b2464bba180bfa84b998d091ebe8171",
+      "origin": "App/Resources/Countries/country-latvia.webp",
+      "pixels": {
+        "byteSHA256": "dda0a32e4ae15aaeb45b67052707f8a03b2464bba180bfa84b998d091ebe8171",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-lebanon-177809a3.webp",
+      "originalSHA256": "1fb2a4220556491b1ea3fa52877105eef3b0a7638d91dd7b56e2877ae44089b8",
+      "shippedSHA256": "1fb2a4220556491b1ea3fa52877105eef3b0a7638d91dd7b56e2877ae44089b8",
+      "origin": "App/Resources/Countries/country-lebanon-177809a3.webp",
+      "pixels": {
+        "byteSHA256": "1fb2a4220556491b1ea3fa52877105eef3b0a7638d91dd7b56e2877ae44089b8",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-lesotho-1-1015cbbd.webp",
+      "originalSHA256": "1015cbbd1e7b2aa7160dd4d63ea1bc16b7081efd491b93e7ef1455c5a262f396",
+      "shippedSHA256": "1015cbbd1e7b2aa7160dd4d63ea1bc16b7081efd491b93e7ef1455c5a262f396",
+      "origin": "App/Resources/Countries/country-lesotho-1-1015cbbd.webp",
+      "pixels": {
+        "byteSHA256": "1015cbbd1e7b2aa7160dd4d63ea1bc16b7081efd491b93e7ef1455c5a262f396",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-liberia-1-5a23c603.webp",
+      "originalSHA256": "5a23c603b5b53df8767f4bcc5b8c22c3680406565ca859516bd2391fa51fb047",
+      "shippedSHA256": "5a23c603b5b53df8767f4bcc5b8c22c3680406565ca859516bd2391fa51fb047",
+      "origin": "App/Resources/Countries/country-liberia-1-5a23c603.webp",
+      "pixels": {
+        "byteSHA256": "5a23c603b5b53df8767f4bcc5b8c22c3680406565ca859516bd2391fa51fb047",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-libya-1-d098510b.webp",
+      "originalSHA256": "d098510b789cfea76ad80f712b897ab4b4cbfca808b8bb78e289ccb8e107362e",
+      "shippedSHA256": "d098510b789cfea76ad80f712b897ab4b4cbfca808b8bb78e289ccb8e107362e",
+      "origin": "App/Resources/Countries/country-libya-1-d098510b.webp",
+      "pixels": {
+        "byteSHA256": "d098510b789cfea76ad80f712b897ab4b4cbfca808b8bb78e289ccb8e107362e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-liechtenstein.webp",
+      "originalSHA256": "09faf8d2f859aef03ba80bb2d32c4d8c013df0070424467304c0a39cc3e7b099",
+      "shippedSHA256": "09faf8d2f859aef03ba80bb2d32c4d8c013df0070424467304c0a39cc3e7b099",
+      "origin": "App/Resources/Countries/country-liechtenstein.webp",
+      "pixels": {
+        "byteSHA256": "09faf8d2f859aef03ba80bb2d32c4d8c013df0070424467304c0a39cc3e7b099",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-lithuania.webp",
+      "originalSHA256": "845c81cea1bffadab1277f47ca82349a0eb9a635d150237a8e90f4d818de6efa",
+      "shippedSHA256": "845c81cea1bffadab1277f47ca82349a0eb9a635d150237a8e90f4d818de6efa",
+      "origin": "App/Resources/Countries/country-lithuania.webp",
+      "pixels": {
+        "byteSHA256": "845c81cea1bffadab1277f47ca82349a0eb9a635d150237a8e90f4d818de6efa",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-luxembourg.webp",
+      "originalSHA256": "c9f2813446b3e79f9eb19c39a35bf83186b054bff63f8251a44408d0a3e3a4dd",
+      "shippedSHA256": "c9f2813446b3e79f9eb19c39a35bf83186b054bff63f8251a44408d0a3e3a4dd",
+      "origin": "App/Resources/Countries/country-luxembourg.webp",
+      "pixels": {
+        "byteSHA256": "c9f2813446b3e79f9eb19c39a35bf83186b054bff63f8251a44408d0a3e3a4dd",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-macau-339a608b.webp",
+      "originalSHA256": "57f977f34bba566f713947792a899bb0fd24e4c4265de4e4a616d53ce7dfec90",
+      "shippedSHA256": "57f977f34bba566f713947792a899bb0fd24e4c4265de4e4a616d53ce7dfec90",
+      "origin": "App/Resources/Countries/country-macau-339a608b.webp",
+      "pixels": {
+        "byteSHA256": "57f977f34bba566f713947792a899bb0fd24e4c4265de4e4a616d53ce7dfec90",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-madagascar-1-cba2b008.webp",
+      "originalSHA256": "cba2b00822e123a0058527527fc1733b6a923e8e7ad3e9b379c761743dfc417f",
+      "shippedSHA256": "cba2b00822e123a0058527527fc1733b6a923e8e7ad3e9b379c761743dfc417f",
+      "origin": "App/Resources/Countries/country-madagascar-1-cba2b008.webp",
+      "pixels": {
+        "byteSHA256": "cba2b00822e123a0058527527fc1733b6a923e8e7ad3e9b379c761743dfc417f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-malawi-1-2247bc6e.webp",
+      "originalSHA256": "2247bc6e76145c3e6bcc27b057e8dfdf1be3e6fa808c0fe35fed11feb854f36b",
+      "shippedSHA256": "2247bc6e76145c3e6bcc27b057e8dfdf1be3e6fa808c0fe35fed11feb854f36b",
+      "origin": "App/Resources/Countries/country-malawi-1-2247bc6e.webp",
+      "pixels": {
+        "byteSHA256": "2247bc6e76145c3e6bcc27b057e8dfdf1be3e6fa808c0fe35fed11feb854f36b",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-malaysia-480adbdc.webp",
+      "originalSHA256": "b3645f58c3584712e9cd6617483dd1fbf9a4de4654e22e6223a1824433ed3c34",
+      "shippedSHA256": "b3645f58c3584712e9cd6617483dd1fbf9a4de4654e22e6223a1824433ed3c34",
+      "origin": "App/Resources/Countries/country-malaysia-480adbdc.webp",
+      "pixels": {
+        "byteSHA256": "b3645f58c3584712e9cd6617483dd1fbf9a4de4654e22e6223a1824433ed3c34",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-maldives-dc2b609e.webp",
+      "originalSHA256": "a8f6777df8f61cf1593dee11c3e727e8a28abc44de4c4f10c8d6c066a1e4e495",
+      "shippedSHA256": "a8f6777df8f61cf1593dee11c3e727e8a28abc44de4c4f10c8d6c066a1e4e495",
+      "origin": "App/Resources/Countries/country-maldives-dc2b609e.webp",
+      "pixels": {
+        "byteSHA256": "a8f6777df8f61cf1593dee11c3e727e8a28abc44de4c4f10c8d6c066a1e4e495",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-mali-1-4c908a1d.webp",
+      "originalSHA256": "4c908a1d0c93a82f60d436090761021374c34f4b9b5557beff0411744d685c30",
+      "shippedSHA256": "4c908a1d0c93a82f60d436090761021374c34f4b9b5557beff0411744d685c30",
+      "origin": "App/Resources/Countries/country-mali-1-4c908a1d.webp",
+      "pixels": {
+        "byteSHA256": "4c908a1d0c93a82f60d436090761021374c34f4b9b5557beff0411744d685c30",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-malta.webp",
+      "originalSHA256": "46729638a0c1f3d04c28df4a31ac69555f79323c12aa7ea8a4960f263563f49d",
+      "shippedSHA256": "46729638a0c1f3d04c28df4a31ac69555f79323c12aa7ea8a4960f263563f49d",
+      "origin": "App/Resources/Countries/country-malta.webp",
+      "pixels": {
+        "byteSHA256": "46729638a0c1f3d04c28df4a31ac69555f79323c12aa7ea8a4960f263563f49d",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-martinique.webp",
+      "originalSHA256": "71bc45ea7ea733e582e73ab9774bbe116a3359796958cd0a38c751957d0e27c7",
+      "shippedSHA256": "71bc45ea7ea733e582e73ab9774bbe116a3359796958cd0a38c751957d0e27c7",
+      "origin": "App/Resources/Countries/country-martinique.webp",
+      "pixels": {
+        "byteSHA256": "71bc45ea7ea733e582e73ab9774bbe116a3359796958cd0a38c751957d0e27c7",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-mauritania-1-3cbb8f60.webp",
+      "originalSHA256": "3cbb8f6064138b5f1fee5ec3421d44586cbbdb431aa234492ae66c383117a97a",
+      "shippedSHA256": "3cbb8f6064138b5f1fee5ec3421d44586cbbdb431aa234492ae66c383117a97a",
+      "origin": "App/Resources/Countries/country-mauritania-1-3cbb8f60.webp",
+      "pixels": {
+        "byteSHA256": "3cbb8f6064138b5f1fee5ec3421d44586cbbdb431aa234492ae66c383117a97a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-mauritius-1-98b6cb7a.webp",
+      "originalSHA256": "98b6cb7a1879452d84192900f5bd88930831bf8ed15c39e40bda784b508bccaa",
+      "shippedSHA256": "98b6cb7a1879452d84192900f5bd88930831bf8ed15c39e40bda784b508bccaa",
+      "origin": "App/Resources/Countries/country-mauritius-1-98b6cb7a.webp",
+      "pixels": {
+        "byteSHA256": "98b6cb7a1879452d84192900f5bd88930831bf8ed15c39e40bda784b508bccaa",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-mayotte-1-22a2531f.webp",
+      "originalSHA256": "22a2531f878487a4b0edcf31859be453f75977ddd8195ca82ee47a101ef643b5",
+      "shippedSHA256": "22a2531f878487a4b0edcf31859be453f75977ddd8195ca82ee47a101ef643b5",
+      "origin": "App/Resources/Countries/country-mayotte-1-22a2531f.webp",
+      "pixels": {
+        "byteSHA256": "22a2531f878487a4b0edcf31859be453f75977ddd8195ca82ee47a101ef643b5",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-mexico-amate.webp",
+      "originalSHA256": "13106b151dd604c54de1b0e2a97b658c880409e6dae9bccfc4a86192cc132e2a",
+      "shippedSHA256": "13106b151dd604c54de1b0e2a97b658c880409e6dae9bccfc4a86192cc132e2a",
+      "origin": "App/Resources/Countries/country-mexico-amate.webp",
+      "pixels": {
+        "byteSHA256": "13106b151dd604c54de1b0e2a97b658c880409e6dae9bccfc4a86192cc132e2a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-micronesia-federated-states-of-1-43578f0e.webp",
+      "originalSHA256": "43578f0ebb7ee2392b510864eb5fac7e798ff7d6792f0c14efcd2cb3d39aa061",
+      "shippedSHA256": "43578f0ebb7ee2392b510864eb5fac7e798ff7d6792f0c14efcd2cb3d39aa061",
+      "origin": "App/Resources/Countries/country-micronesia-federated-states-of-1-43578f0e.webp",
+      "pixels": {
+        "byteSHA256": "43578f0ebb7ee2392b510864eb5fac7e798ff7d6792f0c14efcd2cb3d39aa061",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-moldova.webp",
+      "originalSHA256": "c86fb7646217c0eedacfcbfa779ce01d987650c80eb706ac99f88650e50112da",
+      "shippedSHA256": "c86fb7646217c0eedacfcbfa779ce01d987650c80eb706ac99f88650e50112da",
+      "origin": "App/Resources/Countries/country-moldova.webp",
+      "pixels": {
+        "byteSHA256": "c86fb7646217c0eedacfcbfa779ce01d987650c80eb706ac99f88650e50112da",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-monaco.webp",
+      "originalSHA256": "596ae51903b9284021636362659466e3788cbe1f7c2e2c4a9195a9c2604f47b7",
+      "shippedSHA256": "596ae51903b9284021636362659466e3788cbe1f7c2e2c4a9195a9c2604f47b7",
+      "origin": "App/Resources/Countries/country-monaco.webp",
+      "pixels": {
+        "byteSHA256": "596ae51903b9284021636362659466e3788cbe1f7c2e2c4a9195a9c2604f47b7",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-mongolia-5afbde89.webp",
+      "originalSHA256": "b6423a482d25ce31cc1d48f34af2243ec9665db1fb4e7d544da7d09d09384e01",
+      "shippedSHA256": "b6423a482d25ce31cc1d48f34af2243ec9665db1fb4e7d544da7d09d09384e01",
+      "origin": "App/Resources/Countries/country-mongolia-5afbde89.webp",
+      "pixels": {
+        "byteSHA256": "b6423a482d25ce31cc1d48f34af2243ec9665db1fb4e7d544da7d09d09384e01",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-montenegro.webp",
+      "originalSHA256": "d2461537ab28b971692b580fa896e61b0f18336f1580c35cf04d2e709719489a",
+      "shippedSHA256": "d2461537ab28b971692b580fa896e61b0f18336f1580c35cf04d2e709719489a",
+      "origin": "App/Resources/Countries/country-montenegro.webp",
+      "pixels": {
+        "byteSHA256": "d2461537ab28b971692b580fa896e61b0f18336f1580c35cf04d2e709719489a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-montserrat.webp",
+      "originalSHA256": "0249952d4076c2b67d77f1cfce40ed51422bdb7d3e0a0c433891ce7ef23ee91d",
+      "shippedSHA256": "0249952d4076c2b67d77f1cfce40ed51422bdb7d3e0a0c433891ce7ef23ee91d",
+      "origin": "App/Resources/Countries/country-montserrat.webp",
+      "pixels": {
+        "byteSHA256": "0249952d4076c2b67d77f1cfce40ed51422bdb7d3e0a0c433891ce7ef23ee91d",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-morocco-retained-92839f82.webp",
+      "originalSHA256": "92839f829b125229cce2f8ac6b5c7bedc99d7d7c4dacca6b56cf32e286f20503",
+      "shippedSHA256": "92839f829b125229cce2f8ac6b5c7bedc99d7d7c4dacca6b56cf32e286f20503",
+      "origin": "App/Resources/Countries/country-morocco-retained-92839f82.webp",
+      "pixels": {
+        "byteSHA256": "92839f829b125229cce2f8ac6b5c7bedc99d7d7c4dacca6b56cf32e286f20503",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-mozambique-1-dee39e00.webp",
+      "originalSHA256": "dee39e000dde785cf60d46d0546fde50abbe9b9cad3437ec67541c7b021ae6e7",
+      "shippedSHA256": "dee39e000dde785cf60d46d0546fde50abbe9b9cad3437ec67541c7b021ae6e7",
+      "origin": "App/Resources/Countries/country-mozambique-1-dee39e00.webp",
+      "pixels": {
+        "byteSHA256": "dee39e000dde785cf60d46d0546fde50abbe9b9cad3437ec67541c7b021ae6e7",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-myanmar-0f457aa7.webp",
+      "originalSHA256": "23d72a3435274ea49248de11d85ecbb54acb8a998f78b0ec4a2222f4e3bf6dda",
+      "shippedSHA256": "23d72a3435274ea49248de11d85ecbb54acb8a998f78b0ec4a2222f4e3bf6dda",
+      "origin": "App/Resources/Countries/country-myanmar-0f457aa7.webp",
+      "pixels": {
+        "byteSHA256": "23d72a3435274ea49248de11d85ecbb54acb8a998f78b0ec4a2222f4e3bf6dda",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-namibia-1-9bb359dd.webp",
+      "originalSHA256": "9bb359dd9483f0277614a90ea0174cf0ad151d373b37666fd846072b50be25e9",
+      "shippedSHA256": "9bb359dd9483f0277614a90ea0174cf0ad151d373b37666fd846072b50be25e9",
+      "origin": "App/Resources/Countries/country-namibia-1-9bb359dd.webp",
+      "pixels": {
+        "byteSHA256": "9bb359dd9483f0277614a90ea0174cf0ad151d373b37666fd846072b50be25e9",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-nepal-c73c3993.webp",
+      "originalSHA256": "59143719c05f4f88e716b33022c75faaf53146503c73c43f9322eb5e7acf1a50",
+      "shippedSHA256": "59143719c05f4f88e716b33022c75faaf53146503c73c43f9322eb5e7acf1a50",
+      "origin": "App/Resources/Countries/country-nepal-c73c3993.webp",
+      "pixels": {
+        "byteSHA256": "59143719c05f4f88e716b33022c75faaf53146503c73c43f9322eb5e7acf1a50",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-new-caledonia-1-af18436d.webp",
+      "originalSHA256": "af18436de37c454be9f4bdd006a8e0cab06163f5589422517dbf96515608968f",
+      "shippedSHA256": "af18436de37c454be9f4bdd006a8e0cab06163f5589422517dbf96515608968f",
+      "origin": "App/Resources/Countries/country-new-caledonia-1-af18436d.webp",
+      "pixels": {
+        "byteSHA256": "af18436de37c454be9f4bdd006a8e0cab06163f5589422517dbf96515608968f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-new-zealand-1-76ef967e.webp",
+      "originalSHA256": "76ef967e42b8eb5a0e24e4cdcbf877c01a46f4c84d0f215b16ef347eef8ee7db",
+      "shippedSHA256": "76ef967e42b8eb5a0e24e4cdcbf877c01a46f4c84d0f215b16ef347eef8ee7db",
+      "origin": "App/Resources/Countries/country-new-zealand-1-76ef967e.webp",
+      "pixels": {
+        "byteSHA256": "76ef967e42b8eb5a0e24e4cdcbf877c01a46f4c84d0f215b16ef347eef8ee7db",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-nicaragua-v2.webp",
+      "originalSHA256": "8a74f4c899dd111e91928548eb053ade074f8f9d03befb426018f651fef4a0d3",
+      "shippedSHA256": "8a74f4c899dd111e91928548eb053ade074f8f9d03befb426018f651fef4a0d3",
+      "origin": "App/Resources/Countries/country-nicaragua-v2.webp",
+      "pixels": {
+        "byteSHA256": "8a74f4c899dd111e91928548eb053ade074f8f9d03befb426018f651fef4a0d3",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-niger-1-ad5e424d.webp",
+      "originalSHA256": "ad5e424d08a597a313b2e0ca4869c3e816d0f3abd34e9dc5cf999f414affb268",
+      "shippedSHA256": "ad5e424d08a597a313b2e0ca4869c3e816d0f3abd34e9dc5cf999f414affb268",
+      "origin": "App/Resources/Countries/country-niger-1-ad5e424d.webp",
+      "pixels": {
+        "byteSHA256": "ad5e424d08a597a313b2e0ca4869c3e816d0f3abd34e9dc5cf999f414affb268",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-nigeria-1-06ca5862.webp",
+      "originalSHA256": "06ca586248e0e4e50de91a948b0a383202a25ddaa100733ab0748eca24bdb605",
+      "shippedSHA256": "06ca586248e0e4e50de91a948b0a383202a25ddaa100733ab0748eca24bdb605",
+      "origin": "App/Resources/Countries/country-nigeria-1-06ca5862.webp",
+      "pixels": {
+        "byteSHA256": "06ca586248e0e4e50de91a948b0a383202a25ddaa100733ab0748eca24bdb605",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-nl-local-a2ba542a.webp",
+      "originalSHA256": "2f383c63836885c2a9c2077796a38bd9bfeeb8a2bbbe8165cd5b31055252bbf0",
+      "shippedSHA256": "2f383c63836885c2a9c2077796a38bd9bfeeb8a2bbbe8165cd5b31055252bbf0",
+      "origin": "App/Resources/Countries/country-nl-local-a2ba542a.webp",
+      "pixels": {
+        "byteSHA256": "2f383c63836885c2a9c2077796a38bd9bfeeb8a2bbbe8165cd5b31055252bbf0",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-no-local-v2-23b3a86b.webp",
+      "originalSHA256": "9bc5818175fcc3a95a74f08e65a049460a92a27fd10ceefe950d2505393a4ba7",
+      "shippedSHA256": "9bc5818175fcc3a95a74f08e65a049460a92a27fd10ceefe950d2505393a4ba7",
+      "origin": "App/Resources/Countries/country-no-local-v2-23b3a86b.webp",
+      "pixels": {
+        "byteSHA256": "9bc5818175fcc3a95a74f08e65a049460a92a27fd10ceefe950d2505393a4ba7",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-norfolk-island-1-02d28c1c.webp",
+      "originalSHA256": "02d28c1c22dae70db864caf479118cb1d027f7b7b978d47d33d6caefb70f173a",
+      "shippedSHA256": "02d28c1c22dae70db864caf479118cb1d027f7b7b978d47d33d6caefb70f173a",
+      "origin": "App/Resources/Countries/country-norfolk-island-1-02d28c1c.webp",
+      "pixels": {
+        "byteSHA256": "02d28c1c22dae70db864caf479118cb1d027f7b7b978d47d33d6caefb70f173a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-north-korea-986ff6d3.webp",
+      "originalSHA256": "e846168f862de3fb4afe46c35c990d991c750900faf4cd8ab1b1cb74f90ade53",
+      "shippedSHA256": "e846168f862de3fb4afe46c35c990d991c750900faf4cd8ab1b1cb74f90ade53",
+      "origin": "App/Resources/Countries/country-north-korea-986ff6d3.webp",
+      "pixels": {
+        "byteSHA256": "e846168f862de3fb4afe46c35c990d991c750900faf4cd8ab1b1cb74f90ade53",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-north-macedonia.webp",
+      "originalSHA256": "c777de0274427fca74bf01e1e58d92d1a2fe60e8b67027a9bdce2034587ea7ed",
+      "shippedSHA256": "c777de0274427fca74bf01e1e58d92d1a2fe60e8b67027a9bdce2034587ea7ed",
+      "origin": "App/Resources/Countries/country-north-macedonia.webp",
+      "pixels": {
+        "byteSHA256": "c777de0274427fca74bf01e1e58d92d1a2fe60e8b67027a9bdce2034587ea7ed",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-northern-mariana-islands-1-a941688d.webp",
+      "originalSHA256": "a941688d8a5310c03248952e0467b9d22a67147aefe7a226fd2b5240539cb314",
+      "shippedSHA256": "a941688d8a5310c03248952e0467b9d22a67147aefe7a226fd2b5240539cb314",
+      "origin": "App/Resources/Countries/country-northern-mariana-islands-1-a941688d.webp",
+      "pixels": {
+        "byteSHA256": "a941688d8a5310c03248952e0467b9d22a67147aefe7a226fd2b5240539cb314",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-oman-fbbf8fa8.webp",
+      "originalSHA256": "3457520a30a9f90fa7b1663dd6f13e705cccfda3260170afdffee2c50ae58092",
+      "shippedSHA256": "3457520a30a9f90fa7b1663dd6f13e705cccfda3260170afdffee2c50ae58092",
+      "origin": "App/Resources/Countries/country-oman-fbbf8fa8.webp",
+      "pixels": {
+        "byteSHA256": "3457520a30a9f90fa7b1663dd6f13e705cccfda3260170afdffee2c50ae58092",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-pakistan-fd306b12.webp",
+      "originalSHA256": "722fe70d0624f92dfa682d5e187deea66b0ccfab87a3dcb0dad44d0487935822",
+      "shippedSHA256": "722fe70d0624f92dfa682d5e187deea66b0ccfab87a3dcb0dad44d0487935822",
+      "origin": "App/Resources/Countries/country-pakistan-fd306b12.webp",
+      "pixels": {
+        "byteSHA256": "722fe70d0624f92dfa682d5e187deea66b0ccfab87a3dcb0dad44d0487935822",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-palau-2-ca98219f.webp",
+      "originalSHA256": "ca98219fccf916e15d3c1e338d007942a048bdaa246bde48b0c25ffcbeb5e14c",
+      "shippedSHA256": "ca98219fccf916e15d3c1e338d007942a048bdaa246bde48b0c25ffcbeb5e14c",
+      "origin": "App/Resources/Countries/country-palau-2-ca98219f.webp",
+      "pixels": {
+        "byteSHA256": "ca98219fccf916e15d3c1e338d007942a048bdaa246bde48b0c25ffcbeb5e14c",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-palestine-c125e3e5.webp",
+      "originalSHA256": "0810ce7ada5a6789a99a891b68d7c8b48f4a3c05da6b119d53e39adf315cdbd8",
+      "shippedSHA256": "0810ce7ada5a6789a99a891b68d7c8b48f4a3c05da6b119d53e39adf315cdbd8",
+      "origin": "App/Resources/Countries/country-palestine-c125e3e5.webp",
+      "pixels": {
+        "byteSHA256": "0810ce7ada5a6789a99a891b68d7c8b48f4a3c05da6b119d53e39adf315cdbd8",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-panama-v2.webp",
+      "originalSHA256": "e7fe5a4d35729df7819712be6563f430a6f22ed12a8668d9be36e0df39e37553",
+      "shippedSHA256": "e7fe5a4d35729df7819712be6563f430a6f22ed12a8668d9be36e0df39e37553",
+      "origin": "App/Resources/Countries/country-panama-v2.webp",
+      "pixels": {
+        "byteSHA256": "e7fe5a4d35729df7819712be6563f430a6f22ed12a8668d9be36e0df39e37553",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-papua-new-guinea-1-f4607dd2.webp",
+      "originalSHA256": "f4607dd21c92a66e22184b1e3ac345c78d178f810346554e056b58454f598b7b",
+      "shippedSHA256": "f4607dd21c92a66e22184b1e3ac345c78d178f810346554e056b58454f598b7b",
+      "origin": "App/Resources/Countries/country-papua-new-guinea-1-f4607dd2.webp",
+      "pixels": {
+        "byteSHA256": "f4607dd21c92a66e22184b1e3ac345c78d178f810346554e056b58454f598b7b",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-paraguay-retained-b3495cd0.webp",
+      "originalSHA256": "b3495cd0a5cee9fca30adb93eb37dec14ccc88fab3560f2fda3ae4d46ff9811d",
+      "shippedSHA256": "b3495cd0a5cee9fca30adb93eb37dec14ccc88fab3560f2fda3ae4d46ff9811d",
+      "origin": "App/Resources/Countries/country-paraguay-retained-b3495cd0.webp",
+      "pixels": {
+        "byteSHA256": "b3495cd0a5cee9fca30adb93eb37dec14ccc88fab3560f2fda3ae4d46ff9811d",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-peru-retained-840061c5.webp",
+      "originalSHA256": "840061c5b00aa21a8255f244128501823d18131c338c93efa1a66cb6cf15d3f0",
+      "shippedSHA256": "840061c5b00aa21a8255f244128501823d18131c338c93efa1a66cb6cf15d3f0",
+      "origin": "App/Resources/Countries/country-peru-retained-840061c5.webp",
+      "pixels": {
+        "byteSHA256": "840061c5b00aa21a8255f244128501823d18131c338c93efa1a66cb6cf15d3f0",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-philippines-c325d1d7.webp",
+      "originalSHA256": "6e3b3fa9e5d3a2e15026f516efa09f52fbfe47a175a7d03d10a606937180af09",
+      "shippedSHA256": "6e3b3fa9e5d3a2e15026f516efa09f52fbfe47a175a7d03d10a606937180af09",
+      "origin": "App/Resources/Countries/country-philippines-c325d1d7.webp",
+      "pixels": {
+        "byteSHA256": "6e3b3fa9e5d3a2e15026f516efa09f52fbfe47a175a7d03d10a606937180af09",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-pl-local-636636eb.webp",
+      "originalSHA256": "a19246c208abc5a41e030f92fa4f4cf4887c50e8718dc21e2c9789fb719efc0d",
+      "shippedSHA256": "a19246c208abc5a41e030f92fa4f4cf4887c50e8718dc21e2c9789fb719efc0d",
+      "origin": "App/Resources/Countries/country-pl-local-636636eb.webp",
+      "pixels": {
+        "byteSHA256": "a19246c208abc5a41e030f92fa4f4cf4887c50e8718dc21e2c9789fb719efc0d",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-pt-local-cb18b90b.webp",
+      "originalSHA256": "81a6fbc7944ba87957eeeaaef4be4d95b0a14c4e03c986a4e0271d10dcf1a47d",
+      "shippedSHA256": "81a6fbc7944ba87957eeeaaef4be4d95b0a14c4e03c986a4e0271d10dcf1a47d",
+      "origin": "App/Resources/Countries/country-pt-local-cb18b90b.webp",
+      "pixels": {
+        "byteSHA256": "81a6fbc7944ba87957eeeaaef4be4d95b0a14c4e03c986a4e0271d10dcf1a47d",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-puerto-rico-v1.webp",
+      "originalSHA256": "4e502a73c6ef081d0f9465850447ec4625126cb218cd45e01138be881d34cb81",
+      "shippedSHA256": "4e502a73c6ef081d0f9465850447ec4625126cb218cd45e01138be881d34cb81",
+      "origin": "App/Resources/Countries/country-puerto-rico-v1.webp",
+      "pixels": {
+        "byteSHA256": "4e502a73c6ef081d0f9465850447ec4625126cb218cd45e01138be881d34cb81",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-qatar-d4ddf59d.webp",
+      "originalSHA256": "9ecfc38b6b9a2618860a163c9462714b1ae3e84fdc63390e1c53e4c7f9fc638e",
+      "shippedSHA256": "9ecfc38b6b9a2618860a163c9462714b1ae3e84fdc63390e1c53e4c7f9fc638e",
+      "origin": "App/Resources/Countries/country-qatar-d4ddf59d.webp",
+      "pixels": {
+        "byteSHA256": "9ecfc38b6b9a2618860a163c9462714b1ae3e84fdc63390e1c53e4c7f9fc638e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-reunion-1-323bc5ed.webp",
+      "originalSHA256": "323bc5ed12e92de25bf93a625a063f146c28b1bd065462bf9e37e8e921e32cdf",
+      "shippedSHA256": "323bc5ed12e92de25bf93a625a063f146c28b1bd065462bf9e37e8e921e32cdf",
+      "origin": "App/Resources/Countries/country-reunion-1-323bc5ed.webp",
+      "pixels": {
+        "byteSHA256": "323bc5ed12e92de25bf93a625a063f146c28b1bd065462bf9e37e8e921e32cdf",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-romania.webp",
+      "originalSHA256": "a915c57cf74e78fdc1a0dcb8aadb061faaa96b927e2ce313bcfbb41acd92d848",
+      "shippedSHA256": "a915c57cf74e78fdc1a0dcb8aadb061faaa96b927e2ce313bcfbb41acd92d848",
+      "origin": "App/Resources/Countries/country-romania.webp",
+      "pixels": {
+        "byteSHA256": "a915c57cf74e78fdc1a0dcb8aadb061faaa96b927e2ce313bcfbb41acd92d848",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-russia.webp",
+      "originalSHA256": "3a5755993d0f2b5d86aee58a4f7a6bb68ebde62f1480dc55252c1bb4935e6886",
+      "shippedSHA256": "3a5755993d0f2b5d86aee58a4f7a6bb68ebde62f1480dc55252c1bb4935e6886",
+      "origin": "App/Resources/Countries/country-russia.webp",
+      "pixels": {
+        "byteSHA256": "3a5755993d0f2b5d86aee58a4f7a6bb68ebde62f1480dc55252c1bb4935e6886",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-rwanda-2-3b2a6cc8.webp",
+      "originalSHA256": "3b2a6cc8c7e9549249f8ca765427010a56b6c6caf878b493f2e2fda783335468",
+      "shippedSHA256": "3b2a6cc8c7e9549249f8ca765427010a56b6c6caf878b493f2e2fda783335468",
+      "origin": "App/Resources/Countries/country-rwanda-2-3b2a6cc8.webp",
+      "pixels": {
+        "byteSHA256": "3b2a6cc8c7e9549249f8ca765427010a56b6c6caf878b493f2e2fda783335468",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-saint-barthelemy.webp",
+      "originalSHA256": "dc8434364efe75cc02281fd497fedfdbfac01c5787b962509facbf983a568a5a",
+      "shippedSHA256": "dc8434364efe75cc02281fd497fedfdbfac01c5787b962509facbf983a568a5a",
+      "origin": "App/Resources/Countries/country-saint-barthelemy.webp",
+      "pixels": {
+        "byteSHA256": "dc8434364efe75cc02281fd497fedfdbfac01c5787b962509facbf983a568a5a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-saint-kitts-and-nevis.webp",
+      "originalSHA256": "ae60205e11fcf1ff9a1a2a8f4b7ce38d051fa51a861fb018076b00189fef09e1",
+      "shippedSHA256": "ae60205e11fcf1ff9a1a2a8f4b7ce38d051fa51a861fb018076b00189fef09e1",
+      "origin": "App/Resources/Countries/country-saint-kitts-and-nevis.webp",
+      "pixels": {
+        "byteSHA256": "ae60205e11fcf1ff9a1a2a8f4b7ce38d051fa51a861fb018076b00189fef09e1",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-saint-lucia.webp",
+      "originalSHA256": "7d4fa2a244d8d53f62f56f2fb350a00e8c15572f16f00bc2a3a2c5b4fc064890",
+      "shippedSHA256": "7d4fa2a244d8d53f62f56f2fb350a00e8c15572f16f00bc2a3a2c5b4fc064890",
+      "origin": "App/Resources/Countries/country-saint-lucia.webp",
+      "pixels": {
+        "byteSHA256": "7d4fa2a244d8d53f62f56f2fb350a00e8c15572f16f00bc2a3a2c5b4fc064890",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-saint-martin.webp",
+      "originalSHA256": "fe8241b71c172159bd9f4ced0fb1fa6b494015466a45d03c90ec0ea24c183649",
+      "shippedSHA256": "fe8241b71c172159bd9f4ced0fb1fa6b494015466a45d03c90ec0ea24c183649",
+      "origin": "App/Resources/Countries/country-saint-martin.webp",
+      "pixels": {
+        "byteSHA256": "fe8241b71c172159bd9f4ced0fb1fa6b494015466a45d03c90ec0ea24c183649",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-saint-pierre-and-miquelon.webp",
+      "originalSHA256": "b5d97aea96e9bd8c0b71afeb9a083a99d3e875682d0a9655418f2e452f900c48",
+      "shippedSHA256": "b5d97aea96e9bd8c0b71afeb9a083a99d3e875682d0a9655418f2e452f900c48",
+      "origin": "App/Resources/Countries/country-saint-pierre-and-miquelon.webp",
+      "pixels": {
+        "byteSHA256": "b5d97aea96e9bd8c0b71afeb9a083a99d3e875682d0a9655418f2e452f900c48",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-saint-vincent-and-the-grenadines.webp",
+      "originalSHA256": "656a24073499f3e7e99807fb205ebfd286c163e82876656872c9012dc6e2e71f",
+      "shippedSHA256": "656a24073499f3e7e99807fb205ebfd286c163e82876656872c9012dc6e2e71f",
+      "origin": "App/Resources/Countries/country-saint-vincent-and-the-grenadines.webp",
+      "pixels": {
+        "byteSHA256": "656a24073499f3e7e99807fb205ebfd286c163e82876656872c9012dc6e2e71f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-samoa-1-b97a3a87.webp",
+      "originalSHA256": "b97a3a87ae4bcc0fbfe4a98ceeaaec141560b588830cfef276481f9b6a3a8439",
+      "shippedSHA256": "b97a3a87ae4bcc0fbfe4a98ceeaaec141560b588830cfef276481f9b6a3a8439",
+      "origin": "App/Resources/Countries/country-samoa-1-b97a3a87.webp",
+      "pixels": {
+        "byteSHA256": "b97a3a87ae4bcc0fbfe4a98ceeaaec141560b588830cfef276481f9b6a3a8439",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-san-marino.webp",
+      "originalSHA256": "fc94e8d7ce44dfed17184f0e43545853eeecb687b98f778ce19270d1d1a39535",
+      "shippedSHA256": "fc94e8d7ce44dfed17184f0e43545853eeecb687b98f778ce19270d1d1a39535",
+      "origin": "App/Resources/Countries/country-san-marino.webp",
+      "pixels": {
+        "byteSHA256": "fc94e8d7ce44dfed17184f0e43545853eeecb687b98f778ce19270d1d1a39535",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-sao-tome-and-principe-1-29dcda91.webp",
+      "originalSHA256": "29dcda9126d921728a5cbb85536299a5c11690b4f7933a8e50a5aa2a6a1a49e5",
+      "shippedSHA256": "29dcda9126d921728a5cbb85536299a5c11690b4f7933a8e50a5aa2a6a1a49e5",
+      "origin": "App/Resources/Countries/country-sao-tome-and-principe-1-29dcda91.webp",
+      "pixels": {
+        "byteSHA256": "29dcda9126d921728a5cbb85536299a5c11690b4f7933a8e50a5aa2a6a1a49e5",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-saudi-arabia-3f00bf00.webp",
+      "originalSHA256": "d85d3bef1ae2a5ed7236c0d045aff7566ee3e792a759f0e8190e330bda82e30c",
+      "shippedSHA256": "d85d3bef1ae2a5ed7236c0d045aff7566ee3e792a759f0e8190e330bda82e30c",
+      "origin": "App/Resources/Countries/country-saudi-arabia-3f00bf00.webp",
+      "pixels": {
+        "byteSHA256": "d85d3bef1ae2a5ed7236c0d045aff7566ee3e792a759f0e8190e330bda82e30c",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-se-local-v1-e29171b3.webp",
+      "originalSHA256": "97fd38213d9fde568842b1ed1dfd478822e8746858c8fab097b25854a33e512e",
+      "shippedSHA256": "97fd38213d9fde568842b1ed1dfd478822e8746858c8fab097b25854a33e512e",
+      "origin": "App/Resources/Countries/country-se-local-v1-e29171b3.webp",
+      "pixels": {
+        "byteSHA256": "97fd38213d9fde568842b1ed1dfd478822e8746858c8fab097b25854a33e512e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-senegal-1-23f046ad.webp",
+      "originalSHA256": "23f046ad8acfa787bc9533f47ffadb55511c1b137810f831fdc8a55248a94d63",
+      "shippedSHA256": "23f046ad8acfa787bc9533f47ffadb55511c1b137810f831fdc8a55248a94d63",
+      "origin": "App/Resources/Countries/country-senegal-1-23f046ad.webp",
+      "pixels": {
+        "byteSHA256": "23f046ad8acfa787bc9533f47ffadb55511c1b137810f831fdc8a55248a94d63",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-serbia.webp",
+      "originalSHA256": "e5dc62cce0b2ce018016162c9c3d388769133cfe71b90fe9d2207b61d37e8bcb",
+      "shippedSHA256": "e5dc62cce0b2ce018016162c9c3d388769133cfe71b90fe9d2207b61d37e8bcb",
+      "origin": "App/Resources/Countries/country-serbia.webp",
+      "pixels": {
+        "byteSHA256": "e5dc62cce0b2ce018016162c9c3d388769133cfe71b90fe9d2207b61d37e8bcb",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-seychelles-1-39818f0d.webp",
+      "originalSHA256": "39818f0dfe647b947051358c4bc832a6335ddf5cdbefd3d93630d1684928ca49",
+      "shippedSHA256": "39818f0dfe647b947051358c4bc832a6335ddf5cdbefd3d93630d1684928ca49",
+      "origin": "App/Resources/Countries/country-seychelles-1-39818f0d.webp",
+      "pixels": {
+        "byteSHA256": "39818f0dfe647b947051358c4bc832a6335ddf5cdbefd3d93630d1684928ca49",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-sierra-leone-1-7b3a04f0.webp",
+      "originalSHA256": "7b3a04f029dfca468ef347962c7d89d0f3421516246a12b83e8dacc7b0d2e139",
+      "shippedSHA256": "7b3a04f029dfca468ef347962c7d89d0f3421516246a12b83e8dacc7b0d2e139",
+      "origin": "App/Resources/Countries/country-sierra-leone-1-7b3a04f0.webp",
+      "pixels": {
+        "byteSHA256": "7b3a04f029dfca468ef347962c7d89d0f3421516246a12b83e8dacc7b0d2e139",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-singapore-84177899.webp",
+      "originalSHA256": "6ac4354a5fbc9ea6bb3fa3640794420d926e7cf7946df4e32e69031455876f6c",
+      "shippedSHA256": "6ac4354a5fbc9ea6bb3fa3640794420d926e7cf7946df4e32e69031455876f6c",
+      "origin": "App/Resources/Countries/country-singapore-84177899.webp",
+      "pixels": {
+        "byteSHA256": "6ac4354a5fbc9ea6bb3fa3640794420d926e7cf7946df4e32e69031455876f6c",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-sint-maarten.webp",
+      "originalSHA256": "33935a588066ce296ed9b50599dc85ab415f9c8d31643258342ccbe186d5ea02",
+      "shippedSHA256": "33935a588066ce296ed9b50599dc85ab415f9c8d31643258342ccbe186d5ea02",
+      "origin": "App/Resources/Countries/country-sint-maarten.webp",
+      "pixels": {
+        "byteSHA256": "33935a588066ce296ed9b50599dc85ab415f9c8d31643258342ccbe186d5ea02",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-slovakia.webp",
+      "originalSHA256": "e9a4587e69990e4fcddb90878240db9012b9b77068a377caabc106ac4e155ed8",
+      "shippedSHA256": "e9a4587e69990e4fcddb90878240db9012b9b77068a377caabc106ac4e155ed8",
+      "origin": "App/Resources/Countries/country-slovakia.webp",
+      "pixels": {
+        "byteSHA256": "e9a4587e69990e4fcddb90878240db9012b9b77068a377caabc106ac4e155ed8",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-slovenia.webp",
+      "originalSHA256": "8e7f68bffc5cdf6eee42dba2bc2e4e03fc2dc5270c136ca22aa2981d38f2c6f8",
+      "shippedSHA256": "8e7f68bffc5cdf6eee42dba2bc2e4e03fc2dc5270c136ca22aa2981d38f2c6f8",
+      "origin": "App/Resources/Countries/country-slovenia.webp",
+      "pixels": {
+        "byteSHA256": "8e7f68bffc5cdf6eee42dba2bc2e4e03fc2dc5270c136ca22aa2981d38f2c6f8",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-solomon-islands-1-37b8d83a.webp",
+      "originalSHA256": "37b8d83a88cb9de68ea078d8a8ac0c57da4ba174609596486532b8ee047c875e",
+      "shippedSHA256": "37b8d83a88cb9de68ea078d8a8ac0c57da4ba174609596486532b8ee047c875e",
+      "origin": "App/Resources/Countries/country-solomon-islands-1-37b8d83a.webp",
+      "pixels": {
+        "byteSHA256": "37b8d83a88cb9de68ea078d8a8ac0c57da4ba174609596486532b8ee047c875e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-somalia-1-2b6a87fd.webp",
+      "originalSHA256": "2b6a87fd6eff1e3bfcba087225bd7006eedbebfbd389d36829635f7a653d09aa",
+      "shippedSHA256": "2b6a87fd6eff1e3bfcba087225bd7006eedbebfbd389d36829635f7a653d09aa",
+      "origin": "App/Resources/Countries/country-somalia-1-2b6a87fd.webp",
+      "pixels": {
+        "byteSHA256": "2b6a87fd6eff1e3bfcba087225bd7006eedbebfbd389d36829635f7a653d09aa",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-south-africa-1-8f50892d.webp",
+      "originalSHA256": "8f50892d686f0094df31c87e4ced7583dbb1b11e245452b5736360e95ac10ab4",
+      "shippedSHA256": "8f50892d686f0094df31c87e4ced7583dbb1b11e245452b5736360e95ac10ab4",
+      "origin": "App/Resources/Countries/country-south-africa-1-8f50892d.webp",
+      "pixels": {
+        "byteSHA256": "8f50892d686f0094df31c87e4ced7583dbb1b11e245452b5736360e95ac10ab4",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-south-georgia-and-the-south-sandwich-islands-retained-e219fa31.webp",
+      "originalSHA256": "e219fa31de947cfeb4f4629049c882aca045aac3b9850ef55c0dc177159fa9b9",
+      "shippedSHA256": "e219fa31de947cfeb4f4629049c882aca045aac3b9850ef55c0dc177159fa9b9",
+      "origin": "App/Resources/Countries/country-south-georgia-and-the-south-sandwich-islands-retained-e219fa31.webp",
+      "pixels": {
+        "byteSHA256": "e219fa31de947cfeb4f4629049c882aca045aac3b9850ef55c0dc177159fa9b9",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-south-sudan-1-cc80ea6b.webp",
+      "originalSHA256": "cc80ea6bf22e5eb252fe149de3963d9dfbe12bd6fe3adc469d339e39118fb83d",
+      "shippedSHA256": "cc80ea6bf22e5eb252fe149de3963d9dfbe12bd6fe3adc469d339e39118fb83d",
+      "origin": "App/Resources/Countries/country-south-sudan-1-cc80ea6b.webp",
+      "pixels": {
+        "byteSHA256": "cc80ea6bf22e5eb252fe149de3963d9dfbe12bd6fe3adc469d339e39118fb83d",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-sri-lanka-dc7c2667.webp",
+      "originalSHA256": "3781a5d1aa3323ce9883077a5a9c4e280853d71cd3a1be814115d63468371900",
+      "shippedSHA256": "3781a5d1aa3323ce9883077a5a9c4e280853d71cd3a1be814115d63468371900",
+      "origin": "App/Resources/Countries/country-sri-lanka-dc7c2667.webp",
+      "pixels": {
+        "byteSHA256": "3781a5d1aa3323ce9883077a5a9c4e280853d71cd3a1be814115d63468371900",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-sudan-1-33602fa5.webp",
+      "originalSHA256": "33602fa5acea4ec999f3874e582f352f49304b753d2b722c2f1d4ffc3ed96a3a",
+      "shippedSHA256": "33602fa5acea4ec999f3874e582f352f49304b753d2b722c2f1d4ffc3ed96a3a",
+      "origin": "App/Resources/Countries/country-sudan-1-33602fa5.webp",
+      "pixels": {
+        "byteSHA256": "33602fa5acea4ec999f3874e582f352f49304b753d2b722c2f1d4ffc3ed96a3a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-suriname-retained-1723b134.webp",
+      "originalSHA256": "1723b134c1d175156cc9b38b601afd4f51e582203b0b728ffd01f149bcb60e14",
+      "shippedSHA256": "1723b134c1d175156cc9b38b601afd4f51e582203b0b728ffd01f149bcb60e14",
+      "origin": "App/Resources/Countries/country-suriname-retained-1723b134.webp",
+      "pixels": {
+        "byteSHA256": "1723b134c1d175156cc9b38b601afd4f51e582203b0b728ffd01f149bcb60e14",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-svalbard-and-jan-mayen.webp",
+      "originalSHA256": "0d2b64f8582a325d23896defe47ac6664bb295b754b782bdb4f8dcaf0911bb5a",
+      "shippedSHA256": "0d2b64f8582a325d23896defe47ac6664bb295b754b782bdb4f8dcaf0911bb5a",
+      "origin": "App/Resources/Countries/country-svalbard-and-jan-mayen.webp",
+      "pixels": {
+        "byteSHA256": "0d2b64f8582a325d23896defe47ac6664bb295b754b782bdb4f8dcaf0911bb5a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-syria-388c88b1.webp",
+      "originalSHA256": "17deb998225b0cec22d0a0a87620a1aad3adc0bb294e58bcda47803b8720efcd",
+      "shippedSHA256": "17deb998225b0cec22d0a0a87620a1aad3adc0bb294e58bcda47803b8720efcd",
+      "origin": "App/Resources/Countries/country-syria-388c88b1.webp",
+      "pixels": {
+        "byteSHA256": "17deb998225b0cec22d0a0a87620a1aad3adc0bb294e58bcda47803b8720efcd",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-taiwan-c73ddf22.webp",
+      "originalSHA256": "75bdbfa3ac3ef619d293d366743cc6f4a327f9d658dd86a604a1e399f38aa426",
+      "shippedSHA256": "75bdbfa3ac3ef619d293d366743cc6f4a327f9d658dd86a604a1e399f38aa426",
+      "origin": "App/Resources/Countries/country-taiwan-c73ddf22.webp",
+      "pixels": {
+        "byteSHA256": "75bdbfa3ac3ef619d293d366743cc6f4a327f9d658dd86a604a1e399f38aa426",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-tajikistan-19370956.webp",
+      "originalSHA256": "c15f01870db134e5e7bdf1e13018033ff17a2b1eb8b496225ca543883b73fa7e",
+      "shippedSHA256": "c15f01870db134e5e7bdf1e13018033ff17a2b1eb8b496225ca543883b73fa7e",
+      "origin": "App/Resources/Countries/country-tajikistan-19370956.webp",
+      "pixels": {
+        "byteSHA256": "c15f01870db134e5e7bdf1e13018033ff17a2b1eb8b496225ca543883b73fa7e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-thailand-8cee34c3.webp",
+      "originalSHA256": "c3ac8899ef0199d4f6c36917e0828445577f0dc1aa7376a7e16b11edeb049b16",
+      "shippedSHA256": "c3ac8899ef0199d4f6c36917e0828445577f0dc1aa7376a7e16b11edeb049b16",
+      "origin": "App/Resources/Countries/country-thailand-8cee34c3.webp",
+      "pixels": {
+        "byteSHA256": "c3ac8899ef0199d4f6c36917e0828445577f0dc1aa7376a7e16b11edeb049b16",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-timor-leste-adbb0c8d.webp",
+      "originalSHA256": "828b1acdeb340596ebf4a46f8c7f227743923b848facd576f62b5c68edad9b21",
+      "shippedSHA256": "828b1acdeb340596ebf4a46f8c7f227743923b848facd576f62b5c68edad9b21",
+      "origin": "App/Resources/Countries/country-timor-leste-adbb0c8d.webp",
+      "pixels": {
+        "byteSHA256": "828b1acdeb340596ebf4a46f8c7f227743923b848facd576f62b5c68edad9b21",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-togo-1-b1fdfdba.webp",
+      "originalSHA256": "b1fdfdba5c1012c8a04d996ff3b1b5477ef80c51d472106dd78ca8fc0c5d8fff",
+      "shippedSHA256": "b1fdfdba5c1012c8a04d996ff3b1b5477ef80c51d472106dd78ca8fc0c5d8fff",
+      "origin": "App/Resources/Countries/country-togo-1-b1fdfdba.webp",
+      "pixels": {
+        "byteSHA256": "b1fdfdba5c1012c8a04d996ff3b1b5477ef80c51d472106dd78ca8fc0c5d8fff",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-tonga-1-31a602d3.webp",
+      "originalSHA256": "31a602d3f43c707a942e4ce5d23d69eec0b7544f3d9c2cc791f501472086335b",
+      "shippedSHA256": "31a602d3f43c707a942e4ce5d23d69eec0b7544f3d9c2cc791f501472086335b",
+      "origin": "App/Resources/Countries/country-tonga-1-31a602d3.webp",
+      "pixels": {
+        "byteSHA256": "31a602d3f43c707a942e4ce5d23d69eec0b7544f3d9c2cc791f501472086335b",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-trinidad-and-tobago.webp",
+      "originalSHA256": "37dd559d2cba386fccc53adb8b8337b58baea593e49d4d10227448116259b1b1",
+      "shippedSHA256": "37dd559d2cba386fccc53adb8b8337b58baea593e49d4d10227448116259b1b1",
+      "origin": "App/Resources/Countries/country-trinidad-and-tobago.webp",
+      "pixels": {
+        "byteSHA256": "37dd559d2cba386fccc53adb8b8337b58baea593e49d4d10227448116259b1b1",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-tunisia-1-6b957e96.webp",
+      "originalSHA256": "6b957e967a88b2c3b455d8561332eb6f7ab7800ec92aa4df1c37c6f5c9f2a301",
+      "shippedSHA256": "6b957e967a88b2c3b455d8561332eb6f7ab7800ec92aa4df1c37c6f5c9f2a301",
+      "origin": "App/Resources/Countries/country-tunisia-1-6b957e96.webp",
+      "pixels": {
+        "byteSHA256": "6b957e967a88b2c3b455d8561332eb6f7ab7800ec92aa4df1c37c6f5c9f2a301",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-turkiye.webp",
+      "originalSHA256": "62f9336920c442d05250308cb2a4ef75f7fb65731a93fe14fa2cb63792288bf4",
+      "shippedSHA256": "62f9336920c442d05250308cb2a4ef75f7fb65731a93fe14fa2cb63792288bf4",
+      "origin": "App/Resources/Countries/country-turkiye.webp",
+      "pixels": {
+        "byteSHA256": "62f9336920c442d05250308cb2a4ef75f7fb65731a93fe14fa2cb63792288bf4",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-turkmenistan-a2252087.webp",
+      "originalSHA256": "3f693267c079104704be135b8323e5b1ecaf9cd62fa0630fb1d571c286999073",
+      "shippedSHA256": "3f693267c079104704be135b8323e5b1ecaf9cd62fa0630fb1d571c286999073",
+      "origin": "App/Resources/Countries/country-turkmenistan-a2252087.webp",
+      "pixels": {
+        "byteSHA256": "3f693267c079104704be135b8323e5b1ecaf9cd62fa0630fb1d571c286999073",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-turks-and-caicos.webp",
+      "originalSHA256": "a1499981e02c5e5b9919ee6ea37c6e510efc201d6f6af10378c28a8da4283540",
+      "shippedSHA256": "a1499981e02c5e5b9919ee6ea37c6e510efc201d6f6af10378c28a8da4283540",
+      "origin": "App/Resources/Countries/country-turks-and-caicos.webp",
+      "pixels": {
+        "byteSHA256": "a1499981e02c5e5b9919ee6ea37c6e510efc201d6f6af10378c28a8da4283540",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-uganda-1-786af278.webp",
+      "originalSHA256": "786af278acf922047ed160a44d6cecf672dfb2af06c90d864373534eda2e50dd",
+      "shippedSHA256": "786af278acf922047ed160a44d6cecf672dfb2af06c90d864373534eda2e50dd",
+      "origin": "App/Resources/Countries/country-uganda-1-786af278.webp",
+      "pixels": {
+        "byteSHA256": "786af278acf922047ed160a44d6cecf672dfb2af06c90d864373534eda2e50dd",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-ukraine.webp",
+      "originalSHA256": "2085d56ccf657542e08657ea06fab0c839069b7078523331aa99145746d3e41a",
+      "shippedSHA256": "2085d56ccf657542e08657ea06fab0c839069b7078523331aa99145746d3e41a",
+      "origin": "App/Resources/Countries/country-ukraine.webp",
+      "pixels": {
+        "byteSHA256": "2085d56ccf657542e08657ea06fab0c839069b7078523331aa99145746d3e41a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-united-arab-emirates-d5317db0.webp",
+      "originalSHA256": "9826593e7ad8bac2e28e2330c7cf4c4c8ce1bbd0cc14bd053907c12d73379663",
+      "shippedSHA256": "9826593e7ad8bac2e28e2330c7cf4c4c8ce1bbd0cc14bd053907c12d73379663",
+      "origin": "App/Resources/Countries/country-united-arab-emirates-d5317db0.webp",
+      "pixels": {
+        "byteSHA256": "9826593e7ad8bac2e28e2330c7cf4c4c8ce1bbd0cc14bd053907c12d73379663",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-united-republic-of-tanzania-1-f9899071.webp",
+      "originalSHA256": "f9899071f460897d8644ab3f35dc3942b381f5fefbfd19fd9f16ea2d25e15d1f",
+      "shippedSHA256": "f9899071f460897d8644ab3f35dc3942b381f5fefbfd19fd9f16ea2d25e15d1f",
+      "origin": "App/Resources/Countries/country-united-republic-of-tanzania-1-f9899071.webp",
+      "pixels": {
+        "byteSHA256": "f9899071f460897d8644ab3f35dc3942b381f5fefbfd19fd9f16ea2d25e15d1f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-united-states.webp",
+      "originalSHA256": "822fc0494063d047c8933a63894ed45850ca74ab7248c82dd29af1b76b69efa5",
+      "shippedSHA256": "822fc0494063d047c8933a63894ed45850ca74ab7248c82dd29af1b76b69efa5",
+      "origin": "App/Resources/Countries/country-united-states.webp",
+      "pixels": {
+        "byteSHA256": "822fc0494063d047c8933a63894ed45850ca74ab7248c82dd29af1b76b69efa5",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-uruguay-retained-340e18f1.webp",
+      "originalSHA256": "340e18f1085fabdb21af07347c07b5390ba6fe73c2b13faa0c0592492a41c61e",
+      "shippedSHA256": "340e18f1085fabdb21af07347c07b5390ba6fe73c2b13faa0c0592492a41c61e",
+      "origin": "App/Resources/Countries/country-uruguay-retained-340e18f1.webp",
+      "pixels": {
+        "byteSHA256": "340e18f1085fabdb21af07347c07b5390ba6fe73c2b13faa0c0592492a41c61e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-us-virgin-islands.webp",
+      "originalSHA256": "89795b1c923bcbbe107c3fdf89b609600d961ff7d469ebc3a40a6a47326288f5",
+      "shippedSHA256": "89795b1c923bcbbe107c3fdf89b609600d961ff7d469ebc3a40a6a47326288f5",
+      "origin": "App/Resources/Countries/country-us-virgin-islands.webp",
+      "pixels": {
+        "byteSHA256": "89795b1c923bcbbe107c3fdf89b609600d961ff7d469ebc3a40a6a47326288f5",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-uzbekistan-6557b59c.webp",
+      "originalSHA256": "c45a19cd29460c6c736e83cb52e363e72d22adf36ec0b81dcb636663ff436afc",
+      "shippedSHA256": "c45a19cd29460c6c736e83cb52e363e72d22adf36ec0b81dcb636663ff436afc",
+      "origin": "App/Resources/Countries/country-uzbekistan-6557b59c.webp",
+      "pixels": {
+        "byteSHA256": "c45a19cd29460c6c736e83cb52e363e72d22adf36ec0b81dcb636663ff436afc",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-vanuatu-1-2b0b496a.webp",
+      "originalSHA256": "2b0b496a987ea501688ce5b5547d82d309002f7eeb5a7792df7ec415b0b3fd05",
+      "shippedSHA256": "2b0b496a987ea501688ce5b5547d82d309002f7eeb5a7792df7ec415b0b3fd05",
+      "origin": "App/Resources/Countries/country-vanuatu-1-2b0b496a.webp",
+      "pixels": {
+        "byteSHA256": "2b0b496a987ea501688ce5b5547d82d309002f7eeb5a7792df7ec415b0b3fd05",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-vatican-city.webp",
+      "originalSHA256": "de4df00273f39d493c2b4935d9c94c3574e7c6c135c0468549d1cfab7e6cb68d",
+      "shippedSHA256": "de4df00273f39d493c2b4935d9c94c3574e7c6c135c0468549d1cfab7e6cb68d",
+      "origin": "App/Resources/Countries/country-vatican-city.webp",
+      "pixels": {
+        "byteSHA256": "de4df00273f39d493c2b4935d9c94c3574e7c6c135c0468549d1cfab7e6cb68d",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-venezuela-retained-13584044.webp",
+      "originalSHA256": "13584044f91e56c4b873cad46322cf8d898a8f4e3e874c8c009726bb1b104b23",
+      "shippedSHA256": "13584044f91e56c4b873cad46322cf8d898a8f4e3e874c8c009726bb1b104b23",
+      "origin": "App/Resources/Countries/country-venezuela-retained-13584044.webp",
+      "pixels": {
+        "byteSHA256": "13584044f91e56c4b873cad46322cf8d898a8f4e3e874c8c009726bb1b104b23",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-vn-local-0c924a00.webp",
+      "originalSHA256": "b59822bb82a01413718b29a19576ad15d1bcb150653bdf9565d3132ca9b2f37d",
+      "shippedSHA256": "b59822bb82a01413718b29a19576ad15d1bcb150653bdf9565d3132ca9b2f37d",
+      "origin": "App/Resources/Countries/country-vn-local-0c924a00.webp",
+      "pixels": {
+        "byteSHA256": "b59822bb82a01413718b29a19576ad15d1bcb150653bdf9565d3132ca9b2f37d",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-wallis-and-futuna-islands-2-b27f984c.webp",
+      "originalSHA256": "b27f984ce6ea4e9a5d8120d4e9b5fd6a731f950c3e0a872379342c4029516076",
+      "shippedSHA256": "b27f984ce6ea4e9a5d8120d4e9b5fd6a731f950c3e0a872379342c4029516076",
+      "origin": "App/Resources/Countries/country-wallis-and-futuna-islands-2-b27f984c.webp",
+      "pixels": {
+        "byteSHA256": "b27f984ce6ea4e9a5d8120d4e9b5fd6a731f950c3e0a872379342c4029516076",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-western-sahara-2-62e6ea8b.webp",
+      "originalSHA256": "62e6ea8b33a26ff1152cb314add193b042539e67a7b5b623205883edf05df157",
+      "shippedSHA256": "62e6ea8b33a26ff1152cb314add193b042539e67a7b5b623205883edf05df157",
+      "origin": "App/Resources/Countries/country-western-sahara-2-62e6ea8b.webp",
+      "pixels": {
+        "byteSHA256": "62e6ea8b33a26ff1152cb314add193b042539e67a7b5b623205883edf05df157",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-yemen-d1f71ae5.webp",
+      "originalSHA256": "f429a2be252619c59ed9dc5976fc62e15ab54c3afc5a754c86b84396d3db5ba8",
+      "shippedSHA256": "f429a2be252619c59ed9dc5976fc62e15ab54c3afc5a754c86b84396d3db5ba8",
+      "origin": "App/Resources/Countries/country-yemen-d1f71ae5.webp",
+      "pixels": {
+        "byteSHA256": "f429a2be252619c59ed9dc5976fc62e15ab54c3afc5a754c86b84396d3db5ba8",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-zambia-1-32480074.webp",
+      "originalSHA256": "324800745678d89e72bec3670204bee0b5f5caa623ee8ff368a153efe832b82d",
+      "shippedSHA256": "324800745678d89e72bec3670204bee0b5f5caa623ee8ff368a153efe832b82d",
+      "origin": "App/Resources/Countries/country-zambia-1-32480074.webp",
+      "pixels": {
+        "byteSHA256": "324800745678d89e72bec3670204bee0b5f5caa623ee8ff368a153efe832b82d",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/country-zimbabwe-1-e6a393a5.webp",
+      "originalSHA256": "e6a393a5882a73b6b48ec278d4448a0bb618fa8dcd1ac5b6a6102e06a73fc0ad",
+      "shippedSHA256": "e6a393a5882a73b6b48ec278d4448a0bb618fa8dcd1ac5b6a6102e06a73fc0ad",
+      "origin": "App/Resources/Countries/country-zimbabwe-1-e6a393a5.webp",
+      "pixels": {
+        "byteSHA256": "e6a393a5882a73b6b48ec278d4448a0bb618fa8dcd1ac5b6a6102e06a73fc0ad",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/generic-subantarctic-terrain-v1-ca078478.webp",
+      "originalSHA256": "ca078478015be399c7ec5646c6358d646f786df536d5f56119f2a7e532e04ea6",
+      "shippedSHA256": "ca078478015be399c7ec5646c6358d646f786df536d5f56119f2a7e532e04ea6",
+      "origin": "App/Resources/Countries/generic-subantarctic-terrain-v1-ca078478.webp",
+      "pixels": {
+        "byteSHA256": "ca078478015be399c7ec5646c6358d646f786df536d5f56119f2a7e532e04ea6",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/generic-temperate-volcanic-terrain-v1-35a3483a.webp",
+      "originalSHA256": "35a3483a046319f3bed897ed4c69d43c37f19c7bf31cf44539f66de3ae7fa5d9",
+      "shippedSHA256": "35a3483a046319f3bed897ed4c69d43c37f19c7bf31cf44539f66de3ae7fa5d9",
+      "origin": "App/Resources/Countries/generic-temperate-volcanic-terrain-v1-35a3483a.webp",
+      "pixels": {
+        "byteSHA256": "35a3483a046319f3bed897ed4c69d43c37f19c7bf31cf44539f66de3ae7fa5d9",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/generic-tropical-terrain-v1-15868f7d.webp",
+      "originalSHA256": "15868f7d666aea5227e14add3b09ef7b2c2aa6bce5a0e1e5cfcc1a599c5ee240",
+      "shippedSHA256": "15868f7d666aea5227e14add3b09ef7b2c2aa6bce5a0e1e5cfcc1a599c5ee240",
+      "origin": "App/Resources/Countries/generic-tropical-terrain-v1-15868f7d.webp",
+      "pixels": {
+        "byteSHA256": "15868f7d666aea5227e14add3b09ef7b2c2aa6bce5a0e1e5cfcc1a599c5ee240",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/mainland.jpg",
+      "originalSHA256": "13aaa0ba6eae2bba91226970546c8de543f2631d26c50c38a319383bc606954e",
+      "shippedSHA256": "737cfadf24996ed235b967df9eec29235913116633cb4ebcce6aeae311333ab3",
+      "origin": "App/Resources/mainland.jpg",
+      "pixels": {
+        "rgbaSHA256": "SHA256=0de6e161a119dc3182c6b47d7bfd14c3fc823b866ec9ccb4bf400732c2b78e9a",
+        "proof": "FFmpeg decoded RGBA hash before and after JPEG metadata"
+      }
+    },
+    {
+      "file": "print/assets/art/region-ae-r02-v1-9d4c3f54.webp",
+      "originalSHA256": "4f8c7d97d35361286efab079bba963d416a3d38912f9edfe66894079f1682958",
+      "shippedSHA256": "4f8c7d97d35361286efab079bba963d416a3d38912f9edfe66894079f1682958",
+      "origin": "App/Resources/Countries/region-ae-r02-v1-9d4c3f54.webp",
+      "pixels": {
+        "byteSHA256": "4f8c7d97d35361286efab079bba963d416a3d38912f9edfe66894079f1682958",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-af-r02-v2-4f71b9f5.webp",
+      "originalSHA256": "3f304394635fbd61d5eaf704c94ee6e530b3e6d197b6733c07ea883c254abd33",
+      "shippedSHA256": "3f304394635fbd61d5eaf704c94ee6e530b3e6d197b6733c07ea883c254abd33",
+      "origin": "App/Resources/Countries/region-af-r02-v2-4f71b9f5.webp",
+      "pixels": {
+        "byteSHA256": "3f304394635fbd61d5eaf704c94ee6e530b3e6d197b6733c07ea883c254abd33",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-bd-r04-v1-47774ccb.webp",
+      "originalSHA256": "0ab48002151d2b468014d2cafd0365d163293531f89460aa8ebc1912fcf6c44c",
+      "shippedSHA256": "0ab48002151d2b468014d2cafd0365d163293531f89460aa8ebc1912fcf6c44c",
+      "origin": "App/Resources/Countries/region-bd-r04-v1-47774ccb.webp",
+      "pixels": {
+        "byteSHA256": "0ab48002151d2b468014d2cafd0365d163293531f89460aa8ebc1912fcf6c44c",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-bn-r01-v2-1bb57596.webp",
+      "originalSHA256": "21d9d94fd2665d31e3cb7f281a064aa7063c5babc67052d6eb72fc328864790a",
+      "shippedSHA256": "21d9d94fd2665d31e3cb7f281a064aa7063c5babc67052d6eb72fc328864790a",
+      "origin": "App/Resources/Countries/region-bn-r01-v2-1bb57596.webp",
+      "pixels": {
+        "byteSHA256": "21d9d94fd2665d31e3cb7f281a064aa7063c5babc67052d6eb72fc328864790a",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-bt-r04-v1-948b355b.webp",
+      "originalSHA256": "9bd360e6072327620394a098ffe32af6474956a7e008ccbc90682ef16a28dd8f",
+      "shippedSHA256": "9bd360e6072327620394a098ffe32af6474956a7e008ccbc90682ef16a28dd8f",
+      "origin": "App/Resources/Countries/region-bt-r04-v1-948b355b.webp",
+      "pixels": {
+        "byteSHA256": "9bd360e6072327620394a098ffe32af6474956a7e008ccbc90682ef16a28dd8f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-hk-r01-v2-d8775385.webp",
+      "originalSHA256": "4e53db4dc2c6fe8988af4020b1c628e0b49105731064bd68496017b65e1a1bea",
+      "shippedSHA256": "4e53db4dc2c6fe8988af4020b1c628e0b49105731064bd68496017b65e1a1bea",
+      "origin": "App/Resources/Countries/region-hk-r01-v2-d8775385.webp",
+      "pixels": {
+        "byteSHA256": "4e53db4dc2c6fe8988af4020b1c628e0b49105731064bd68496017b65e1a1bea",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-id-r03-v1-c90659c5.webp",
+      "originalSHA256": "5be2e6ad313ab23bf31704465bade1a47a8389d78362e0ce769bb5ed6fcc04f5",
+      "shippedSHA256": "5be2e6ad313ab23bf31704465bade1a47a8389d78362e0ce769bb5ed6fcc04f5",
+      "origin": "App/Resources/Countries/region-id-r03-v1-c90659c5.webp",
+      "pixels": {
+        "byteSHA256": "5be2e6ad313ab23bf31704465bade1a47a8389d78362e0ce769bb5ed6fcc04f5",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-il-r01-v1-99f29608.webp",
+      "originalSHA256": "4d150bd4bcb1f8c594584c53b399d57a2f00a96bda7f469c2a2a769bfb8519c3",
+      "shippedSHA256": "4d150bd4bcb1f8c594584c53b399d57a2f00a96bda7f469c2a2a769bfb8519c3",
+      "origin": "App/Resources/Countries/region-il-r01-v1-99f29608.webp",
+      "pixels": {
+        "byteSHA256": "4d150bd4bcb1f8c594584c53b399d57a2f00a96bda7f469c2a2a769bfb8519c3",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-in-r04-v1-b2352103.webp",
+      "originalSHA256": "3ce96f05859bdc4608131b2a8fbcebdb47f50fe1767ff29f9fe2ddfa7c14f2ad",
+      "shippedSHA256": "3ce96f05859bdc4608131b2a8fbcebdb47f50fe1767ff29f9fe2ddfa7c14f2ad",
+      "origin": "App/Resources/Countries/region-in-r04-v1-b2352103.webp",
+      "pixels": {
+        "byteSHA256": "3ce96f05859bdc4608131b2a8fbcebdb47f50fe1767ff29f9fe2ddfa7c14f2ad",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-iq-r04-v1-75fb7347.webp",
+      "originalSHA256": "438a70b544d78123f396ac65d7a7a8caea8f3e4d4e24014d0fcdadb7c772217c",
+      "shippedSHA256": "438a70b544d78123f396ac65d7a7a8caea8f3e4d4e24014d0fcdadb7c772217c",
+      "origin": "App/Resources/Countries/region-iq-r04-v1-75fb7347.webp",
+      "pixels": {
+        "byteSHA256": "438a70b544d78123f396ac65d7a7a8caea8f3e4d4e24014d0fcdadb7c772217c",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-ir-r06-v1-74b20b7f.webp",
+      "originalSHA256": "d92d09d0649cef5d02c7b1ca65e1b7c71a62b618c3f6f4e66be74488a3d2875f",
+      "shippedSHA256": "d92d09d0649cef5d02c7b1ca65e1b7c71a62b618c3f6f4e66be74488a3d2875f",
+      "origin": "App/Resources/Countries/region-ir-r06-v1-74b20b7f.webp",
+      "pixels": {
+        "byteSHA256": "d92d09d0649cef5d02c7b1ca65e1b7c71a62b618c3f6f4e66be74488a3d2875f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-jo-r04-v1-479fefa8.webp",
+      "originalSHA256": "e7a82375dff8badafae38c59d16f44c41ce33eba734ceaad5bddb50d70cc0c5f",
+      "shippedSHA256": "e7a82375dff8badafae38c59d16f44c41ce33eba734ceaad5bddb50d70cc0c5f",
+      "origin": "App/Resources/Countries/region-jo-r04-v1-479fefa8.webp",
+      "pixels": {
+        "byteSHA256": "e7a82375dff8badafae38c59d16f44c41ce33eba734ceaad5bddb50d70cc0c5f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-kg-r02-v1-c55c920b.webp",
+      "originalSHA256": "b6eae142bfb5a92cc9c204c83ce3fb95c9b88b9b52a1d104a42fd5b0bd5046ba",
+      "shippedSHA256": "b6eae142bfb5a92cc9c204c83ce3fb95c9b88b9b52a1d104a42fd5b0bd5046ba",
+      "origin": "App/Resources/Countries/region-kg-r02-v1-c55c920b.webp",
+      "pixels": {
+        "byteSHA256": "b6eae142bfb5a92cc9c204c83ce3fb95c9b88b9b52a1d104a42fd5b0bd5046ba",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-kh-r01-v2-6de0b356.webp",
+      "originalSHA256": "3c996fa6ca9aa941205943844e735a111ffc03f072a77943027e0ff89b04667e",
+      "shippedSHA256": "3c996fa6ca9aa941205943844e735a111ffc03f072a77943027e0ff89b04667e",
+      "origin": "App/Resources/Countries/region-kh-r01-v2-6de0b356.webp",
+      "pixels": {
+        "byteSHA256": "3c996fa6ca9aa941205943844e735a111ffc03f072a77943027e0ff89b04667e",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-kp-r04-v1-0bb4e5fb.webp",
+      "originalSHA256": "c61107417a1b1c574918651a79a48b7425f3ec7d1ee3d37fe7b0c84355600c14",
+      "shippedSHA256": "c61107417a1b1c574918651a79a48b7425f3ec7d1ee3d37fe7b0c84355600c14",
+      "origin": "App/Resources/Countries/region-kp-r04-v1-0bb4e5fb.webp",
+      "pixels": {
+        "byteSHA256": "c61107417a1b1c574918651a79a48b7425f3ec7d1ee3d37fe7b0c84355600c14",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-la-r03-v1-b686637e.webp",
+      "originalSHA256": "5d2a6658fd484b1ac5237967d68e244082681a5c23f1921ef814f78740f53910",
+      "shippedSHA256": "5d2a6658fd484b1ac5237967d68e244082681a5c23f1921ef814f78740f53910",
+      "origin": "App/Resources/Countries/region-la-r03-v1-b686637e.webp",
+      "pixels": {
+        "byteSHA256": "5d2a6658fd484b1ac5237967d68e244082681a5c23f1921ef814f78740f53910",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-lb-r04-v2-742ee54b.webp",
+      "originalSHA256": "5f90c9ccb82b6324dfbfc91422539aab0c8ad3e0504c5826ddc3f79f4f6746e8",
+      "shippedSHA256": "5f90c9ccb82b6324dfbfc91422539aab0c8ad3e0504c5826ddc3f79f4f6746e8",
+      "origin": "App/Resources/Countries/region-lb-r04-v2-742ee54b.webp",
+      "pixels": {
+        "byteSHA256": "5f90c9ccb82b6324dfbfc91422539aab0c8ad3e0504c5826ddc3f79f4f6746e8",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-lk-r02-v1-7b7f4803.webp",
+      "originalSHA256": "7168d744eee9331a1a2a963e1b0d58b5b57c8937599ef77854b4d7da58e548c3",
+      "shippedSHA256": "7168d744eee9331a1a2a963e1b0d58b5b57c8937599ef77854b4d7da58e548c3",
+      "origin": "App/Resources/Countries/region-lk-r02-v1-7b7f4803.webp",
+      "pixels": {
+        "byteSHA256": "7168d744eee9331a1a2a963e1b0d58b5b57c8937599ef77854b4d7da58e548c3",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-mm-r01-v1-832c96b8.webp",
+      "originalSHA256": "e905d3e9f0e3c52c6290e4add25b8a2648b85a38ff604991a6122cebffc6c2fd",
+      "shippedSHA256": "e905d3e9f0e3c52c6290e4add25b8a2648b85a38ff604991a6122cebffc6c2fd",
+      "origin": "App/Resources/Countries/region-mm-r01-v1-832c96b8.webp",
+      "pixels": {
+        "byteSHA256": "e905d3e9f0e3c52c6290e4add25b8a2648b85a38ff604991a6122cebffc6c2fd",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-mn-r05-v1-c8e715f0.webp",
+      "originalSHA256": "abc05c18c0a3c34b6c53f8e212f48b02efa90273a8c76ac499df6fa469000ff5",
+      "shippedSHA256": "abc05c18c0a3c34b6c53f8e212f48b02efa90273a8c76ac499df6fa469000ff5",
+      "origin": "App/Resources/Countries/region-mn-r05-v1-c8e715f0.webp",
+      "pixels": {
+        "byteSHA256": "abc05c18c0a3c34b6c53f8e212f48b02efa90273a8c76ac499df6fa469000ff5",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-my-r04-v1-bccfd03a.webp",
+      "originalSHA256": "90d6e40050f29a9bb624ecd9be9c65488bb0debad31bc46fdc89e9799dd649b1",
+      "shippedSHA256": "90d6e40050f29a9bb624ecd9be9c65488bb0debad31bc46fdc89e9799dd649b1",
+      "origin": "App/Resources/Countries/region-my-r04-v1-bccfd03a.webp",
+      "pixels": {
+        "byteSHA256": "90d6e40050f29a9bb624ecd9be9c65488bb0debad31bc46fdc89e9799dd649b1",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-np-r01-v1-fd3a3b43.webp",
+      "originalSHA256": "3b19c5adf5ee2f62b0bf37d2f40f1c93d268ce20b605f6c515cca753f148ac93",
+      "shippedSHA256": "3b19c5adf5ee2f62b0bf37d2f40f1c93d268ce20b605f6c515cca753f148ac93",
+      "origin": "App/Resources/Countries/region-np-r01-v1-fd3a3b43.webp",
+      "pixels": {
+        "byteSHA256": "3b19c5adf5ee2f62b0bf37d2f40f1c93d268ce20b605f6c515cca753f148ac93",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-om-r05-v1-6bd1ca17.webp",
+      "originalSHA256": "a413e6012392a46ae4899f02003348470eb6c8dc2d1ef3d259e1f64fde532189",
+      "shippedSHA256": "a413e6012392a46ae4899f02003348470eb6c8dc2d1ef3d259e1f64fde532189",
+      "origin": "App/Resources/Countries/region-om-r05-v1-6bd1ca17.webp",
+      "pixels": {
+        "byteSHA256": "a413e6012392a46ae4899f02003348470eb6c8dc2d1ef3d259e1f64fde532189",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-ph-r03-v2-3a58a04b.webp",
+      "originalSHA256": "938a2b131d387ef2adc4e3761def1596373a5eedc41f285e5fe9579237a04e94",
+      "shippedSHA256": "938a2b131d387ef2adc4e3761def1596373a5eedc41f285e5fe9579237a04e94",
+      "origin": "App/Resources/Countries/region-ph-r03-v2-3a58a04b.webp",
+      "pixels": {
+        "byteSHA256": "938a2b131d387ef2adc4e3761def1596373a5eedc41f285e5fe9579237a04e94",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-pk-r03-v1-200f795a.webp",
+      "originalSHA256": "c86ab38d7961fafce7b1b9fb0ecd9799fb630184ac6be6f63c035c21bb097ed7",
+      "shippedSHA256": "c86ab38d7961fafce7b1b9fb0ecd9799fb630184ac6be6f63c035c21bb097ed7",
+      "origin": "App/Resources/Countries/region-pk-r03-v1-200f795a.webp",
+      "pixels": {
+        "byteSHA256": "c86ab38d7961fafce7b1b9fb0ecd9799fb630184ac6be6f63c035c21bb097ed7",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-ps-r01-v1-b59dc944.webp",
+      "originalSHA256": "69f863bb5305c19a3eda1081794e1486241473814f59d3be607b19837d71ff26",
+      "shippedSHA256": "69f863bb5305c19a3eda1081794e1486241473814f59d3be607b19837d71ff26",
+      "origin": "App/Resources/Countries/region-ps-r01-v1-b59dc944.webp",
+      "pixels": {
+        "byteSHA256": "69f863bb5305c19a3eda1081794e1486241473814f59d3be607b19837d71ff26",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-sa-r03-v1-50dae786.webp",
+      "originalSHA256": "057b661a46898eab14b6f587b571a65ba68822cf6b55eda8b9af94b517817328",
+      "shippedSHA256": "057b661a46898eab14b6f587b571a65ba68822cf6b55eda8b9af94b517817328",
+      "origin": "App/Resources/Countries/region-sa-r03-v1-50dae786.webp",
+      "pixels": {
+        "byteSHA256": "057b661a46898eab14b6f587b571a65ba68822cf6b55eda8b9af94b517817328",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-sy-r04-v1-85eec719.webp",
+      "originalSHA256": "09da89f15edcffaf7ce8f94ed3be8baae77839f9290473f14a1d75a9f38f0100",
+      "shippedSHA256": "09da89f15edcffaf7ce8f94ed3be8baae77839f9290473f14a1d75a9f38f0100",
+      "origin": "App/Resources/Countries/region-sy-r04-v1-85eec719.webp",
+      "pixels": {
+        "byteSHA256": "09da89f15edcffaf7ce8f94ed3be8baae77839f9290473f14a1d75a9f38f0100",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-th-r02-v1-9411bc72.webp",
+      "originalSHA256": "86692a489e9396f863e4b5c572d2d77b797dd53bb6433bb9b140a11915a7a4a1",
+      "shippedSHA256": "86692a489e9396f863e4b5c572d2d77b797dd53bb6433bb9b140a11915a7a4a1",
+      "origin": "App/Resources/Countries/region-th-r02-v1-9411bc72.webp",
+      "pixels": {
+        "byteSHA256": "86692a489e9396f863e4b5c572d2d77b797dd53bb6433bb9b140a11915a7a4a1",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-tj-r03-v1-9020e302.webp",
+      "originalSHA256": "62cad44f8ddda6d80bc2ca4f676046633540921075ae1476f73811ca838736f1",
+      "shippedSHA256": "62cad44f8ddda6d80bc2ca4f676046633540921075ae1476f73811ca838736f1",
+      "origin": "App/Resources/Countries/region-tj-r03-v1-9020e302.webp",
+      "pixels": {
+        "byteSHA256": "62cad44f8ddda6d80bc2ca4f676046633540921075ae1476f73811ca838736f1",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-tl-r03-v1-c7aae3d2.webp",
+      "originalSHA256": "153128d7f1680e72921d4a8b4cab9419750de7c5fdf90c058f24af093b8405fa",
+      "shippedSHA256": "153128d7f1680e72921d4a8b4cab9419750de7c5fdf90c058f24af093b8405fa",
+      "origin": "App/Resources/Countries/region-tl-r03-v1-c7aae3d2.webp",
+      "pixels": {
+        "byteSHA256": "153128d7f1680e72921d4a8b4cab9419750de7c5fdf90c058f24af093b8405fa",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-tm-r03-v2-0ae20596.webp",
+      "originalSHA256": "15192b2f3603fede802fd93b5a911e106d3d989510d37dda9e487d287eb189a3",
+      "shippedSHA256": "15192b2f3603fede802fd93b5a911e106d3d989510d37dda9e487d287eb189a3",
+      "origin": "App/Resources/Countries/region-tm-r03-v2-0ae20596.webp",
+      "pixels": {
+        "byteSHA256": "15192b2f3603fede802fd93b5a911e106d3d989510d37dda9e487d287eb189a3",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-tw-r01-v2-ef8d1ef4.webp",
+      "originalSHA256": "7c650ef6c3bcd50de6452e46c4fbc137186c4d73676a68354bc308975c0b174f",
+      "shippedSHA256": "7c650ef6c3bcd50de6452e46c4fbc137186c4d73676a68354bc308975c0b174f",
+      "origin": "App/Resources/Countries/region-tw-r01-v2-ef8d1ef4.webp",
+      "pixels": {
+        "byteSHA256": "7c650ef6c3bcd50de6452e46c4fbc137186c4d73676a68354bc308975c0b174f",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-uz-r06-v1-54bee65f.webp",
+      "originalSHA256": "68a32bf9b9e70c0e20d6f58eac671bd62cb6dff04d65db8b77320fd3f55bf7fb",
+      "shippedSHA256": "68a32bf9b9e70c0e20d6f58eac671bd62cb6dff04d65db8b77320fd3f55bf7fb",
+      "origin": "App/Resources/Countries/region-uz-r06-v1-54bee65f.webp",
+      "pixels": {
+        "byteSHA256": "68a32bf9b9e70c0e20d6f58eac671bd62cb6dff04d65db8b77320fd3f55bf7fb",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/region-ye-r06-v1-c36b7692.webp",
+      "originalSHA256": "422723e5a995367df2f2e73bb7f11455b1a98e5fce9cf1b2b0c10f289b6e05f3",
+      "shippedSHA256": "422723e5a995367df2f2e73bb7f11455b1a98e5fce9cf1b2b0c10f289b6e05f3",
+      "origin": "App/Resources/Countries/region-ye-r06-v1-c36b7692.webp",
+      "pixels": {
+        "byteSHA256": "422723e5a995367df2f2e73bb7f11455b1a98e5fce9cf1b2b0c10f289b6e05f3",
+        "proof": "byte-identical WebP; origin is stored in a sidecar"
+      }
+    },
+    {
+      "file": "print/assets/art/sardinia.jpg",
+      "originalSHA256": "dbd07fb8d6329a3a6dae5ef2932a697a227d9a4c881057be599ba30cbab8ea3b",
+      "shippedSHA256": "aadda89cbd391927854ae99394a9715181e19ca0faa59519fd9cb003dae89ba7",
+      "origin": "App/Resources/sardinia.jpg",
+      "pixels": {
+        "rgbaSHA256": "SHA256=c488eb9deb2e5dbcb00cf689b394ad8ad1970752a676f1a52f48979f39925453",
+        "proof": "FFmpeg decoded RGBA hash before and after JPEG metadata"
+      }
+    },
+    {
+      "file": "print/assets/art/sicily.jpg",
+      "originalSHA256": "abceb6d02bce31e8f48a09570f3042550b0a01a74230993c635b1a8b9f6a1b23",
+      "shippedSHA256": "65e570303fa109704c0971298e38d07b06367cb24460c6716a00683aa9bfb73b",
+      "origin": "App/Resources/sicily.jpg",
+      "pixels": {
+        "rgbaSHA256": "SHA256=2c9c7f4e3893f08759f87d77f78adb82ae9fbb39d8245ca44a2ff7f8eee26ed8",
+        "proof": "FFmpeg decoded RGBA hash before and after JPEG metadata"
+      }
+    },
+    {
+      "file": "print/assets/art/approved-italy.png",
+      "originalSHA256": "4bc1668ab4b41816638730e17ff1914aaa26454ce69752b5735e4abb9f54eba7",
+      "shippedSHA256": "c0c05d3c369f1b5e1e93238fc0639c1b13abde575c833812c5459d6b6804f405",
+      "origin": "approved print collection/italy-art.png",
+      "pixels": {
+        "rgbaSHA256": "SHA256=28b4955432d97a9693ce179a9d1147e96687ba9a4e2affc5739fabb8e0c0aabe",
+        "proof": "FFmpeg decoded RGBA hash before and after JPEG metadata"
+      }
+    }
+  ]
+}

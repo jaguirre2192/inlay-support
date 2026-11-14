@@ -1,0 +1,25 @@
+{
+  "sourcePacks": [
+    {
+      "name": "EU",
+      "sourceURL": "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-10m.json",
+      "sourceSHA256": "3bc6f1d367a9bcec479841bae0e76092f512838411d0cef124e92eec4db45f79"
+    },
+    {
+      "name": "UK and North America",
+      "sourceURL": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_map_units.geojson",
+      "sourceSHA256": "57da82be755f4afccd8f3b14251bb2752f5df1395f47d2d86f817470c4a48862"
+    },
+    {
+      "name": "Complete Europe",
+      "sourceURL": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_map_units.geojson",
+      "sourceSHA256": "57da82be755f4afccd8f3b14251bb2752f5df1395f47d2d86f817470c4a48862",
+      "claimSourceURL": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_disputed_areas.geojson",
+      "claimSourceSHA256": "9cafef8b7dfb6b164dc58f218f981f4ace9f716f6c03795d4c62d1ac9f3d50f5",
+      "baseSourceCommit": "5dbb52f2820534f0b5ea271fb081d3fa13844224",
+      "baseSHA256": "bb8f355f8a56f926bb6a4fe109be8febf4ea1a5fda2fe458fbf7a1de0fbe4697"
+    }
+  ],
+  "transformation": "Exact Inlay projected coordinates, preserved in SVG paths for client-side canvas clipping.",
+  "catalogFingerprint": "99840783efeb8ffe"
+}

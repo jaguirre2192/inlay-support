@@ -1,0 +1,25 @@
+import fs from 'node:fs/promises';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+const {chromium,webkit}=await import(process.env.INLAY_PLAYWRIGHT_MODULE||'playwright');
+const root=process.cwd(),fixtures=process.env.INLAY_PRINT_FIXTURES,base=process.env.INLAY_PRINT_BASE||'http://127.0.0.1:63054/print/';
+const list=JSON.parse(await fs.readFile(path.join(fixtures,'fixtures.json'),'utf8')).fixtures,own=list.find(x=>x.name==='own-mixed'),friend=list.find(x=>x.name==='friend-live');
+const out=path.join(root,'.impeccable/review/recovery-delta');await fs.mkdir(out,{recursive:true});const checks=[],captures=[];
+const ready=p=>p.getByText('Proof ready.',{exact:true}).waitFor({timeout:60000});
+async function shot(p,name){await p.evaluate(()=>{document.activeElement?.blur();scrollTo(0,0)});const file=path.join(out,name+'.png');await p.screenshot({path:file,fullPage:true,caret:'initial'});assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);captures.push({file:path.relative(root,file),sha256:crypto.createHash('sha256').update(await fs.readFile(file)).digest('hex'),viewport:p.viewportSize(),fullPage:true,scrollY:0});}
+for(const [engine,name] of [[chromium,'chromium'],[webkit,'webkit']]){
+ const browser=await engine.launch(),page=await browser.newPage({viewport:{width:390,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(base+'#'+own.code);await ready(page);await page.getByLabel('Memory',{exact:true}).check();await page.locator('#country').selectOption('IT');await page.locator('#name-0').fill('Kept recipient');await page.locator('#dedication').fill('Keep this dedication');await page.locator('#photo-0').setInputFiles(process.env.INLAY_PRINT_PHOTO);await page.locator('#photo-slots img').waitFor();await page.locator('#caption-0').fill('Kept caption');await ready(page);
+ const photo=await page.locator('#photo-slots img').getAttribute('src');const dl=page.waitForEvent('download');await page.locator('#save-design').click();const design=JSON.parse(await fs.readFile(await (await dl).path(),'utf8'));
+ await page.getByText('Restore a saved design',{exact:true}).click();
+ for(const kind of ['json','date','photo']){
+  const invalid=structuredClone(design);if(kind==='date')invalid.config.occasionDate='2026-02-31';if(kind==='photo')invalid.config.photos[0].data='data:image/jpeg;base64,eA==';
+  await page.locator('#design-file').setInputFiles({name:'invalid.json',mimeType:'application/json',buffer:Buffer.from(kind==='json'?'{':JSON.stringify(invalid))});await page.locator('#choose-design').waitFor();assert.equal(await page.locator('#retry-import').isHidden(),true);assert.equal(await page.locator('#edit-link').isHidden(),true);await ready(page);
+  assert.equal(await page.locator('#name-0').inputValue(),'Kept recipient');assert.equal(await page.locator('#dedication').inputValue(),'Keep this dedication');assert.equal(await page.locator('#caption-0').inputValue(),'Kept caption');assert.equal(await page.locator('#photo-slots img').getAttribute('src'),photo);checks.push({name:name+' invalid '+kind+' preserves Memory photo/name/dedication/caption',pass:true});
+ }
+ if(name==='chromium')await shot(page,'phone-design-recovery');
+ const fileChooser=page.waitForEvent('filechooser');await page.locator('#choose-design').click();const chooser=await fileChooser;await chooser.setFiles({name:'valid.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(design))});await page.getByText('Your saved design is here.',{exact:true}).waitFor();await ready(page);assert.equal(await page.locator('#photo-slots img').getAttribute('src'),photo);checks.push({name:name+' choose another design opens picker and restores valid file',pass:true});
+ const fileButton=await page.locator('#photo-0').evaluate(el=>({height:parseFloat(getComputedStyle(el,'::file-selector-button').minHeight),input:el.getBoundingClientRect().height}));assert.ok(fileButton.height>=44&&fileButton.input>=44);assert.deepEqual(errors,[]);await browser.close();
+}
+for(const width of [390,1440]){
+ const browser=await chromium.launch(),page=await browser.newPage({viewport:{width,height:900}});await page.addInitScript(()=>Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>Promise.reject(Error('permission denied'))}}));await page.goto(base+'#'+friend.code);await ready(page);await page.locator('.more-atlas summary').click();await shot(page,width===390?'phone-copy-expanded':'desktop-copy-expanded');await page.locator('#copy-atlas-link').click();await page.locator('#copy-atlas-fallback').waitFor();assert.equal(await page.locator('#original-atlas-link').inputValue(),friend.url);if(width===390)await shot(page,'phone-copy-fallback');checks.push({name:'copy manual recovery '+width,pass:true});await browser.close();
+}
+await fs.writeFile(path.join(out,'delta-checks.json'),JSON.stringify({base,checks,captures},null,2)+'\n');console.log(JSON.stringify({checks:checks.length,captures:captures.length}));

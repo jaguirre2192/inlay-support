@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="referrer" content="no-referrer"><meta name="robots" content="noindex">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' blob:; worker-src 'self'; form-action 'none'; object-src 'none'">
+<title>Inlay · Your print studio</title><meta name="description" content="Bring your Inlay atlas into a personal print proof. Your places, your photographs, your world.">
+<script src="./boot.js"></script><link rel="stylesheet" href="./studio.css"><link rel="icon" href="../friend/inlay-icon.webp" type="image/webp">
+<script type="module" src="./studio.js"></script>
+</head><body>
+<a class="skip" href="#editor">Skip to the editor</a>
+<header class="site-header"><a class="back" href="/" aria-label="Back to Inlay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg><span>Inlay home</span></a><a class="wordmark" href="/">INLAY</a><button class="text-button" id="clear-draft" disabled>Clear draft</button></header>
+<main>
+<section class="import-panel" aria-labelledby="import-heading" id="import-panel">
+<div><h1 id="import-heading">Bring your world.</h1><p>In Inlay, open Your atlas → Framed print, or make a gift from a friend’s atlas.</p><p class="small">Already have a print link? Paste it below. Your places are read on this device.</p></div>
+<form id="import-form" novalidate><label for="print-link">Print link from Inlay</label><textarea id="print-link" rows="2" spellcheck="false" autocomplete="off" placeholder="Paste your Inlay print link"></textarea><button class="button primary" type="submit" id="import-submit">Open this atlas</button><details class="initial-restore"><summary>Open a saved design <svg class="disclosure-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="disclosure-vertical" d="M12 5v14"/></svg></summary><label for="initial-design-file">Your Inlay design file</label><input type="file" id="initial-design-file" accept="application/json,.json"></details></form>
+</section>
+<div class="notice" id="import-status" role="status" aria-live="polite">Opening the print studio…</div>
+<div class="notice error" id="import-error" role="alert" hidden><p id="import-error-message"></p><button class="text-button" id="retry-import">Try again</button><button class="text-button" id="edit-link">Use another link</button><button class="text-button" id="choose-design" hidden>Choose another design</button></div>
+<div class="studio-grid" id="studio-grid" hidden>
+<section class="preview-column" aria-label="Your personalized print proof">
+<div class="gallery"><div class="frame" id="frame"><canvas id="proof" width="1800" height="1200" aria-label="Your personalized atlas proof"></canvas></div><p class="preview-note">Your print, made personal.</p></div>
+<div class="render-status" id="render-status" role="status" aria-live="polite"></div>
+<div class="notice error" id="render-error" role="alert" hidden><p id="render-error-message"></p><button class="text-button" id="retry-render">Retry the artwork</button></div>
+<details class="inspect" id="inspect"><summary>Inspect the print <svg class="disclosure-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="disclosure-vertical" d="M12 5v14"/></svg></summary><p class="small">Swipe across the larger proof, or use the arrow keys when it has focus.</p><div class="proof-scroll" tabindex="0" role="region" aria-label="Enlarged print proof"><canvas id="detail-proof" width="1800" height="1200" aria-label="Enlarged personalized proof"></canvas></div></details>
+<details class="place-list"><summary>Places in this atlas <svg class="disclosure-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="disclosure-vertical" d="M12 5v14"/></svg></summary><div id="places"></div></details>
+</section>
+<section id="editor" class="editor" aria-labelledby="edition-title">
+<h1 id="edition-title">Your World</h1><p class="intro" id="edition-description">Your places, illustrated. A personal atlas with a flag for every destination.</p>
+<div id="atlas-summary" class="atlas-summary"></div>
+<fieldset><legend>Edition</legend><div class="choices edition-choices"><label><input type="radio" name="edition" value="world" checked><span>Your World</span></label><label><input type="radio" name="edition" value="country"><span>Country</span></label><label><input type="radio" name="edition" value="memory"><span>Memory</span></label></div></fieldset>
+<div id="country-field" class="field" hidden><label for="country">Choose the place</label><select id="country"></select></div>
+<div id="name-fields" class="name-fields"></div>
+<div class="field"><label for="dedication">Dedication <span>(optional)</span></label><input id="dedication" maxlength="100" placeholder="Everywhere, with you." autocomplete="off"></div>
+<div class="field"><label for="occasion-date">A date to remember <span>(optional)</span></label><input type="date" id="occasion-date"></div>
+<section id="photo-editor" hidden aria-labelledby="photos-heading"><h2 id="photos-heading">Your photographs</h2><p class="small">Choose three pictures from your own collection. They stay on this device and can be replaced or removed.</p><div id="photo-slots"></div></section>
+<fieldset><legend>Preview presentation</legend><div class="choices"><label><input type="radio" name="frame" value="oak" checked><span>Natural oak</span></label><label><input type="radio" name="frame" value="walnut"><span>Dark walnut</span></label><label><input type="radio" name="frame" value="none"><span>Proof only</span></label></div><p class="small">Frame shown for visualization. The download contains the artwork.</p></fieldset>
+<div class="proof-actions"><button class="button primary" id="download-proof" disabled>Download proof</button><button class="button secondary" id="save-design">Save design</button><p class="small">A personal digital proof. No order or payment is taken.</p></div>
+<div class="notice" id="export-status" role="status" aria-live="polite" hidden></div>
+<div class="notice error" id="export-error" role="alert" hidden></div>
+<p class="storage-note" id="storage-note" role="status">Your draft stays in this browser.</p><button class="text-button" id="retry-save" hidden>Retry saving the draft</button>
+<details class="more-atlas"><summary>Add or replace an atlas <svg class="disclosure-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="disclosure-vertical" d="M12 5v14"/></svg></summary><p class="small">Bring another person’s print link to make Our World. Friends, family, partners, travel companions: any two people.</p><button class="text-button" id="copy-atlas-link" hidden>Copy the app’s original atlas link</button><p class="small" id="copy-atlas-status" role="status" aria-live="polite"></p><div id="copy-atlas-fallback" hidden><label for="original-atlas-link">Select and copy this atlas link</label><textarea id="original-atlas-link" rows="3" readonly></textarea></div><p class="small">For a gift combining two friends: copy the first atlas link here, open the other friend’s print from Inlay, then paste the first link below. Copied links include the app’s names and places, without photographs or proof edits.</p><label for="second-link">Another Inlay print link</label><textarea id="second-link" rows="2" autocomplete="off" spellcheck="false"></textarea><div class="inline-actions"><button class="button secondary" id="add-atlas">Add a second person</button><button class="text-button" id="replace-atlas">Replace this atlas</button></div><button class="text-button" id="remove-second" hidden>Use the first person’s atlas only</button></details>
+<details><summary>Restore a saved design <svg class="disclosure-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="disclosure-vertical" d="M12 5v14"/></svg></summary><p class="small">Open a design file you saved here. This replaces the current draft only after the file has been checked.</p><label class="file-label" for="design-file">Choose your Inlay design file</label><input type="file" id="design-file" accept="application/json,.json"></details>
+<p class="privacy-note">Names and visited countries and territories come from Inlay. Trip dates, trips, plans and photos are never imported. “Both visited” shows overlap, not trips taken together. <a href="/privacy/">Privacy</a></p>
+</section></div>
+<noscript><div class="notice error">Enable JavaScript to read your atlas locally and prepare your proof. Your atlas link is kept in the address after the # and is not sent to this website.</div></noscript>
+</main><footer><a class="wordmark" href="/">INLAY</a><p>Every place, a part of you.</p><nav aria-label="Footer"><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="./credits.html">Artwork &amp; credits</a></nav></footer>
+</body></html>
