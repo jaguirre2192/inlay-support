@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Open an invitation to compare travel maps with a friend on Inlay.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta property="og:title" content="Compare travel maps on Inlay">
+  <meta property="og:description" content="Open to see where you've both been.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jaguirre2192.github.io/inlay-support/friend/card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Compare travel maps on Inlay, with its paper landscape icon.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#f2eddf" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1d2c31" media="(prefers-color-scheme: dark)">
+  <title>Compare travel maps on Inlay</title>
+  <link rel="icon" href="inlay-icon.webp" type="image/webp">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="friend.css">
+  <script src="friend.js" defer></script>
+</head>
+<body class="invitation-page">
+  <nav aria-label="Main navigation">
+    <a class="brand" href="../">Inlay</a>
+    <div class="links"><a href="../support/">Support</a></div>
+  </nav>
+  <main class="invitation" aria-labelledby="invite-title">
+    <img class="app-icon" src="inlay-icon.webp" width="112" height="112" alt="" fetchpriority="high">
+    <h1 id="invite-title">Compare<br>travel maps.</h1>
+    <p class="lead" id="invite-note">Open this invitation in Inlay to see where you've both been.</p>
+    <div class="invite-actions" id="invite-actions" hidden>
+      <a class="open-inlay" id="open-inlay" href="#">Open in Inlay</a>
+      <button class="copy-invite" id="copy-invite" type="button">Copy invitation</button>
+    </div>
+    <p class="invite-status" id="invite-status" role="status" aria-live="polite"></p>
+    <p class="invite-help" id="invite-help" hidden>You'll need Inlay installed on your iPhone. If it doesn't open, copy this invitation and paste it in Inlay's Friends screen.</p>
+    <noscript><p>JavaScript is needed to open this invitation here. You can also copy the full link from your message and paste it in Inlay's Friends screen.</p></noscript>
+  </main>
+  <footer>
+    <span>© 2026 Jorge Aguirre</span>
+    <span><a href="../">Home</a> · <a href="../support/">Support</a> · <a href="../privacy/">Privacy</a></span>
+  </footer>
+</body>
+</html>

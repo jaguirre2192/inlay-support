@@ -1,0 +1,13 @@
+{
+  "creator": "Jorge Aguirre / Inlay",
+  "asset": "Friend invitation preview card",
+  "sourceArtwork": "Approved Atlas window icon",
+  "sourceNativeExportSHA256": "020a02eb720a443dbc051934ab7bfe932243fe68d73892b1744e3a6ff677d208",
+  "sourceIconSHA256": "b62140c7cdcfd33a5f9da0610f5ce6a0ed5c6e2ea09438beca22ba519347e315",
+  "layout": "Authored HTML/CSS, Newsreader OFL,1200x630",
+  "illustrationChanged": false,
+  "cardSHA256": "841e8bcd360aef711ab5065dc3527cd6337d2c353ec5245c0a04edcd782eba5a",
+  "cardBytes": 145010,
+  "pngImagePayloadUnchanged": true,
+  "verifiedImagePayloadSHA256": "5cab2a78b87b531d433802751ad9eaf9552700a7e93dc0ef475e0409304dd78c"
+}
