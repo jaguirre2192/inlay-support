@@ -20,6 +20,8 @@ Jorge selected personalized proofs first on2026-11-14. Payment, print provider, 
 
 The existing static GitHub Pages codebase and inlayatlas.com domain are established. Atlas owns this checkout; actual native Claude owns the separate app checkout. Preserve support/privacy/invitations, the custom domain, approved artwork and existing review/public-release holds.
 
+On2026-11-15 Jorge explicitly authorized launching the approved cinematic website. The homepage, collection, three edition pages and inclusive Gifts/Our World now use the approved gallery identity and link to the real proof studio. There is no pretend bag, price or checkout. Marketing pages remain fully readable without JavaScript. The current app is still awaiting review with manual release, so app availability is Coming soon to iPhone. The native writer confirmed the older phone captures are unsuitable for publication; the app section uses the approved bundled Italy illustration, labelled as artwork. Fresh app captures follow the committed native build and receive their own visual review.
+
 ## Brand Commitments
 
 Name: Inlay. Preserve the approved Country, Memory and redesigned Your World print collection, its recipient dedication and complete flag faces. Preserve authentic, varied country artwork and real geography. Keep the free app distinct from future paid physical prints.

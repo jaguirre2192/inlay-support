@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://inlayatlas.com/</loc></url>
+  <url><loc>https://inlayatlas.com/editions/</loc></url>
+  <url><loc>https://inlayatlas.com/editions/your-world/</loc></url>
+  <url><loc>https://inlayatlas.com/editions/country/</loc></url>
+  <url><loc>https://inlayatlas.com/editions/memory/</loc></url>
+  <url><loc>https://inlayatlas.com/gifts/</loc></url>
   <url><loc>https://inlayatlas.com/support/</loc></url>
   <url><loc>https://inlayatlas.com/privacy/</loc></url>
 </urlset>

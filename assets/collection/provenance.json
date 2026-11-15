@@ -1,0 +1,73 @@
+{
+  "owner": "Atlas, Mac Studio",
+  "date": "2026-11-15",
+  "samples": "24-country demonstration history, named dedication and synthetic Italy photographs; not customer data. Frames are illustrative.",
+  "files": [
+    {
+      "file": "assets/collection/gallery-wall.png",
+      "source": "approved website-shop-v1/site/assets/gallery-wall.png",
+      "sha256": "9dc501f44f1c8fe1794d65f03b4e1534cafb9a9d8745edde1b7fa66d1bc78939",
+      "bytes": 2195906,
+      "operation": "exact copy; original artwork and embedded provenance unchanged"
+    },
+    {
+      "file": "assets/collection/atlas-film-poster.png",
+      "source": "approved website-shop-v1/site/assets/atlas-film-poster.png",
+      "sha256": "07f2bb1d9bb8819cd269606975cc36178fee1a881333232f56bf03a20db6c561",
+      "bytes": 2233211,
+      "operation": "exact copy; original artwork and embedded provenance unchanged"
+    },
+    {
+      "file": "assets/collection/atlas-film.mp4",
+      "source": "approved website-shop-v1/site/assets/atlas-film.mp4",
+      "sha256": "0e3e7cd39e8392d31ba9129be185deba5a5316d650081a25b0df8dfef004b738",
+      "bytes": 9251567,
+      "operation": "exact copy; original artwork and embedded provenance unchanged"
+    },
+    {
+      "file": "assets/collection/favicon.svg",
+      "source": "approved website-shop-v1/site/assets/favicon.svg",
+      "sha256": "d527385688926b977354656d56d27daed9c45e2fbac4698d2a368f9d47361557",
+      "bytes": 198,
+      "operation": "exact copy; original artwork and embedded provenance unchanged"
+    },
+    {
+      "file": "assets/collection/products/world.png",
+      "source": "approved website-shop-v1/site/assets/products/world.png",
+      "sha256": "7c805f9f5f982289b0495c34a2d60ec78b5c12eedaf07365b46537c2c17a07d7",
+      "bytes": 1761762,
+      "operation": "exact copy; original artwork and embedded provenance unchanged"
+    },
+    {
+      "file": "assets/collection/products/country.png",
+      "source": "approved website-shop-v1/site/assets/products/country.png",
+      "sha256": "819d52f6a9f39612be0e2fd4fcbe4bde5c54a12fb9a66518aa1e36d22483d0c8",
+      "bytes": 1390280,
+      "operation": "exact copy; original artwork and embedded provenance unchanged"
+    },
+    {
+      "file": "assets/collection/products/memory.png",
+      "source": "approved website-shop-v1/site/assets/products/memory.png",
+      "sha256": "646ccbbce3ddb950c62611a5437a24f56fa739f2413da7fbc906e4860d37638e",
+      "bytes": 2657828,
+      "operation": "exact copy; original artwork and embedded provenance unchanged"
+    },
+    {
+      "file": "assets/collection/products/our-world.png",
+      "source": "approved website-shop-v1/site/assets/prints/world.html, rendered in Chromium at1800x1200",
+      "sha256": "f23599f5a9af4bbdece74c063e31188a632426cc4640465e2ca042fef778cfa3",
+      "bytes": 549460,
+      "operation": "browser composition of approved geography and flags; synthetic Sam18 Alex16 overlap10 union24. Embedded origin, no regenerated artwork."
+    }
+  ],
+  "reused": [
+    {
+      "file": "print/assets/art/approved-italy.png",
+      "source": "existing approved native Italy plate, reused in place; no app UI screenshot claimed"
+    },
+    {
+      "file": "print/assets/fonts/",
+      "source": "existing self-hosted licensed print fonts; no duplicate copies"
+    }
+  ]
+}
