@@ -1,0 +1,385 @@
+import { h, render } from 'preact';
+import { useState, useEffect, useRef, useMemo, useCallback } from 'preact/hooks';
+import htm from 'htm';
+import { readWorld, readLand } from './inlr.js';
+import { AtlasMap } from './map.js';
+import * as store from './store.js';
+import { t, useLanguage, preferredLanguage, countryName, placeName, tracking, upper, LANGUAGES, language } from './i18n.js';
+
+const html = htm.bind(h);
+const GROUPS = ['europe', 'asia', 'africa', 'north-america', 'south-america', 'oceania'];
+const GROUP_TITLE = { europe: 'Europe', asia: 'Asia', africa: 'Africa', 'north-america': 'North America', 'south-america': 'South America', oceania: 'Oceania' };
+const groupTitle = (g) => t(GROUP_TITLE[g] ?? g);
+const darkQuery = matchMedia('(prefers-color-scheme: dark)');
+const COUNTRY_ART = (image) => `/print/assets/art/${image}`;
+
+// ---- helpers ---------------------------------------------------------------------------------
+function Legend({ children, color, class: cls = '' }) {
+  return html`<span class=${'legend ' + cls} style=${{ color, letterSpacing: tracking() }}>${typeof children === 'string' ? upper(children) : children}</span>`;
+}
+
+function useDark(prefs) {
+  const [system, setSystem] = useState(darkQuery.matches);
+  useEffect(() => { const f = () => setSystem(darkQuery.matches); darkQuery.addEventListener('change', f); return () => darkQuery.removeEventListener('change', f); }, []);
+  return prefs.appearance === 'dark' ? true : prefs.appearance === 'light' ? false : system;
+}
+
+function download(name, text) {
+  const url = URL.createObjectURL(new Blob([text], { type: 'application/json' }));
+  const a = Object.assign(document.createElement('a'), { href: url, download: name });
+  document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+
+// ---- app -------------------------------------------------------------------------------------
+function App({ world, initial }) {
+  const [atlas, setAtlas] = useState(initial);
+  const [selected, setSelected] = useState(null);
+  const [area, setArea] = useState({ kind: 'world' });
+  const [banner, setBanner] = useState(null);
+  const [sheet, setSheet] = useState(null);
+  const [, setLang] = useState(language());
+  const mapHost = useRef(null), map = useRef(null), panel = useRef(null), top = useRef(null);
+  const dark = useDark(atlas.prefs);
+  const homeRef = useRef(atlas.home);
+  homeRef.current = atlas.home;
+  const visited = useMemo(() => new Set(Object.keys(atlas.visits)), [atlas.visits]);
+  const wanted = useMemo(() => new Set(Object.keys(atlas.wanted)), [atlas.wanted]);
+  const name = useCallback((id) => { const r = world.rows.get(id); return r ? countryName(id, r.name) : id; }, [world, language()]);
+  const shortName = useCallback((id) => { const r = world.rows.get(id); return r ? countryName(id, r.short) : id; }, [world, language()]);
+
+  const update = useCallback((fn) => setAtlas((a) => { const next = fn(structuredClone(a)); store.save(next); return next; }), []);
+
+  // The map, once.
+  useEffect(() => {
+    const m = new AtlasMap(mapHost.current, world, {
+      artURL: COUNTRY_ART,
+      label: (id) => upper(shortName(id)),
+      cityLabel: placeName,
+      tracking,
+      home: () => homeRef.current,
+      onSelect: (id) => { setSelected(id); if (!id) setArea({ kind: 'world' }); },
+      insets: () => {
+        const p = panel.current?.getBoundingClientRect(), tp = top.current?.getBoundingClientRect(), host = mapHost.current.getBoundingClientRect();
+        const wide = host.width >= 600 && host.width > host.height;
+        return { top: (tp?.bottom ?? 60) - host.top + 8, bottom: wide ? 16 : host.bottom - (p?.top ?? host.bottom) + 12,
+                 left: wide ? (p?.right ?? 0) - host.left + 16 : 0, right: 0 };
+      },
+    });
+    map.current = m;
+    window.__atlas = m;
+    const key = (e) => {
+      if (e.target.closest('input,textarea,select,[contenteditable]')) return;
+      if (e.key === '/') { e.preventDefault(); setSheet('search'); return; }
+      if (e.key === 'Escape') { setSheet(null); setSelected(null); setArea({ kind: 'world' }); m.frameWorld(); return; }
+      if (m.key(e)) e.preventDefault();
+    };
+    addEventListener('keydown', key);
+    return () => removeEventListener('keydown', key);
+  }, []);
+
+  useEffect(() => { map.current?.set({ visited, wanted, selected, dark }); }, [visited, wanted, selected, dark]);
+  useEffect(() => { document.documentElement.dataset.theme = dark ? 'dark' : 'light'; }, [dark]);
+
+  // Selecting a place frames it.
+  useEffect(() => {
+    if (!selected) return;
+    const r = world.rows.get(selected);
+    if (r) { setArea({ kind: 'country', id: selected }); requestAnimationFrame(() => map.current.frame(r.focus)); }
+  }, [selected]);
+
+  const choose = (id) => { setSheet(null); setSelected(id); };
+  const showGroup = (g) => { setSelected(null); setArea({ kind: 'group', id: g }); map.current.frame(world.groups[g]); };
+  const showWorld = () => { setSelected(null); setArea({ kind: 'world' }); map.current.frameWorld(); };
+
+  const mark = (id) => {
+    const before = atlas;
+    update((a) => { a.visits[id] = a.visits[id] ?? {}; return a; });
+    map.current.stamp(id);
+    setBanner({ text: t('%@ added to your atlas', name(id)), undo: () => { setAtlas(before); store.save(before); map.current.stamp(id, true); } });
+  };
+  const unmark = (id) => {
+    const before = atlas;
+    update((a) => { delete a.visits[id]; return a; });
+    map.current.stamp(id, true);
+    setBanner({ text: t('%@ removed', name(id)), undo: () => { setAtlas(before); store.save(before); map.current.stamp(id); } });
+  };
+  const toggleWant = (id) => {
+    const before = atlas, had = !!atlas.wanted[id];
+    update((a) => { if (had) delete a.wanted[id]; else a.wanted[id] = { rank: Object.keys(a.wanted).length, note: '', nextUp: false, modified: Date.now() / 1000 }; return a; });
+    setBanner({ text: had ? t('%@ removed from Want to go', name(id)) : t('%@ saved to Want to go', name(id)),
+                undo: () => { setAtlas(before); store.save(before); } });
+  };
+  useEffect(() => { if (!banner) return; const timer = setTimeout(() => setBanner(null), 6000); return () => clearTimeout(timer); }, [banner]);
+
+  const counts = useMemo(() => {
+    let c = 0, tr = 0;
+    for (const id of visited) { const r = world.rows.get(id); if (r?.kind === 'country') c++; else if (r?.kind === 'territory') tr++; }
+    return { countries: c, territories: tr };
+  }, [visited]);
+
+  const changeLanguage = async (code) => {
+    await useLanguage(code);
+    update((a) => { a.prefs.language = code; return a; });
+    setLang(code);
+    map.current.renderer.requestDraw();
+  };
+
+  return html`
+    <div class="atlas" data-sheet=${sheet ? 'open' : ''}>
+      <div class="map" ref=${mapHost} role="application" aria-label=${t('World')}></div>
+      <div class="wash" aria-hidden="true"></div>
+      <header class="top" ref=${top}>
+        <a class="wordmark" href="/" aria-label="Inlay">INLAY</a>
+      </header>
+      <button class="glass count-card" onClick=${() => setSheet('search')} aria-label=${t('%lld countries, %lld territories', counts.countries, counts.territories)}>
+        <span class="figure"><b>${counts.countries}</b><span class="of"> / ${world.countryCount}</span></span>
+        <${Legend}>${t('Countries')}<//>
+        <span class="bar"><i style=${{ width: (counts.countries / world.countryCount * 100) + '%' }}></i></span>
+      </button>
+      <nav class="rail">
+        <button class="glass round" onClick=${() => setSheet('search')} aria-label=${t('Find a place')} title=${t('Find a place')}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+        </button>
+        <button class="glass round" onClick=${() => setSheet('settings')} aria-label=${t('Settings')} title=${t('Settings')}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9 7 7m10 10 2.1 2.1M4.9 19.1 7 17m10-10 2.1-2.1"/></svg>
+        </button>
+      </nav>
+      <${Panel} ref_=${panel} world=${world} atlas=${atlas} area=${area} selected=${selected} name=${name}
+        visited=${visited} wanted=${wanted} counts=${counts} banner=${banner} onDismissBanner=${() => setBanner(null)}
+        onWorld=${showWorld} onGroup=${showGroup} onChoose=${() => setSheet('search')}
+        onMark=${mark} onUnmark=${unmark} onWant=${toggleWant} onDate=${(id) => setSheet({ kind: 'date', id })} />
+      ${sheet === 'search' && html`<${SearchSheet} world=${world} name=${name} visited=${visited} wanted=${wanted} onChoose=${choose} onClose=${() => setSheet(null)} />`}
+      ${sheet === 'settings' && html`<${SettingsSheet} world=${world} atlas=${atlas} name=${name} update=${update} setAtlas=${setAtlas}
+          onLanguage=${changeLanguage} onClose=${() => setSheet(null)} />`}
+      ${sheet?.kind === 'date' && html`<${DateSheet} id=${sheet.id} name=${name(sheet.id)} value=${atlas.visits[sheet.id]?.date}
+          onSave=${(date) => { update((a) => { a.visits[sheet.id] = { ...(a.visits[sheet.id] ?? {}), date: date ?? undefined }; if (!date) delete a.visits[sheet.id].date; return a; }); setSheet(null); }}
+          onClose=${() => setSheet(null)} />`}
+      ${atlas.memoryOnly && html`<p class="memory-note">${tw('This browser isn’t keeping data, so your atlas lasts until you close the page. Export it to keep it.')}</p>`}
+    </div>`;
+}
+
+// ---- the place panel -------------------------------------------------------------------------
+function Panel({ ref_, world, atlas, area, selected, name, visited, wanted, counts, banner, onDismissBanner, onWorld, onGroup, onChoose, onMark, onUnmark, onWant, onDate }) {
+  const row = selected ? world.rows.get(selected) : null;
+  const isVisited = row && visited.has(row.id), isWanted = row && wanted.has(row.id);
+  const date = row && atlas.visits[row.id]?.date;
+  const share = Math.round(counts.countries / world.countryCount * 100);
+  let title, legend;
+  if (row) {
+    title = name(row.id);
+    const parts = [row.kind === 'territory' ? t('Territory') : groupTitle(row.group)];
+    if (isVisited) parts.push(date ? t('Visited %@', formatDate(date)) : t('Visited'));
+    else if (isWanted) parts.push(t('On your Want to go list'));
+    else parts.push(t('Not yet visited'));
+    legend = parts.join(' · ');
+  } else if (area.kind === 'group') {
+    title = groupTitle(area.id);
+    legend = t('%@ · %lld destinations', groupTitle(area.id), world.byGroup[area.id].length);
+  } else {
+    title = t('All places');
+    legend = t('%lld of %lld countries · %@ of the world', counts.countries, world.countryCount, `${share}%`);
+  }
+  return html`
+    <section class="panel glass" ref=${ref_} aria-live="polite">
+      ${banner && html`<div class="banner">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        <span>${banner.text}</span>
+        <button class="link" onClick=${() => { banner.undo(); onDismissBanner(); }}>${t('Undo')}</button>
+        <button class="x" onClick=${onDismissBanner} aria-label=${t('Dismiss visit update')}>×</button>
+      </div>`}
+      <div class="title-row">
+        <button class="crumb" onClick=${onWorld}><${Legend} color=${area.kind === 'world' && !row ? 'var(--ink)' : 'var(--sage)'}>${t('World')}<//></button>
+        <span class="slash" aria-hidden="true">/</span>
+        <button class="place-title" onClick=${onChoose} aria-label=${t('Choose destination')}>
+          <span>${title}</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
+        </button>
+      </div>
+      <${Legend} class="status">${legend}<//>
+      ${row ? html`
+        <div class="actions">
+          ${isVisited ? html`
+            <button class="outline" onClick=${() => onDate(row.id)}>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4m6-4v4"/></svg>
+              ${date ? formatDate(date) : t('Add date')}
+            </button>
+            <span class="spacer"></span>
+            <button class="quiet" onClick=${() => onUnmark(row.id)}>${t('Unmark')}</button>
+          ` : html`
+            <button class="ink" onClick=${() => onMark(row.id)}>${t('Mark as visited')}</button>
+            <button class=${'outline round' + (isWanted ? ' on' : '')} onClick=${() => onWant(row.id)} aria-label=${t('Want to go')} aria-pressed=${isWanted}>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v16l-5-3.5L7 20z"/></svg>
+            </button>
+          `}
+        </div>` : html`
+        <div class="tiles" role="list">
+          ${(area.kind === 'group' ? [area.id] : GROUPS).map((g) => {
+            const ids = world.byGroup[g].filter((id) => world.rows.get(id).kind === 'country');
+            const done = ids.filter((id) => visited.has(id)).length;
+            return html`<button class="tile" role="listitem" onClick=${() => onGroup(g)}>
+              <span class="tile-name">${groupTitle(g)}</span>
+              <span class="tile-foot"><span class="bar"><i style=${{ width: done / ids.length * 100 + '%' }}></i></span><span class="num">${done}/${ids.length}</span></span>
+            </button>`;
+          })}
+        </div>`}
+    </section>`;
+}
+
+const formatDate = (d) => {
+  const [y, m] = d.split('-').map(Number);
+  return m ? new Intl.DateTimeFormat(language(), { month: 'long', year: 'numeric' }).format(new Date(y, m - 1, 1)) : String(y);
+};
+
+// ---- sheets ----------------------------------------------------------------------------------
+function Sheet({ title, onClose, children, class: cls = '' }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current; if (!el) return;
+    (el.querySelector('input[type=search]') ?? el.querySelector('.sheet-head button'))?.focus();
+    const esc = (e) => { if (e.key === 'Escape') { e.stopPropagation(); onClose(); } };
+    el.addEventListener('keydown', esc);
+    return () => el.removeEventListener('keydown', esc);
+  }, []);
+  return html`<div class="scrim" onClick=${(e) => e.target === e.currentTarget && onClose()}>
+    <div class=${'sheet ' + cls} role="dialog" aria-modal="true" aria-label=${title} ref=${ref}>
+      <div class="sheet-head"><h2>${title}</h2><button class="glass pill" onClick=${onClose}>${t('Done')}</button></div>
+      ${children}
+    </div></div>`;
+}
+
+function SearchSheet({ world, name, visited, wanted, onChoose, onClose }) {
+  const [q, setQ] = useState('');
+  const fold = (s) => s.normalize('NFD').replace(/\p{M}/gu, '').toLocaleLowerCase();
+  const rows = useMemo(() => {
+    const needle = fold(q.trim());
+    return [...world.rows.values()].filter((r) => !needle || fold(name(r.id)).includes(needle) || fold(r.name).includes(needle))
+      .sort((a, b) => name(a.id).localeCompare(name(b.id), language()));
+  }, [q]);
+  const grouped = GROUPS.map((g) => [g, rows.filter((r) => r.group === g)]).filter(([, list]) => list.length);
+  return html`<${Sheet} title=${t('Places')} onClose=${onClose} class="search">
+    <input class="search-field" type="search" placeholder=${t('Find a place')} value=${q} onInput=${(e) => setQ(e.target.value)}
+      onKeyDown=${(e) => { if (e.key === 'Enter' && rows[0]) onChoose(rows[0].id); }} aria-label=${t('Find a place')} />
+    <div class="list">
+      ${grouped.map(([g, list]) => html`<section>
+        <${Legend} class="section-title">${groupTitle(g)}<//>
+        ${list.map((r) => html`<button class="row" onClick=${() => onChoose(r.id)}>
+          <img class="flag" src=${`/print/assets/flags/${r.id.toLowerCase()}.svg`} alt="" loading="lazy" />
+          <span class="row-name">${name(r.id)}${r.kind === 'territory' && html`<small>${t('Territory')}</small>`}</span>
+          ${visited.has(r.id) ? html`<svg class="tick" viewBox="0 0 24 24" aria-label=${t('Visited')}><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>`
+            : wanted.has(r.id) ? html`<svg class="tick want" viewBox="0 0 24 24" aria-label=${t('Want to go')}><path d="M7 4h10v16l-5-3.5L7 20z"/></svg>` : null}
+        </button>`)}
+      </section>`)}
+    </div>
+  <//>`;
+}
+
+function DateSheet({ name, value, onSave, onClose }) {
+  const now = new Date();
+  const [year, setYear] = useState(value ? Number(value.slice(0, 4)) : now.getFullYear());
+  const [month, setMonth] = useState(value?.length > 4 ? Number(value.slice(5)) : null);
+  const months = Array.from({ length: 12 }, (_, i) => new Intl.DateTimeFormat(language(), { month: 'short' }).format(new Date(2026, i, 1)));
+  const future = (m) => year === now.getFullYear() && m > now.getMonth() + 1;
+  return html`<${Sheet} title=${t('Date of first visit')} onClose=${onClose} class="date">
+    <p class="sheet-line">${name}</p>
+    <div class="stepper">
+      <button class="outline round" onClick=${() => setYear(year - 1)} aria-label="−">−</button>
+      <b class="year">${year}</b>
+      <button class="outline round" disabled=${year >= now.getFullYear()} onClick=${() => setYear(year + 1)} aria-label="+">+</button>
+    </div>
+    <div class="months">${months.map((m, i) => html`<button class=${'month' + (month === i + 1 ? ' on' : '')} disabled=${future(i + 1)}
+      onClick=${() => setMonth(month === i + 1 ? null : i + 1)}>${m}</button>`)}</div>
+    <div class="actions">
+      <button class="ink" onClick=${() => onSave(month ? `${year}-${String(month).padStart(2, '0')}` : String(year))}>${t('Save')}</button>
+      ${value && html`<button class="quiet" onClick=${() => onSave(null)}>${t('Remove date')}</button>`}
+    </div>
+  <//>`;
+}
+
+function SettingsSheet({ world, atlas, name, update, setAtlas, onLanguage, onClose }) {
+  const [note, setNote] = useState(null);
+  const file = useRef(null);
+  const describe = (id) => { const r = world.rows.get(id); return r && { kind: r.kind, name: r.name }; };
+  const doImport = async (e) => {
+    const f = e.target.files?.[0]; e.target.value = '';
+    if (!f) return;
+    try {
+      const data = store.readExport(await f.text());
+      const { atlas: next, summary } = store.addExport(atlas, data, (id) => world.rows.has(id));
+      setAtlas(next); store.save(next);
+      const parts = [];
+      if (summary.visited) parts.push(t('%lld visited places', summary.visited));
+      if (summary.wanted) parts.push(t('%lld Want to go places', summary.wanted));
+      if (summary.trips) parts.push(t('%lld trips', summary.trips));
+      let text = parts.length ? t('Added %@.', new Intl.ListFormat(language(), { type: 'conjunction' }).format(parts))
+                              : t('Everything in this file is already in your atlas.');
+      if (summary.skipped) text += ' ' + t('%lld places weren’t recognised.', summary.skipped);
+      setNote(text);
+    } catch (err) {
+      setNote(err.message === 'newerVersion' ? t('This file was made by a newer version of Inlay. Update Inlay, then import it again.')
+                                             : t('That isn’t an Inlay atlas file. Choose a file made with Export your atlas.'));
+    }
+  };
+  return html`<${Sheet} title=${t('Settings')} onClose=${onClose} class="settings">
+    <section class="group">
+      <label class="field"><${Legend}>${tw('Language')}<//>
+        <select value=${language()} onChange=${(e) => onLanguage(e.target.value)}>
+          ${LANGUAGES.map(([code, label]) => html`<option value=${code}>${label}</option>`)}
+        </select></label>
+      <label class="field"><${Legend}>${t('Home country')}<//>
+        <select value=${atlas.home ?? ''} onChange=${(e) => update((a) => { a.home = e.target.value || null; return a; })}>
+          <option value="">—</option>
+          ${[...world.rows.values()].filter((r) => r.kind === 'country').sort((a, b) => name(a.id).localeCompare(name(b.id), language()))
+            .map((r) => html`<option value=${r.id}>${name(r.id)}</option>`)}
+        </select></label>
+      <label class="field"><${Legend}>${tw('Appearance')}<//>
+        <select value=${atlas.prefs.appearance ?? 'system'} onChange=${(e) => update((a) => { a.prefs.appearance = e.target.value; return a; })}>
+          <option value="system">${tw('Automatic')}</option><option value="light">${tw('Light')}</option><option value="dark">${tw('Dark')}</option>
+        </select></label>
+    </section>
+    <section class="group">
+      <${Legend} class="section-title">${tw('Your atlas and the app')}<//>
+      <p class="sheet-line">${tw('Your atlas is kept in this browser. To move it between the Inlay app and the web, export it on one and import it on the other: places, dates, Want to go plans and trips come along.')}</p>
+      <div class="actions">
+        <button class="outline" onClick=${() => download('Inlay atlas.json', store.writeExport(atlas, describe))}>${t('Export your atlas')}</button>
+        <button class="outline" onClick=${() => file.current.click()}>${t('Import an atlas file')}</button>
+        <input ref=${file} type="file" accept="application/json,.json" hidden onChange=${doImport} />
+      </div>
+      ${note && html`<p class="note" role="status">${note}</p>`}
+    </section>
+    <section class="group links">
+      <a href="/">${tw('Inlay gallery')}</a> · <a href="/print/">${tw('Print your atlas')}</a> · <a href="/print/credits.html">${t('Map credits')}</a> · <a href="/privacy/">${tw('Privacy')}</a>
+    </section>
+  <//>`;
+}
+
+// Strings the app doesn't have; translated here (WEB_STRINGS) and looked up by key.
+import { WEB_STRINGS } from './web-strings.js';
+function tw(key) { return WEB_STRINGS[language()]?.[key] ?? key; }
+
+// ---- start -----------------------------------------------------------------------------------
+async function start() {
+  const root = document.getElementById('app');
+  try {
+    const initial = await store.load();
+    await useLanguage(preferredLanguage(initial.prefs?.language));
+    const [meta, places, land] = await Promise.all([
+      fetch('./data/world.json', { cache: 'force-cache' }).then((r) => r.json()),
+      readWorld('./data/world.inlr'), readLand('./data/land.inlr'),
+    ]);
+    const rows = new Map(meta.places.map((r) => [r.id, r]));
+    for (const [id, p] of places) p.row = rows.get(id);
+    const byGroup = Object.fromEntries(GROUPS.map((g) => [g, meta.places.filter((r) => r.group === g).map((r) => r.id)]));
+    const world = { frame: [0, 0, meta.frame[2], meta.frame[3]], places, land, rows, byGroup, groups: meta.groups,
+                    overviews: meta.overviews, countryCount: meta.countryCount, territoryCount: meta.territoryCount };
+    root.textContent = '';
+    render(html`<${App} world=${world} initial=${initial} />`, root);
+  } catch (e) {
+    console.error(e);
+    root.innerHTML = '';
+    const p = document.createElement('p'); p.className = 'fatal';
+    p.textContent = e.message?.includes('WebGL') ? 'This browser can’t draw the atlas (WebGL 2 is off or unavailable).' : 'The atlas couldn’t load. Check your connection and reload.';
+    root.append(p);
+  }
+}
+start();
