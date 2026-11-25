@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<base href="../">
+<title>Globe · dev</title>
+<link rel="stylesheet" href="./atlas.css">
+<link rel="stylesheet" href="./css/globe.css">
+<script type="importmap">
+{ "imports": { "preact": "./vendor/preact.module.js", "preact/hooks": "./vendor/hooks.module.js", "htm": "./vendor/htm.module.js" } }
+</script>
+<style>
+  .dev-panel { position: absolute; left: 12px; right: 12px; bottom: 12px; height: 150px; z-index: 5; border-radius: 22px; padding: 14px; box-sizing: border-box; }
+  @media (min-width: 600px) and (orientation: landscape) { .dev-panel { right: auto; width: 340px; top: 72px; height: auto; bottom: 16px; } }
+  .dev-top { position: absolute; left: 0; right: 0; top: 0; height: 52px; z-index: 5; display: grid; place-items: center; pointer-events: none; }
+  .dev-layer { position: absolute; inset: 0; z-index: 3; }
+</style>
+<script type="module" src="./dev/globe-dev.js"></script>
+</head>
+<body><main id="app"><p class="loading">Inlay</p></main></body>
+</html>

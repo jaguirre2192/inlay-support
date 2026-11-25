@@ -219,7 +219,7 @@ export class AtlasMap {
   bindGestures() {
     const el = this.labels.parentElement;
     const pointers = new Map();
-    let last = null, moved = 0, pinch = null, velocity = [0, 0], lastTime = 0, glide = null;
+    let last = null, moved = 0, pinch = null, velocity = [0, 0], lastTime = 0, glide = null, wheelBeyond = null, wheelTimer = 0;
     el.addEventListener('pointerdown', (e) => {
       if (e.target !== this.labels && e.target !== this.canvas) return;
       el.setPointerCapture(e.pointerId);
@@ -237,6 +237,13 @@ export class AtlasMap {
       if (pointers.size === 2 && pinch) {
         const [a, b] = [...pointers.values()];
         const d = Math.hypot(a[0] - b[0], a[1] - b[1]), c = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+        // Pinching on past the whole world curls the map into the globe (the app's pinch-to-globe).
+        if (this.view.scale <= this.minScale * 1.001 && d < pinch.d) {
+          pinch.beyond ??= pinch.d;
+          this.options.onBeyond?.(d / pinch.beyond, false);
+          pinch.d = d; pinch.c = c; moved += 10;
+          return;
+        }
         this.view.x -= (c[0] - pinch.c[0]) / this.view.scale; this.view.y -= (c[1] - pinch.c[1]) / this.view.scale;
         this.zoomAt(c[0], c[1], d / pinch.d);
         pinch = { d, c }; moved += 10;
@@ -253,6 +260,7 @@ export class AtlasMap {
     const end = (e) => {
       if (!pointers.has(e.pointerId)) return;
       pointers.delete(e.pointerId);
+      if (pinch?.beyond) this.options.onBeyond?.(null, true);
       if (pointers.size === 1) { last = [...pointers.values()][0]; pinch = null; return; }
       if (pointers.size > 0) return;
       pinch = null;
@@ -281,7 +289,12 @@ export class AtlasMap {
     el.addEventListener('pointercancel', end);
     el.addEventListener('wheel', (e) => {
       e.preventDefault();
-      if (e.ctrlKey) this.zoomAt(e.clientX, e.clientY, Math.exp(-e.deltaY * 0.012)); // trackpad pinch
+      if (e.ctrlKey && e.deltaY > 0 && this.view.scale <= this.minScale * 1.001 && this.options.onBeyond) {
+        wheelBeyond = (wheelBeyond ?? 1) * Math.exp(-e.deltaY * 0.012);
+        this.options.onBeyond(wheelBeyond, false);
+        clearTimeout(wheelTimer);
+        wheelTimer = setTimeout(() => { this.options.onBeyond(null, true); wheelBeyond = null; }, 180);
+      } else if (e.ctrlKey) this.zoomAt(e.clientX, e.clientY, Math.exp(-e.deltaY * 0.012)); // trackpad pinch
       else if (Math.abs(e.deltaX) > 0 && !e.deltaMode) { this.view.x += e.deltaX / this.view.scale; this.view.y += e.deltaY / this.view.scale; this.apply(); }
       else this.zoomAt(e.clientX, e.clientY, Math.exp(-e.deltaY * (e.deltaMode ? 0.05 : 0.0022)));
     }, { passive: false });

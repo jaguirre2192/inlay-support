@@ -228,6 +228,11 @@ function ToolPrint({ world, ids, slice, inked, onClick, title, line }) {
   </button>`;
 }
 
+const latestYear = (atlas) => {
+  const years = Object.values(atlas.visits).map((v) => v.date?.slice(0, 4)).filter(Boolean).sort();
+  return years.at(-1) ?? null;
+};
+
 function Tools({ world, atlas, visited, onTool }) {
   const ids = [...visited].filter((id) => world.rows.has(id));
   const seals = useMemo(() => milestones(world, atlas), [atlas]);
@@ -243,6 +248,8 @@ function Tools({ world, atlas, visited, onTool }) {
       title=${t('Photos')} line=${t('Find places')} />
     <${ToolPrint} world=${world} ids=${[]} slice=${[f[0], f[1] + f[3] * 0.1, f[2], f[3] * 0.62]} inked=${visited} onClick=${() => onTool('friends')}
       title=${t('Friends')} line=${t('Compare atlases')} />
+    <${ToolPrint} world=${world} ids=${['AU', 'NZ']} inked=${visited} onClick=${() => onTool('yearinreview')}
+      title=${t('Year in review')} line=${latestYear(atlas) ?? t('All time')} />
     <${ToolPrint} world=${world} ids=${['PE', 'CL', 'AR']} inked=${visited} onClick=${() => onTool('share')}
       title=${t('Share')} line=${t('Stamps')} />
     <${ToolPrint} world=${world} ids=${['IS', 'NO']} inked=${visited} onClick=${() => onTool('print')}

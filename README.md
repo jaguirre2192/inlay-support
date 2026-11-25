@@ -14,6 +14,7 @@ Jorge authorized the approved cinematic website launch on 2026-11-15. The curren
 | `/editions/country/` | Single-country illustrated edition and real studio entry. |
 | `/editions/memory/` | Country artwork with buyer-selected photographs and real studio entry. |
 | `/gifts/` | A friend's atlas and Our World for any two people. |
+| `/atlas/` | Inlay in the browser: the iPhone app's illustrated atlas (map, regions, Your atlas, passport, milestones, share cards, friends, year in review, globe), kept in the browser and exchanged with the app through its atlas file. Spec: [atlas/SPEC.md](atlas/SPEC.md); data from the app via `tools/build-atlas-data.py --native <Inlay checkout>`. |
 | `/print/` | Import an actual Inlay atlas or saved design, personalize, download a PNG proof and save a design. |
 | `/print/credits.html` | Artwork, geographic and font acknowledgments. |
 | `/friend/` | Open an invitation locally in Inlay, copy it and provide the Messages preview card. |

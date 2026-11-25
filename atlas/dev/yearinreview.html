@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<base href="../"><!-- the app's modules fetch ./data/... relative to the page -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Year in review · harness</title>
+<link rel="stylesheet" href="./atlas.css">
+<link rel="stylesheet" href="./css/passport.css">
+<link rel="stylesheet" href="./css/yearinreview.css">
+<script type="importmap">
+{ "imports": { "preact": "./vendor/preact.module.js", "preact/hooks": "./vendor/hooks.module.js", "htm": "./vendor/htm.module.js" } }
+</script>
+<style>body { background: var(--paper); }</style>
+</head>
+<body>
+<!-- Dev only. Opens the Year in review sheet on a sample atlas: 2024 has eight new places and two
+     trips, with earlier years underneath. &lang=ja picks a language; &theme=dark the page theme.
+     window.yir exposes the pure pieces: frame(n) → PNG data URL, record() → { type, size, base64 }. -->
+<main id="app"></main>
+<script type="module">
+import { h, render } from 'preact';
+import htm from 'htm';
+import { readWorld, readLand } from './js/inlr.js';
+import { t, useLanguage, countryName } from './js/i18n.js';
+import { YearInReviewSheet, reviewPlan, reviewYears, frameCount, frameAt, Keyframes, drawReviewFrame, recordReview, videoType, reviewDuration, SIZE } from './js/yearinreview.js';
+const html = htm.bind(h);
+const q = new URLSearchParams(location.search);
+if (q.get('theme')) document.documentElement.dataset.theme = q.get('theme');
+
+const GROUPS = ['europe', 'asia', 'africa', 'north-america', 'south-america', 'oceania'];
+async function loadWorld() {
+  const [meta, places, land] = await Promise.all([
+    fetch('./data/world.json').then((r) => r.json()), readWorld('./data/world.inlr'), readLand('./data/land.inlr')]);
+  const rows = new Map(meta.places.map((r) => [r.id, r]));
+  for (const [id, p] of places) p.row = rows.get(id);
+  const byGroup = Object.fromEntries(GROUPS.map((g) => [g, meta.places.filter((r) => r.group === g).map((r) => r.id)]));
+  return { frame: [0, 0, meta.frame[2], meta.frame[3]], places, land, rows, byGroup, groups: meta.groups,
+           overviews: meta.overviews, countryCount: meta.countryCount, territoryCount: meta.territoryCount };
+}
+
+// 2024: eight new places in Europe and North Africa over two trips; earlier years underneath.
+const SAMPLE = {
+  version: 1, name: 'Jorge', home: 'US',
+  visits: {
+    PT: { date: '2024-03' }, ES: { date: '2024-03' }, MA: { date: '2024-04' }, IT: { date: '2024-06' },
+    GR: { date: '2024-06' }, HR: { date: '2024-07' }, SI: { date: '2024-07' }, AT: { date: '2024' },
+    FR: { date: '2019-07' }, GB: { date: '2018-03' }, DE: { date: '2022-05' }, CH: { date: '2022-05' },
+    MX: { date: '2021-12' }, JP: { date: '2025-04' }, US: {}, CA: {},
+  },
+  wanted: {}, prefs: {},
+  trips: [
+    { id: 't1', name: 'Iberia and Morocco', start: '2024-03-08T00:00:00Z', end: '2024-04-02T00:00:00Z', places: ['PT', 'ES', 'MA'], note: '' },
+    { id: 't2', name: 'Adriatic summer', start: '2024-06-14T00:00:00Z', end: '2024-07-20T00:00:00Z', places: ['IT', 'GR', 'HR', 'SI'], note: '' },
+  ],
+};
+
+const world = await loadWorld();
+await useLanguage(q.get('lang') ?? 'en');
+const atlas = SAMPLE;
+const visited = new Set(Object.keys(atlas.visits));
+const name = (id) => { const r = world.rows.get(id); return r ? countryName(id, r.name) : id; };
+
+function Sheet({ title, onClose, children, class: cls = '' }) {
+  return html`<div class="scrim"><div class=${'sheet ' + cls} role="dialog" aria-label=${title}>
+    <div class="sheet-head"><h2>${title}</h2><button class="glass pill" onClick=${onClose}>${t('Done')}</button></div>${children}</div></div>`;
+}
+if (q.get('mode') !== 'none') {
+  render(html`<${YearInReviewSheet} Sheet=${Sheet} world=${world} atlas=${atlas} name=${name} visited=${visited} onClose=${() => {}} />`,
+    document.getElementById('app'));
+}
+
+const toBase64 = (blob) => new Promise((resolve) => { const r = new FileReader(); r.onload = () => resolve(String(r.result).split(',')[1]); r.readAsDataURL(blob); });
+window.yir = { world,
+  years: () => reviewYears(world, atlas, visited),
+  plan: (year = 2024) => reviewPlan(world, atlas, visited, year, name),
+  info(year = 2024) {
+    const plan = this.plan(year);
+    return { title: plan.title, stops: plan.stops, base: plan.baseVisited, frame: plan.frame, totalLine: plan.totalLine,
+      frames: frameCount(plan), seconds: reviewDuration(plan), type: videoType() };
+  },
+  async frame(n, year = 2024) {
+    const plan = this.plan(year);
+    const keyframes = new Keyframes(world, plan);
+    const desc = frameAt(plan, n);
+    await keyframes.prefetch(desc);
+    const c = document.createElement('canvas'); c.width = SIZE.width; c.height = SIZE.height;
+    drawReviewFrame(c.getContext('2d'), plan, desc, keyframes);
+    return c.toDataURL('image/png');
+  },
+  async record(year = 2024) {
+    const started = performance.now();
+    const made = await recordReview(world, this.plan(year), { onProgress: (p) => { window.yirProgress = p; } });
+    return { type: made.type, file: made.file, size: made.blob.size, ms: Math.round(performance.now() - started), base64: await toBase64(made.blob) };
+  },
+};
+window.harnessReady = true;
+</script>
+</body>
+</html>

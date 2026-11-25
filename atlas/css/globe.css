@@ -1,0 +1,18 @@
+/* The paper globe (js/globe.js): the launch over the map, and the globe for "Show globe". */
+.globe-launch, .globe-view { position: absolute; inset: 0; overflow: hidden; background: var(--paper); }
+.globe-launch canvas, .globe-view canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.globe-launch { cursor: default; touch-action: none; }
+/* After the unfold the map is already in place: a short crossfade. */
+.globe-launch.globe-handover { opacity: 0; transition: opacity .45s cubic-bezier(.4, 0, .2, 1); pointer-events: none; }
+/* Without an unfold, the globe comes towards you as it dissolves into the map. */
+.globe-launch.globe-dissolve { opacity: 0; transform: scale(1.7); transition: opacity 1.3s cubic-bezier(.4, 0, .2, 1), transform 1.3s cubic-bezier(.4, 0, .2, 1); pointer-events: none; }
+.globe-view { touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; }
+.globe-view:active { cursor: grabbing; }
+.globe-view:focus-visible { outline: none; }
+.globe-view:focus-visible canvas { outline: 2px solid var(--sage); outline-offset: -2px; }
+.globe-view.globe-hidden { visibility: hidden; pointer-events: none; }
+/* Curling from the map: the map keeps the pinch. */
+.globe-view.globe-passive { pointer-events: none; }
+.globe-failed { display: grid; place-content: center; justify-items: center; gap: 12px; text-align: center; }
+.globe-failed p { margin: 0; font-size: 15px; color: var(--pencil); }
+@media (prefers-reduced-motion: reduce) { .globe-launch.globe-handover, .globe-launch.globe-dissolve { transition: none; } }

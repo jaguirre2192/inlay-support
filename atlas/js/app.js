@@ -43,9 +43,12 @@ function App({ world, initial }) {
   const [, setLang] = useState(language());
   const mapHost = useRef(null), map = useRef(null), panel = useRef(null), top = useRef(null);
   const dark = useDark(atlas.prefs);
+  const lastRatio = useRef(1);
   const homeRef = useRef(atlas.home), selectedRef = useRef(null), sheetRef = useRef(null), previous = useRef(atlas);
   sheetRef.current = sheet;
   const [milestone, setMilestone] = useState(null);
+  const [launching, setLaunching] = useState(!matchMedia('(prefers-reduced-motion: reduce)').matches);
+  const [globe, setGlobe] = useState(false), [mapReady, setMapReady] = useState(false);
   selectedRef.current = selected;
   homeRef.current = atlas.home;
   const visited = useMemo(() => new Set(Object.keys(atlas.visits)), [atlas.visits]);
@@ -66,6 +69,8 @@ function App({ world, initial }) {
       regions: world.regions,
       focusCountry: () => selectedRef.current,
       onRegions: () => setRegionsReady((n) => n + 1),
+      // Pinching on past the whole world: ratio is the fingers' span against where it started.
+      onBeyond: (ratio, ended) => { if (ended) curlToGlobe(curlProgress(1, lastRatio.current), true); else { lastRatio.current = ratio; curlToGlobe(curlProgress(1, ratio)); } },
       onSelect: (id, regionID) => {
         if (regionID) { setRegion(regionID); return; }
         setRegion(null); setSelected(id); if (!id) setArea({ kind: 'world' });
@@ -79,6 +84,7 @@ function App({ world, initial }) {
     });
     map.current = m;
     window.__atlas = m;
+    setMapReady(true);
     const key = (e) => {
       if (e.target.closest('input,textarea,select,[contenteditable]')) return;
       if (e.key === '/') { e.preventDefault(); setSheet('search'); return; }
@@ -171,6 +177,11 @@ function App({ world, initial }) {
   return html`
     <div class="atlas" data-sheet=${sheet ? 'open' : ''}>
       <div class="map" ref=${mapHost} role="application" aria-label=${t('World')}></div>
+      ${mapReady && area.kind === 'world' && !selected && html`<${GlobeView} world=${world} atlas=${atlas} dark=${dark} view=${() => map.current?.view}
+          insets=${() => map.current?.options.insets()} active=${globe}
+          onPick=${(id) => { setGlobe(false); choose(id); }} onFlat=${() => setGlobe(false)} onCurlEnd=${(g) => setGlobe(g)} />`}
+      ${mapReady && launching && html`<${GlobeLaunch} world=${world} atlas=${atlas} dark=${dark} view=${() => map.current?.view}
+          insets=${() => map.current?.options.insets()} onDone=${() => setLaunching(false)} />`}
       <div class="wash" aria-hidden="true"></div>
       <header class="top" ref=${top}>
         <a class="wordmark" href="/" aria-label="Inlay">INLAY</a>
@@ -184,6 +195,11 @@ function App({ world, initial }) {
         <button class="glass round" onClick=${() => setSheet('search')} aria-label=${t('Find a place')} title=${t('Find a place')}>
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
         </button>
+        ${area.kind === 'world' && !selected && html`<button class="glass round" onClick=${() => setGlobe(!globe)}
+            aria-label=${globe ? t('Show flat map') : t('Show globe')} title=${globe ? t('Show flat map') : t('Show globe')}>
+          ${globe ? html`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="1.5"/><path d="M3 12h18M12 6v12"/></svg>`
+                  : html`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg>`}
+        </button>`}
         <button class="glass round" onClick=${() => setSheet('settings')} aria-label=${t('Settings')} title=${t('Settings')}>
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9 7 7m10 10 2.1 2.1M4.9 19.1 7 17m10-10 2.1-2.1"/></svg>
         </button>
@@ -206,6 +222,7 @@ function App({ world, initial }) {
           visited=${visited} wanted=${wanted} openID=${sheet?.open} onWant=${addWant} onChoose=${choose} onClose=${() => setSheet(null)} />`}
       ${(sheet === 'share' || sheet?.kind === 'share') && html`<${ShareSheet} Sheet=${Sheet} world=${world} atlas=${atlas} name=${name} visited=${visited}
           friend=${sheet?.friend} design=${sheet?.design} placeID=${sheet?.placeID} onClose=${() => setSheet(null)} />`}
+      ${sheet === 'yearinreview' && html`<${YearInReviewSheet} Sheet=${Sheet} world=${world} atlas=${atlas} name=${name} visited=${visited} onClose=${() => setSheet(null)} />`}
       ${sheet === 'print' && html`<${PrintSheet} Sheet=${Sheet} world=${world} atlas=${atlas} onClose=${() => setSheet(null)} />`}
       ${sheet === 'photos' && html`<${PhotosSheet} Sheet=${Sheet} world=${world} atlas=${atlas} update=${update} name=${name} regionName=${regionName}
           visited=${visited} loadRegions=${(id) => map.current.ensureRegions(id)} onClose=${() => setSheet(null)} />`}
@@ -478,6 +495,8 @@ import { FriendsSheet, openInviteFromURL, addFriend, friendID } from './friends.
 import { PlaceSheet, PrintSheet } from './placeinfo.js';
 import { PhotosSheet } from './photos.js';
 import { ShareSheet } from './share.js';
+import { YearInReviewSheet } from './yearinreview.js';
+import { GlobeLaunch, GlobeView, curlToGlobe, curlProgress } from './globe.js';
 function tw(key) { return WEB_STRINGS[language()]?.[key] ?? key; }
 
 // ---- start -----------------------------------------------------------------------------------
