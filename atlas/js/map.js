@@ -1,7 +1,7 @@
 // The map element: renderer + label layer + camera + gestures + hit testing.
 
 import { AtlasRenderer } from './renderer.js';
-import { contains, boundsOf } from './inlr.js';
+import { contains, boundsOf, readRegions } from './inlr.js';
 
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -38,6 +38,8 @@ export class AtlasMap {
     host.append(this.canvas, this.labels);
     this.renderer = new AtlasRenderer(this.canvas, world, options.artURL);
     this.renderer.onDraw = () => this.drawLabels();
+    this.renderer.onNeedRegions = (id) => this.ensureRegions(id);
+    this.regionsLoading = new Set();
     this.ctx = this.labels.getContext('2d');
     this.view = { x: world.frame[2] / 2, y: world.frame[3] / 2, scale: 0.02 };
     this.anim = null;
@@ -70,7 +72,8 @@ export class AtlasMap {
 
   set(state) {
     Object.assign(this.state, state);
-    this.renderer.set({ visited: this.state.visited, wanted: this.state.wanted, selected: this.state.selected, dark: this.state.dark });
+    this.renderer.set({ visited: this.state.visited, wanted: this.state.wanted, selected: this.state.selected, dark: this.state.dark,
+                        region: this.state.region ?? null, wholeCountries: !!this.state.wholeCountries });
   }
 
   stamp(id, lift) { if (!reduceMotion.matches) this.renderer.stamp(id, lift); else this.renderer.requestDraw(); }
@@ -159,6 +162,36 @@ export class AtlasMap {
     this.anim = null; this.apply();
   }
 
+  // ---- regions --------------------------------------------------------------------------------
+  hasRegions(countryID) { return !!this.options.regions?.files[countryID]; }
+
+  async ensureRegions(countryID) {
+    const index = this.options.regions, file = index?.files[countryID];
+    if (!file || this.renderer.regional.has(countryID) || this.regionsLoading.has(countryID)) return this.renderer.regional.get(countryID);
+    this.regionsLoading.add(countryID);
+    try {
+      const detail = await readRegions(`./data/regions/${file}`);
+      this.renderer.addRegions(countryID, detail, index.rows, (image) => `./art/regions/${image}`);
+      this.options.onRegions?.(countryID);
+      return detail;
+    } catch (e) { console.warn('Regions unavailable', countryID, e); }
+    finally { this.regionsLoading.delete(countryID); }
+  }
+
+  /** The region under a point inside `countryID`, once its regions are loaded. */
+  regionAt(countryID, clientX, clientY) {
+    const detail = this.renderer.regional.get(countryID);
+    if (!detail) return null;
+    let [x, y] = this.toWorld(clientX, clientY);
+    const f = this.world.frame, W = f[2];
+    x = ((x - f[0]) % W + W) % W + f[0];
+    for (const [id, r] of detail.regions) {
+      const [bx, by, bw, bh] = r.entry.bounds;
+      if (x >= bx && x <= bx + bw && y >= by && y <= by + bh && contains(r.rings, x, y)) return id;
+    }
+    return null;
+  }
+
   // ---- hit testing ----------------------------------------------------------------------------
   placeAt(clientX, clientY) {
     let [x, y] = this.toWorld(clientX, clientY);
@@ -225,7 +258,10 @@ export class AtlasMap {
       pinch = null;
       if (moved < 6 && e.type === 'pointerup') {
         const id = this.placeAt(e.clientX, e.clientY);
-        this.options.onSelect?.(id);
+        // Inside the country in focus, a tap picks its region.
+        const focus = this.options.focusCountry?.();
+        const region = id && id === focus ? this.regionAt(id, e.clientX, e.clientY) : null;
+        this.options.onSelect?.(id, region);
         return;
       }
       // Glide on after a flick.

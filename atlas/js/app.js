@@ -35,13 +35,16 @@ function download(name, text) {
 function App({ world, initial }) {
   const [atlas, setAtlas] = useState(initial);
   const [selected, setSelected] = useState(null);
+  const [region, setRegion] = useState(null);
+  const [, setRegionsReady] = useState(0);
   const [area, setArea] = useState({ kind: 'world' });
   const [banner, setBanner] = useState(null);
   const [sheet, setSheet] = useState(null);
   const [, setLang] = useState(language());
   const mapHost = useRef(null), map = useRef(null), panel = useRef(null), top = useRef(null);
   const dark = useDark(atlas.prefs);
-  const homeRef = useRef(atlas.home);
+  const homeRef = useRef(atlas.home), selectedRef = useRef(null);
+  selectedRef.current = selected;
   homeRef.current = atlas.home;
   const visited = useMemo(() => new Set(Object.keys(atlas.visits)), [atlas.visits]);
   const wanted = useMemo(() => new Set(Object.keys(atlas.wanted)), [atlas.wanted]);
@@ -58,7 +61,13 @@ function App({ world, initial }) {
       cityLabel: placeName,
       tracking,
       home: () => homeRef.current,
-      onSelect: (id) => { setSelected(id); if (!id) setArea({ kind: 'world' }); },
+      regions: world.regions,
+      focusCountry: () => selectedRef.current,
+      onRegions: () => setRegionsReady((n) => n + 1),
+      onSelect: (id, regionID) => {
+        if (regionID) { setRegion(regionID); return; }
+        setRegion(null); setSelected(id); if (!id) setArea({ kind: 'world' });
+      },
       insets: () => {
         const p = panel.current?.getBoundingClientRect(), tp = top.current?.getBoundingClientRect(), host = mapHost.current.getBoundingClientRect();
         const wide = host.width >= 600 && host.width > host.height;
@@ -78,31 +87,42 @@ function App({ world, initial }) {
     return () => removeEventListener('keydown', key);
   }, []);
 
-  useEffect(() => { map.current?.set({ visited, wanted, selected, dark }); }, [visited, wanted, selected, dark]);
+  useEffect(() => { map.current?.set({ visited, wanted, selected, dark, region, wholeCountries: !!atlas.prefs.wholeCountries }); },
+            [visited, wanted, selected, dark, region, atlas.prefs.wholeCountries]);
   useEffect(() => { document.documentElement.dataset.theme = dark ? 'dark' : 'light'; }, [dark]);
 
   // Selecting a place frames it.
   useEffect(() => {
     if (!selected) return;
     const r = world.rows.get(selected);
-    if (r) { setArea({ kind: 'country', id: selected }); requestAnimationFrame(() => map.current.frame(r.focus)); }
+    if (r) { setArea({ kind: 'country', id: selected }); requestAnimationFrame(() => map.current.frame(r.focus)); map.current.ensureRegions(selected); }
   }, [selected]);
+  useEffect(() => {
+    const row = region && world.regions.rows.get(region);
+    if (row) requestAnimationFrame(() => map.current.frame(row.focusFrame ?? row.bounds));
+  }, [region]);
 
-  const choose = (id) => { setSheet(null); setSelected(id); };
-  const showGroup = (g) => { setSelected(null); setArea({ kind: 'group', id: g }); map.current.frame(world.groups[g]); };
-  const showWorld = () => { setSelected(null); setArea({ kind: 'world' }); map.current.frameWorld(); };
+  const choose = (id) => { setSheet(null); setRegion(null); setSelected(id); };
+  const chooseRegion = (id) => { setSheet(null); setRegion(id); };
+  const regionName = (id) => placeName(world.regions.rows.get(id)?.name ?? id);
+  const showGroup = (g) => { setSelected(null); setRegion(null); setArea({ kind: 'group', id: g }); map.current.frame(world.groups[g]); };
+  const showWorld = () => { setSelected(null); setRegion(null); setArea({ kind: 'world' }); map.current.frameWorld(); };
 
   const mark = (id) => {
-    const before = atlas;
-    update((a) => { a.visits[id] = a.visits[id] ?? {}; return a; });
-    map.current.stamp(id);
-    setBanner({ text: t('%@ added to your atlas', name(id)), undo: () => { setAtlas(before); store.save(before); map.current.stamp(id, true); } });
+    const before = atlas, row = world.regions.rows.get(id), parent = row?.countryID;
+    const parentNew = parent && !atlas.visits[parent];
+    update((a) => { a.visits[id] = a.visits[id] ?? {}; if (parent) a.visits[parent] = a.visits[parent] ?? {}; return a; });
+    if (!row || parentNew) map.current.stamp(parent ?? id);
+    const label = row ? regionName(id) : name(id);
+    setBanner({ text: parentNew ? t('%@ and %@ added to your atlas', label, name(parent)) : t('%@ added to your atlas', label),
+                undo: () => { setAtlas(before); store.save(before); if (!row || parentNew) map.current.stamp(parent ?? id, true); } });
   };
   const unmark = (id) => {
     const before = atlas;
+    const isRegion = world.regions.rows.has(id);
     update((a) => { delete a.visits[id]; return a; });
-    map.current.stamp(id, true);
-    setBanner({ text: t('%@ removed', name(id)), undo: () => { setAtlas(before); store.save(before); map.current.stamp(id); } });
+    if (!isRegion) map.current.stamp(id, true);
+    setBanner({ text: t('%@ removed', isRegion ? regionName(id) : name(id)), undo: () => { setAtlas(before); store.save(before); if (!isRegion) map.current.stamp(id); } });
   };
   const toggleWant = (id) => {
     const before = atlas, had = !!atlas.wanted[id];
@@ -132,7 +152,7 @@ function App({ world, initial }) {
       <header class="top" ref=${top}>
         <a class="wordmark" href="/" aria-label="Inlay">INLAY</a>
       </header>
-      <button class="glass count-card" onClick=${() => setSheet('search')} aria-label=${t('%lld countries, %lld territories', counts.countries, counts.territories)}>
+      <button class="glass count-card" onClick=${() => setSheet('collection')} aria-label=${t('%lld countries, %lld territories', counts.countries, counts.territories)}>
         <span class="figure"><b>${counts.countries}</b><span class="of"> / ${world.countryCount}</span></span>
         <${Legend}>${t('Countries')}<//>
         <span class="bar"><i style=${{ width: (counts.countries / world.countryCount * 100) + '%' }}></i></span>
@@ -146,10 +166,16 @@ function App({ world, initial }) {
         </button>
       </nav>
       <${Panel} ref_=${panel} world=${world} atlas=${atlas} area=${area} selected=${selected} name=${name}
+        region=${region} regionName=${regionName} onCountry=${() => { setRegion(null); const r = world.rows.get(selected); if (r) map.current.frame(r.focus); }}
+        onRegions=${() => setSheet('regions')}
         visited=${visited} wanted=${wanted} counts=${counts} banner=${banner} onDismissBanner=${() => setBanner(null)}
         onWorld=${showWorld} onGroup=${showGroup} onChoose=${() => setSheet('search')}
         onMark=${mark} onUnmark=${unmark} onWant=${toggleWant} onDate=${(id) => setSheet({ kind: 'date', id })} />
       ${sheet === 'search' && html`<${SearchSheet} world=${world} name=${name} visited=${visited} wanted=${wanted} onChoose=${choose} onClose=${() => setSheet(null)} />`}
+      ${sheet === 'collection' && html`<${CollectionSheet} Sheet=${Sheet} world=${world} atlas=${atlas} update=${update} name=${name}
+          visited=${visited} wanted=${wanted} onChoose=${choose} onClose=${() => setSheet(null)} />`}
+      ${sheet === 'regions' && selected && html`<${RegionSheet} world=${world} country=${selected} name=${name} regionName=${regionName}
+          visited=${visited} wholeCountries=${!!atlas.prefs.wholeCountries} onChoose=${chooseRegion} onClose=${() => setSheet(null)} />`}
       ${sheet === 'settings' && html`<${SettingsSheet} world=${world} atlas=${atlas} name=${name} update=${update} setAtlas=${setAtlas}
           onLanguage=${changeLanguage} onClose=${() => setSheet(null)} />`}
       ${sheet?.kind === 'date' && html`<${DateSheet} id=${sheet.id} name=${name(sheet.id)} value=${atlas.visits[sheet.id]?.date}
@@ -160,13 +186,26 @@ function App({ world, initial }) {
 }
 
 // ---- the place panel -------------------------------------------------------------------------
-function Panel({ ref_, world, atlas, area, selected, name, visited, wanted, counts, banner, onDismissBanner, onWorld, onGroup, onChoose, onMark, onUnmark, onWant, onDate }) {
+/** What a country's subregions are called, lowercase plural (PlaceNames.kind in the app). */
+const KINDS = ['states', 'provinces', 'prefectures', 'voivodeships', 'autonomous communities', 'divisions', 'island groups', 'areas', 'countries'];
+export const kindWord = (kind) => t(KINDS.includes(kind) ? kind : 'regions');
+
+function Panel({ ref_, world, atlas, area, selected, region, name, regionName, visited, wanted, counts, banner, onDismissBanner,
+                 onWorld, onGroup, onChoose, onCountry, onRegions, onMark, onUnmark, onWant, onDate }) {
   const row = selected ? world.rows.get(selected) : null;
-  const isVisited = row && visited.has(row.id), isWanted = row && wanted.has(row.id);
-  const date = row && atlas.visits[row.id]?.date;
+  const regionRow = region ? world.regions.rows.get(region) : null;
+  const target = regionRow && regionRow.markable !== false ? region : row?.id;
+  const isVisited = target && visited.has(target), isWanted = row && !regionRow && wanted.has(row.id);
+  const date = target && atlas.visits[target]?.date;
   const share = Math.round(counts.countries / world.countryCount * 100);
+  const markable = row ? (world.regions.byCountry.get(row.id) ?? []).filter((r) => r.markable !== false) : [];
   let title, legend;
-  if (row) {
+  if (regionRow) {
+    title = regionName(region);
+    const parts = [name(row.id)];
+    if (regionRow.markable !== false) parts.push(isVisited ? (date ? t('Visited %@', formatDate(date)) : t('Visited')) : t('Not yet visited'));
+    legend = parts.join(' · ');
+  } else if (row) {
     title = name(row.id);
     const parts = [row.kind === 'territory' ? t('Territory') : groupTitle(row.group)];
     if (isVisited) parts.push(date ? t('Visited %@', formatDate(date)) : t('Visited'));
@@ -180,6 +219,7 @@ function Panel({ ref_, world, atlas, area, selected, name, visited, wanted, coun
     title = t('All places');
     legend = t('%lld of %lld countries · %@ of the world', counts.countries, world.countryCount, `${share}%`);
   }
+  const regionsDone = markable.filter((r) => visited.has(r.id)).length;
   return html`
     <section class="panel glass" ref=${ref_} aria-live="polite">
       ${banner && html`<div class="banner">
@@ -191,28 +231,39 @@ function Panel({ ref_, world, atlas, area, selected, name, visited, wanted, coun
       <div class="title-row">
         <button class="crumb" onClick=${onWorld}><${Legend} color=${area.kind === 'world' && !row ? 'var(--ink)' : 'var(--sage)'}>${t('World')}<//></button>
         <span class="slash" aria-hidden="true">/</span>
-        <button class="place-title" onClick=${onChoose} aria-label=${t('Choose destination')}>
+        ${regionRow && html`<button class="crumb" onClick=${onCountry}><${Legend} color="var(--sage)">${name(row.id)}<//></button>
+          <span class="slash" aria-hidden="true">/</span>`}
+        <button class="place-title" onClick=${regionRow ? onRegions : onChoose} aria-label=${t('Choose destination')}>
           <span>${title}</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
         </button>
+        ${row && !regionRow && markable.length > 0 && html`<span class="spacer"></span>
+          <button class="chip" onClick=${onRegions}><${Legend} color="var(--paper)">${kindWord(world.regions.kinds[row.id])}<//>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></button>`}
       </div>
       <${Legend} class="status">${legend}<//>
       ${row ? html`
         <div class="actions">
-          ${isVisited ? html`
-            <button class="outline" onClick=${() => onDate(row.id)}>
+          ${regionRow && regionRow.markable === false ? null : isVisited ? html`
+            <button class="outline" onClick=${() => onDate(target)}>
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4m6-4v4"/></svg>
               ${date ? formatDate(date) : t('Add date')}
             </button>
             <span class="spacer"></span>
-            <button class="quiet" onClick=${() => onUnmark(row.id)}>${t('Unmark')}</button>
+            <button class="quiet" onClick=${() => onUnmark(target)}>${t('Unmark')}</button>
           ` : html`
-            <button class="ink" onClick=${() => onMark(row.id)}>${t('Mark as visited')}</button>
-            <button class=${'outline round' + (isWanted ? ' on' : '')} onClick=${() => onWant(row.id)} aria-label=${t('Want to go')} aria-pressed=${isWanted}>
+            <button class="ink" onClick=${() => onMark(target)}>${t('Mark as visited')}</button>
+            ${!regionRow && html`<button class=${'outline round' + (isWanted ? ' on' : '')} onClick=${() => onWant(row.id)} aria-label=${t('Want to go')} aria-pressed=${isWanted}>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v16l-5-3.5L7 20z"/></svg>
-            </button>
+            </button>`}
           `}
-        </div>` : html`
+        </div>
+        ${!regionRow && markable.length > 0 && html`<button class="regions-row" onClick=${onRegions}>
+          <${Legend}>${kindWord(world.regions.kinds[row.id])}<//>
+          <span class="bar"><i style=${{ width: regionsDone / markable.length * 100 + '%' }}></i></span>
+          <span class="num">${t('%lld of %lld', regionsDone, markable.length)}</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 7 5 5-5 5"/></svg>
+        </button>`}` : html`
         <div class="tiles" role="list">
           ${(area.kind === 'group' ? [area.id] : GROUPS).map((g) => {
             const ids = world.byGroup[g].filter((id) => world.rows.get(id).kind === 'country');
@@ -224,6 +275,25 @@ function Panel({ ref_, world, atlas, area, selected, name, visited, wanted, coun
           })}
         </div>`}
     </section>`;
+}
+
+function RegionSheet({ world, country, name, regionName, visited, wholeCountries, onChoose, onClose }) {
+  const kind = world.regions.kinds[country];
+  const rows = (world.regions.byCountry.get(country) ?? []).filter((r) => r.markable !== false)
+    .sort((a, b) => regionName(a.id).localeCompare(regionName(b.id), language()));
+  const done = rows.filter((r) => visited.has(r.id)).length;
+  return html`<${Sheet} title=${name(country)} onClose=${onClose} class="search">
+    <p class="sheet-line">${t('%lld of %lld %@ visited', done, rows.length, kindWord(kind))}</p>
+    <p class="sheet-line small">${wholeCountries
+      ? t('Marking one also marks %@. Your map shows all of %@ (Light up whole countries, in Settings); the %@ you mark are kept here.', name(country), name(country), kindWord(kind))
+      : t('Marking one also marks %@. Unvisited %@ fade on the map once you’ve marked any.', name(country), kindWord(kind))}</p>
+    <div class="list">
+      ${rows.map((r) => html`<button class="row" onClick=${() => onChoose(r.id)}>
+        <span class="row-name">${regionName(r.id)}</span>
+        ${visited.has(r.id) && html`<svg class="tick" viewBox="0 0 24 24" aria-label=${t('Visited')}><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>`}
+      </button>`)}
+    </div>
+  <//>`;
 }
 
 const formatDate = (d) => {
@@ -355,6 +425,7 @@ function SettingsSheet({ world, atlas, name, update, setAtlas, onLanguage, onClo
 
 // Strings the app doesn't have; translated here (WEB_STRINGS) and looked up by key.
 import { WEB_STRINGS } from './web-strings.js';
+import { CollectionSheet } from './collection.js';
 function tw(key) { return WEB_STRINGS[language()]?.[key] ?? key; }
 
 // ---- start -----------------------------------------------------------------------------------
@@ -363,14 +434,19 @@ async function start() {
   try {
     const initial = await store.load();
     await useLanguage(preferredLanguage(initial.prefs?.language));
-    const [meta, places, land] = await Promise.all([
+    const [meta, places, land, regionIndex] = await Promise.all([
       fetch('./data/world.json', { cache: 'force-cache' }).then((r) => r.json()),
       readWorld('./data/world.inlr'), readLand('./data/land.inlr'),
+      fetch('./data/regions.json', { cache: 'force-cache' }).then((r) => r.json()),
     ]);
+    const regionRows = new Map(regionIndex.regions.map((r) => [r.id, r]));
+    const byCountry = new Map();
+    for (const r of regionIndex.regions) { if (!byCountry.has(r.countryID)) byCountry.set(r.countryID, []); byCountry.get(r.countryID).push(r); }
+    const regions = { files: regionIndex.files, kinds: regionIndex.kinds, rows: regionRows, byCountry };
     const rows = new Map(meta.places.map((r) => [r.id, r]));
     for (const [id, p] of places) p.row = rows.get(id);
     const byGroup = Object.fromEntries(GROUPS.map((g) => [g, meta.places.filter((r) => r.group === g).map((r) => r.id)]));
-    const world = { frame: [0, 0, meta.frame[2], meta.frame[3]], places, land, rows, byGroup, groups: meta.groups,
+    const world = { frame: [0, 0, meta.frame[2], meta.frame[3]], places, land, rows, byGroup, groups: meta.groups, regions,
                     overviews: meta.overviews, countryCount: meta.countryCount, territoryCount: meta.territoryCount };
     root.textContent = '';
     render(html`<${App} world=${world} initial=${initial} />`, root);

@@ -139,3 +139,49 @@ button:disabled { opacity: 0.4; cursor: default; }
 
 .memory-note { position: absolute; top: calc(env(safe-area-inset-top) + 52px); left: 50%; transform: translateX(-50%); max-width: 360px; margin: 0;
   padding: 8px 14px; border-radius: 14px; background: var(--paper); color: var(--pencil); font-size: 13px; box-shadow: var(--shadow); }
+
+.chip { height: 30px; border-radius: 15px; padding: 0 10px 0 12px; border: 0; background: var(--sage); display: inline-flex; align-items: center; gap: 4px; flex: none; }
+.chip svg { width: 14px; height: 14px; color: var(--paper); }
+.regions-row { display: flex; align-items: center; gap: 12px; width: 100%; padding: 10px 0 2px; margin-top: 4px; background: none; border: 0; border-top: 0.5px solid var(--rule); text-align: left; }
+.regions-row .bar { flex: 1; }
+.regions-row svg { width: 16px; height: 16px; color: var(--pencil); }
+.sheet-line.small { font-size: 13px; margin-top: -6px; }
+
+/* Your atlas */
+.segments { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 2px; padding: 2px; border-radius: 10px; background: color-mix(in srgb, var(--ink) 7%, transparent); margin-bottom: 8px; }
+.segments button { height: 34px; border: 0; border-radius: 8px; background: none; font-size: 14px; font-weight: 500; }
+.segments button.on { background: var(--leaf); box-shadow: 0 1px 3px rgba(31, 43, 39, 0.12); font-weight: 600; }
+.collection section { padding: 12px 0; border-bottom: 0.5px solid var(--rule); }
+.collection section:last-child { border-bottom: 0; }
+.share { display: grid; gap: 8px; }
+.share-figure { display: flex; align-items: baseline; gap: 10px; }
+.share-figure b { font: 600 56px/1 var(--rounded); letter-spacing: -1.5px; }
+.share-figure span { color: var(--pencil); }
+.figures { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 8px; }
+.figures > div { display: grid; grid-template-columns: auto 1fr; align-items: baseline; column-gap: 4px; padding: 0 12px; border-left: 0.5px solid var(--rule); }
+.figures > div:first-child { padding-left: 0; border-left: 0; }
+.figures b { font: 600 26px/1.1 var(--rounded); }
+.figures small { color: var(--pencil); font-size: 13px; }
+.figures .legend { grid-column: 1 / -1; margin-top: 4px; }
+.continent { display: grid; grid-template-columns: 1fr 1.2fr auto; align-items: center; gap: 12px; min-height: 40px; }
+.years { display: flex; align-items: flex-end; gap: 4px; height: 120px; margin: 12px 0 4px; }
+.year-bar { flex: 1; max-width: 34px; display: grid; grid-template-rows: 1fr auto; align-items: end; height: 100%; min-width: 0; }
+.year-bar i { display: block; background: var(--sage); border-radius: 3px 3px 0 0; min-height: 2px; animation: grow .7s cubic-bezier(.2, .8, .2, 1) both; transform-origin: bottom; }
+.year-bar span { font: 500 10px var(--rounded); color: var(--pencil); text-align: center; margin-top: 4px; }
+@keyframes grow { from { transform: scaleY(0); } }
+.section-head { display: flex; justify-content: space-between; align-items: center; }
+.row.trip small, .row-name small { display: block; margin: 2px 0 0; color: var(--pencil); font-size: 13px; }
+.row.trip svg { width: 16px; height: 16px; color: var(--pencil); }
+.want-row .rank, .stop .rank { font: 600 15px var(--rounded); color: var(--sage); width: 22px; text-align: center; }
+.plain { background: none; border: 0; padding: 0; text-align: left; flex: 1; font-size: 16px; }
+.quiet.icon svg { width: 18px; height: 18px; }
+.order { display: inline-flex; }
+.order .quiet { padding: 8px 6px; font-size: 16px; }
+.empty { color: var(--pencil); margin: 24px 0; text-align: center; }
+.field input, .field textarea { border-radius: 12px; border: 0.5px solid var(--rule); background: var(--leaf); padding: 10px 12px; font-size: 16px; resize: vertical; }
+.field input { height: 44px; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.toggle { display: flex; align-items: center; gap: 10px; min-height: 44px; }
+.toggle input { width: 20px; height: 20px; accent-color: var(--sage); }
+.plan .field, .trip .field { margin-bottom: 12px; }
+.danger { color: #A3402C; }

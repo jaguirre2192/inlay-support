@@ -143,7 +143,10 @@ export class AtlasRenderer {
       place.entry = this.bank.add(id, place.rings);
       for (const plate of place.plates) plate.entry = plate.rings === place.rings ? place.entry : this.bank.add(plate, plate.rings);
     }
-    this.state = { visited: new Set(), wanted: new Set(), selected: null, dark: false, reveals: new Map() };
+    this.state = { visited: new Set(), wanted: new Set(), selected: null, dark: false, reveals: new Map(),
+                   region: null, wholeCountries: false };
+    /** Regional detail per country, once its file is read (addRegions). */
+    this.regional = new Map();
     this.view = { x: 0, y: 0, scale: 0.02 };
     this.size = [1, 1]; this.dpr = 1;
     this.pending = false;
@@ -156,6 +159,40 @@ export class AtlasRenderer {
   }
 
   set(state) { Object.assign(this.state, state); this.requestDraw(); }
+
+  /**
+   * A country's regions, from its regions-xx.inlr: { foundation, regions: Map(id -> {rings,
+   * layers, overlays}) } plus `rows` (id -> {focusFrame, markable}) from regions.json.
+   */
+  addRegions(countryID, detail, rows, urlFor) {
+    for (const layer of detail.foundation) { layer.entry = this.bank.add(layer, layer.rings); layer.url = urlFor(layer.image); }
+    for (const [id, region] of detail.regions) {
+      region.id = id;
+      region.entry = this.bank.add(region, region.rings);
+      region.row = rows.get(id);
+      for (const layer of [...region.layers, ...region.overlays]) { layer.entry = this.bank.add(layer, layer.rings); layer.url = urlFor(layer.image); }
+    }
+    this.regional.set(countryID, detail);
+    this.requestDraw();
+  }
+
+  /** How far a visited country has handed over to its regions' art (RegionalProgress in the app):
+   *  every region together, so small ones never sit blank beside large ones. */
+  regionalProgress(place) {
+    const [w, h] = this.size, f = place.row.focus;
+    const fit = Math.min(w / (f[2] + 180), h / (f[3] + 180));
+    const linear = Math.min(1, Math.max(0, (this.view.scale - fit * 1.3) / (fit * 1.1)));
+    return linear * linear * (3 - 2 * linear);
+  }
+
+  /** Italy's own curve: each region comes up as the map closes in on it (detailProgress). */
+  italyProgress(place, region) {
+    const [w, h] = this.size, f = place.row.focus, rf = region.row?.focusFrame ?? region.entry.bounds;
+    const start = Math.min(w / (f[2] + 180), h / (f[3] + 180)) * 1.6;
+    const full = Math.max(start * 1.2, Math.min(w / (rf[2] + 50), h / (rf[3] + 50)) * 0.88);
+    const linear = Math.min(1, Math.max(0, (this.view.scale - start) / (full - start)));
+    return linear * linear * (3 - 2 * linear);
+  }
   setView(view) { this.view = view; this.requestDraw(); }
 
   /** Starts the stamp (or lift) for a place: the art spreads from its centre over `duration`. */
@@ -314,32 +351,130 @@ export class AtlasRenderer {
     // Paper under the art, faded in with the stamp so the reveal reads as ink on paper.
     this.stencilFill(p.entry, 0x80);
     this.coverRect(p.entry.bounds, rgb(pal.visitedPaper, opacity * (reveal ? 0.5 + 0.5 * Math.min(1, reveal[2] / (radius || 1)) : 1)), 0x80, 0x80, false);
-    const ready = p.plates.map((plate) => this.textures.get(this.artURL(plate.image)));
-    for (let i = 0; i < p.plates.length; i++) {
-      const plate = p.plates[i], tex = ready[i];
+    for (const plate of p.plates) {
+      const tex = this.textures.get(this.artURL(plate.image));
       if (!tex) continue;
       const ownClip = plate.entry !== p.entry;
       if (ownClip) { this.useSolid(shift); this.stencilFill(plate.entry, 0x40); }
-      gl.useProgram(this.artProgram.program);
-      const v = this.view, [w, h] = this.size, u = this.artProgram.u;
-      gl.uniform3f(u.view, v.x, v.y, v.scale); gl.uniform2f(u.size, w, h); gl.uniform1f(u.shift, shift);
-      gl.uniform4fv(u.frame, plate.frame);
-      gl.uniform4fv(u.crop, plate.crop);
-      const fade = Math.min(1, (performance.now() - tex.born) / 350);
-      if (fade < 1) this.requestDraw();
-      gl.uniform1f(u.opacity, opacity * fade);
-      gl.uniform3fv(u.reveal, reveal ?? [0, 0, 0]);
-      gl.uniform1f(u.edge, (radius || 1) * 0.12);
-      gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, tex.tex); gl.uniform1i(u.art, 0);
-      const ref = ownClip ? 0xC0 : 0x80;
-      gl.stencilMask(0); gl.stencilFunc(gl.EQUAL, ref, ref); gl.stencilOp(gl.KEEP, gl.KEEP, gl.KEEP);
-      gl.bindBuffer(gl.ARRAY_BUFFER, this.quad);
-      gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
-      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      this.art(plate, tex, shift, opacity, ownClip ? 0xC0 : 0x80, reveal, radius);
       if (ownClip) { this.useSolid(shift); this.coverRect(plate.entry.bounds, [0, 0, 0, 0], 0x40, 0x40, true); }
     }
+    if (!reveal && opacity === 1) this.drawRegional(p, shift, pal);
     // Clear this place's bits for the next one.
     this.useSolid(shift);
-    this.coverRect(p.entry.bounds, [0, 0, 0, 0], 0xC0, 0x80, true);
+    this.coverRect(p.entry.bounds, [0, 0, 0, 0], 0xE0, 0x80, true);
+  }
+
+  /** One art plate where the stencil holds all of `ref`'s bits. */
+  art(plate, tex, shift, alpha, ref, reveal = null, radius = 1) {
+    const gl = this.gl, v = this.view, [w, h] = this.size, u = this.artProgram.u;
+    gl.useProgram(this.artProgram.program);
+    gl.uniform3f(u.view, v.x, v.y, v.scale); gl.uniform2f(u.size, w, h); gl.uniform1f(u.shift, shift);
+    gl.uniform4fv(u.frame, plate.frame);
+    gl.uniform4fv(u.crop, plate.crop);
+    const fade = Math.min(1, (performance.now() - tex.born) / 350);
+    if (fade < 1) this.requestDraw();
+    gl.uniform1f(u.opacity, alpha * fade);
+    gl.uniform3fv(u.reveal, reveal ?? [0, 0, 0]);
+    gl.uniform1f(u.edge, (radius || 1) * 0.12);
+    gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, tex.tex); gl.uniform1i(u.art, 0);
+    gl.stencilMask(0); gl.stencilFunc(gl.EQUAL, ref, ref); gl.stencilOp(gl.KEEP, gl.KEEP, gl.KEEP);
+    gl.bindBuffer(gl.ARRAY_BUFFER, this.quad);
+    gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  }
+
+  /** A regional layer inside its own clip (bit 0x20) and whatever `ref` already holds. */
+  layer(layer, tex, shift, alpha, ref) {
+    this.useSolid(shift); this.stencilFill(layer.entry, 0x20);
+    this.art(layer, tex, shift, alpha, ref | 0x20);
+    this.useSolid(shift); this.coverRect(layer.entry.bounds, [0, 0, 0, 0], 0x20, 0x20, true);
+  }
+
+  /**
+   * Regions inside a visited country (stencil 0x80 holds the country). As the map closes in,
+   * the collage hands over to every region's own plate together (Italy: region by region);
+   * once one region is marked, the others fade back to paper unless whole countries light up.
+   */
+  drawRegional(p, shift, pal) {
+    const detail = this.regional.get(p.row.id);
+    if (!detail) {
+      // Load the country's regions once the map closes in (the app's per-country packs).
+      if (this.view.scale > Math.min(this.size[0] / (p.row.focus[2] + 180), this.size[1] / (p.row.focus[3] + 180))) this.onNeedRegions?.(p.row.id);
+      return;
+    }
+    const s = this.state, wash = 0xEEE6D3;
+    const regions = [...detail.regions.values()].filter((r) => this.onScreen(r.entry.bounds, shift));
+    if (!regions.length) return;
+    const isItaly = p.row.id === 'IT';
+    const markable = regions.filter((r) => r.row?.markable !== false);
+    const marked = markable.some((r) => s.visited.has(r.id));
+    const tex = (layer) => this.textures.get(layer.url);
+    const regionStencil = (r) => { this.useSolid(shift); this.stencilFill(r.entry, 0x40); };
+    const regionClear = (r) => { this.useSolid(shift); this.coverRect(r.entry.bounds, [0, 0, 0, 0], 0x40, 0x40, true); };
+
+    if (isItaly) {
+      const shown = regions.map((r) => [r, this.italyProgress(p, r)]).filter(([, t]) => t > 0);
+      // As elsewhere: the wash and the regions come in only once every region in view has its art.
+      const allReady = shown.every(([r]) => r.layers.every((l) => tex(l)));
+      if (shown.length && allReady) {
+        const strongest = Math.max(...shown.map(([, t]) => t));
+        this.useSolid(shift); this.coverRect(p.entry.bounds, rgb(wash, 0.88 * strongest), 0x80, 0x80, false);
+        for (const [r, t] of shown) {
+          const ready = r.layers.map(tex);
+          if (ready.some((x) => !x)) continue;
+          regionStencil(r);
+          this.useSolid(shift); this.coverRect(r.entry.bounds, rgb(wash, t), 0xC0, 0xC0, false);
+          r.layers.forEach((l, i) => this.layer(l, ready[i], shift, t, 0xC0));
+          if (s.region && s.region !== r.id) { this.useSolid(shift); this.coverRect(r.entry.bounds, rgb(wash, 0.76 * t), 0xC0, 0xC0, false); }
+          regionClear(r);
+          this.useSolid(shift); this.edges(r.entry, rgb(0xFFF9EA, 0.75 * t));
+        }
+      }
+    } else if (regions.some((r) => r.layers.length || detail.foundation.length)) {
+      const t = this.regionalProgress(p);
+      if (t > 0) {
+        // The country changes over all at once, when every image its regions list is here.
+        const all = [...detail.foundation, ...regions.flatMap((r) => [...r.layers, ...r.overlays])];
+        const ready = new Map(all.map((l) => [l, tex(l)]));
+        if ([...ready.values()].every(Boolean)) {
+          for (const r of regions) {
+            regionStencil(r);
+            this.useSolid(shift); this.coverRect(r.entry.bounds, rgb(wash, 0.88 * t), 0xC0, 0xC0, false);
+            for (const l of detail.foundation) if (this.onScreen(l.entry.bounds, shift)) this.layer(l, ready.get(l), shift, t, 0xC0);
+            regionClear(r);
+          }
+          for (const r of regions) {
+            regionStencil(r);
+            for (const l of r.layers) this.layer(l, ready.get(l), shift, t, 0xC0);
+            regionClear(r);
+            this.useSolid(shift); this.edges(r.entry, rgb(0xFFF9EA, 0.75 * t));
+          }
+          // Coastal overlays may sit over the water: drawn inside their own clip only.
+          for (const r of regions) {
+            if (marked && !s.visited.has(r.id)) continue;
+            for (const l of r.overlays) {
+              this.useSolid(shift); this.stencilFill(l.entry, 0x20);
+              this.art(l, ready.get(l), shift, t, 0x20);
+              this.useSolid(shift); this.coverRect(l.entry.bounds, [0, 0, 0, 0], 0x20, 0x20, true);
+            }
+          }
+        }
+      }
+    }
+    // Marked regions: the rest fade back to paper, state by state.
+    if (marked && !s.wholeCountries && !isItaly) {
+      for (const r of markable) {
+        if (s.visited.has(r.id)) continue;
+        regionStencil(r);
+        this.useSolid(shift); this.coverRect(r.entry.bounds, rgb(wash, 0.72), 0xC0, 0xC0, false);
+        regionClear(r);
+      }
+      for (const r of markable) { this.useSolid(shift); this.edges(r.entry, [0.7, 0.7, 0.7, 0.7]); }
+    }
+    if (s.region && !isItaly) {
+      const r = detail.regions.get(s.region);
+      if (r) { this.useSolid(shift); this.edges(r.entry, rgb(pal.select, 0.95)); }
+    }
   }
 }
