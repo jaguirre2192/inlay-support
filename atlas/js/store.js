@@ -13,7 +13,7 @@ function open() {
 }
 
 export function emptyAtlas() {
-  return { version: 1, name: '', home: null, visits: {}, wanted: {}, trips: [], prefs: {}, created: new Date().toISOString() };
+  return { version: 1, name: '', home: null, visits: {}, wanted: {}, trips: [], friends: [], prefs: {}, created: new Date().toISOString() };
 }
 
 export async function load() {

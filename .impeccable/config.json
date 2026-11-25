@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "sf pro text",
+        "createdAt": "2026-11-25T17:38:00.852Z",
+        "reason": "Web atlas follows the Inlay app's DESIGN.md (SF typography; Jorge 2026-11-07 asked for no serif type), not the gallery site's DESIGN.md; recorded in atlas/SPEC.md"
+      }
+    ]
+  }
+}

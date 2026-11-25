@@ -1,0 +1,136 @@
+/* The passport (PassportView.swift) and the atlas-as-picture backdrop shared with milestones.css.
+   Pages are headed by the place on the map edge to edge under the sheet's bar; the entry stamp
+   comes down onto the page; pages hinge on their spine as they turn. */
+
+/* ---- Backdrop (AtlasBackdrop) ---- */
+.bd { position: relative; overflow: hidden; background: var(--sea); }
+.bd-art { position: absolute; inset: 0; transform: scale(1); }
+.bd-art canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block;
+  -webkit-mask-image: linear-gradient(#000 80%, transparent); mask-image: linear-gradient(#000 80%, transparent);
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-size: 100% 0%; mask-size: 100% 0%; }
+/* Inks in from the top over 0.9 s, then one slow push into the art over 30 s (never a loop). */
+.bd-art.shown canvas { -webkit-mask-size: 100% 125%; mask-size: 100% 125%; animation: bd-ink .9s ease-in-out; }
+.bd-art.shown { transform: scale(1.045); transition: transform 30s ease-in-out; }
+.bd-art.at-once canvas { animation: none; }
+@keyframes bd-ink { from { -webkit-mask-size: 100% 0%; mask-size: 100% 0%; } }
+.bd-wash { position: absolute; inset: 0; pointer-events: none; }
+.bd-wash.footer { background: linear-gradient(transparent 60%, color-mix(in srgb, var(--paper) 75%, transparent) 84%, var(--paper)); }
+.bd-wash.hero { background: linear-gradient(transparent 34%, color-mix(in srgb, var(--paper) 88%, transparent) 58%, color-mix(in srgb, var(--paper) 96%, transparent)); }
+@media (prefers-reduced-motion: reduce) { .bd-art.shown { transform: none; } }
+
+/* ---- the sheet: art under the bar ---- */
+.sheet.pp-sheet { position: relative; width: min(640px, 100%); height: min(92vh, 920px); max-height: none; padding: 0; overflow: hidden; }
+@supports (height: 100dvh) { .sheet.pp-sheet { height: min(92dvh, 920px); } }
+.sheet.pp-sheet.pp-empty-sheet { height: min(80vh, 720px); }
+.sheet.pp-sheet::before { content: ''; position: absolute; z-index: 2; left: 0; right: 0; top: 0; height: 88px; pointer-events: none;
+  background: linear-gradient(color-mix(in srgb, var(--paper) 70%, transparent), transparent); }
+.sheet.pp-sheet > .sheet-head { position: absolute; z-index: 3; top: 0; left: 0; right: 0; margin: 0; padding: 16px var(--gutter) 0; pointer-events: none; }
+.sheet.pp-sheet > .sheet-head > * { pointer-events: auto; }
+.sheet.pp-sheet > .sheet-head h2 { font: 600 17px/1.2 var(--display); letter-spacing: -0.2px; }
+.pp-share { position: absolute; z-index: 3; top: 12px; right: calc(var(--gutter) + 88px); width: 40px; height: 40px; }
+.pp-share svg { width: 18px; height: 18px; }
+
+.pp-pages { position: absolute; inset: 0; overflow: hidden; container-type: size; perspective: 1400px; }
+.pp-page { position: absolute; inset: 0; background: var(--paper); touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.pp-scroll { height: 100%; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; }
+.pp-scroll::-webkit-scrollbar { display: none; }
+/* Most of the page: the place is the page's picture, not a thumbnail. */
+.pp-head { position: relative; height: max(320px, 60vh); }
+@container (min-height: 1px) { .pp-head { height: max(320px, 68cqh); } }
+.pp-art { position: absolute; inset: 0; will-change: transform; }
+.pp-art .bd { position: absolute; inset: 0; }
+.pp-stamp-spot { position: absolute; z-index: 1; right: 22px; bottom: 6px; }
+.pp-words { position: relative; z-index: 1; background: var(--paper); padding: 10px 24px calc(env(safe-area-inset-bottom) + 36px); }
+.pp-line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.pp-number { font: 500 12px var(--rounded); font-variant-numeric: tabular-nums; color: var(--pencil); white-space: nowrap; }
+.pp-name { margin: 6px 0 4px; font: 700 34px/1.08 var(--display); letter-spacing: -0.4px; color: var(--ink); text-wrap: balance; }
+.pp-date { margin: 0; color: var(--pencil); font-size: 15px; }
+.pp-trips { display: grid; gap: 10px; margin-top: 22px; }
+.pp-trip { display: grid; gap: 4px; padding-bottom: 10px; border-bottom: 0.5px solid var(--rule); }
+.pp-trip-line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.pp-trip-name { font: 500 17px/1.25 var(--display); }
+.pp-trip-date { font-size: 13px; color: var(--pencil); white-space: nowrap; }
+.pp-trip-note { margin: 0; font-size: 13px; color: var(--pencil); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* Turning: beside the art, at its middle. */
+.pp-turn { position: absolute; z-index: 3; top: calc(max(320px, 68%) / 2 - 22px); transition: opacity .2s; }
+.pp-turn.prev { left: 12px; }
+.pp-turn.next { right: 12px; }
+.pp-turn:disabled { opacity: 0; pointer-events: none; }
+.pp-turn svg { width: 20px; height: 20px; }
+
+/* A page arriving or leaving hinges on its spine and falls into a little shadow. */
+.pp-page.forward:not(.leaving) { transform-origin: left center; animation: pp-in-forward .52s cubic-bezier(.2, .8, .2, 1); }
+.pp-page.back:not(.leaving) { transform-origin: right center; animation: pp-in-back .52s cubic-bezier(.2, .8, .2, 1); }
+.pp-page.leaving { pointer-events: none; }
+.pp-page.leaving.forward { transform-origin: right center; animation: pp-out-forward .46s cubic-bezier(.4, 0, .6, 1) forwards; }
+.pp-page.leaving.back { transform-origin: left center; animation: pp-out-back .46s cubic-bezier(.4, 0, .6, 1) forwards; }
+@keyframes pp-in-forward { from { transform: translateX(34%) rotateY(-22deg) scale(.96); filter: brightness(.88); opacity: 0; } }
+@keyframes pp-in-back { from { transform: translateX(-34%) rotateY(22deg) scale(.96); filter: brightness(.88); opacity: 0; } }
+@keyframes pp-out-forward { to { transform: translateX(-34%) rotateY(22deg) scale(.96); filter: brightness(.88); opacity: 0; } }
+@keyframes pp-out-back { to { transform: translateX(34%) rotateY(-22deg) scale(.96); filter: brightness(.88); opacity: 0; } }
+
+/* ---- the entry stamp ---- */
+.pp-stamp, .pp-messy { --u: calc(1px * var(--s, 1)); color: var(--stamp); font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif; white-space: nowrap; line-height: 1.15; }
+.pp-stamp { position: relative; width: calc(140 * var(--u)); padding: calc(10 * var(--u)) calc(14 * var(--u)); display: flex; flex-direction: column; align-items: center; gap: calc(3 * var(--u));
+  color: color-mix(in srgb, var(--stamp) 82%, transparent); background: color-mix(in srgb, var(--sea) 90%, transparent); border-radius: calc(8 * var(--u));
+  box-shadow: inset 0 0 0 calc(2 * var(--u)) color-mix(in srgb, var(--stamp) 80%, transparent); }
+.pp-stamp::after { content: ''; position: absolute; inset: calc(4 * var(--u)); border-radius: calc(5 * var(--u)); pointer-events: none;
+  border: calc(0.8 * var(--u)) solid color-mix(in srgb, var(--stamp) 60%, transparent); }
+.pp-stamp-word { font-size: calc(9 * var(--u)); font-weight: 800; letter-spacing: calc(3 * var(--u)); margin-right: calc(-3 * var(--u)); }
+.pp-stamp-name { font-weight: 800; letter-spacing: calc(1.2 * var(--u)); margin-right: calc(-1.2 * var(--u)); max-width: 100%; overflow: hidden; }
+.pp-stamp-rule { display: block; align-self: stretch; height: max(0.5px, var(--u)); background: currentColor; }
+.pp-stamp-date { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 700; max-width: 100%; overflow: hidden; }
+
+/* The press: held above the page, it drops, presses a touch too far and settles, soft to sharp. */
+.pp-press { opacity: 0; }
+.pp-press.pressed { opacity: 1; animation: pp-press .66s both; }
+@keyframes pp-press {
+  0% { transform: scale(1.55) rotate(9deg); opacity: 0; filter: blur(1.2px) drop-shadow(0 9px 12px rgba(0, 0, 0, 0.22)); animation-timing-function: cubic-bezier(.45, 0, .7, .4); }
+  18% { filter: blur(1.2px) drop-shadow(0 5px 8px rgba(0, 0, 0, 0.12)); }
+  28% { opacity: 1; }
+  31% { transform: scale(0.93) rotate(-1.5deg); filter: blur(0.5px) drop-shadow(0 0 0 rgba(0, 0, 0, 0)); animation-timing-function: cubic-bezier(.2, .7, .3, 1); }
+  46% { filter: blur(0) drop-shadow(0 0 0 rgba(0, 0, 0, 0)); }
+  64% { transform: scale(1.012) rotate(0.2deg); }
+  100% { transform: none; opacity: 1; filter: none; }
+}
+
+/* Border stamps (messy), for the share cards. */
+.pp-messy { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.pp-messy .n { font-weight: 800; max-width: 100%; overflow: hidden; }
+.pp-messy .d { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 700; }
+.pp-messy .w { font-weight: 800; }
+.pp-messy i { display: block; height: max(0.5px, var(--u)); background: currentColor; }
+.pp-messy.box { width: calc(140 * var(--u)); padding: calc(10 * var(--u)) calc(14 * var(--u)); gap: calc(3 * var(--u)); border: calc(2.2 * var(--u)) solid; border-radius: calc(6 * var(--u)); }
+.pp-messy.box::after { content: ''; position: absolute; inset: calc(4 * var(--u)); border: calc(0.8 * var(--u)) solid; border-radius: calc(3 * var(--u)); }
+.pp-messy.box .w { font-size: calc(9 * var(--u)); letter-spacing: calc(3 * var(--u)); }
+.pp-messy.box .n { letter-spacing: calc(1.2 * var(--u)); }
+.pp-messy.box i { align-self: stretch; }
+.pp-messy.box .d { font-size: calc(10 * var(--u)); }
+.pp-messy.round { width: calc(108 * var(--u)); height: calc(108 * var(--u)); border-radius: 50%; border: calc(2.4 * var(--u)) solid; gap: calc(2 * var(--u)); padding: 0 calc(15 * var(--u)); }
+.pp-messy.round::after { content: ''; position: absolute; inset: calc(6 * var(--u)); border-radius: 50%; border: calc(0.9 * var(--u)) dashed; }
+.pp-messy.round .plane { width: calc(11 * var(--u)); height: calc(11 * var(--u)); fill: currentColor; stroke: none; }
+.pp-messy.round .w { font-size: calc(7 * var(--u)); letter-spacing: calc(1.5 * var(--u)); }
+.pp-messy.oval { width: calc(152 * var(--u)); height: calc(84 * var(--u)); border-radius: 50%; border: calc(2.2 * var(--u)) solid; gap: calc(2 * var(--u)); padding: 0 calc(22 * var(--u)); }
+.pp-messy.oval::after { content: ''; position: absolute; inset: calc(5 * var(--u)); border-radius: 50%; border: calc(0.8 * var(--u)) solid; }
+.pp-messy.oval .w { font-size: calc(8 * var(--u)); letter-spacing: calc(2.4 * var(--u)); }
+.pp-messy.oval .n { font-weight: 900; }
+.pp-messy.oval .d { font-weight: 600; }
+.pp-messy.octagon { width: calc(118 * var(--u)); height: calc(98 * var(--u)); gap: calc(3 * var(--u)); padding: 0 calc(16 * var(--u)); }
+.pp-messy.octagon .oct { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: currentColor; }
+.pp-messy.octagon i { width: calc(58 * var(--u)); }
+.pp-messy.octagon .w { font-size: calc(7 * var(--u)); letter-spacing: calc(2 * var(--u)); }
+.pp-messy.ticket { width: calc(144 * var(--u)); height: calc(70 * var(--u)); flex-direction: row; justify-content: flex-start; gap: calc(6 * var(--u)); padding: calc(8 * var(--u)); border: calc(1.8 * var(--u)) solid; }
+.pp-messy.ticket::after { content: ''; position: absolute; inset: calc(3.5 * var(--u)); border: calc(0.8 * var(--u)) dashed; }
+.pp-messy.ticket .side { width: calc(12 * var(--u)); font-size: calc(7.5 * var(--u)); letter-spacing: calc(1.6 * var(--u)); transform: rotate(-90deg); display: flex; justify-content: center; }
+.pp-messy.ticket i.v { width: max(0.5px, calc(0.9 * var(--u))); height: 100%; }
+.pp-messy.ticket .col { display: flex; flex-direction: column; gap: calc(2 * var(--u)); min-width: 0; }
+
+/* ---- the empty passport: Greece close up, the words rising out of the paper ---- */
+.pp-empty { position: absolute; inset: 0; }
+.pp-prompt { position: absolute; left: 0; right: 0; bottom: 0; max-width: 520px; padding: 0 28px calc(env(safe-area-inset-bottom) + 32px); }
+.pp-prompt h3 { margin: 0; font: 700 28px/1.12 var(--display); letter-spacing: -0.4px; color: var(--ink); }
+.pp-prompt p { margin: 8px 0 0; font-size: 17px; line-height: 1.38; color: color-mix(in srgb, var(--ink) 78%, transparent); }
+.pp-prompt > * { animation: pp-arrive .8s cubic-bezier(.2, .8, .2, 1) both; animation-delay: .25s; }
+.pp-prompt > :nth-child(2) { animation-delay: .34s; }
+@keyframes pp-arrive { from { opacity: 0; transform: translateY(14px); filter: blur(3px); } }

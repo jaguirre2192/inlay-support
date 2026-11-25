@@ -1,0 +1,83 @@
+/* Milestones (Milestones.swift): an album of 36 seals in chapters; each seal opens on its places
+   on the map with the seal pressed down onto the art. Needs passport.css (Backdrop, StampPress). */
+
+/* ---- the seal ---- */
+.ms-seal { position: relative; display: inline-grid; place-items: center; flex: none; color: var(--pencil); }
+.ms-seal > .ms-rings { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: none; overflow: visible; }
+.ms-edge { fill: none; stroke: var(--rule); }
+/* The ring draws round to where it stands on first sight; a collected seal spreads its ink from the centre. */
+.ms-ring { fill: none; stroke: var(--sage); stroke-linecap: round; transform: rotate(-90deg); transform-origin: center; transform-box: fill-box;
+  transition: stroke-dashoffset 1.1s cubic-bezier(.3, 1.25, .5, 1) var(--delay, .2s); }
+.ms-disc { fill: var(--sage); transform: scale(0.001); transform-origin: center; transform-box: fill-box;
+  transition: transform 1.1s cubic-bezier(.3, 1.22, .5, 1) var(--delay, .2s); }
+.ms-press { fill: none; stroke: color-mix(in srgb, var(--paper) 45%, transparent); stroke-width: 1; stroke-dasharray: 1.5 3;
+  transform: rotate(-50deg); transform-origin: center; transform-box: fill-box; opacity: 0;
+  transition: transform 1.1s cubic-bezier(.3, 1.2, .5, 1) var(--delay, .2s), opacity .6s ease var(--delay, .2s); }
+.ms-seal.fill .ms-disc { transform: none; }
+.ms-seal.fill .ms-press { transform: none; opacity: 1; }
+.ms-seal .ms-symbol { position: relative; stroke-width: 1.8; transition: color .5s ease var(--delay, .2s); }
+.ms-seal.earned.fill { color: var(--paper); }
+.ms-fill { fill: currentColor; stroke: none; }
+.ms-num { fill: currentColor; stroke: none; font-family: var(--rounded); font-weight: 700; }
+
+/* ---- the album ---- */
+.sheet.ms-sheet { width: min(620px, 100%); }
+.ms-album { flex: 1; min-height: 0; overflow-y: auto; margin: 0 calc(-1 * var(--gutter)); padding: 4px var(--gutter) 16px; display: grid; gap: 28px; align-content: start; }
+.ms-total-line { display: flex; align-items: baseline; gap: 8px; }
+.ms-total-line b { font: 600 56px/1 var(--rounded); letter-spacing: -1.5px; font-variant-numeric: tabular-nums; }
+.ms-total-line span { color: var(--pencil); font-size: 15px; }
+.ms-scale { display: block; height: 3px; border-radius: 1.5px; background: var(--rule); margin-top: 8px; overflow: hidden; }
+.ms-scale i { display: block; height: 100%; min-width: 3px; border-radius: 1.5px; background: var(--sage); transition: width .6s cubic-bezier(.2, .8, .2, 1); }
+.ms-closest .legend { margin-bottom: 6px; }
+.ms-rows { border-top: 0.5px solid var(--rule); }
+.ms-closest-row { display: flex; align-items: center; gap: 14px; width: 100%; min-height: 60px; padding: 8px 0; border: 0; border-bottom: 0.5px solid var(--rule); background: none; text-align: left; }
+.ms-closest-words { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.ms-closest-words b { font: 600 17px/1.25 var(--display); letter-spacing: -0.2px; }
+.ms-closest-words small { font-size: 13px; color: var(--pencil); }
+.ms-fraction { font: 500 15px var(--rounded); font-variant-numeric: tabular-nums; color: var(--pencil); white-space: nowrap; }
+.ms-chevron { width: 14px; height: 14px; color: var(--pencil); stroke-width: 2.4; flex: none; }
+.ms-chapter { display: grid; gap: 16px; }
+.ms-chapter-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ms-chapter-head h3 { margin: 0; font: 700 20px/1.2 var(--display); letter-spacing: -0.4px; }
+.ms-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 18px 12px; }
+.ms-item { display: grid; justify-items: center; align-content: start; gap: 6px; min-height: 44px; padding: 2px 0; border: 0; border-radius: 16px; background: none; text-align: center; transition: transform .15s ease; }
+.ms-item:active { transform: scale(0.96); }
+.ms-item .ms-seal { margin-bottom: 2px; }
+.ms-item b { font: 700 13px/1.22 var(--display); color: color-mix(in srgb, var(--ink) 80%, transparent); text-wrap: balance; }
+.ms-item.earned b { color: var(--ink); }
+.ms-item small { font-size: 11px; color: var(--pencil); font-variant-numeric: tabular-nums; }
+@media (hover: hover) { .ms-item:hover .ms-edge { stroke: color-mix(in srgb, var(--sage) 45%, transparent); } .ms-closest-row:hover b { color: var(--sage); } }
+
+/* ---- one milestone, opened: its places on the map, the seal pressed onto the art ---- */
+.sheet.ms-detail { position: relative; padding: 0; overflow: hidden; }
+.sheet.ms-detail > .sheet-head { position: absolute; z-index: 3; top: 0; left: 0; right: 0; margin: 0; padding: 16px var(--gutter) 0; justify-content: flex-end; pointer-events: none; }
+.sheet.ms-detail > .sheet-head > button { pointer-events: auto; }
+/* The title is set large under the seal; the bar keeps only Done over the art. */
+.sheet.ms-detail > .sheet-head h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ms-detail-scroll { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-bottom: calc(env(safe-area-inset-bottom) + 24px); }
+.ms-art { height: min(420px, 50vh); margin-bottom: -62px; }
+.ms-detail-head { position: relative; z-index: 1; display: grid; justify-items: center; gap: 10px; padding: 8px 24px 24px; text-align: center; }
+.ms-detail.bare .ms-detail-head { padding-top: 72px; }
+.ms-detail-seal { margin-bottom: 6px; }
+.ms-seal-paper { display: inline-grid; padding: 5px; border-radius: 50%; background: var(--paper); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12); }
+.ms-detail-head h3 { margin: 0; font: 700 28px/1.15 var(--display); letter-spacing: -0.4px; text-wrap: balance; }
+.ms-detail-head p { margin: 0; max-width: 30em; font-size: 17px; line-height: 1.35; color: var(--pencil); text-wrap: pretty; }
+.ms-status { margin-top: 4px; }
+.ms-places { margin: 0 var(--gutter); border-top: 0.5px solid var(--rule); }
+.ms-place { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 48px; padding: 4px 0; border: 0; border-bottom: 0.5px solid var(--rule); background: none; text-align: left; }
+.ms-place:disabled { opacity: 1; cursor: default; }
+.ms-check { width: 22px; height: 22px; flex: none; color: color-mix(in srgb, var(--ink) 28%, transparent); }
+.ms-check.done circle { fill: var(--sage); stroke: none; }
+.ms-check.done path { stroke: var(--paper); stroke-width: 2.2; }
+.ms-place-name { flex: 1; min-width: 0; font: 500 17px/1.25 var(--display); }
+@media (hover: hover) { .ms-place:not(:disabled):hover .ms-place-name { color: var(--sage); } }
+
+/* ---- "Milestone collected" (the map's banner) ---- */
+.ms-banner { display: flex; align-items: center; gap: 12px; padding: 0 0 8px; margin-bottom: 2px; border-bottom: 0.5px solid var(--rule); animation: ms-drop .4s cubic-bezier(.2, .8, .2, 1); }
+.ms-banner-seal { width: 36px; height: 36px; flex: none; border-radius: 50%; background: var(--sage); color: var(--paper); display: grid; place-items: center; animation: ms-ink .7s cubic-bezier(.3, 1.3, .5, 1) .1s both; }
+.ms-banner-seal svg { stroke-width: 2.2; }
+.ms-banner-words { flex: 1; min-width: 0; display: grid; gap: 1px; padding: 0; border: 0; background: none; text-align: left; }
+.ms-banner-words:disabled { opacity: 1; cursor: default; }
+.ms-banner-words b { font: 700 15px/1.25 var(--display); }
+@keyframes ms-drop { from { opacity: 0; transform: translateY(-8px); } }
+@keyframes ms-ink { from { transform: scale(0.2); } }

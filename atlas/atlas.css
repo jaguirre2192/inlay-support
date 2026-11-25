@@ -185,3 +185,20 @@ button:disabled { opacity: 0.4; cursor: default; }
 .toggle input { width: 20px; height: 20px; accent-color: var(--sage); }
 .plan .field, .trip .field { margin-bottom: 12px; }
 .danger { color: #A3402C; }
+
+/* Find in Photos */
+.photos-intro h3 { margin: 4px 0 8px; font: 700 22px/1.2 var(--display); letter-spacing: -0.4px; }
+.photos .actions label { cursor: pointer; }
+.photos-reading { padding: 40px 0; }
+.photo-row { cursor: pointer; }
+.photo-row input { width: 20px; height: 20px; accent-color: var(--sage); flex: none; }
+
+/* Tools row: small prints of the atlas, words on the paper at the foot */
+.tools { display: flex; gap: 10px; overflow-x: auto; margin: 4px calc(-1 * var(--gutter)) 4px; padding: 4px var(--gutter) 8px; scrollbar-width: none; }
+.tools::-webkit-scrollbar { display: none; }
+.tool-print { flex: 0 0 132px; display: grid; grid-template-rows: 96px auto; border-radius: 14px; overflow: hidden; padding: 0; text-align: left;
+  border: 0.5px solid var(--rule); background: var(--leaf); box-shadow: 0 1px 2px rgba(31, 43, 39, 0.06); }
+.tool-print canvas { width: 100%; height: 96px; display: block; }
+.tool-words { display: grid; padding: 8px 10px 10px; gap: 1px; }
+.tool-words b { font: 600 14px/1.2 var(--display); }
+.tool-words small { font-size: 12px; color: var(--pencil); }

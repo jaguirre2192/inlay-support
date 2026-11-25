@@ -2,10 +2,12 @@
 // Timeline (new places by year, trips) and Want to go (ranked, with plans), as in the app.
 
 import { h } from 'preact';
-import { useState, useMemo } from 'preact/hooks';
+import { useState, useMemo, useEffect, useRef } from 'preact/hooks';
 import htm from 'htm';
 import { t, language, upper, tracking } from './i18n.js';
 import { isoSeconds } from './store.js';
+import { paintPlaces, frameOf } from './placeart.js';
+import { milestones } from './milestones.js';
 
 const html = htm.bind(h);
 const GROUPS = ['europe', 'asia', 'africa', 'north-america', 'south-america', 'oceania'];
@@ -22,7 +24,7 @@ const tripDates = (trip) => trip.end && trip.end.slice(0, 10) !== trip.start.sli
   ? new Intl.DateTimeFormat(language(), { day: 'numeric', month: 'short', year: 'numeric' }).formatRange(new Date(trip.start), new Date(trip.end))
   : dateFormat(trip.start);
 
-export function CollectionSheet({ Sheet, world, atlas, update, name, visited, wanted, onChoose, onClose }) {
+export function CollectionSheet({ Sheet, world, atlas, update, name, visited, wanted, onChoose, onClose, onTool }) {
   const [tab, setTab] = useState('visited');
   const [editing, setEditing] = useState(null); // { trip } or { wish: id }
   const tabs = [['visited', t('Visited')], ['timeline', t('Timeline')], ['want', t('Want to go')]];
@@ -30,6 +32,7 @@ export function CollectionSheet({ Sheet, world, atlas, update, name, visited, wa
     <div class="segments" role="tablist">${tabs.map(([key, label]) =>
       html`<button role="tab" aria-selected=${tab === key} class=${tab === key ? 'on' : ''} onClick=${() => setTab(key)}>${label}</button>`)}</div>
     <div class="list">
+      ${tab === 'visited' && html`<${Tools} world=${world} atlas=${atlas} visited=${visited} onTool=${onTool} />`}
       ${tab === 'visited' && html`<${VisitedTab} world=${world} name=${name} visited=${visited} wanted=${wanted} onChoose=${onChoose} />`}
       ${tab === 'timeline' && html`<${TimelineTab} world=${world} atlas=${atlas} name=${name} onTrip=${(trip) => setEditing({ trip })} />`}
       ${tab === 'want' && html`<${WantTab} atlas=${atlas} update=${update} name=${name} onChoose=${onChoose} onPlan=${(id) => setEditing({ wish: id })} />`}
@@ -206,4 +209,43 @@ function TripEditor({ Sheet, world, atlas, update, name, trip, onClose }) {
     <div class="actions"><button class="ink" onClick=${save}>${t('Save')}</button><button class="quiet" onClick=${onClose}>${t('Cancel')}</button>
       ${!isNew && html`<span class="spacer"></span><button class="quiet danger" onClick=${remove}>${t('Delete trip')}</button>`}</div>
   <//>`;
+}
+
+// ---- the tools: small prints of the atlas, each its own slice of art (DESIGN.md, motion pass) --
+function ToolPrint({ world, ids, slice, inked, onClick, title, line }) {
+  const canvas = useRef(null);
+  useEffect(() => {
+    const c = canvas.current; if (!c) return;
+    const dpr = Math.min(devicePixelRatio || 1, 2), w = c.clientWidth || 160, h = c.clientHeight || 96;
+    c.width = Math.round(w * dpr); c.height = Math.round(h * dpr);
+    const ctx = c.getContext('2d'); ctx.scale(dpr, dpr);
+    const dark = document.documentElement.dataset.theme === 'dark';
+    paintPlaces(ctx, world, { rect: slice ?? frameOf(world, ids, 0.18), width: w, height: h, inked, dark });
+  }, [ids.join(), inked.size]);
+  return html`<button class="tool-print" onClick=${onClick}>
+    <canvas ref=${canvas} aria-hidden="true"></canvas>
+    <span class="tool-words"><b>${title}</b><small>${line}</small></span>
+  </button>`;
+}
+
+function Tools({ world, atlas, visited, onTool }) {
+  const ids = [...visited].filter((id) => world.rows.has(id));
+  const seals = useMemo(() => milestones(world, atlas), [atlas]);
+  const collected = seals.filter((m) => m.collected).length;
+  const sample = (list, n) => list.slice(0, n);
+  const f = world.frame;
+  return html`<div class="tools" role="list">
+    <${ToolPrint} world=${world} ids=${ids.length ? sample(ids, 6) : ['GR']} inked=${visited} onClick=${() => onTool('passport')}
+      title=${t('Passport')} line=${t('%lld pages', ids.length)} />
+    <${ToolPrint} world=${world} ids=${['IT', 'FR', 'ES', 'PT']} inked=${visited} onClick=${() => onTool('milestones')}
+      title=${t('Milestones')} line=${t('%lld of %lld', collected, seals.length)} />
+    <${ToolPrint} world=${world} ids=${['JP']} inked=${visited} onClick=${() => onTool('photos')}
+      title=${t('Photos')} line=${t('Find places')} />
+    <${ToolPrint} world=${world} ids=${[]} slice=${[f[0], f[1] + f[3] * 0.1, f[2], f[3] * 0.62]} inked=${visited} onClick=${() => onTool('friends')}
+      title=${t('Friends')} line=${t('Compare atlases')} />
+    <${ToolPrint} world=${world} ids=${['PE', 'CL', 'AR']} inked=${visited} onClick=${() => onTool('share')}
+      title=${t('Share')} line=${t('Stamps')} />
+    <${ToolPrint} world=${world} ids=${['IS', 'NO']} inked=${visited} onClick=${() => onTool('print')}
+      title=${t('Print')} line=${t('Framed print')} />
+  </div>`;
 }

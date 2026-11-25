@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Friends harness · Inlay</title>
+<!-- Relative URLs (data, art, i18n fetches) resolve as from /atlas/, as in the app. -->
+<base href="/atlas/">
+<link rel="stylesheet" href="./atlas.css">
+<link rel="stylesheet" href="./css/friends.css">
+<script type="importmap">
+{ "imports": { "preact": "./vendor/preact.module.js", "preact/hooks": "./vendor/hooks.module.js", "htm": "./vendor/htm.module.js" } }
+</script>
+<style>body { background: var(--sea); } .harness-note { position: fixed; top: 8px; left: 8px; font: 12px var(--font); color: var(--pencil); }</style>
+</head>
+<body>
+<main id="app"><p class="loading">Inlay</p></main>
+<script type="module">
+// Dev harness for js/friends.js. Query: ?lang=de&theme=dark&view=list|compare|empty|live&friend=<code>
+// It also opens /atlas/dev/friends.html#INLAY2-… the way the app would (openInviteFromURL).
+import { h, render } from 'preact';
+import { useState, useCallback, useMemo, useEffect, useRef } from 'preact/hooks';
+import htm from 'htm';
+import { readWorld, readLand } from './js/inlr.js';
+import { t, useLanguage, countryName } from './js/i18n.js';
+import { FriendsSheet, readInvite, addFriend, friendID, openInviteFromURL } from './js/friends.js';
+
+const html = htm.bind(h);
+const q = new URLSearchParams(location.search);
+const GROUPS = ['europe', 'asia', 'africa', 'north-america', 'south-america', 'oceania'];
+if (q.get('theme')) document.documentElement.dataset.theme = q.get('theme');
+
+function Sheet({ title, onClose, children, class: cls = '' }) {
+  return html`<div class="scrim"><div class=${'sheet ' + cls} role="dialog" aria-modal="true" aria-label=${title}>
+      <div class="sheet-head"><h2>${title}</h2><button class="glass pill" onClick=${onClose}>${t('Done')}</button></div>
+      ${children}</div></div>`;
+}
+
+// Sam's atlas, as the app's own UI test sends it (UITests/StoreCaptureTests.swift).
+const SAM = 'INLAY1-eyJuYW1lIjoiU2FtIiwidmlzaXRlZCI6WyJFUyIsIkZSIiwiR1IiLCJJVCIsIkpQIiwiUEUiLCJWTiIsIlVTIl19';
+const LIVE = 'INLAY3-1b4e28ba2fa111d2883f0016d3cca427QW5h';
+
+async function start() {
+  await useLanguage(q.get('lang') ?? 'en');
+  const [meta, places, land] = await Promise.all([
+    fetch('./data/world.json').then((r) => r.json()), readWorld('./data/world.inlr'), readLand('./data/land.inlr')]);
+  const rows = new Map(meta.places.map((r) => [r.id, r]));
+  for (const [id, p] of places) p.row = rows.get(id);
+  const byGroup = Object.fromEntries(GROUPS.map((g) => [g, meta.places.filter((r) => r.group === g).map((r) => r.id)]));
+  const world = { frame: [0, 0, meta.frame[2], meta.frame[3]], places, land, rows, byGroup, groups: meta.groups, overviews: meta.overviews };
+
+  const view = q.get('view') ?? 'list';
+  const atlas = { name: 'Jorge', home: 'US', visits: {}, wanted: {}, trips: [], prefs: {}, friends: [] };
+  if (view !== 'empty') {
+    for (const id of ['US', 'MX', 'CA', 'IT', 'FR', 'ES', 'PT', 'GB', 'DE', 'JP', 'IT-25']) atlas.visits[id] = {};
+    ['PE', 'VN', 'IS', 'AR'].forEach((id, rank) => { atlas.wanted[id] = { rank, note: '', nextUp: false, modified: 0 }; });
+    addFriend(atlas, await readInvite(q.get('friend') ?? SAM));
+    addFriend(atlas, await readInvite('INLAY1-eyJuYW1lIjoiQW5hIE1hcsOtYSIsInZpc2l0ZWQiOlsiTVgiLCJBUiIsIkNMIiwiUEUiLCJCUiJdfQ'));
+  }
+  let openID = view === 'compare' ? friendID(atlas.friends.find((f) => f.name === 'Sam') ?? atlas.friends[0]) : null;
+  if (view === 'live') { addFriend(atlas, await readInvite(LIVE)); openID = '1b4e28ba-2fa1-11d2-883f-0016d3cca427'; }
+  const opened = await openInviteFromURL(location);
+  if (opened) { addFriend(atlas, opened); openID = friendID(opened); }
+  window.__friendsReady = true;
+
+  function Harness() {
+    const [a, setA] = useState(atlas);
+    const update = useCallback((fn) => setA((x) => fn(structuredClone(x))), []);
+    const visited = useMemo(() => new Set(Object.keys(a.visits)), [a.visits]);
+    const wanted = useMemo(() => new Set(Object.keys(a.wanted)), [a.wanted]);
+    const name = (id) => { const r = world.rows.get(id); return r ? countryName(id, r.name) : id; };
+    window.__atlasState = a;
+    return html`<${FriendsSheet} Sheet=${Sheet} world=${world} atlas=${a} update=${update} name=${name} visited=${visited} wanted=${wanted}
+      openID=${openID} onChoose=${() => {}} onClose=${() => {}} />`;
+  }
+  const root = document.getElementById('app'); root.textContent = '';
+  render(html`<${Harness} />`, root);
+}
+start().catch((e) => { console.error(e); document.getElementById('app').textContent = String(e); });
+</script>
+</body>
+</html>

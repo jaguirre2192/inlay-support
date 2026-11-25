@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dev: milestones and passport</title>
+<base href="/atlas/">
+<link rel="stylesheet" href="./atlas.css">
+<link rel="stylesheet" href="./css/passport.css">
+<link rel="stylesheet" href="./css/milestones.css">
+<script type="importmap">
+{ "imports": { "preact": "./vendor/preact.module.js", "preact/hooks": "./vendor/hooks.module.js", "htm": "./vendor/htm.module.js" } }
+</script>
+<style>
+  .dev-bar { position: fixed; top: 8px; left: 8px; z-index: 50; display: flex; gap: 6px; flex-wrap: wrap; font-size: 12px; }
+  .dev-bar a { padding: 4px 8px; border-radius: 8px; background: var(--paper); color: var(--ink); text-decoration: none; box-shadow: var(--shadow); }
+  .dev-panel { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); width: min(560px, calc(100% - 40px)); padding: 16px; border-radius: 28px; }
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script type="module">
+// Dev harness (delete with atlas/dev/): mounts MilestonesSheet or PassportSheet over the real
+// world data with a sample atlas. ?view=milestones|passport|empty|banner, &open=<milestone id>,
+// &start=<place id>, &lang=ja, &theme=dark, &raw=1 (no sample, uses ?visits=FR,DE...)
+import { h, render } from 'preact';
+import { useState, useRef, useEffect } from 'preact/hooks';
+import htm from 'htm';
+import { readWorld, readLand } from './js/inlr.js';
+import { t, useLanguage, countryName } from './js/i18n.js';
+import { MilestonesSheet, MilestoneBanner, milestones, newlyCollected, closest } from './js/milestones.js';
+import { PassportSheet } from './js/passport.js';
+const html = htm.bind(h);
+const q = new URLSearchParams(location.search);
+const GROUPS = ['europe', 'asia', 'africa', 'north-america', 'south-america', 'oceania'];
+document.documentElement.dataset.theme = q.get('theme') === 'dark' ? 'dark' : 'light';
+
+function Sheet({ title, onClose, children, class: cls = '' }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current; if (!el) return;
+    (el.querySelector('input[type=search]') ?? el.querySelector('.sheet-head button'))?.focus();
+    const esc = (e) => { if (e.key === 'Escape') { e.stopPropagation(); onClose(); } };
+    el.addEventListener('keydown', esc);
+    return () => el.removeEventListener('keydown', esc);
+  }, []);
+  return html`<div class="scrim" onClick=${(e) => e.target === e.currentTarget && onClose()}>
+    <div class=${'sheet ' + cls} role="dialog" aria-modal="true" aria-label=${title} ref=${ref}>
+      <div class="sheet-head"><h2>${title}</h2><button class="glass pill" onClick=${onClose}>${t('Done')}</button></div>
+      ${children}
+    </div></div>`;
+}
+
+const sample = {
+  name: 'Sample', home: 'US', prefs: {}, wanted: {},
+  visits: {
+    US: { date: '2019' }, 'US-CA': { date: '2019-07' }, 'US-NY': {}, GB: { date: '2015-04' }, IE: { date: '2015-05' }, IM: {}, JE: {},
+    FR: { date: '2016-08' }, ES: { date: '2017-03' }, PT: { date: '2017-04' }, AD: {}, IT: { date: '2018-09' }, VA: { date: '2018-09' },
+    GR: { date: '2021-06' }, DK: { date: '2022' }, NO: { date: '2022-07' }, SE: { date: '2022-07' }, FI: {}, EE: { date: '2023-05' }, LV: { date: '2023-05' },
+    JP: { date: '2024-04' }, TH: { date: '2024-12' }, VN: {}, KH: {}, LA: {}, MA: { date: '2020-02' }, AU: { date: '2025-01' }, MX: { date: '2010' }, CA: { date: '2012-08' },
+    PR: {}, GI: {},
+  },
+  trips: [
+    { id: 'T1', name: 'Scandinavia by train', start: '2022-07-02T12:00:00Z', end: '2022-07-19T12:00:00Z', places: ['DK', 'NO', 'SE'], note: 'Night train from Stockholm to Narvik, then the ferry down the coast.' },
+    { id: 'T2', name: 'Lisbon and Seville', start: '2017-03-28T12:00:00Z', end: '2017-04-06T12:00:00Z', places: ['PT', 'ES'], note: '' },
+    { id: 'T3', name: 'Mekong', start: '2024-12-01T12:00:00Z', end: '2025-01-03T12:00:00Z', places: ['TH', 'LA', 'KH', 'VN'], note: '' },
+  ],
+};
+
+async function start() {
+  await useLanguage(q.get('lang') ?? 'en');
+  const [meta, places, land, regionIndex] = await Promise.all([
+    fetch('./data/world.json').then((r) => r.json()), readWorld('./data/world.inlr'), readLand('./data/land.inlr'),
+    fetch('./data/regions.json').then((r) => r.json()),
+  ]);
+  const regionRows = new Map(regionIndex.regions.map((r) => [r.id, r]));
+  const byCountry = new Map();
+  for (const r of regionIndex.regions) { if (!byCountry.has(r.countryID)) byCountry.set(r.countryID, []); byCountry.get(r.countryID).push(r); }
+  const rows = new Map(meta.places.map((r) => [r.id, r]));
+  for (const [id, p] of places) p.row = rows.get(id);
+  const world = { frame: [0, 0, meta.frame[2], meta.frame[3]], places, land, rows,
+    byGroup: Object.fromEntries(GROUPS.map((g) => [g, meta.places.filter((r) => r.group === g).map((r) => r.id)])),
+    groups: meta.groups, regions: { files: regionIndex.files, kinds: regionIndex.kinds, rows: regionRows, byCountry },
+    countryCount: meta.countryCount, territoryCount: meta.territoryCount };
+  let atlas = structuredClone(sample);
+  if (q.get('visits') != null) atlas = { ...atlas, visits: Object.fromEntries(q.get('visits').split(',').filter(Boolean).map((id) => [id, {}])), trips: [] };
+  if (q.get('view') === 'empty') atlas = { ...atlas, visits: {}, trips: [] };
+  window.__dev = { world, atlas, milestones, newlyCollected, closest };
+  const name = (id) => countryName(id, world.rows.get(id)?.name ?? id);
+  const view = q.get('view') ?? 'milestones';
+  function Dev() {
+    const [sheet, setSheet] = useState(view === 'banner' ? null : view === 'empty' ? 'passport' : view);
+    const [chosen, setChosen] = useState(null);
+    const [banner, setBanner] = useState(null);
+    useEffect(() => {
+      if (view !== 'banner') return;
+      // Marking Lithuania completes the Baltic coast.
+      try { localStorage.removeItem('inlay.atlas.milestonesEarned'); } catch {}
+      const after = structuredClone(atlas); after.visits.LT = {};
+      setBanner(newlyCollected(world, atlas, after).at(-1));
+    }, []);
+    useEffect(() => {
+      if (q.get('open') && sheet === 'milestones') setTimeout(() => {
+        const items = [...document.querySelectorAll('.ms-item, .ms-closest-row')];
+        const target = items.find((b) => b.getAttribute('aria-label')?.startsWith(milestones(world, atlas).find((m) => m.id === q.get('open')).title));
+        target?.click();
+      }, 50);
+    }, []);
+    return html`<div class="dev-bar">
+        <a href="dev/collection-pages.html?view=milestones">milestones</a><a href="dev/collection-pages.html?view=passport">passport</a><a href="dev/collection-pages.html?view=empty">empty</a><a href="dev/collection-pages.html?view=banner">banner</a>
+        <a href="dev/collection-pages.html?view=milestones&open=baltic">baltic</a><a href="dev/collection-pages.html?view=milestones&open=fiftystates">50 states</a><a href="dev/collection-pages.html?view=milestones&open=ten">ten</a>
+        <a href="dev/collection-pages.html?view=passport&theme=dark">dark</a><a href="dev/collection-pages.html?view=passport&lang=ja">ja</a>
+        ${chosen && html`<a>chose ${chosen}</a>`}
+      </div>
+      ${banner && html`<section class="dev-panel glass"><${MilestoneBanner} milestone=${banner} onDismiss=${() => setBanner(null)} onOpen=${() => setSheet('milestones')} /></section>`}
+      ${sheet === 'milestones' && html`<${MilestonesSheet} Sheet=${Sheet} world=${world} atlas=${atlas} name=${name}
+          onChoose=${(id) => { setChosen(id); setSheet(null); }} onClose=${() => setSheet(null)} />`}
+      ${sheet === 'passport' && html`<${PassportSheet} Sheet=${Sheet} world=${world} atlas=${atlas} name=${name} startID=${q.get('start')}
+          play=${(s) => console.log('sound', s)} onClose=${() => setSheet(null)} />`}`;
+  }
+  render(html`<${Dev} />`, document.getElementById('app'));
+}
+start().catch((e) => { console.error(e); document.body.textContent = e.stack; });
+</script>
+</body>
+</html>

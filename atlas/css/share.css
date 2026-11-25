@@ -1,0 +1,48 @@
+/* The share card studio (js/share.js): the card on a faint print of your atlas, then the
+   design capsules, Story/Post and Paper/Night, and Share. */
+
+.sheet.share-studio { width: min(560px, 100%); min-width: 0; }
+.share-studio > * { min-width: 0; }
+.share-studio .share-stage { position: relative; flex: 1 1 auto; min-height: 0; height: min(56vh, 540px);
+  margin: -4px calc(-1 * var(--gutter)) 12px; overflow: hidden; }
+/* A ghost of the atlas under one even veil of paper. */
+.share-ghost { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.55; }
+.share-stage::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(color-mix(in srgb, var(--paper) 70%, transparent), color-mix(in srgb, var(--paper) 78%, transparent)); }
+/* Absolutely placed, so the card's 1080 px canvas never sizes the sheet; it scales to fit inside. */
+.share-preview { position: absolute; inset: 0; z-index: 1; display: flex; align-items: center; justify-content: center; padding: 14px var(--gutter); }
+.share-card { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; min-width: 0; min-height: 0; border-radius: 10px; opacity: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10), 0 12px 22px rgba(0, 0, 0, 0.22); transition: opacity .22s ease; }
+.share-card.shown { opacity: 1; }
+.share-card.updating { opacity: 0.72; }
+.share-status { position: absolute; margin: 0; color: var(--pencil); font-size: 13px; }
+
+.share-designs { display: flex; gap: 8px; overflow-x: auto; margin: 0 calc(-1 * var(--gutter)) 12px; padding: 1px var(--gutter);
+  scrollbar-width: none; flex: none; }
+.share-designs::-webkit-scrollbar { display: none; }
+.share-design { flex: none; height: 40px; padding: 0 14px; font-size: 14px; border-radius: 20px; }
+.share-design svg { width: 17px; height: 17px; }
+.share-design.on { color: var(--ink); }
+
+.share-options { display: flex; gap: 10px; align-items: center; flex: none; }
+.share-options .share-seg { flex: 1; margin: 0; min-width: 0; }
+.share-seg button { min-width: 0; padding: 0 6px; }
+.share-menu { flex: none; position: relative; }
+.share-menu select { height: 38px; max-width: 150px; border-radius: 19px; border: 0; padding: 0 30px 0 14px; font-size: 14px; font-weight: 600;
+  background: color-mix(in srgb, var(--ink) 7%, transparent); color: var(--ink); appearance: none; -webkit-appearance: none; cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, var(--pencil) 50%), linear-gradient(135deg, var(--pencil) 50%, transparent 50%);
+  background-position: calc(100% - 16px) 17px, calc(100% - 12px) 17px; background-size: 4px 4px; background-repeat: no-repeat; }
+.share-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.share-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; min-height: 44px; margin-top: 14px; flex: none; }
+.share-actions .ink { min-width: 160px; justify-content: center; }
+.share-actions .ink svg { width: 18px; height: 18px; }
+.share-note { color: var(--pencil); font-size: 13px; text-align: center; flex-basis: 100%; }
+
+@media (max-width: 420px) {
+  .share-options { flex-wrap: wrap; }
+  .share-options .share-seg { flex: 1 1 40%; }
+  .share-menu { flex: 1 1 100%; }
+  .share-menu select { max-width: none; width: 100%; }
+}
+@media (max-height: 700px) { .share-studio .share-stage { height: 44vh; } }

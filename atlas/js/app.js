@@ -43,7 +43,9 @@ function App({ world, initial }) {
   const [, setLang] = useState(language());
   const mapHost = useRef(null), map = useRef(null), panel = useRef(null), top = useRef(null);
   const dark = useDark(atlas.prefs);
-  const homeRef = useRef(atlas.home), selectedRef = useRef(null);
+  const homeRef = useRef(atlas.home), selectedRef = useRef(null), sheetRef = useRef(null), previous = useRef(atlas);
+  sheetRef.current = sheet;
+  const [milestone, setMilestone] = useState(null);
   selectedRef.current = selected;
   homeRef.current = atlas.home;
   const visited = useMemo(() => new Set(Object.keys(atlas.visits)), [atlas.visits]);
@@ -81,6 +83,7 @@ function App({ world, initial }) {
       if (e.target.closest('input,textarea,select,[contenteditable]')) return;
       if (e.key === '/') { e.preventDefault(); setSheet('search'); return; }
       if (e.key === 'Escape') { setSheet(null); setSelected(null); setArea({ kind: 'world' }); m.frameWorld(); return; }
+      if (sheetRef.current) return;
       if (m.key(e)) e.preventDefault();
     };
     addEventListener('keydown', key);
@@ -102,7 +105,11 @@ function App({ world, initial }) {
     if (row) requestAnimationFrame(() => map.current.frame(row.focusFrame ?? row.bounds));
   }, [region]);
 
-  const choose = (id) => { setSheet(null); setRegion(null); setSelected(id); };
+  const choose = (id) => {
+    setSheet(null);
+    const row = world.regions.rows.get(id);
+    if (row) { setSelected(row.countryID); setRegion(id); } else { setRegion(null); setSelected(id); }
+  };
   const chooseRegion = (id) => { setSheet(null); setRegion(id); };
   const regionName = (id) => placeName(world.regions.rows.get(id)?.name ?? id);
   const showGroup = (g) => { setSelected(null); setRegion(null); setArea({ kind: 'group', id: g }); map.current.frame(world.groups[g]); };
@@ -130,6 +137,22 @@ function App({ world, initial }) {
     setBanner({ text: had ? t('%@ removed from Want to go', name(id)) : t('%@ saved to Want to go', name(id)),
                 undo: () => { setAtlas(before); store.save(before); } });
   };
+  // A milestone collected by any change (mark, trip, import) is celebrated once, as in the app.
+  useEffect(() => {
+    const got = newlyCollected(world, previous.current, atlas);
+    previous.current = atlas;
+    if (got?.length) setMilestone(got.at(-1));
+  }, [atlas]);
+  // An invitation link (/atlas/#INLAY2-…) opens straight into the comparison; the code
+  // leaves the address bar so it stays out of history.
+  useEffect(() => { (async () => {
+    const shared = await openInviteFromURL(location).catch(() => null);
+    if (!shared) return;
+    update((a) => { addFriend(a, shared); return a; });
+    setSheet({ kind: 'friends', open: friendID(shared) });
+    history.replaceState(null, '', location.pathname);
+  })(); }, []);
+  const addWant = (id) => update((a) => { a.wanted[id] = a.wanted[id] ?? { rank: Object.keys(a.wanted).length, note: '', nextUp: false, modified: Date.now() / 1000 }; return a; });
   useEffect(() => { if (!banner) return; const timer = setTimeout(() => setBanner(null), 6000); return () => clearTimeout(timer); }, [banner]);
 
   const counts = useMemo(() => {
@@ -170,10 +193,24 @@ function App({ world, initial }) {
         onRegions=${() => setSheet('regions')}
         visited=${visited} wanted=${wanted} counts=${counts} banner=${banner} onDismissBanner=${() => setBanner(null)}
         onWorld=${showWorld} onGroup=${showGroup} onChoose=${() => setSheet('search')}
-        onMark=${mark} onUnmark=${unmark} onWant=${toggleWant} onDate=${(id) => setSheet({ kind: 'date', id })} />
+        onMark=${mark} onUnmark=${unmark} onWant=${toggleWant} onDate=${(id) => setSheet({ kind: 'date', id })}
+        onInfo=${(id) => setSheet({ kind: 'place', id })}
+        milestone=${milestone} onMilestone=${() => { setMilestone(null); setSheet('milestones'); }} onDismissMilestone=${() => setMilestone(null)} />
       ${sheet === 'search' && html`<${SearchSheet} world=${world} name=${name} visited=${visited} wanted=${wanted} onChoose=${choose} onClose=${() => setSheet(null)} />`}
       ${sheet === 'collection' && html`<${CollectionSheet} Sheet=${Sheet} world=${world} atlas=${atlas} update=${update} name=${name}
-          visited=${visited} wanted=${wanted} onChoose=${choose} onClose=${() => setSheet(null)} />`}
+          visited=${visited} wanted=${wanted} onChoose=${choose} onClose=${() => setSheet(null)} onTool=${(tool) => setSheet(tool)} />`}
+      ${sheet === 'milestones' && html`<${MilestonesSheet} Sheet=${Sheet} world=${world} atlas=${atlas} name=${name} onChoose=${choose} onClose=${() => setSheet(null)} />`}
+      ${sheet === 'passport' && html`<${PassportSheet} Sheet=${Sheet} world=${world} atlas=${atlas} name=${name}
+          onShare=${(id) => setSheet({ kind: 'share', design: 'passport', placeID: id })} onClose=${() => setSheet(null)} />`}
+      ${(sheet === 'friends' || sheet?.kind === 'friends') && html`<${FriendsSheet} Sheet=${Sheet} world=${world} atlas=${atlas} update=${update} name=${name}
+          visited=${visited} wanted=${wanted} openID=${sheet?.open} onWant=${addWant} onChoose=${choose} onClose=${() => setSheet(null)} />`}
+      ${(sheet === 'share' || sheet?.kind === 'share') && html`<${ShareSheet} Sheet=${Sheet} world=${world} atlas=${atlas} name=${name} visited=${visited}
+          friend=${sheet?.friend} design=${sheet?.design} placeID=${sheet?.placeID} onClose=${() => setSheet(null)} />`}
+      ${sheet === 'print' && html`<${PrintSheet} Sheet=${Sheet} world=${world} atlas=${atlas} onClose=${() => setSheet(null)} />`}
+      ${sheet === 'photos' && html`<${PhotosSheet} Sheet=${Sheet} world=${world} atlas=${atlas} update=${update} name=${name} regionName=${regionName}
+          visited=${visited} loadRegions=${(id) => map.current.ensureRegions(id)} onClose=${() => setSheet(null)} />`}
+      ${sheet?.kind === 'place' && html`<${PlaceSheet} Sheet=${Sheet} world=${world} atlas=${atlas} id=${sheet.id} name=${name}
+          visited=${visited} wanted=${wanted} onMark=${mark} onUnmark=${unmark} onClose=${() => setSheet(null)} />`}
       ${sheet === 'regions' && selected && html`<${RegionSheet} world=${world} country=${selected} name=${name} regionName=${regionName}
           visited=${visited} wholeCountries=${!!atlas.prefs.wholeCountries} onChoose=${chooseRegion} onClose=${() => setSheet(null)} />`}
       ${sheet === 'settings' && html`<${SettingsSheet} world=${world} atlas=${atlas} name=${name} update=${update} setAtlas=${setAtlas}
@@ -191,7 +228,8 @@ const KINDS = ['states', 'provinces', 'prefectures', 'voivodeships', 'autonomous
 export const kindWord = (kind) => t(KINDS.includes(kind) ? kind : 'regions');
 
 function Panel({ ref_, world, atlas, area, selected, region, name, regionName, visited, wanted, counts, banner, onDismissBanner,
-                 onWorld, onGroup, onChoose, onCountry, onRegions, onMark, onUnmark, onWant, onDate }) {
+                 onWorld, onGroup, onChoose, onCountry, onRegions, onMark, onUnmark, onWant, onDate, onInfo,
+                 milestone, onMilestone, onDismissMilestone }) {
   const row = selected ? world.rows.get(selected) : null;
   const regionRow = region ? world.regions.rows.get(region) : null;
   const target = regionRow && regionRow.markable !== false ? region : row?.id;
@@ -222,6 +260,7 @@ function Panel({ ref_, world, atlas, area, selected, region, name, regionName, v
   const regionsDone = markable.filter((r) => visited.has(r.id)).length;
   return html`
     <section class="panel glass" ref=${ref_} aria-live="polite">
+      ${milestone && html`<${MilestoneBanner} milestone=${milestone} onDismiss=${onDismissMilestone} onOpen=${onMilestone} />`}
       ${banner && html`<div class="banner">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
         <span>${banner.text}</span>
@@ -249,10 +288,14 @@ function Panel({ ref_, world, atlas, area, selected, region, name, regionName, v
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4m6-4v4"/></svg>
               ${date ? formatDate(date) : t('Add date')}
             </button>
+            <button class="outline round" onClick=${() => onInfo(target)} aria-label=${t('About %@', title)}>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg></button>
             <span class="spacer"></span>
             <button class="quiet" onClick=${() => onUnmark(target)}>${t('Unmark')}</button>
           ` : html`
             <button class="ink" onClick=${() => onMark(target)}>${t('Mark as visited')}</button>
+            <button class="outline round" onClick=${() => onInfo(target)} aria-label=${t('About %@', title)}>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg></button>
             ${!regionRow && html`<button class=${'outline round' + (isWanted ? ' on' : '')} onClick=${() => onWant(row.id)} aria-label=${t('Want to go')} aria-pressed=${isWanted}>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v16l-5-3.5L7 20z"/></svg>
             </button>`}
@@ -402,6 +445,9 @@ function SettingsSheet({ world, atlas, name, update, setAtlas, onLanguage, onClo
           ${[...world.rows.values()].filter((r) => r.kind === 'country').sort((a, b) => name(a.id).localeCompare(name(b.id), language()))
             .map((r) => html`<option value=${r.id}>${name(r.id)}</option>`)}
         </select></label>
+      <label class="toggle"><input type="checkbox" checked=${!!atlas.prefs.wholeCountries}
+          onChange=${(e) => update((a) => { a.prefs.wholeCountries = e.target.checked; return a; })} />
+        <span>${t('Light up whole countries')}</span></label>
       <label class="field"><${Legend}>${tw('Appearance')}<//>
         <select value=${atlas.prefs.appearance ?? 'system'} onChange=${(e) => update((a) => { a.prefs.appearance = e.target.value; return a; })}>
           <option value="system">${tw('Automatic')}</option><option value="light">${tw('Light')}</option><option value="dark">${tw('Dark')}</option>
@@ -426,6 +472,12 @@ function SettingsSheet({ world, atlas, name, update, setAtlas, onLanguage, onClo
 // Strings the app doesn't have; translated here (WEB_STRINGS) and looked up by key.
 import { WEB_STRINGS } from './web-strings.js';
 import { CollectionSheet } from './collection.js';
+import { MilestonesSheet, MilestoneBanner, newlyCollected } from './milestones.js';
+import { PassportSheet } from './passport.js';
+import { FriendsSheet, openInviteFromURL, addFriend, friendID } from './friends.js';
+import { PlaceSheet, PrintSheet } from './placeinfo.js';
+import { PhotosSheet } from './photos.js';
+import { ShareSheet } from './share.js';
 function tw(key) { return WEB_STRINGS[language()]?.[key] ?? key; }
 
 // ---- start -----------------------------------------------------------------------------------

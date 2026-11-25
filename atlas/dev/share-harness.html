@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<base href="../"><!-- the app's modules fetch ./data/... relative to the page -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Share cards · harness</title>
+<link rel="stylesheet" href="./atlas.css">
+<link rel="stylesheet" href="./css/share.css">
+<script type="importmap">
+{ "imports": { "preact": "./vendor/preact.module.js", "preact/hooks": "./vendor/hooks.module.js", "htm": "./vendor/htm.module.js" } }
+</script>
+<style>body { background: var(--paper); overflow: auto; } #grid { display: flex; flex-wrap: wrap; gap: 16px; padding: 16px; } #grid canvas { width: 180px; height: auto; }</style>
+</head>
+<body>
+<!-- Dev only. ?mode=grid draws every design × format × tone; ?mode=studio opens the studio sheet.
+     &lang=ja picks a language; &theme=dark the page theme. window.renderAll() returns PNG data URLs. -->
+<div id="grid"></div>
+<main id="app"></main>
+<script type="module">
+import { h, render } from 'preact';
+import { useRef, useEffect } from 'preact/hooks';
+import htm from 'htm';
+import { readWorld, readLand } from './js/inlr.js';
+import { t, useLanguage, countryName } from './js/i18n.js';
+import { drawCard, cardDesigns, ShareSheet } from './js/share.js';
+const html = htm.bind(h);
+const q = new URLSearchParams(location.search);
+if (q.get('theme')) document.documentElement.dataset.theme = q.get('theme');
+
+const GROUPS = ['europe', 'asia', 'africa', 'north-america', 'south-america', 'oceania'];
+async function loadWorld() {
+  const [meta, places, land] = await Promise.all([
+    fetch('./data/world.json').then((r) => r.json()), readWorld('./data/world.inlr'), readLand('./data/land.inlr')]);
+  const rows = new Map(meta.places.map((r) => [r.id, r]));
+  for (const [id, p] of places) p.row = rows.get(id);
+  const byGroup = Object.fromEntries(GROUPS.map((g) => [g, meta.places.filter((r) => r.group === g).map((r) => r.id)]));
+  return { frame: [0, 0, meta.frame[2], meta.frame[3]], places, land, rows, byGroup, groups: meta.groups,
+           overviews: meta.overviews, countryCount: meta.countryCount, territoryCount: meta.territoryCount };
+}
+
+// A sample atlas: Italy, Japan, Portugal, Peru, Australia and more, a few dated, two trips.
+const SAMPLE = {
+  version: 1, name: q.get('owner') ?? 'Jorge', home: 'US',
+  visits: {
+    IT: { date: '2019-06' }, JP: { date: '2024-04' }, PT: { date: '2024-09' }, PE: { date: '2023-11' }, AU: { date: '2025-02' },
+    FR: { date: '2019-07' }, ES: { date: '2022' }, MX: { date: '2021-12' }, GR: { date: '2024-06' }, IS: {}, GB: { date: '2018-03' },
+    CA: {}, US: {}, MA: { date: '2024-12' }, NZ: { date: '2025-03' }, CH: { date: '2024-05' }, PR: { date: '2020' },
+  },
+  wanted: {}, prefs: {},
+  trips: [
+    { id: 't1', name: 'Spring in Japan', start: '2024-04-02T00:00:00Z', end: '2024-04-18T00:00:00Z', places: ['JP'], note: '' },
+    { id: 't2', name: 'Lisbon and Porto', start: '2024-09-10T00:00:00Z', end: null, places: ['PT'], note: '' },
+    { id: 't3', name: 'Alps', start: '2024-05-20T00:00:00Z', end: null, places: ['CH', 'IT'], note: '' },
+  ],
+};
+const FRIEND = { name: 'Sam', visited: new Set(['IT', 'FR', 'ES', 'DE', 'NL', 'JP', 'KR', 'TH', 'VN', 'BR', 'AR', 'US', 'CA']) };
+
+const world = await loadWorld();
+await useLanguage(q.get('lang') ?? 'en');
+const small = q.get('small') === '1'; // one stamp-sized atlas for the "few places" cases
+const atlas = small ? { ...SAMPLE, name: '', visits: { PT: { date: '2024-09' }, ES: {} }, trips: [] } : SAMPLE;
+const visited = new Set(Object.keys(atlas.visits));
+const name = (id) => { const r = world.rows.get(id); return r ? countryName(id, r.name) : id; };
+const source = { world, atlas, visited, friend: FRIEND, name };
+const now = new Date(2026, 10, 25);
+
+window.renderAll = async (designs = cardDesigns(source)) => {
+  const out = {};
+  for (const design of designs) for (const format of ['story', 'post']) for (const tone of ['paper', 'night']) {
+    const c = document.createElement('canvas');
+    const info = await drawCard(c, source, { design, format, tone, now, placeID: q.get('place') ?? undefined, year: q.get('year') ? Number(q.get('year')) : undefined });
+    out[`${design}-${format}-${tone}`] = { url: c.toDataURL('image/png'), label: info.label, size: [c.width, c.height] };
+    if (q.get('mode') === 'grid') document.getElementById('grid').append(c);
+  }
+  return out;
+};
+
+function Sheet({ title, onClose, children, class: cls = '' }) {
+  return html`<div class="scrim"><div class=${'sheet ' + cls} role="dialog" aria-label=${title}>
+    <div class="sheet-head"><h2>${title}</h2><button class="glass pill" onClick=${onClose}>${t('Done')}</button></div>${children}</div></div>`;
+}
+if (q.get('mode') === 'studio') {
+  render(html`<${ShareSheet} Sheet=${Sheet} world=${world} atlas=${atlas} update=${() => {}} name=${name} visited=${visited}
+    wanted=${new Set()} onChoose=${() => {}} onClose=${() => {}} friend=${q.get('friend') === '0' ? null : FRIEND} />`, document.getElementById('app'));
+}
+window.harnessReady = true;
+</script>
+</body>
+</html>
