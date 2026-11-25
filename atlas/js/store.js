@@ -1,6 +1,8 @@
 // The atlas, kept in this browser (IndexedDB), with the app's own file format for moving it
 // to and from the iPhone app (AtlasData.swift: AtlasExport, version 1).
 
+import { stamp, upgrade } from './accountsync.js';
+
 const DB = 'inlay-atlas', STORE = 'atlas', KEY = 'mine';
 
 function open() {
@@ -21,17 +23,26 @@ export async function load() {
     const db = await open();
     return await new Promise((resolve) => {
       const req = db.transaction(STORE).objectStore(STORE).get(KEY);
-      req.onsuccess = () => resolve({ ...emptyAtlas(), ...(req.result || {}) });
-      req.onerror = () => resolve(emptyAtlas());
+      req.onsuccess = () => resolve(remember(upgrade({ ...emptyAtlas(), ...(req.result || {}) })));
+      req.onerror = () => resolve(remember(upgrade(emptyAtlas())));
     });
   } catch {
     // Private windows and blocked storage: keep the atlas in memory only.
-    return { ...emptyAtlas(), memoryOnly: true };
+    return remember(upgrade({ ...emptyAtlas(), memoryOnly: true }));
   }
 }
 
+// What was saved last, to tell which records each save changes (see accountsync.js `stamp`).
+let lastSaved = null;
+function remember(atlas) { lastSaved = structuredClone(atlas); return atlas; }
+
 let queued = null, writing = false;
 export async function save(atlas) {
+  // Every save records when each changed place, plan and trip changed, for account sync.
+  // The page's own object takes the times too, so later saves compare against them.
+  const stamped = stamp(lastSaved, atlas);
+  Object.assign(atlas, { schema: stamped.schema, modified: stamped.modified, removedTrips: stamped.removedTrips });
+  remember(atlas);
   queued = atlas;
   if (writing) return;
   writing = true;
