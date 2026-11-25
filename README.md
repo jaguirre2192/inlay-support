@@ -2,7 +2,7 @@
 
 Static source for Inlay's cinematic gallery, personalized digital-proof studio, invitations, support and privacy pages at the configured `inlayatlas.com` domain. The native application repository remains separate and private. This checkout includes the artwork and geographic assets needed by the website and proof renderer; it includes no native application source, analytics, build secrets or real user travel history.
 
-Jorge authorized the approved cinematic website launch on 2026-11-15. The current source has passed the independent finish review; deployment and live-publication verification are separate steps. Inlay is **coming soon to iPhone**. The app will be free.
+Jorge authorized the approved cinematic website launch on 2026-11-15. The current source has passed the independent finish review; deployment and live-publication verification are separate steps. Inlay is free on the App Store (iPhone and iPad) and in the browser at `/atlas/`.
 
 ## Routes
 

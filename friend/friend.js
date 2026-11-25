@@ -27,6 +27,8 @@
     title.replaceChildren(document.createTextNode("Compare"), document.createElement("br"), document.createTextNode("travel maps."));
     note.textContent = "Open this invitation in Inlay to see where you've both been.";
     open.href = "inlay://friend?d=" + encodeURIComponent(code);
+    // The web atlas reads the same code from its fragment; it never reaches the server.
+    document.getElementById("open-web").href = "/atlas/#" + code;
   }
 
   open.addEventListener("click", () => {

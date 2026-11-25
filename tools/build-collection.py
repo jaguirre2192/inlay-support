@@ -35,7 +35,7 @@ def framed(key, eager=False):
     return f'''<div class="print-frame"><img src="{ART}products/{p['file']}.png" width="{width}" height="{height}" alt="{escape(p['alt'])}" {'fetchpriority="high"' if eager else 'loading="lazy"'} decoding="async"></div>'''
 
 def header(home=False, active=''):
-    items = [('/editions/', 'The collection', 'editions'), ('/gifts/', 'Gifts', 'gifts'), ('/#story', 'Our story', ''), ('/#the-atlas', 'The atlas', '')]
+    items = [('/editions/', 'The collection', 'editions'), ('/gifts/', 'Gifts', 'gifts'), ('/#story', 'Our story', ''), ('/#the-atlas', 'The atlas', ''), ('/atlas/', 'Open your atlas', 'atlas')]
     nav = ''.join('<a href="{}" {}>{}</a>'.format(url, 'aria-current="page"' if id and active == id else '', name) for url,name,id in items)
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="site-header {'home-header' if home else ''}">
@@ -60,12 +60,12 @@ def card(key, level=3):
     return f'''<a class="edition-link" href="/editions/{key}/"><figure><div class="art-stage {'world-stage' if key == 'your-world' else 'portrait-stage' if key == 'country' else 'memory-stage'}">{framed(key)}</div><figcaption><h{level}>{p['name']}</h{level}><p>{p['line']}</p><span class="edition-action">Explore the edition {ARROW}</span></figcaption></figure></a>'''
 
 def handoff():
-    return f'''<section class="process shell" id="make-a-proof"><div class="process-copy"><h2>Your atlas.<br>Your proof.</h2><p>Already have Inlay? Bring your places into the studio and make something personal.</p><p class="availability">Inlay is coming soon to iPhone. The app will be free.</p></div><ol class="process-list"><li><h3>Begin in Inlay</h3><p>Open the print option for your atlas, a friend’s shared atlas, or a comparison. Check the people and places, then continue to the print shop.</p></li><li><h3>Make it personal</h3><p>Choose Your World, Country or Memory in the studio. Edit the names and dedication, or add photographs from your device.</p></li><li><h3>Keep your composition</h3><p>Download a PNG proof or save your design to return to later. Physical printing and ordering will follow.</p></li></ol></section><div class="studio-invitation shell">{link('/print/', 'Open the print studio', 'button')}<p>Use a print link from Inlay or a saved design. Your atlas and selected photos stay in your browser.</p></div>'''
+    return f'''<section class="process shell" id="make-a-proof"><div class="process-copy"><h2>Your atlas.<br>Your proof.</h2><p>Already have Inlay? Bring your places into the studio and make something personal.</p><p class="availability">Inlay is free <a href="https://apps.apple.com/app/id6831712742">on the App Store</a>, and in your browser at <a href="/atlas/">inlayatlas.com/atlas</a>.</p></div><ol class="process-list"><li><h3>Begin in Inlay</h3><p>Open the print option for your atlas, a friend’s shared atlas, or a comparison. Check the people and places, then continue to the print shop.</p></li><li><h3>Make it personal</h3><p>Choose Your World, Country or Memory in the studio. Edit the names and dedication, or add photographs from your device.</p></li><li><h3>Keep your composition</h3><p>Download a PNG proof or save your design to return to later. Physical printing and ordering will follow.</p></li></ol></section><div class="studio-invitation shell">{link('/print/', 'Open the print studio', 'button')}<p>Use a print link from Inlay or a saved design. Your atlas and selected photos stay in your browser.</p></div>'''
 
 def app_showcase():
     # The native writer confirmed the old app captures must not be published.
     # Use approved, bundled atlas illustration until a fresh clean capture set is ready.
-    return f'''<section class="app-showcase" id="the-atlas" aria-labelledby="atlas-heading"><div class="app-showcase-inner"><div class="app-showcase-copy"><h2 id="atlas-heading">Your world begins<br>in your pocket.</h2><p>Mark where you’ve been and watch each place come to life in its own illustration. Find the moments you took there. Compare the places you share with friends.</p><p class="app-free">The atlas is free.<br><span>The memories are yours.</span></p><p class="availability">Coming soon to iPhone.</p>{link('/#make-a-proof','From app to artwork')}</div><figure class="atlas-illustration"><img src="/print/assets/art/approved-italy.png" width="1440" height="1728" alt="Italy’s illustrated atlas artwork: Alpine peaks, Florence, Rome, lemon groves and the Mediterranean islands." loading="lazy" decoding="async"><figcaption>Italy, illustrated in Inlay.</figcaption></figure></div></section>'''
+    return f'''<section class="app-showcase" id="the-atlas" aria-labelledby="atlas-heading"><div class="app-showcase-inner"><div class="app-showcase-copy"><h2 id="atlas-heading">Your world begins<br>in your pocket.</h2><p>Mark where you’ve been and watch each place come to life in its own illustration. Find the moments you took there. Compare the places you share with friends.</p><p class="app-free">The atlas is free.<br><span>The memories are yours.</span></p><p class="availability"><a href="https://apps.apple.com/app/id6831712742">On the App Store</a> · <a href="/atlas/">Open it in your browser</a></p>{link('/#make-a-proof','From app to artwork')}</div><figure class="atlas-illustration"><img src="/print/assets/art/approved-italy.png" width="1440" height="1728" alt="Italy’s illustrated atlas artwork: Alpine peaks, Florence, Rome, lemon groves and the Mediterranean islands." loading="lazy" decoding="async"><figcaption>Italy, illustrated in Inlay.</figcaption></figure></div></section>'''
 
 def home():
     return f'''{header(True)}<main id="main">
@@ -81,7 +81,7 @@ def home():
 {faq('Can I use my own photographs?', '<p>Yes. Choose Memory in the studio, then select photographs from your device and add captions. Your photos stay in your browser and are included only in the files you choose to export.</p>')}
 {faq('Can I make something for a friend?', '<p>Use an atlas your friend has shared with you. For Our World, combine two atlases and keep the individual, shared and combined counts. It works for any two people.</p>')}
 {faq('Can I order a physical print?', '<p>For now, you can create and download a digital proof. Paper, physical sizes, frames, prices and delivery will be confirmed before ordering opens. The frames shown here are illustrative.</p>')}
-{faq('Is Inlay available on the App Store?', '<p>Inlay is coming soon to iPhone. The app will be free; physical prints will be optional.</p>')}
+{faq('Is Inlay available on the App Store?', '<p>Yes. Inlay is free <a href="https://apps.apple.com/app/id6831712742">on the App Store</a> for iPhone and iPad, and you can use the same atlas in your browser at <a href="/atlas/">inlayatlas.com/atlas</a>. Physical prints will be optional.</p>')}
 </div></section></main>{footer()}'''
 
 def collection():
@@ -104,7 +104,7 @@ def write(path,title,description,body,home=False):
     dest.parent.mkdir(parents=True,exist_ok=True)
     dest.write_text(doc+'\n')
 
-write('/', 'Inlay — Everywhere, kept close.', 'A free illustrated atlas for iPhone, coming soon. Explore Country, Memory and Your World editions and make a personalized digital proof from your Inlay atlas.', home(), True)
+write('/', 'Inlay — Everywhere, kept close.', 'A free illustrated atlas for iPhone, iPad and the web. Explore Country, Memory and Your World editions and make a personalized digital proof from your Inlay atlas.', home(), True)
 write('/editions/', 'The collection — Inlay', 'Country, Memory and Your World: three ways to keep the places that stay with you. Explore the collection and create a personalized digital proof.', collection())
 for key,p in ED.items():
     write(f'/editions/{key}/', p['name']+' — Inlay Editions', p['line']+' '+p['description'], product(key))
