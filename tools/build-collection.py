@@ -35,21 +35,21 @@ def framed(key, eager=False):
     return f'''<div class="print-frame"><img src="{ART}products/{p['file']}.png" width="{width}" height="{height}" alt="{escape(p['alt'])}" {'fetchpriority="high"' if eager else 'loading="lazy"'} decoding="async"></div>'''
 
 def header(home=False, active=''):
-    items = [('/editions/', 'The collection', 'editions'), ('/gifts/', 'Gifts', 'gifts'), ('/#story', 'Our story', ''), ('/#the-atlas', 'The atlas', ''), ('/atlas/', 'Open your atlas', 'atlas')]
+    items = [('/editions/', 'The collection', 'editions'), ('/gifts/', 'Gifts', 'gifts'), ('/#story', 'Our story', ''), ('/#the-atlas', 'The atlas', ''), ('/print/', 'Print studio', 'print')]
     nav = ''.join('<a href="{}" {}>{}</a>'.format(url, 'aria-current="page"' if id and active == id else '', name) for url,name,id in items)
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="site-header {'home-header' if home else ''}">
   <a class="wordmark" href="/" aria-label="Inlay home">INLAY</a>
   <nav class="main-nav" aria-label="Main navigation">{nav}</nav>
   <details class="mobile-menu"><summary aria-label="Menu">{MENU}<span class="visually-hidden">Menu</span></summary><nav aria-label="Mobile navigation">{nav}<a href="/support/">Support</a></nav></details>
-  <a class="studio-link" href="/print/">Print studio {ARROW}</a>
+  <a class="studio-link" href="/atlas/">Open the atlas {ARROW}</a>
 </header>'''
 
 def footer():
     return '''<footer class="site-footer"><div class="footer-top">
 <div><a class="footer-brand" href="/">Inlay</a><p>Every place, a part of you.<br>Illustrated memories, made personal.</p></div>
 <nav aria-label="Editions"><a href="/editions/your-world/">Your World</a><a href="/editions/country/">Country</a><a href="/editions/memory/">Memory</a><a href="/gifts/">Gifts &amp; Our World</a></nav>
-<nav aria-label="Information"><a href="/#the-atlas">The free atlas</a><a href="/print/">Print studio</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a></nav>
+<nav aria-label="Information"><a href="/atlas/">Open the atlas</a><a href="/#the-atlas">The free atlas</a><a href="/print/">Print studio</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a></nav>
 </div><div class="footer-bottom"><p>© 2026 Inlay. A collection of places worth keeping.</p><p>Digital proofs are available with an Inlay atlas. Physical prints are coming later. Artwork examples use sample travel history and photographs; frames are illustrative.</p></div></footer>'''
 
 def faq(q, a):
@@ -65,11 +65,11 @@ def handoff():
 def app_showcase():
     # The native writer confirmed the old app captures must not be published.
     # Use approved, bundled atlas illustration until a fresh clean capture set is ready.
-    return f'''<section class="app-showcase" id="the-atlas" aria-labelledby="atlas-heading"><div class="app-showcase-inner"><div class="app-showcase-copy"><h2 id="atlas-heading">Your world begins<br>in your pocket.</h2><p>Mark where you’ve been and watch each place come to life in its own illustration. Find the moments you took there. Compare the places you share with friends.</p><p class="app-free">The atlas is free.<br><span>The memories are yours.</span></p><p class="availability"><a href="https://apps.apple.com/app/id6831712742">On the App Store</a> · <a href="/atlas/">Open it in your browser</a></p>{link('/#make-a-proof','From app to artwork')}</div><figure class="atlas-illustration"><img src="/print/assets/art/approved-italy.png" width="1440" height="1728" alt="Italy’s illustrated atlas artwork: Alpine peaks, Florence, Rome, lemon groves and the Mediterranean islands." loading="lazy" decoding="async"><figcaption>Italy, illustrated in Inlay.</figcaption></figure></div></section>'''
+    return f'''<section class="app-showcase" id="the-atlas" aria-labelledby="atlas-heading"><div class="app-showcase-inner"><div class="app-showcase-copy"><h2 id="atlas-heading">Your world begins<br>wherever you are.</h2><p>Mark where you’ve been and watch each place come to life in its own illustration. Find the moments you took there. Compare the places you share with friends. Open it here in your browser, or carry it on iPhone and iPad.</p><p class="app-free">The atlas is free.<br><span>The memories are yours.</span></p><div class="atlas-actions">{link('/atlas/','Open the atlas in your browser','button light')}<a class="store-link" href="https://apps.apple.com/app/id6831712742">Get it on the App Store</a></div>{link('/#make-a-proof','From app to artwork')}</div><figure class="atlas-illustration"><img src="/print/assets/art/approved-italy.png" width="1440" height="1728" alt="Italy’s illustrated atlas artwork: Alpine peaks, Florence, Rome, lemon groves and the Mediterranean islands." loading="lazy" decoding="async"><figcaption>Italy, illustrated in Inlay.</figcaption></figure></div></section>'''
 
 def home():
     return f'''{header(True)}<main id="main">
-<section class="hero" aria-labelledby="hero-title"><div class="hero-scene"><figure class="hero-print">{framed('your-world',True)}</figure></div><div class="hero-copy shell"><h1 id="hero-title">Everywhere,<br>kept close.</h1><div class="hero-invitation"><p>A free illustrated atlas for your travels.<br>Personal artwork for the places that stay with you.</p>{link('/editions/','Explore the editions','button light')}{link('#the-atlas','Meet the free atlas','hero-app-link')}</div></div><p class="hero-credit">Your World · sample atlas &amp; dedication</p></section>
+<section class="hero" aria-labelledby="hero-title"><div class="hero-scene"><figure class="hero-print">{framed('your-world',True)}</figure></div><div class="hero-copy shell"><h1 id="hero-title">Everywhere,<br>kept close.</h1><div class="hero-invitation"><p>A free illustrated atlas for your travels.<br>Personal artwork for the places that stay with you.</p>{link('/atlas/','Open the atlas','button light')}{link('/editions/','Explore the editions','hero-app-link')}</div></div><p class="hero-credit">Your World · sample atlas &amp; dedication</p></section>
 {app_showcase()}
 <section class="intro shell"><h2>A journey doesn’t end<br>when you come home.</h2><p>Some places become part of who you are. Inlay brings them into view through illustrated landscapes, chosen photographs and a map that tells your own story.</p></section>
 <section class="shell" aria-label="The three print editions"><article class="collection-feature"><a href="/editions/your-world/" class="edition-link" aria-label="Explore Your World"><div class="art-stage world-stage">{framed('your-world')}</div></a><div class="edition-copy"><h2>Your World</h2><p>{ED['your-world']['description']}</p>{link('/editions/your-world/','Explore Your World')}</div></article><div class="editions-duo">{card('country')}{card('memory')}</div></section>
