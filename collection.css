@@ -331,3 +331,8 @@ summary:focus-visible{outline:2px solid #7d542d}
 }
 @media(max-width:365px){.hero h1{font-size:53px}.hero-scene{height:320px}.site-header{padding-inline:16px}.wordmark{font-size:17px}.studio-link{font-size:11px}.page-heading h1,.gift-intro h1{font-size:46px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+.atlas-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;margin-top:28px}
+.atlas-actions .button{min-width:0}
+.store-link{display:inline-flex;align-items:center;min-height:44px;color:var(--paper);font-size:14px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.3em}
+.store-link:hover{color:#fffdf6}
+@media(max-width:600px){.atlas-actions .button{width:100%}}
