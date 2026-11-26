@@ -2,21 +2,25 @@
 // with the Inlay app through Firestore (Inlay/docs/accounts-sync-spec.md). Firebase is loaded only
 // when someone uses this, so visiting the atlas never contacts Google.
 //
-// Hidden until launch: the section shows with ?accounts in the address (remembered in this browser).
+// ACCOUNTS_LIVE publishes the account section to everyone. Until then it shows only with
+// ?accounts in the address (remembered in this browser; ?accounts=off forgets it).
 // ?emulators talks to the local Firebase emulators instead (Inlay/firebase, for testing).
 
 import { useState, useEffect, useRef, useCallback } from 'preact/hooks';
 import { AccountSync, wire } from './accountsync.js';
 import { FIREBASE_CONFIG } from './firebase-config.js';
 
+/** Flip to true when sign-in launches (with the privacy policy that describes it). */
+export const ACCOUNTS_LIVE = false;
+
 const PREVIEW_KEY = 'inlay-accounts-preview', LINKED_KEY = 'inlay-account';
 const params = new URLSearchParams(location.search);
 const storage = (() => { try { return localStorage; } catch { return null; } })();
 const get = (k) => { try { return storage?.getItem(k) ?? null; } catch { return null; } };
 const put = (k, v) => { try { v == null ? storage?.removeItem(k) : storage?.setItem(k, v); } catch {} };
-if (params.has('accounts')) put(PREVIEW_KEY, '1');
+if (params.has('accounts')) put(PREVIEW_KEY, params.get('accounts') === 'off' ? null : '1');
 
-export const accountsEnabled = () => get(PREVIEW_KEY) === '1';
+export const accountsEnabled = () => ACCOUNTS_LIVE || get(PREVIEW_KEY) === '1';
 const useEmulators = params.has('emulators');
 
 // ---- Firebase, loaded on first use ------------------------------------------------------------
@@ -118,6 +122,14 @@ function firestoreRemote({ fs, db }, uid) {
  */
 export function useAccount({ getAtlas, replace, known }) {
   const [state, setState] = useState({ status: get(LINKED_KEY) ? 'loading' : 'signedOut', user: null, summary: null, error: null });
+  // What the person sees about syncing: whether changes are still on their way, and when the
+  // account last confirmed everything.
+  const [progress, setProgress] = useState({ pending: false, syncedAt: null, online: navigator.onLine !== false });
+  useEffect(() => {
+    const update = () => setProgress((p) => ({ ...p, online: navigator.onLine !== false }));
+    addEventListener('online', update); addEventListener('offline', update);
+    return () => { removeEventListener('online', update); removeEventListener('offline', update); };
+  }, []);
   const sync = useRef(null), fb = useRef(null);
   const binding = useRef({ getAtlas, replace, known });
   binding.current = { getAtlas, replace, known };
@@ -133,6 +145,7 @@ export function useAccount({ getAtlas, replace, known }) {
     try {
       const summary = await engine.start();
       if (sync.current !== engine) return;
+      setProgress((p) => ({ ...p, pending: false, syncedAt: Date.now() }));
       setState((s) => ({ ...s, status: 'signedIn', summary }));
     } catch (e) {
       console.warn('Account sync couldn’t start', e);
@@ -213,9 +226,15 @@ export function useAccount({ getAtlas, replace, known }) {
   }, [connect]);
 
   /** Call after each local save. */
-  const changed = useCallback(() => { sync.current?.push(); }, []);
+  const changed = useCallback(() => {
+    const engine = sync.current;
+    if (!engine) return;
+    setProgress((p) => ({ ...p, pending: true }));
+    engine.push().then(() => { if (sync.current === engine && !engine.pushing) setProgress((p) => ({ ...p, pending: false, syncedAt: Date.now() })); },
+                       () => {});
+  }, []);
 
-  return { ...state, signIn, signOut, deleteAccount, changed, dismissSummary: () => setState((s) => ({ ...s, summary: null })) };
+  return { ...state, ...progress, signIn, signOut, deleteAccount, changed, dismissSummary: () => setState((s) => ({ ...s, summary: null })) };
 }
 
 function describe(user) {

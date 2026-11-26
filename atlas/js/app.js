@@ -71,7 +71,7 @@ function App({ world, initial }) {
     if (!s) return;
     if (s.places || s.trips) {
       const parts = [];
-      if (s.places) parts.push(tw('%lld places').replace('%lld', s.places));
+      if (s.places) parts.push(t('%lld visited places', s.places));
       if (s.trips) parts.push(t('%lld trips', s.trips));
       setBanner({ text: tw('Added to your account: %@').replace('%@', parts.join(' · ')) });
     }
@@ -493,7 +493,8 @@ function SettingsSheet({ world, atlas, name, update, setAtlas, account, onLangua
     ${accountsEnabled() && html`<${AccountSection} account=${account} />`}
     <section class="group">
       <${Legend} class="section-title">${tw('Your atlas and the app')}<//>
-      <p class="sheet-line">${tw('Your atlas is kept in this browser. To move it between the Inlay app and the web, export it on one and import it on the other: places, dates, Want to go plans and trips come along.')}</p>
+      <p class="sheet-line">${account.user ? tw('Your account keeps this atlas in step with the Inlay app. You can still export a copy of it at any time.')
+        : tw('Your atlas is kept in this browser. To move it between the Inlay app and the web, export it on one and import it on the other: places, dates, Want to go plans and trips come along.')}</p>
       <div class="actions">
         <button class="outline" onClick=${() => download('Inlay atlas.json', store.writeExport(atlas, describe))}>${t('Export your atlas')}</button>
         <button class="outline" onClick=${() => file.current.click()}>${t('Import an atlas file')}</button>
@@ -517,19 +518,29 @@ function AccountSection({ account }) {
     unavailable: tw('Your account can’t be reached right now. Your atlas is kept here and syncs when it can.'),
     deleteFailed: tw('The account wasn’t deleted. Check your connection and try again.'),
   };
+  const signedOut = account.status === 'signedOut' || account.status === 'deleted';
   const busy = account.status === 'loading' || account.status === 'syncing' || account.status === 'deleting';
-  const who = account.user && (account.user.email ?? (account.user.provider === 'apple' ? tw('Signed in with Apple') : tw('Signed in with Google')));
+  const who = account.user && (account.user.email ?? tw('Email hidden by Apple'));
+  const via = account.user && (account.user.provider === 'apple' ? tw('Signed in with Apple') : tw('Signed in with Google'));
+  const status = account.status === 'deleting' ? tw('Deleting your account…')
+    : busy ? tw('Syncing…')
+    : account.pending ? (account.online ? tw('Syncing changes…') : tw('Offline. Your changes sync when you’re back online.'))
+    : tw('Up to date');
   return html`<section class="group account">
     <${Legend} class="section-title">${tw('Sync across devices')}<//>
-    ${account.status === 'signedOut' || account.status === 'deleted' ? html`
+    ${signedOut ? html`
       ${account.status === 'deleted' && html`<p class="note" role="status">${tw('Your account and everything in it were deleted. This browser keeps its copy of your atlas.')}</p>`}
       <p class="sheet-line">${tw('Sign in to keep this atlas in step with the Inlay app on your iPhone and other devices. Without an account, it stays in this browser.')}</p>
-      <div class="actions">
-        <button class="ink" onClick=${() => account.signIn('apple')}>${tw('Sign in with Apple')}</button>
-        <button class="outline" onClick=${() => account.signIn('google')}>${tw('Sign in with Google')}</button>
-      </div>` : html`
-      <p class="sheet-line">${busy ? (account.status === 'deleting' ? tw('Deleting your account…') : tw('Syncing…'))
-        : tw('Your atlas syncs with your account: %@').replace('%@', who ?? '')}</p>
+      <div class="actions sign-in">
+        <button class="ink provider" onClick=${() => account.signIn('apple')}>${APPLE_MARK}${tw('Sign in with Apple')}</button>
+        <button class="outline provider" onClick=${() => account.signIn('google')}>${GOOGLE_MARK}${tw('Sign in with Google')}</button>
+      </div>
+      <p class="sheet-line small">${tw('Optional. Only your atlas and your sign-in are kept with the account.')} <a href="/privacy/#account">${tw('Privacy')}</a></p>` : html`
+      <div class="account-who">
+        <span class="account-mark" aria-hidden="true">${account.user?.provider === 'apple' ? APPLE_MARK : GOOGLE_MARK}</span>
+        <span><strong>${who ?? ''}</strong><small>${via}</small></span>
+      </div>
+      <p class="sheet-line account-status" role="status"><span class=${'dot' + (account.pending || busy ? ' moving' : '') + (account.pending && !account.online ? ' away' : '')}></span>${status}</p>
       ${step === null && !busy && html`<div class="actions">
         <button class="outline" onClick=${() => setStep('signOut')}>${tw('Sign out')}</button>
         <button class="quiet" onClick=${() => setStep('delete')}>${tw('Delete account')}</button>
@@ -548,6 +559,10 @@ function AccountSection({ account }) {
     ${account.error && html`<p class="note" role="status">${errors[account.error]}</p>`}
   </section>`;
 }
+
+// Apple's and Google's own marks, as their sign-in guidelines ask for.
+const APPLE_MARK = html`<svg class="mark" viewBox="0 0 17 20" aria-hidden="true"><path fill="currentColor" d="M14.1 10.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9s-2-.9-3.4-.9C3.6 4.8 2 5.8 1.1 7.4c-1.8 3.2-.5 7.9 1.3 10.5.9 1.3 1.9 2.7 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.4.8c1.4 0 2.3-1.3 3.1-2.6 1-1.5 1.4-2.9 1.4-3-.1 0-2.7-1-2.7-4.3ZM11.6 3c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5Z"/></svg>`;
+const GOOGLE_MARK = html`<svg class="mark" viewBox="0 0 18 18" aria-hidden="true"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.62Z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.8.54-1.84.86-3.04.86-2.34 0-4.32-1.58-5.03-3.7H.96v2.33A9 9 0 0 0 9 18Z"/><path fill="#FBBC05" d="M3.97 10.72A5.4 5.4 0 0 1 3.68 9c0-.6.1-1.18.29-1.72V4.95H.96A9 9 0 0 0 0 9c0 1.45.35 2.83.96 4.05l3.01-2.33Z"/><path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58A9 9 0 0 0 .96 4.95l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58Z"/></svg>`;
 
 // Strings the app doesn't have; translated here (WEB_STRINGS) and looked up by key.
 import { WEB_STRINGS } from './web-strings.js';

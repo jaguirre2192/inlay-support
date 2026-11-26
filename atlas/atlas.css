@@ -207,3 +207,19 @@ button:disabled { opacity: 0.4; cursor: default; }
 .scrim { grid-template-columns: minmax(0, 1fr); }
 .sheet { min-width: 0; justify-self: center; }
 .sheet .list { overflow-x: hidden; }
+
+/* Sync across devices. The providers' buttons carry their own marks; the signed-in state is the
+   person's identity and one quiet line of status. */
+.sign-in .provider { flex: 1 1 200px; justify-content: center; }
+.mark { width: 17px; height: 17px; stroke: none; flex: none; }
+.ink .mark { margin-top: -2px; }
+.account a { color: var(--sage); }
+.account-who { display: flex; align-items: center; gap: 12px; }
+.account-mark { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--leaf); border: 0.5px solid var(--rule); flex: none; }
+.account-who strong { display: block; font-weight: 600; overflow-wrap: anywhere; }
+.account-who small { display: block; color: var(--pencil); font-size: 13px; }
+.account-status { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 13px; }
+.account-status .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--sage); flex: none; }
+.account-status .dot.moving { animation: sync-breathe 1.2s ease-in-out 3; }
+.account-status .dot.away { background: var(--pencil); animation: none; }
+@keyframes sync-breathe { 50% { opacity: 0.3; } }
