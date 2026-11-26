@@ -85,15 +85,17 @@ const TRIP = '0B4A8D1E-3C9F-4E2A-9B7D-5F6E1A2C3D4E';
 
 // ---- the engine against a fake account ----------------------------------------------------------
 class FakeAccount {
-  constructor() { this.records = { places: {}, wishes: {}, trips: {} }; this.listeners = new Set(); this.refused = 0; }
+  constructor() { this.records = { places: {}, wishes: {}, trips: {} }; this.listeners = new Set(); this.refused = 0; this.failNext = 0; }
   save(incoming) {
-    const accepted = { places: {}, wishes: {}, trips: {} };
+    if (this.failNext > 0) { this.failNext--; return structuredClone(incoming); }
+    const accepted = { places: {}, wishes: {}, trips: {} }, missed = { places: {}, wishes: {}, trips: {} };
     for (const kind of ['places', 'wishes', 'trips']) for (const [id, r] of Object.entries(incoming[kind] ?? {})) {
       const old = this.records[kind][id];
-      if (old && old.modified >= r.modified) { this.refused++; continue; }
+      if (old && old.modified >= r.modified) { this.refused++; missed[kind][id] = r; continue; }
       this.records[kind][id] = r; accepted[kind][id] = r;
     }
     for (const l of this.listeners) l(structuredClone(accepted));
+    return missed;
   }
 }
 function browser(account, uid = 'ann', start = empty()) {
@@ -136,6 +138,16 @@ function browser(account, uid = 'ann', start = empty()) {
   await second.edit((a) => { a.visits.MX = {}; return a; }, 300);
   await first.edit((a) => { a.wanted.MX = { rank: 0, note: '', nextUp: false, modified: 0 }; return a; }, 250);  // its clock was behind
   check('a stale edit is refused by the account', account.records.places.MX.visited === true && account.refused > 0, account.records.places.MX);
+
+  // A write that fails outright is offered again on the next push.
+  const retrying = browser(account);
+  await retrying.sync.start();
+  account.failNext = 1;
+  await retrying.edit((a) => { a.visits.CL = {}; return a; }, 400);
+  check('a failed write isn\'t recorded as sent', !account.records.places.CL);
+  await retrying.sync.push();
+  check('…and goes up on the next push', account.records.places.CL?.visited === true, account.records.places.CL);
+  retrying.sync.stop();
 
   const again = browser(account);
   await again.sync.start();

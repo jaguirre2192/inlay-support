@@ -58,6 +58,26 @@ function App({ world, initial }) {
 
   const update = useCallback((fn) => setAtlas((a) => { const next = fn(structuredClone(a)); store.save(next); return next; }), []);
 
+  // Optional account: merged atlases from the account replace this one (and are saved), and every
+  // save here is offered to the account.
+  const account = useAccount({
+    getAtlas: () => store.latest() ?? atlas,
+    replace: (next) => { setAtlas(next); store.save(next); },
+    known: (id) => world.rows.has(id) || !!world.regions?.rows?.has(id),
+  });
+  useEffect(() => store.onSave(() => account.changed()), [account.changed]);
+  useEffect(() => {
+    const s = account.summary;
+    if (!s) return;
+    if (s.places || s.trips) {
+      const parts = [];
+      if (s.places) parts.push(tw('%lld places').replace('%lld', s.places));
+      if (s.trips) parts.push(t('%lld trips', s.trips));
+      setBanner({ text: tw('Added to your account: %@').replace('%@', parts.join(' · ')) });
+    }
+    account.dismissSummary();
+  }, [account.summary]);
+
   // The map, once.
   useEffect(() => {
     const m = new AtlasMap(mapHost.current, world, {
@@ -231,7 +251,7 @@ function App({ world, initial }) {
       ${sheet === 'regions' && selected && html`<${RegionSheet} world=${world} country=${selected} name=${name} regionName=${regionName}
           visited=${visited} wholeCountries=${!!atlas.prefs.wholeCountries} onChoose=${chooseRegion} onClose=${() => setSheet(null)} />`}
       ${sheet === 'settings' && html`<${SettingsSheet} world=${world} atlas=${atlas} name=${name} update=${update} setAtlas=${setAtlas}
-          onLanguage=${changeLanguage} onClose=${() => setSheet(null)} />`}
+          account=${account} onLanguage=${changeLanguage} onClose=${() => setSheet(null)} />`}
       ${sheet?.kind === 'date' && html`<${DateSheet} id=${sheet.id} name=${name(sheet.id)} value=${atlas.visits[sheet.id]?.date}
           onSave=${(date) => { update((a) => { a.visits[sheet.id] = { ...(a.visits[sheet.id] ?? {}), date: date ?? undefined }; if (!date) delete a.visits[sheet.id].date; return a; }); setSheet(null); }}
           onClose=${() => setSheet(null)} />`}
@@ -426,7 +446,7 @@ function DateSheet({ name, value, onSave, onClose }) {
   <//>`;
 }
 
-function SettingsSheet({ world, atlas, name, update, setAtlas, onLanguage, onClose }) {
+function SettingsSheet({ world, atlas, name, update, setAtlas, account, onLanguage, onClose }) {
   const [note, setNote] = useState(null);
   const file = useRef(null);
   const describe = (id) => { const r = world.rows.get(id); return r && { kind: r.kind, name: r.name }; };
@@ -470,6 +490,7 @@ function SettingsSheet({ world, atlas, name, update, setAtlas, onLanguage, onClo
           <option value="system">${tw('Automatic')}</option><option value="light">${tw('Light')}</option><option value="dark">${tw('Dark')}</option>
         </select></label>
     </section>
+    ${accountsEnabled() && html`<${AccountSection} account=${account} />`}
     <section class="group">
       <${Legend} class="section-title">${tw('Your atlas and the app')}<//>
       <p class="sheet-line">${tw('Your atlas is kept in this browser. To move it between the Inlay app and the web, export it on one and import it on the other: places, dates, Want to go plans and trips come along.')}</p>
@@ -486,6 +507,48 @@ function SettingsSheet({ world, atlas, name, update, setAtlas, onLanguage, onClo
   <//>`;
 }
 
+/** Sync across devices: sign in, who's signed in, sign out, delete the account. */
+function AccountSection({ account }) {
+  const [step, setStep] = useState(null);  // null, 'signOut' or 'delete'
+  const errors = {
+    popupBlocked: tw('Your browser blocked the sign-in window. Allow pop-ups for inlayatlas.com, then try again.'),
+    otherProvider: tw('This email already has an Inlay account with another sign-in. Use that one.'),
+    signInFailed: tw('Signing in didn’t work. Check your connection and try again.'),
+    unavailable: tw('Your account can’t be reached right now. Your atlas is kept here and syncs when it can.'),
+    deleteFailed: tw('The account wasn’t deleted. Check your connection and try again.'),
+  };
+  const busy = account.status === 'loading' || account.status === 'syncing' || account.status === 'deleting';
+  const who = account.user && (account.user.email ?? (account.user.provider === 'apple' ? tw('Signed in with Apple') : tw('Signed in with Google')));
+  return html`<section class="group account">
+    <${Legend} class="section-title">${tw('Sync across devices')}<//>
+    ${account.status === 'signedOut' || account.status === 'deleted' ? html`
+      ${account.status === 'deleted' && html`<p class="note" role="status">${tw('Your account and everything in it were deleted. This browser keeps its copy of your atlas.')}</p>`}
+      <p class="sheet-line">${tw('Sign in to keep this atlas in step with the Inlay app on your iPhone and other devices. Without an account, it stays in this browser.')}</p>
+      <div class="actions">
+        <button class="ink" onClick=${() => account.signIn('apple')}>${tw('Sign in with Apple')}</button>
+        <button class="outline" onClick=${() => account.signIn('google')}>${tw('Sign in with Google')}</button>
+      </div>` : html`
+      <p class="sheet-line">${busy ? (account.status === 'deleting' ? tw('Deleting your account…') : tw('Syncing…'))
+        : tw('Your atlas syncs with your account: %@').replace('%@', who ?? '')}</p>
+      ${step === null && !busy && html`<div class="actions">
+        <button class="outline" onClick=${() => setStep('signOut')}>${tw('Sign out')}</button>
+        <button class="quiet" onClick=${() => setStep('delete')}>${tw('Delete account')}</button>
+      </div>`}
+      ${step === 'signOut' && html`<p class="sheet-line">${tw('Keep a copy of your atlas in this browser after signing out?')}</p>
+        <div class="actions">
+          <button class="ink" onClick=${() => { setStep(null); account.signOut(true); }}>${tw('Keep it here')}</button>
+          <button class="outline" onClick=${() => { setStep(null); account.signOut(false); }}>${tw('Remove from this browser')}</button>
+          <button class="quiet" onClick=${() => setStep(null)}>${t('Cancel')}</button>
+        </div>`}
+      ${step === 'delete' && html`<p class="sheet-line">${tw('Deleting your account removes your synced atlas, plans, trips and friends list from Inlay’s servers, and stops live sharing. This browser keeps its copy. Copies friends already have stay with them. This can’t be undone.')}</p>
+        <div class="actions">
+          <button class="outline danger" onClick=${() => { setStep(null); account.deleteAccount(); }}>${tw('Delete account')}</button>
+          <button class="quiet" onClick=${() => setStep(null)}>${t('Cancel')}</button>
+        </div>`}`}
+    ${account.error && html`<p class="note" role="status">${errors[account.error]}</p>`}
+  </section>`;
+}
+
 // Strings the app doesn't have; translated here (WEB_STRINGS) and looked up by key.
 import { WEB_STRINGS } from './web-strings.js';
 import { CollectionSheet } from './collection.js';
@@ -497,6 +560,7 @@ import { PhotosSheet } from './photos.js';
 import { ShareSheet } from './share.js';
 import { YearInReviewSheet } from './yearinreview.js';
 import { GlobeLaunch, GlobeView, curlToGlobe, curlProgress } from './globe.js';
+import { useAccount, accountsEnabled } from './account.js';
 function tw(key) { return WEB_STRINGS[language()]?.[key] ?? key; }
 
 // ---- start -----------------------------------------------------------------------------------

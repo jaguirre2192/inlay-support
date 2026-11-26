@@ -172,7 +172,9 @@ export const wire = {
 
 /**
  * Keeps this browser's atlas and an account's in step. `remote` provides
- *   load() → records, observe(onChange) → stop(), save(records), deleteEverything().
+ *   load() → records, observe(onChange) → stop(), deleteEverything(), and
+ *   save(records) → the records the account didn't take (refused or failed), which the next
+ *   push offers again.
  * `get`/`set` read and replace the page's atlas.
  */
 export class AccountSync {
@@ -216,8 +218,16 @@ export class AccountSync {
         this.again = false;
         const outgoing = newer(records(this.get()), this.account);
         if (isEmpty(outgoing)) continue;
+        const before = { ...this.account };
         this.note(outgoing);
-        await this.remote.save(outgoing);
+        const missed = (await this.remote.save(outgoing)) ?? {};
+        // What didn't land goes back to what the account was known to hold, so it's retried.
+        for (const [prefix, kind] of [['p', 'places'], ['w', 'wishes'], ['t', 'trips']]) {
+          for (const id of Object.keys(missed[kind] ?? {})) {
+            const key = `${prefix}/${id}`;
+            if (key in before) this.account[key] = before[key]; else delete this.account[key];
+          }
+        }
       } while (this.again);
     })();
     try { await this.pushing; } finally { this.pushing = null; }

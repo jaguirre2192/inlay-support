@@ -33,8 +33,13 @@ export async function load() {
 }
 
 // What was saved last, to tell which records each save changes (see accountsync.js `stamp`).
-let lastSaved = null;
-function remember(atlas) { lastSaved = structuredClone(atlas); return atlas; }
+let lastSaved = null, current = null;
+function remember(atlas) { lastSaved = structuredClone(atlas); current = atlas; return atlas; }
+/** The atlas as last loaded or saved (the page's own object). */
+export const latest = () => current;
+const listeners = new Set();
+/** Calls `fn` after every save (account sync uploads what changed). Returns a function to stop. */
+export function onSave(fn) { listeners.add(fn); return () => listeners.delete(fn); }
 
 let queued = null, writing = false;
 export async function save(atlas) {
@@ -43,6 +48,7 @@ export async function save(atlas) {
   const stamped = stamp(lastSaved, atlas);
   Object.assign(atlas, { schema: stamped.schema, modified: stamped.modified, removedTrips: stamped.removedTrips });
   remember(atlas);
+  for (const fn of listeners) fn(atlas);
   queued = atlas;
   if (writing) return;
   writing = true;
